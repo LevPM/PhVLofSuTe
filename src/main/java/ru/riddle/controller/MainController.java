@@ -13,4 +13,12 @@ public class MainController{
     public void handleSettingButtonAction(ActionEvent event){
         model.openSettingsScreen(event);
     }
+
+    public void handleAuthorsButtonAction(ActionEvent event){
+        model.openAuthorsScreen(event);
+    }
+
+    public void handleCloseButtonAction(){
+        model.closeApp();
+    }
 }
