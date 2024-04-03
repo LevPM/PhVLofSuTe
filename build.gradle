@@ -4,7 +4,9 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-mainClassName = 'ru.riddle.MainScreen'
+application {
+    mainClass.set("ru.riddle.MainScreen")
+}
 
 group = 'ru.riddle'
 version = '0.0.1'
