@@ -8,12 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainScreen extends Application {
+public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage){
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainScreenFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreenFXML.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
