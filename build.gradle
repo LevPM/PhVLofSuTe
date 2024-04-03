@@ -5,7 +5,7 @@ plugins {
 }
 
 application {
-    mainClass.set("ru.riddle.Main")
+    mainClass.set("ru.riddle.AppLauncher")
 }
 
 group = 'ru.riddle'
