@@ -37,7 +37,7 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Settings" textFill="DARKOLIVEGREEN">
+            <Button id="settingsButton" fx:id="settingsOpenButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Settings" textFill="DARKOLIVEGREEN">
                <font>
                   <Font size="36.0" />
                </font>
