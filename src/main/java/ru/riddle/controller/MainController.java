@@ -1,17 +1,16 @@
 package ru.riddle.controller;
 
-import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 import ru.riddle.model.MainScreenModel;
 public class MainController{
 
     private final MainScreenModel model;
-    private Stage stage;
 
     public MainController(){
         model = new MainScreenModel();
     }
 
-    public void handleSettingButtonAction(){
-        model.openSettingsScreen();
+    public void handleSettingButtonAction(ActionEvent event){
+        model.openSettingsScreen(event);
     }
 }
