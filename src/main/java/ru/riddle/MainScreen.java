@@ -11,12 +11,15 @@ import java.io.IOException;
 public class MainScreen extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreenFXML.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-
-        primaryStage.setScene(scene);
+    public void start(Stage primaryStage){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MainScreenFXML.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
 
         primaryStage.setTitle("PhSofSuTe");
 
