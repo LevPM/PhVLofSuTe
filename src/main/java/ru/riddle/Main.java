@@ -13,17 +13,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage){
         try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainScreenFXML.fxml"));
-            Parent root = loader.load();
+            Parent root = FXMLLoader.load(getClass().getResource("/view/MainScreenFXML.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
+            primaryStage.setTitle("PhSofSuTe");
+            primaryStage.show();
         } catch (IOException e){
             e.printStackTrace();
         }
-
-        primaryStage.setTitle("PhSofSuTe");
-
-        primaryStage.show();
     }
 
     public static void main(String[] args) {
