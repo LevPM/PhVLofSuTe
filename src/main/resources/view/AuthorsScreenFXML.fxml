@@ -30,7 +30,7 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <Button id="backButton" fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Back" textAlignment="CENTER" textFill="DARKOLIVEGREEN">
+                  <Button id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Back" textAlignment="CENTER" textFill="DARKOLIVEGREEN">
                      <font>
                         <Font size="48.0" />
                      </font>
