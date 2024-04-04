@@ -3,6 +3,13 @@ plugins {
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.1.0'
     id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'edu.sc.seis.launch4j' version '3.0.5'
+}
+
+launch4j {
+    outfile = 'PhSofSuTe.exe'
+    mainClassName = 'ru.riddle.AppLauncher'
+    jreMinVersion = '21'
 }
 
 application {
