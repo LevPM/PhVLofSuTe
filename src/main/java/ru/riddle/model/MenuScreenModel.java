@@ -48,6 +48,24 @@ public class MenuScreenModel {
         }
     }
 
+    public void backToMenuScreen(ActionEvent event){
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            double height = stage.getHeight();
+            double width = stage.getWidth();
+            boolean isFullScreen = stage.isFullScreen();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setHeight(height);
+            stage.setWidth(width);
+            stage.setFullScreen(isFullScreen);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void closeApp(){
         Platform.exit();
         System.exit(0);

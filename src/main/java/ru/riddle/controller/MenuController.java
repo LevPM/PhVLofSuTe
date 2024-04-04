@@ -18,6 +18,10 @@ public class MenuController {
         model.openAuthorsScreen(event);
     }
 
+    public void handleBackButtonAction(ActionEvent event){
+        model.backToMenuScreen(event);
+    }
+
     public void handleCloseButtonAction(){
         model.closeApp();
     }
