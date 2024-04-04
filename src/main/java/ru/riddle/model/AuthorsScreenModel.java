@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AuthorsScreenModel {
     public void openMainScreen(ActionEvent event){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/MainScreenFXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             double height = stage.getHeight();
             double width = stage.getWidth();

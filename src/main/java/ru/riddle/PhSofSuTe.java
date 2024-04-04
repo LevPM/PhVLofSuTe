@@ -13,7 +13,7 @@ public class PhSofSuTe extends Application {
     @Override
     public void start(Stage primaryStage){
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/MainScreenFXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.setTitle("PhSofSuTe");

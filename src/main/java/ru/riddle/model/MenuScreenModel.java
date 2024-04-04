@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainScreenModel {
+public class MenuScreenModel {
 
     public void openSettingsScreen(ActionEvent event){
         try{
