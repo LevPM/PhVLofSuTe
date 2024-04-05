@@ -13,57 +13,63 @@ import java.io.IOException;
 public class MenuModel {
 
     public void openSettingsScreen(ActionEvent event){
+        Parent root = null;
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/SettingsScreenFXML.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            double height = stage.getHeight();
-            double width = stage.getWidth();
-            boolean isFullScreen = stage.isFullScreen();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setHeight(height);
-            stage.setWidth(width);
-            stage.setFullScreen(isFullScreen);
-            stage.show();
+            root = FXMLLoader.load(getClass().getResource("/view/SettingsScreenFXML.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        double height = stage.getHeight();
+        double width = stage.getWidth();
+        boolean isFullScreen = stage.isFullScreen();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
+        stage.setFullScreen(isFullScreen);
+        stage.show();
     }
 
     public void openAuthorsScreen(ActionEvent event){
+        Parent root = null;
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/AuthorsScreenFXML.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            double height = stage.getHeight();
-            double width = stage.getWidth();
-            boolean isFullScreen = stage.isFullScreen();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setHeight(height);
-            stage.setWidth(width);
-            stage.setFullScreen(isFullScreen);
-            stage.show();
+            root = FXMLLoader.load(getClass().getResource("/view/AuthorsScreenFXML.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        double height = stage.getHeight();
+        double width = stage.getWidth();
+        boolean isFullScreen = stage.isFullScreen();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
+        stage.setFullScreen(isFullScreen);
+        stage.show();
     }
 
     public void backToMenuScreen(ActionEvent event){
+        Parent root = null;
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            double height = stage.getHeight();
-            double width = stage.getWidth();
-            boolean isFullScreen = stage.isFullScreen();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setHeight(height);
-            stage.setWidth(width);
-            stage.setFullScreen(isFullScreen);
-            stage.show();
+            root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        double height = stage.getHeight();
+        double width = stage.getWidth();
+        boolean isFullScreen = stage.isFullScreen();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
+        stage.setFullScreen(isFullScreen);
+        stage.show();
     }
 
     public void closeApp(){
