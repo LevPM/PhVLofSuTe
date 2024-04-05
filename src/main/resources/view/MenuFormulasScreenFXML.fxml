@@ -53,9 +53,9 @@
             </Button>
          </children>
       </GridPane>
-      <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back" textAlignment="CENTER" textFill="#6b0000">
+      <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back" textAlignment="CENTER" textFill="#6b0000">
          <font>
-            <Font name="Arial Black" size="60.0" />
+            <Font name="Arial Black" size="50.0" />
          </font>
          <VBox.margin>
             <Insets bottom="10.0" top="10.0" />
