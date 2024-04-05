@@ -20,32 +20,32 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="W = σS " GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleEButtonAction" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="W = σS " GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="σ = W/S " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleCEButtonAction" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="σ = W/S " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="S = W/σ " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleSButtonAction" style="-fx-background-color: SandyBrown; -fx-border-color: Maroon; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="S = W/σ " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="F = σl" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleFButtonAction" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="F = σl" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="σ = F/l" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleCFButtonAction" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="σ = F/l" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="l = F/σ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#handleLButtonAction" style="-fx-background-color: LightGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-border-radius: 50; -fx-background-radius: 50;" text="l = F/σ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Algerian" size="64.0" />
                </font>
