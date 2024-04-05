@@ -25,4 +25,8 @@ public class MenuController {
     public void handleCloseButtonAction(){
         model.closeApp();
     }
+
+    public void handleStartButtonAction(ActionEvent event) {
+        model.openMenuFormulasScreen(event);
+    }
 }

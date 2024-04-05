@@ -44,7 +44,7 @@
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-border-color: DarkRed; -fx-border-width: 2; -fx-background-color: Goldenrod;" text="Start" textAlignment="JUSTIFY" textFill="MAROON">
+                  <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" style="-fx-border-color: DarkRed; -fx-border-width: 2; -fx-background-color: Goldenrod;" text="Start" textAlignment="JUSTIFY" textFill="MAROON">
                      <font>
                         <Font size="48.0" />
                      </font>

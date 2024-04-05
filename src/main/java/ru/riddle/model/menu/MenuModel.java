@@ -70,4 +70,25 @@ public class MenuModel {
         Platform.exit();
         System.exit(0);
     }
+
+    public void openMenuFormulasScreen(ActionEvent event){
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/view/MenuFormulasScreenFXML.fxml"));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        double height = stage.getHeight();
+        double width = stage.getWidth();
+        boolean isFullScreen = stage.isFullScreen();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setScene(scene);
+        stage.setHeight(height);
+        stage.setWidth(width);
+        stage.setFullScreen(isFullScreen);
+        stage.show();
+    }
 }
