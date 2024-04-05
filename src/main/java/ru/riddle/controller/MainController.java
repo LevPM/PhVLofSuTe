@@ -29,4 +29,8 @@ public class MainController {
 
     public void handleLButtonAction(ActionEvent event) {
     }
+
+    public void handleStartButtonAction(ActionEvent event) {
+        model.backToMenuScreen(event);
+    }
 }
