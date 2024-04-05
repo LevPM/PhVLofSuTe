@@ -30,7 +30,7 @@ public class MainController {
     public void handleLButtonAction(ActionEvent event) {
     }
 
-    public void handleStartButtonAction(ActionEvent event) {
+    public void handleBackButtonAction(ActionEvent event) {
         model.backToMenuScreen(event);
     }
 }
