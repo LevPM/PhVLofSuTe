@@ -1,4 +1,4 @@
-package ru.riddle.view.settings;
+package ru.riddle.model.menu;
 
 import javafx.scene.Parent;
 

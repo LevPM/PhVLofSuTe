@@ -1,4 +1,4 @@
-package ru.riddle.model;
+package ru.riddle.model.menu;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
