@@ -1,13 +1,13 @@
 package ru.riddle.controller;
 
 import javafx.event.ActionEvent;
-import ru.riddle.model.menu.MenuScreenModel;
+import ru.riddle.model.menu.MenuModel;
 public class MenuController {
 
-    private final MenuScreenModel model;
+    private final MenuModel model;
 
     public MenuController(){
-        model = new MenuScreenModel();
+        model = new MenuModel();
     }
 
     public void handleSettingButtonAction(ActionEvent event){
