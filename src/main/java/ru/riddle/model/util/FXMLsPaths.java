@@ -1,6 +1,6 @@
 package ru.riddle.model.util;
 
-public enum FXMLs {
+public enum FXMLsPaths {
     MENU_SCREEN("/view/MenuScreenFXML.fxml"),
     SETTINGS_SCREEN("/view/SettingsScreenFXML.fxml"),
     AUTHORS_SCREEN("/view/AuthorsScreenFXML.fxml"),
@@ -11,7 +11,7 @@ public enum FXMLs {
 
     private final String path;
 
-    FXMLs(String path) {
+    FXMLsPaths(String path) {
         this.path = path;
     }
 

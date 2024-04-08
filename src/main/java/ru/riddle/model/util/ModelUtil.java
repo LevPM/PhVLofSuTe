@@ -24,7 +24,7 @@ public class ModelUtil {
         stage.show();
     }
 
-    public static Parent downloadRoot(FXMLs fxml){
+    public static Parent downloadRoot(FXMLsPaths fxml){
         try {
             return FXMLLoader.load(ModelUtil.class.getResource(fxml.getPath()));
         } catch (IOException e) {
