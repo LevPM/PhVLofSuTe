@@ -38,6 +38,7 @@ public class MainModel {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        root.setId("First");
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         double height = stage.getHeight();

@@ -3,18 +3,12 @@ package ru.riddle.controller;
 import javafx.event.ActionEvent;
 import ru.riddle.model.TheoryModel;
 
-import java.io.IOException;
-
 public class TheoryController {
 
     private TheoryModel model;
 
     public TheoryController(){
-        try{
-            model = new TheoryModel();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        model = new TheoryModel();
     }
 
     public void handleLeaveButtonAction(ActionEvent event) {
@@ -22,9 +16,10 @@ public class TheoryController {
     }
 
     public void handleNextButtonAction(ActionEvent event) {
-
+        model.goToNextScreen(event);
     }
 
     public void handlePreviousButtonAction(ActionEvent event) {
+        model.backToPreviousScreen(event);
     }
 }
