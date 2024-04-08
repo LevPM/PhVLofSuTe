@@ -11,6 +11,15 @@ import java.io.IOException;
 
 public class TheoryModel {
 
+    Parent[] roots;
+
+    public TheoryModel() throws IOException {
+        roots = new Parent[]{
+                FXMLLoader.load(getClass().getResource("/view/theory/TheoryFirstFXML.fxml")),
+                FXMLLoader.load(getClass().getResource("/view/theory/TheorySecondFXML.fxml"))
+        };
+    }
+
     public void leaveTheory(ActionEvent event){
         Parent root = null;
         try{

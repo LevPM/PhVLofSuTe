@@ -3,12 +3,18 @@ package ru.riddle.controller;
 import javafx.event.ActionEvent;
 import ru.riddle.model.TheoryModel;
 
+import java.io.IOException;
+
 public class TheoryController {
 
-    private final TheoryModel model;
+    private TheoryModel model;
 
     public TheoryController(){
-        model = new TheoryModel();
+        try{
+            model = new TheoryModel();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void handleLeaveButtonAction(ActionEvent event) {
@@ -16,6 +22,10 @@ public class TheoryController {
     }
 
     public void handleNextButtonAction(ActionEvent event) {
+
+    }
+
+    public void handleBackButtonAction(ActionEvent event) {
 
     }
 }
