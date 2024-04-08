@@ -1,13 +1,10 @@
 package ru.riddle.model;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import ru.riddle.model.util.FXMLs;
+import ru.riddle.model.util.ModelUtil;
 
 public class TheoryModel{
 
@@ -17,12 +14,7 @@ public class TheoryModel{
 
         switch (id){
             case "Second" -> {
-                Parent root = null;
-                try {
-                    root = FXMLLoader.load(getClass().getResource("/view/theory/TheoryFirstFXML.fxml"));
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
+                Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_FIRST);
                 root.setId("First");
 
                 ModelUtil.changeScreen(event, root);
@@ -35,12 +27,7 @@ public class TheoryModel{
 
         switch (id){
             case "First" -> {
-                Parent root = null;
-                try {
-                    root = FXMLLoader.load(getClass().getResource("/view/theory/TheorySecondFXML.fxml"));
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
+                Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_SECOND);
                 root.setId("Second");
 
                 ModelUtil.changeScreen(event, root);
@@ -49,12 +36,7 @@ public class TheoryModel{
     }
 
     public void leaveTheory(ActionEvent event) {
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/view/MenuFormulasScreenFXML.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
 
         ModelUtil.changeScreen(event, root);
     }

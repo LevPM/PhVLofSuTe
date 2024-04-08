@@ -2,46 +2,26 @@ package ru.riddle.model.menu;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import ru.riddle.model.ModelUtil;
-
-import java.io.IOException;
+import ru.riddle.model.util.FXMLs;
+import ru.riddle.model.util.ModelUtil;
 
 public class MenuModel {
 
     public void openSettingsScreen(ActionEvent event){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(getClass().getResource("/view/SettingsScreenFXML.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.SETTINGS_SCREEN);
 
         ModelUtil.changeScreen(event, root);
     }
 
     public void openAuthorsScreen(ActionEvent event){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(getClass().getResource("/view/AuthorsScreenFXML.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.AUTHORS_SCREEN);
 
         ModelUtil.changeScreen(event, root);
     }
 
     public void backToMenuScreen(ActionEvent event){
-        Parent root = null;
-        try{
-            root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_SCREEN);
 
         ModelUtil.changeScreen(event, root);
     }
@@ -52,12 +32,7 @@ public class MenuModel {
     }
 
     public void openMenuFormulasScreen(ActionEvent event){
-        Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource("/view/MenuFormulasScreenFXML.fxml"));
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
 
         ModelUtil.changeScreen(event, root);
     }

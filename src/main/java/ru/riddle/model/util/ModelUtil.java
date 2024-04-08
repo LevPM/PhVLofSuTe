@@ -1,10 +1,13 @@
-package ru.riddle.model;
+package ru.riddle.model.util;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class ModelUtil {
 
@@ -19,5 +22,14 @@ public class ModelUtil {
         stage.setWidth(width);
         stage.setFullScreen(isFullScreen);
         stage.show();
+    }
+
+    public static Parent downloadRoot(FXMLs fxml){
+        try {
+            return FXMLLoader.load(ModelUtil.class.getResource(fxml.getPath()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
