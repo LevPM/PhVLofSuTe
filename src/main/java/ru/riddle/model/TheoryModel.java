@@ -25,16 +25,7 @@ public class TheoryModel{
                 }
                 root.setId("First");
 
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                double height = stage.getHeight();
-                double width = stage.getWidth();
-                boolean isFullScreen = stage.isFullScreen();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.setHeight(height);
-                stage.setWidth(width);
-                stage.setFullScreen(isFullScreen);
-                stage.show();
+                ModelUtil.changeScreen(event, root);
             }
         }
     }
@@ -52,16 +43,7 @@ public class TheoryModel{
                 }
                 root.setId("Second");
 
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                double height = stage.getHeight();
-                double width = stage.getWidth();
-                boolean isFullScreen = stage.isFullScreen();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.setHeight(height);
-                stage.setWidth(width);
-                stage.setFullScreen(isFullScreen);
-                stage.show();
+                ModelUtil.changeScreen(event, root);
             }
         }
     }
@@ -74,15 +56,6 @@ public class TheoryModel{
             e.printStackTrace();
         }
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        double height = stage.getHeight();
-        double width = stage.getWidth();
-        boolean isFullScreen = stage.isFullScreen();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.setFullScreen(isFullScreen);
-        stage.show();
+        ModelUtil.changeScreen(event, root);
     }
 }

@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import ru.riddle.model.ModelUtil;
 
 import java.io.IOException;
 
@@ -19,16 +20,7 @@ public class MainModel {
             e.printStackTrace();
         }
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        double height = stage.getHeight();
-        double width = stage.getWidth();
-        boolean isFullScreen = stage.isFullScreen();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.setFullScreen(isFullScreen);
-        stage.show();
+        ModelUtil.changeScreen(event, root);
     }
 
     public void openTheory(ActionEvent event){
@@ -40,15 +32,6 @@ public class MainModel {
         }
         root.setId("First");
 
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        double height = stage.getHeight();
-        double width = stage.getWidth();
-        boolean isFullScreen = stage.isFullScreen();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
-        stage.setFullScreen(isFullScreen);
-        stage.show();
+        ModelUtil.changeScreen(event, root);
     }
 }
