@@ -33,8 +33,4 @@ public class MainController {
     public void handleBackButtonAction(ActionEvent event) {
         model.backToMenuScreen(event);
     }
-
-    public void handleTheoryButtonAction(ActionEvent event) {
-        model.openTheory(event);
-    }
 }
