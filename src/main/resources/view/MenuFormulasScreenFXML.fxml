@@ -51,12 +51,12 @@
                   <Font name="Algerian" size="64.0" />
                </font>
             </Button>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back" textAlignment="CENTER" textFill="#6b0000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back" textAlignment="CENTER" textFill="#6b0000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Black" size="50.0" />
                </font>
             </Button>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-border-color: Black; -fx-background-color: HotPink; -fx-border-width: 3; -fx-background-radius: 100; -fx-border-radius: 100;" text="Theory" textAlignment="CENTER" textFill="#6b0000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTheoryButtonAction" style="-fx-border-color: Black; -fx-background-color: HotPink; -fx-border-width: 3; -fx-background-radius: 100; -fx-border-radius: 100;" text="Theory" textAlignment="CENTER" textFill="#6b0000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER">
                <font>
                   <Font name="Arial Black" size="72.0" />
                </font>
