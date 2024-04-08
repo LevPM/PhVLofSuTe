@@ -25,7 +25,6 @@ public class TheoryController {
 
     }
 
-    public void handleBackButtonAction(ActionEvent event) {
-
+    public void handlePreviousButtonAction(ActionEvent event) {
     }
 }
