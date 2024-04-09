@@ -19,7 +19,6 @@ public class TheoryModel{
             }
             case "Third" -> {
                 Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_SECOND);
-
                 ModelUtil.changeScreen(event, root);
             }
         }
@@ -46,7 +45,6 @@ public class TheoryModel{
 
     public void leaveTheory(ActionEvent event) {
         Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
-
         ModelUtil.changeScreen(event, root);
     }
 }
