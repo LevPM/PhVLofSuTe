@@ -25,15 +25,18 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="480.0" prefWidth="480.0" style="-fx-border-color: Navy; -fx-border-width: 3; -fx-background-color: LemonChiffon;" HBox.hgrow="ALWAYS">
                <children>
-                  <ImageView fitHeight="480.0" fitWidth="655.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="394.0" fitWidth="377.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/Image_ForcesOfSuTeWithL.png" />
                      </image>
                   </ImageView>
-               </children></VBox>
-            <VBox alignment="CENTER_LEFT" prefHeight="471.0" prefWidth="728.0" HBox.hgrow="ALWAYS">
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin></VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="480.0" prefWidth="480.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" prefHeight="201.0" prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Если на жидкость не действуют другие силы, жидкость будет стремиться принимать форму сферы, по касательной к ее поверхности действуют силы, стягивающие эту поверхность. " wrapText="true">
                      <font>
