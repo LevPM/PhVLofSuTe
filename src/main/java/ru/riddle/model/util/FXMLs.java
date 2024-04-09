@@ -7,6 +7,7 @@ public enum FXMLs {
     MENU_FORMULAS_SCREEN("/view/MenuFormulasScreenFXML.fxml"),
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
     THEORY_SECOND("/view/theory/TheorySecondFXML.fxml", "Second"),
+    THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third")
     ;
 
     private final String path;
