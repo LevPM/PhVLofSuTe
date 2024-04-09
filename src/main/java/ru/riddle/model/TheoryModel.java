@@ -25,14 +25,22 @@ public class TheoryModel{
     public void goToNextScreen(ActionEvent event) {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
+        ModelUtil.changeScreen(event,
         switch (id){
             case "First" -> {
                 Parent root = ModelUtil.downloadRoot(FXMLsPaths.THEORY_SECOND);
                 root.setId("Second");
-
-                ModelUtil.changeScreen(event, root);
+                yield root;
             }
+            case "Second" -> {
+                Parent root = ModelUtil.downloadRoot(FXMLsPaths.THEORY_SECOND);
+                root.setId("Third");
+                yield root;
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + id);
         }
+        );
+
     }
 
     public void leaveTheory(ActionEvent event) {
