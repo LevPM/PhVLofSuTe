@@ -27,7 +27,7 @@
          <children>
             <VBox alignment="CENTER_LEFT" prefHeight="471.0" prefWidth="210.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Чем больше площадь поверхности жидкости, тем больше молекул, которые обладают избыточной потенциальной энергией, и тем больше поверхностная энергия. " wrapText="true">
+                  <Label alignment="CENTER" prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Чем больше площадь поверхности жидкости, тем больше молекул, которые обладают избыточной потенциальной энергией, и тем больше поверхностная энергия. " wrapText="true">
                      <font>
                         <Font name="Calibri Bold" size="24.0" />
                      </font>
