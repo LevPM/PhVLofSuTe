@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -23,7 +25,7 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER_LEFT" prefHeight="471.0" prefWidth="210.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Чем больше площадь поверхности жидкости, тем больше молекул, которые обладают избыточной потенциальной энергией, и тем больше поверхностная энергия. " wrapText="true">
                      <font>
@@ -82,7 +84,17 @@
                   </Label>
                </children>
             </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER" style="-fx-background-color: LemonChiffon; -fx-border-color: Navy; -fx-border-width: 3;" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="2.8" scaleY="2.8" scaleZ="0.0">
+                     <image>
+                        <Image url="@images/Image_EnergyOfSuTe.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin></VBox>
          </children>
       </HBox>
       <BorderPane>
