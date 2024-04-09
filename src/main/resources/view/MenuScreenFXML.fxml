@@ -11,9 +11,9 @@
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label alignment="CENTER" text="Physics Simulator" textAlignment="JUSTIFY">
+            <Label alignment="CENTER" text="Physics Simulator" textAlignment="JUSTIFY" underline="true">
                <font>
-                  <Font name="Arial Black" size="72.0" />
+                  <Font name="Bank Gothic Light BT" size="72.0" />
                </font>
                <VBox.margin>
                   <Insets left="10.0" right="10.0" top="10.0" />
@@ -24,7 +24,7 @@
             </Label>
             <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="of Surface Tension" textAlignment="JUSTIFY">
                <font>
-                  <Font name="Arial Black" size="48.0" />
+                  <Font name="Corbel Bold" size="56.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" />
@@ -39,31 +39,31 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button id="settingsButton" fx:id="settingsOpenButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Settings" textFill="DARKOLIVEGREEN">
+                  <Button id="settingsButton" fx:id="settingsOpenButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Settings" textFill="MAROON">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="System Bold" size="36.0" />
                      </font>
                   </Button>
-                  <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" style="-fx-border-color: DarkRed; -fx-border-width: 2; -fx-background-color: Goldenrod;" text="Start" textAlignment="JUSTIFY" textFill="MAROON">
+                  <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" style="-fx-border-color: Navy; -fx-border-width: 2; -fx-background-color: Goldenrod; -fx-background-radius: 50; -fx-border-radius: 50;" text="Start" textAlignment="JUSTIFY" textFill="NAVY">
                      <font>
-                        <Font size="48.0" />
+                        <Font name="System Bold Italic" size="48.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button id="authorsButton" fx:id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Authors" textFill="DARKOLIVEGREEN">
+                  <Button id="authorsButton" fx:id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Authors" textFill="MAROON">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="System Bold" size="36.0" />
                      </font>
                   </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" style="-fx-border-color: DarkGreen; -fx-border-width: 2; -fx-background-color: DarkKhaki;" text="Close" textFill="DARKOLIVEGREEN">
+                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Close" textFill="MAROON">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="System Bold" size="36.0" />
                      </font>
                   </Button>
                </children>
