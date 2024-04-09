@@ -11,20 +11,31 @@
 
 <VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: papayawhip;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.controller.TheoryController">
    <children>
+      <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Lavender;" text="Поверхностное натяжение" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="40.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER" prefHeight="186.0" prefWidth="850.0" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Поверхностное натяжение — это величина, которая показывает стремление жидкости сократить свою свободную поверхность, то есть уменьшить избыток своей потенциальной энергии на границе раздела с газообразной фазой. " wrapText="true" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="27.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
       <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <Label alignment="CENTER" prefWidth="700.0" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Поверхностное натяжение — это величина, которая показывает стремление жидкости сократить свою свободную поверхность, то есть уменьшить избыток своей потенциальной энергии на границе раздела с газообразной фазой. " wrapText="true">
-                     <font>
-                        <Font name="Calibri Bold" size="27.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </padding>
-                  </Label>
-               </children>
-            </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
                   <Label alignment="CENTER" prefWidth="700.0" style="-fx-border-radius: 20; -fx-border-color: DarkGreen; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: PaleGreen;" text="Силы поверхностного натяжения действуют вдоль поверхности жидкости, стремясь сократить ее площадь. Как будто жидкость заключена в упругую пленку, которая стремится сжать свое содержимое." wrapText="true">
