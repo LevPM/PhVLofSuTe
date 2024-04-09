@@ -25,11 +25,18 @@ public class ModelUtil {
     }
 
     public static Parent downloadRoot(FXMLs fxml){
+        Parent root = null;
+
         try {
-            return FXMLLoader.load(ModelUtil.class.getResource(fxml.getPath()));
+            root = FXMLLoader.load(ModelUtil.class.getResource(fxml.getPath()));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+
+        if(fxml.getId() != null){
+            root.setId(fxml.getId());
+        }
+
+        return root;
     }
 }
