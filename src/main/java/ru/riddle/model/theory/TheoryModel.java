@@ -1,4 +1,4 @@
-package ru.riddle.model;
+package ru.riddle.model.theory;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
