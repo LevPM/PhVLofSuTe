@@ -14,13 +14,13 @@ public class TheoryModel{
 
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
-                    switch (id){
-                        case "Second" -> FXMLs.THEORY_FIRST;
-                        case "Third" -> FXMLs.THEORY_SECOND;
-                        case "ExamplesMenu" -> FXMLs.THEORY_THIRD;
-                        default -> throw new IllegalStateException("Unexpected value: " + id);
-                    }
-                    ));
+                        switch (id){
+                            case "Second" -> FXMLs.THEORY_FIRST;
+                            case "Third" -> FXMLs.THEORY_SECOND;
+                            case "ExamplesMenu" -> FXMLs.THEORY_THIRD;
+                            default -> throw new IllegalStateException("Unexpected value: " + id);
+                        }
+                        ));
         }
 
     public void goToNextScreen(ActionEvent event) {
@@ -28,12 +28,12 @@ public class TheoryModel{
 
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
-                    switch (id) {
-                        case "First" -> FXMLs.THEORY_SECOND;
-                        case "Second" -> FXMLs.THEORY_THIRD;
-                        case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
-                        default -> throw new IllegalStateException("Unexpected value: " + id);
-                    }));
+                        switch (id) {
+                            case "First" -> FXMLs.THEORY_SECOND;
+                            case "Second" -> FXMLs.THEORY_THIRD;
+                            case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
+                            default -> throw new IllegalStateException("Unexpected value: " + id);
+                        }));
 
     }
 

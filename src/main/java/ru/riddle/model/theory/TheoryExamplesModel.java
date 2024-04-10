@@ -13,13 +13,13 @@ public class TheoryExamplesModel {
 
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
-                switch (id){
-                    case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_1;
-                    case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
-                    case "FirstExample4" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
-                    default -> throw new IllegalStateException("Unexpected value: " + id);
-                }
-                ));
+                        switch (id){
+                            case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_1;
+                            case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                            case "FirstExample4" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
+                            default -> throw new IllegalStateException("Unexpected value: " + id);
+                        }
+                        ));
     }
 
     public void goToNextScreen(ActionEvent event) {
@@ -27,14 +27,13 @@ public class TheoryExamplesModel {
 
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
-                switch (id){
-                    case "FirstExample1" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
-                    case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
-                    case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_4;
-                    default -> throw new IllegalStateException("Unexpected value: " + id);
-                }
-                ));
-
+                        switch (id){
+                            case "FirstExample1" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                            case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
+                            case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_4;
+                            default -> throw new IllegalStateException("Unexpected value: " + id);
+                        }
+                        ));
     }
 
     public void backToExamplesMenu(ActionEvent event){
