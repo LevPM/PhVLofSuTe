@@ -9,6 +9,7 @@ public enum FXMLs {
     THEORY_SECOND("/view/theory/TheorySecondFXML.fxml", "Second"),
     THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third"),
     THEORY_EXAMPLES_MENU("/view/theory/TheoryExamplesMenu.fxml", "ExamplesMenu"),
+
     THEORY_FIRST_EXAMPLE_1("/view/theory/examples/firstTask/TheoryFirstExample1.fxml", "FirstExample1"),
     THEORY_FIRST_EXAMPLE_2("/view/theory/examples/firstTask/TheoryFirstExample2.fxml", "FirstExample2"),
     THEORY_FIRST_EXAMPLE_3("/view/theory/examples/firstTask/TheoryFirstExample3.fxml", "FirstExample3"),
