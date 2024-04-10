@@ -67,7 +67,7 @@
                   </Label>
                   <VBox alignment="CENTER" prefHeight="377.0" prefWidth="816.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="На кольцо действуют сила тяжести, сила поверхностного натяжения и внешняя сила, с которой отрывают кольцо от раствора. " wrapText="true" VBox.vgrow="ALWAYS">
+                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="1) На кольцо действуют сила тяжести, сила поверхностного натяжения и внешняя сила, с которой отрывают кольцо от раствора. " wrapText="true" VBox.vgrow="ALWAYS">
                            <font>
                               <Font name="Calibri Bold" size="24.0" />
                            </font>
@@ -78,7 +78,7 @@
                               <Insets left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="Так как кольцо соприкасается с раствором и внешней и внутренней сторонами, то сила поверхностного натяжения удваивается:&#10;Fs = 2σl " wrapText="true" VBox.vgrow="ALWAYS">
+                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="2) Так как кольцо соприкасается с раствором и внешней и внутренней сторонами, то сила поверхностного натяжения удваивается:&#10;Fₛ = 2σl " wrapText="true" VBox.vgrow="ALWAYS">
                            <font>
                               <Font name="Calibri Bold" size="24.0" />
                            </font>
