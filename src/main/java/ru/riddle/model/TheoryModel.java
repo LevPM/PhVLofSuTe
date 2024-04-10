@@ -29,6 +29,10 @@ public class TheoryModel{
                 Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_FOURTH);
                 ModelUtil.changeScreen(event, root);
             }
+            case "Sixth" -> {
+                Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_FIFTH);
+                ModelUtil.changeScreen(event, root);
+            }
         }
     }
 
@@ -41,6 +45,7 @@ public class TheoryModel{
             case "Second" -> ModelUtil.downloadRoot(FXMLs.THEORY_THIRD);
             case "Third" -> ModelUtil.downloadRoot(FXMLs.THEORY_FOURTH);
             case "Fourth" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIFTH);
+            case "Fifth" -> ModelUtil.downloadRoot(FXMLs.THEORY_SIXTH);
             default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
