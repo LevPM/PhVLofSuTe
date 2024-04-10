@@ -8,10 +8,11 @@ public enum FXMLs {
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
     THEORY_SECOND("/view/theory/TheorySecondFXML.fxml", "Second"),
     THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third"),
-    THEORY_FOURTH("/view/theory/examples/firstTask/TheoryFirstExample1.fxml", "Fourth"),
-    THEORY_FIFTH("/view/theory/examples/firstTask/TheoryFirstExample2.fxml", "Fifth"),
-    THEORY_SIXTH("/view/theory/examples/firstTask/TheoryFirstExample3.fxml", "Sixth"),
-    THEORY_SEVENTH("/view/theory/examples/firstTask/TheoryFirstExample4.fxml", "Seventh")
+    THEORY_EXAMPLES_MENU("/view/theory/TheoryExamplesMenu.fxml", "ExamplesMenu"),
+    THEORY_FIRST_EXAMPLE_1("/view/theory/examples/firstTask/TheoryFirstExample1.fxml", "FirstExample"),
+    THEORY_FIRST_EXAMPLE_2("/view/theory/examples/firstTask/TheoryFirstExample2.fxml", "SecondExample"),
+    THEORY_FIRST_EXAMPLE_3("/view/theory/examples/firstTask/TheoryFirstExample3.fxml", "ThirdExample"),
+    THEORY_FIRST_EXAMPLE_4("/view/theory/examples/firstTask/TheoryFirstExample4.fxml", "FourthExample")
     ;
 
     private final String path;

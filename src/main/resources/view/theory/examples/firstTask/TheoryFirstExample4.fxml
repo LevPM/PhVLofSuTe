@@ -108,7 +108,7 @@
       </HBox>
       <BorderPane>
          <right>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNextButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Next" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleNextButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Next" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
                <font>
                   <Font name="Arial Black" size="50.0" />
                </font>

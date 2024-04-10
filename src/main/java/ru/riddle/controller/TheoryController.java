@@ -1,11 +1,14 @@
 package ru.riddle.controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import ru.riddle.model.theory.TheoryModel;
+import ru.riddle.model.util.FXMLs;
+import ru.riddle.model.util.ModelUtil;
 
 public class TheoryController {
 
-    private TheoryModel model;
+    private final TheoryModel model;
 
     public TheoryController(){
         model = new TheoryModel();
@@ -21,5 +24,16 @@ public class TheoryController {
 
     public void handlePreviousButtonAction(ActionEvent event) {
         model.backToPreviousScreen(event);
+    }
+
+    public void handleExampleButtonAction(ActionEvent event) {
+        System.out.println("ok1");
+        String id = ((Node) (event.getSource())).getId();
+        System.out.println("ok");
+        ModelUtil.changeScreen(event,
+                switch (id){
+                    case "FirstExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_1);
+                    default -> throw new IllegalStateException("Unexpected value: " + id);
+                });
     }
 }
