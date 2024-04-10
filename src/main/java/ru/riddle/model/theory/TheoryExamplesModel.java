@@ -13,9 +13,9 @@ public class TheoryExamplesModel {
 
         ModelUtil.changeScreen(event,
                 switch (id){
-                    case "SecondExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_1);
-                    case "ThirdExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
-                    case "FourthExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
+                    case "FirstExample2" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_1);
+                    case "FirstExample3" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
+                    case "FirstExample4" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
                     default -> throw new IllegalStateException("Unexpected value: " + id);
                 });
     }
@@ -25,9 +25,9 @@ public class TheoryExamplesModel {
 
         ModelUtil.changeScreen(event,
                 switch (id){
-                    case "FirstExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
-                    case "SecondExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
-                    case "ThirdExample" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_4);
+                    case "FirstExample1" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
+                    case "FirstExample2" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
+                    case "FirstExample3" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_4);
                     default -> throw new IllegalStateException("Unexpected value: " + id);
                 }
         );
