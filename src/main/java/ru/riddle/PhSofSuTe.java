@@ -1,26 +1,21 @@
 package ru.riddle;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import ru.riddle.model.util.FXMLs;
+import ru.riddle.model.util.ModelUtil;
 
 public class PhSofSuTe extends Application {
 
     @Override
     public void start(Stage primaryStage){
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("/view/MenuScreenFXML.fxml"));
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("PhSofSuTe");
-            primaryStage.show();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_SCREEN);
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("PhSofSuTe");
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
