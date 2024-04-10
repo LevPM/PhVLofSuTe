@@ -21,8 +21,10 @@ public enum FXMLs {
     FXMLs(String path) {
         this.path = path;
     }
+
     FXMLs(String path, String id) {
-        this.path = path; this.id = id;
+        this.path = path;
+        this.id = id;
     }
 
     public String getPath() {
