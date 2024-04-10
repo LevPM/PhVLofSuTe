@@ -32,13 +32,13 @@ public class TheoryModel{
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
         ModelUtil.changeScreen(event,
-        switch (id){
-            case "First" -> ModelUtil.downloadRoot(FXMLs.THEORY_SECOND);
-            case "Second" -> ModelUtil.downloadRoot(FXMLs.THEORY_THIRD);
-            case "Third" -> ModelUtil.downloadRoot(FXMLs.THEORY_EXAMPLES_MENU);
-            default -> throw new IllegalStateException("Unexpected value: " + id);
-        }
-        );
+                ModelUtil.downloadRoot(
+                    switch (id) {
+                        case "First" -> FXMLs.THEORY_SECOND;
+                        case "Second" -> FXMLs.THEORY_THIRD;
+                        case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
+                        default -> throw new IllegalStateException("Unexpected value: " + id);
+                    }));
 
     }
 

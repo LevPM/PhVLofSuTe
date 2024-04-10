@@ -12,25 +12,28 @@ public class TheoryExamplesModel {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
         ModelUtil.changeScreen(event,
+                ModelUtil.downloadRoot(
                 switch (id){
-                    case "FirstExample2" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_1);
-                    case "FirstExample3" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
-                    case "FirstExample4" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
+                    case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_1;
+                    case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                    case "FirstExample4" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
                     default -> throw new IllegalStateException("Unexpected value: " + id);
-                });
+                }
+                ));
     }
 
     public void goToNextScreen(ActionEvent event) {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
         ModelUtil.changeScreen(event,
+                ModelUtil.downloadRoot(
                 switch (id){
-                    case "FirstExample1" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_2);
-                    case "FirstExample2" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_3);
-                    case "FirstExample3" -> ModelUtil.downloadRoot(FXMLs.THEORY_FIRST_EXAMPLE_4);
+                    case "FirstExample1" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                    case "FirstExample2" -> FXMLs.THEORY_FIRST_EXAMPLE_3;
+                    case "FirstExample3" -> FXMLs.THEORY_FIRST_EXAMPLE_4;
                     default -> throw new IllegalStateException("Unexpected value: " + id);
                 }
-        );
+                ));
 
     }
 
