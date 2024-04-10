@@ -10,7 +10,8 @@ public enum FXMLs {
     THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third"),
     THEORY_FOURTH("/view/theory/TheoryFourthFXML.fxml", "Fourth"),
     THEORY_FIFTH("/view/theory/TheoryFifthFXML.fxml", "Fifth"),
-    THEORY_SIXTH("/view/theory/TheorySixthFXML.fxml", "Sixth")
+    THEORY_SIXTH("/view/theory/TheorySixthFXML.fxml", "Sixth"),
+    THEORY_SEVENTH("/view/theory/TheorySeventhFXML.fxml", "Seventh")
     ;
 
     private final String path;
