@@ -7,7 +7,8 @@ public enum FXMLs {
     MENU_FORMULAS_SCREEN("/view/MenuFormulasScreenFXML.fxml"),
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
     THEORY_SECOND("/view/theory/TheorySecondFXML.fxml", "Second"),
-    THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third")
+    THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third"),
+    THEORY_FOURTH("/view/theory/TheoryFourthFXML.fxml", "Fourth")
     ;
 
     private final String path;
@@ -18,7 +19,7 @@ public enum FXMLs {
     }
     FXMLs(String path, String id) {
         this.path = path; this.id = id;
-    };
+    }
 
     public String getPath() {
         return path;
