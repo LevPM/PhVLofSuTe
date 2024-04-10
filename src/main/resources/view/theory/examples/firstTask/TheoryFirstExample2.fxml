@@ -117,7 +117,7 @@
             </Button>
          </left>
          <center>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLeaveButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Leave" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back to Menu" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
                <font>
                   <Font name="Arial Black" size="50.0" />
                </font>

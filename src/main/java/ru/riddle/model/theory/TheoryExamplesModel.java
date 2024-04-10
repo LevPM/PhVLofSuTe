@@ -37,7 +37,7 @@ public class TheoryExamplesModel {
 
     }
 
-    public void leaveExample(ActionEvent event){
+    public void backToExamplesMenu(ActionEvent event){
         Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_EXAMPLES_MENU);
         ModelUtil.changeScreen(event, root);
     }

@@ -19,7 +19,7 @@ public class TheoryExamplesController {
         model.backToPreviousScreen(event);
     }
 
-    public void handleLeaveButtonAction(ActionEvent event) {
-        model.leaveExample(event);
+    public void handleBackButtonAction(ActionEvent event) {
+        model.backToExamplesMenu(event);
     }
 }
