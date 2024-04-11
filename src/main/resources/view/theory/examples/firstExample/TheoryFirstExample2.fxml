@@ -30,20 +30,20 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
             <GridPane HBox.hgrow="ALWAYS">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1150.0" minWidth="10.0" prefWidth="789.0" />
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1150.0" minWidth="10.0" prefWidth="789.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="678.0" minWidth="10.0" prefWidth="442.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="356.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="356.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
                   <VBox alignment="CENTER" prefHeight="150.0" prefWidth="34.0" style="-fx-border-color: Navy; -fx-border-width: 3; -fx-background-color: LemonChiffon;" GridPane.columnIndex="1" GridPane.rowSpan="2">
                      <children>
                         <ImageView fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                            <image>
-                              <Image url="@../../images/Image_FirstTask.png" />
+                              <Image url="@../../images/Image_FirstExample.png" />
                            </image>
                            <viewport>
                               <Rectangle2D />
@@ -54,28 +54,46 @@
                         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                      </GridPane.margin>
                   </VBox>
-                  <Label alignment="CENTER" prefHeight="247.0" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="Тонкое алюминиевое кольцо радиусом 7,8 см соприкасается с мыльным раствором. Каким усилием можно оторвать кольцо от раствора? Температуру раствора считать комнатной. Масса кольца 7 г. Коэффициент поверхностного натяжения мыльного раствора при комнатной температуре равен 4 × 10-2 Н/м. " wrapText="true" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: GreenYellow;" text="Решение" wrapText="true">
                      <font>
-                        <Font name="Calibri Bold" size="24.0" />
+                        <Font name="Calibri Bold" size="36.0" />
                      </font>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                      <GridPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER" prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: GreenYellow;" text="Условие" wrapText="true" GridPane.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Calibri Bold" size="36.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
-                     </padding>
+                  <VBox alignment="CENTER" prefHeight="377.0" prefWidth="816.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="1) На кольцо действуют сила тяжести, сила поверхностного натяжения и внешняя сила, с которой отрывают кольцо от раствора. " wrapText="true" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Calibri Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="2) Так как кольцо соприкасается с раствором и внешней и внутренней сторонами, то сила поверхностного натяжения удваивается:&#10;Fₛ = 2σl " wrapText="true" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Calibri Bold" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
                      <GridPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets />
                      </GridPane.margin>
-                  </Label>
+                  </VBox>
                </children>
             </GridPane>
          </children>
@@ -92,7 +110,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
          <left>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handlePreviousButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Previous" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
+            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePreviousButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Previous" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
                <font>
                   <Font name="Arial Black" size="50.0" />
                </font>
