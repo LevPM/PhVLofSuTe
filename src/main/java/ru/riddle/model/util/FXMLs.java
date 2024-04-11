@@ -1,5 +1,7 @@
 package ru.riddle.model.util;
 
+import java.util.List;
+
 public enum FXMLs {
     MENU_SCREEN("/view/MenuScreenFXML.fxml"),
     SETTINGS_SCREEN("/view/SettingsScreenFXML.fxml"),
@@ -22,6 +24,20 @@ public enum FXMLs {
     THEORY_SECOND_EXAMPLE_3("/resources/view/theory/examples/secondTask/TheorySecondExample3.fxml", "SecondExample3"),
     THEORY_SECOND_EXAMPLE_4("/resources/view/theory/examples/secondTask/TheorySecondExample4.fxml", "SecondExample4"),
     ;
+
+    public static final List<FXMLs> firstExample = List.of(
+            THEORY_FIRST_EXAMPLE_1,
+            THEORY_FIRST_EXAMPLE_2,
+            THEORY_FIRST_EXAMPLE_3,
+            THEORY_FIRST_EXAMPLE_4
+    );
+
+    public static final List<FXMLs> secondExample = List.of(
+            THEORY_SECOND_EXAMPLE_1,
+            THEORY_SECOND_EXAMPLE_2,
+            THEORY_SECOND_EXAMPLE_3,
+            THEORY_SECOND_EXAMPLE_4
+    );
 
     private final String path;
     private String id;
