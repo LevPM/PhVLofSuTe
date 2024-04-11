@@ -89,7 +89,7 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="Ответ: &#10;Для того, чтобы оторвать кольцо от раствора, необходимо приложить силу в 0,11 " wrapText="true">
+                        <Label prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="Ответ: &#10;Для того, чтобы оторвать кольцо от раствора, необходимо приложить силу в 0,11 Н" wrapText="true">
                            <font>
                               <Font name="Calibri Bold" size="24.0" />
                            </font>
