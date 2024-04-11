@@ -51,7 +51,7 @@
                         </ImageView>
                      </children>
                      <GridPane.margin>
-                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </VBox>
                   <Label alignment="CENTER" prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="С помощью динамометра проволочное кольцо массой 1,5 г и диаметром 5 см отрывают от поверхности жидкости. Динамометр в момент отрыва показывает 50 мН. Чему равно поверхностное натяжение жидкости?" wrapText="true" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
