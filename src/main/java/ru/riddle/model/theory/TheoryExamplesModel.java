@@ -6,30 +6,17 @@ import javafx.scene.Parent;
 import ru.riddle.model.util.FXMLs;
 import ru.riddle.model.util.ModelUtil;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class TheoryExamplesModel {
-
-    private final List<FXMLs> firstExample = new ArrayList<>();
-    {
-        firstExample.addAll(Arrays.asList(
-                FXMLs.THEORY_FIRST_EXAMPLE_1,
-                FXMLs.THEORY_FIRST_EXAMPLE_2,
-                FXMLs.THEORY_FIRST_EXAMPLE_3,
-                FXMLs.THEORY_FIRST_EXAMPLE_4
-        ));
-    }
 
     public void backToPreviousScreen(ActionEvent event) {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
+        final int numberOfPreviousFXML = Integer.parseInt(id.substring(id.length() - 1)) - 2;
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
                         switch (id.substring(0, id.length() - 1)){
-                            case "FirstExample" -> firstExample.get(Integer.parseInt(id.substring(id.length() - 1)) - 2);
-                            case "SecondExample" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                            case "FirstExample" -> FXMLs.firstExample.get(numberOfPreviousFXML);
+                            case "SecondExample" -> FXMLs.secondExample.get(numberOfPreviousFXML);
                             default -> throw new IllegalStateException("Unexpected value: " + id);
                         }
                         ));
@@ -38,11 +25,12 @@ public class TheoryExamplesModel {
     public void goToNextScreen(ActionEvent event) {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
+        final int numberOfNextFXML = Integer.parseInt(id.substring(id.length() - 1));
         ModelUtil.changeScreen(event,
                 ModelUtil.downloadRoot(
                         switch (id.substring(0, id.length() - 1)){
-                            case "FirstExample" -> firstExample.get(Integer.parseInt(id.substring(id.length() - 1)));
-                            case "SecondExample" -> FXMLs.THEORY_FIRST_EXAMPLE_2;
+                            case "FirstExample" -> FXMLs.firstExample.get(numberOfNextFXML);
+                            case "SecondExample" -> FXMLs.secondExample.get(numberOfNextFXML);
                             default -> throw new IllegalStateException("Unexpected value: " + id);
                         }
                         ));
