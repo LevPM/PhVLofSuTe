@@ -17,6 +17,7 @@ public class TheoryExamplesModel {
                         case "SecondExample" -> FXMLs.secondExample.get(numberOfPreviousFXML);
                         case "ThirdExample" -> FXMLs.thirdExample.get(numberOfPreviousFXML);
                         case "FourthExample" -> FXMLs.fourthExample.get(numberOfPreviousFXML);
+                        case "FifthExample" -> FXMLs.fifthExample.get(numberOfPreviousFXML);
                         default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
@@ -32,6 +33,7 @@ public class TheoryExamplesModel {
                         case "SecondExample" -> FXMLs.secondExample.get(numberOfNextFXML);
                         case "ThirdExample" -> FXMLs.thirdExample.get(numberOfNextFXML);
                         case "FourthExample" -> FXMLs.fourthExample.get(numberOfNextFXML);
+                        case "FifthExample" -> FXMLs.fifthExample.get(numberOfNextFXML);
                         default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
