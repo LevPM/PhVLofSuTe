@@ -1,10 +1,7 @@
 package ru.riddle.controller;
 
 import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import ru.riddle.model.theory.TheoryModel;
-import ru.riddle.model.util.FXMLs;
-import ru.riddle.model.util.ModelUtil;
 
 public class TheoryController {
 

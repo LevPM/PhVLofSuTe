@@ -2,7 +2,6 @@ package ru.riddle.model.theory;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import ru.riddle.model.util.FXMLs;
 import ru.riddle.model.util.ModelUtil;
 
