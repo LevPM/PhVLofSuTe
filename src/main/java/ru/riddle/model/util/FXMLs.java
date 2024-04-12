@@ -23,6 +23,11 @@ public enum FXMLs {
     THEORY_SECOND_EXAMPLE_2("/view/theory/examples/secondExample/TheorySecondExample2.fxml", "SecondExample2"),
     THEORY_SECOND_EXAMPLE_3("/view/theory/examples/secondExample/TheorySecondExample3.fxml", "SecondExample3"),
     THEORY_SECOND_EXAMPLE_4("/view/theory/examples/secondExample/TheorySecondExample4.fxml", "SecondExample4"),
+
+    THEORY_THIRD_EXAMPLE_1("/view/theory/examples/ThirdExample/TheoryThirdExample1.fxml", "ThirdExample1"),
+    THEORY_THIRD_EXAMPLE_2("/view/theory/examples/ThirdExample/TheoryThirdExample2.fxml", "ThirdExample2"),
+    THEORY_THIRD_EXAMPLE_3("/view/theory/examples/ThirdExample/TheoryThirdExample3.fxml", "ThirdExample3"),
+    THEORY_THIRD_EXAMPLE_4("/view/theory/examples/ThirdExample/TheoryThirdExample4.fxml", "ThirdExample4"),
     ;
 
     public static final List<FXMLs> firstExample = List.of(
@@ -37,6 +42,13 @@ public enum FXMLs {
             THEORY_SECOND_EXAMPLE_2,
             THEORY_SECOND_EXAMPLE_3,
             THEORY_SECOND_EXAMPLE_4
+    );
+
+    public static final List<FXMLs> thirdExample = List.of(
+            THEORY_THIRD_EXAMPLE_1,
+            THEORY_THIRD_EXAMPLE_2,
+            THEORY_THIRD_EXAMPLE_3,
+            THEORY_THIRD_EXAMPLE_4
     );
 
     private final String path;
