@@ -55,7 +55,7 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </GridPane.margin>
                   </VBox>
-                  <Label alignment="CENTER" prefHeight="258.0" prefWidth="407.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="После соприкосновения трубки с поверхностью жидкости (воды) весы будут перевешивать на её сторону. Для поддержания равновесия на противоположенную сторону положили доп.груз. массой 0,14 г. Найдите радиус трубки." wrapText="true" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <Label prefHeight="258.0" prefWidth="407.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="После соприкосновения трубки с поверхностью жидкости (воды) весы будут перевешивать на её сторону. Для поддержания равновесия на противоположенную сторону положили доп.груз. массой 0,14 г. Найдите радиус трубки." wrapText="true" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                      <font>
                         <Font name="Calibri Bold" size="24.0" />
                      </font>
