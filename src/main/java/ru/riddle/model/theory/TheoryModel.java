@@ -13,46 +13,42 @@ public class TheoryModel{
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
         ModelUtil.changeScreen(event,
-                ModelUtil.downloadRoot(
-                        switch (id){
-                            case "Second" -> FXMLs.THEORY_FIRST;
-                            case "Third" -> FXMLs.THEORY_SECOND;
-                            case "ExamplesMenu" -> FXMLs.THEORY_THIRD;
-                            default -> throw new IllegalStateException("Unexpected value: " + id);
-                        }
-                        ));
+                switch (id){
+                        case "Second" -> FXMLs.THEORY_FIRST;
+                        case "Third" -> FXMLs.THEORY_SECOND;
+                        case "ExamplesMenu" -> FXMLs.THEORY_THIRD;
+                        default -> throw new IllegalStateException("Unexpected value: " + id);
         }
+        );
+    }
 
     public void goToNextScreen(ActionEvent event) {
         String id = ((Node) event.getSource()).getScene().getRoot().getId();
 
         ModelUtil.changeScreen(event,
-                ModelUtil.downloadRoot(
-                        switch (id) {
-                            case "First" -> FXMLs.THEORY_SECOND;
-                            case "Second" -> FXMLs.THEORY_THIRD;
-                            case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
-                            default -> throw new IllegalStateException("Unexpected value: " + id);
-                        }));
+                switch (id) {
+                    case "First" -> FXMLs.THEORY_SECOND;
+                    case "Second" -> FXMLs.THEORY_THIRD;
+                    case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
+                    default -> throw new IllegalStateException("Unexpected value: " + id);
+        });
 
     }
 
     public void openExample(ActionEvent event){
         String id = ((Node) (event.getSource())).getId();
         ModelUtil.changeScreen(event,
-                ModelUtil.downloadRoot(
-                        switch (id){
-                            case "FirstExample" -> FXMLs.firstExample.getFirst();
-                            case "SecondExample" -> FXMLs.secondExample.getFirst();
-                            case "ThirdExample" -> FXMLs.thirdExample.getFirst();
-                            case "FourthExample" -> FXMLs.fourthExample.getFirst();
-                            default -> throw new IllegalStateException("Unexpected value: " + id);
-                        })
+                switch (id){
+                        case "FirstExample" -> FXMLs.firstExample.getFirst();
+                        case "SecondExample" -> FXMLs.secondExample.getFirst();
+                        case "ThirdExample" -> FXMLs.thirdExample.getFirst();
+                        case "FourthExample" -> FXMLs.fourthExample.getFirst();
+                        default -> throw new IllegalStateException("Unexpected value: " + id);
+        }
         );
     }
 
     public void leaveTheory(ActionEvent event) {
-        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.MENU_FORMULAS_SCREEN);
     }
 }

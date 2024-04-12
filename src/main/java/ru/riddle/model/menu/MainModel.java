@@ -8,14 +8,10 @@ import ru.riddle.model.util.ModelUtil;
 public class MainModel {
 
     public void backToMenuScreen(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_SCREEN);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.MENU_SCREEN);
     }
 
     public void openTheory(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.THEORY_FIRST);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.THEORY_FIRST);
     }
 }

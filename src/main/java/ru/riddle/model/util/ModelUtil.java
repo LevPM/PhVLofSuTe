@@ -11,12 +11,12 @@ import java.io.IOException;
 
 public class ModelUtil {
 
-    public static void changeScreen(ActionEvent event, Parent root){
+    public static void changeScreen(ActionEvent event, FXMLs fxml){
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         double height = stage.getHeight();
         double width = stage.getWidth();
         boolean isFullScreen = stage.isFullScreen();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(downloadRoot(fxml));
         stage.setScene(scene);
         stage.setHeight(height);
         stage.setWidth(width);

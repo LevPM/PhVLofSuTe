@@ -9,21 +9,15 @@ import ru.riddle.model.util.ModelUtil;
 public class MenuModel {
 
     public void openSettingsScreen(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.SETTINGS_SCREEN);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.SETTINGS_SCREEN);
     }
 
     public void openAuthorsScreen(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.AUTHORS_SCREEN);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.AUTHORS_SCREEN);
     }
 
     public void backToMenuScreen(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_SCREEN);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.MENU_SCREEN);
     }
 
     public void closeApp(){
@@ -32,8 +26,6 @@ public class MenuModel {
     }
 
     public void openMenuFormulasScreen(ActionEvent event){
-        Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
-
-        ModelUtil.changeScreen(event, root);
+        ModelUtil.changeScreen(event, FXMLs.MENU_FORMULAS_SCREEN);
     }
 }
