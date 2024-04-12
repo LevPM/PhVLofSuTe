@@ -33,7 +33,9 @@ public class TheoryController {
                         switch (id){
                             case "FirstExample" -> FXMLs.firstExample.getFirst();
                             case "SecondExample" -> FXMLs.secondExample.getFirst();
+                            case "ThirdExample" -> FXMLs.thirdExample.getFirst();
                             default -> throw new IllegalStateException("Unexpected value: " + id);
-                        }));
+                        })
+        );
     }
 }
