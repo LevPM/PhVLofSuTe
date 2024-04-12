@@ -89,7 +89,7 @@
                               <Insets left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="3) Fₚ = σl, где l = 𝜋d. то есть :&#10;Fₚ = σ𝜋d" wrapText="true" VBox.vgrow="ALWAYS">
+                        <Label prefWidth="736.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="3) Fₚ = σl, где l = 2𝜋d. то есть :&#10;Fₚ = 2σ𝜋d" wrapText="true" VBox.vgrow="ALWAYS">
                            <font>
                               <Font name="Calibri Bold" size="24.0" />
                            </font>
