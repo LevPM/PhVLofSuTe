@@ -27,16 +27,6 @@ public class TheoryController {
     }
 
     public void handleExampleButtonAction(ActionEvent event) {
-        String id = ((Node) (event.getSource())).getId();
-        ModelUtil.changeScreen(event,
-                ModelUtil.downloadRoot(
-                        switch (id){
-                            case "FirstExample" -> FXMLs.firstExample.getFirst();
-                            case "SecondExample" -> FXMLs.secondExample.getFirst();
-                            case "ThirdExample" -> FXMLs.thirdExample.getFirst();
-                            case "FourthExample" -> FXMLs.fourthExample.getFirst();
-                            default -> throw new IllegalStateException("Unexpected value: " + id);
-                        })
-        );
+        model.openExample(event);
     }
 }

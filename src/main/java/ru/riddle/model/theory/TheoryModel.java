@@ -37,6 +37,20 @@ public class TheoryModel{
 
     }
 
+    public void openExample(ActionEvent event){
+        String id = ((Node) (event.getSource())).getId();
+        ModelUtil.changeScreen(event,
+                ModelUtil.downloadRoot(
+                        switch (id){
+                            case "FirstExample" -> FXMLs.firstExample.getFirst();
+                            case "SecondExample" -> FXMLs.secondExample.getFirst();
+                            case "ThirdExample" -> FXMLs.thirdExample.getFirst();
+                            case "FourthExample" -> FXMLs.fourthExample.getFirst();
+                            default -> throw new IllegalStateException("Unexpected value: " + id);
+                        })
+        );
+    }
+
     public void leaveTheory(ActionEvent event) {
         Parent root = ModelUtil.downloadRoot(FXMLs.MENU_FORMULAS_SCREEN);
         ModelUtil.changeScreen(event, root);
