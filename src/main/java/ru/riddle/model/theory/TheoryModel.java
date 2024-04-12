@@ -42,6 +42,7 @@ public class TheoryModel{
                         case "SecondExample" -> FXMLs.secondExample.getFirst();
                         case "ThirdExample" -> FXMLs.thirdExample.getFirst();
                         case "FourthExample" -> FXMLs.fourthExample.getFirst();
+                        case "FifthExample" -> FXMLs.fifthExample.getFirst();
                         default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
