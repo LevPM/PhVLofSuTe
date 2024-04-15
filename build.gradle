@@ -5,8 +5,11 @@ plugins {
     id 'edu.sc.seis.launch4j' version '3.0.5'
 }
 
+group = 'ru.riddle'
+version = '0.1.1'
+
 launch4j {
-    outfile = 'PhSofSuTe.exe'
+    outfile = 'PhSofSuTe_v' + project.version + '.exe'
     mainClassName = 'ru.riddle.AppLauncher'
     jreMinVersion = '21'
     outputDir = "PhSofSuTeEXE"
@@ -16,9 +19,6 @@ launch4j {
 application {
     mainClass.set("ru.riddle.AppLauncher")
 }
-
-group = 'ru.riddle'
-version = '0.0.1'
 
 repositories {
     mavenCentral()
