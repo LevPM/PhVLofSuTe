@@ -1,4 +1,4 @@
-package ru.riddle.PhSofSuTe.model.menu;
+package ru.riddle.PhVLofSuTe.model.menu;
 
 public record Author(String name, String nickname, String position) {
 

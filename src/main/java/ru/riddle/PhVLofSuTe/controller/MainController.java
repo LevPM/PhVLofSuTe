@@ -1,7 +1,7 @@
-package ru.riddle.PhSofSuTe.controller;
+package ru.riddle.PhVLofSuTe.controller;
 
 import javafx.event.ActionEvent;
-import ru.riddle.PhSofSuTe.model.menu.MainModel;
+import ru.riddle.PhVLofSuTe.model.menu.MainModel;
 
 public class MainController {
 

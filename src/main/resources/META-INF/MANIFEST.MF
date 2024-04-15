@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: ru.riddle.PhSofSuTe.AppLauncher
+Main-Class: ru.riddle.PhVLofSuTe.AppLauncher

@@ -1,9 +1,9 @@
-package ru.riddle.PhSofSuTe.model.menu;
+package ru.riddle.PhVLofSuTe.model.menu;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import ru.riddle.PhSofSuTe.model.util.FXMLs;
-import ru.riddle.PhSofSuTe.model.util.ModelUtil;
+import ru.riddle.PhVLofSuTe.model.util.FXMLs;
+import ru.riddle.PhVLofSuTe.model.util.ModelUtil;
 
 public class MenuModel {
 

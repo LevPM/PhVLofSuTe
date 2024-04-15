@@ -1,7 +1,7 @@
-package ru.riddle.PhSofSuTe;
+package ru.riddle.PhVLofSuTe;
 
 public class AppLauncher {
     public static void main(String[] args) {
-        PhSofSuTe.main(args);
+        PhVLofSuTe.main(args);
     }
 }

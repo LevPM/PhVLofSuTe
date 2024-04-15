@@ -1,4 +1,4 @@
-package ru.riddle.PhSofSuTe.model.util;
+package ru.riddle.PhVLofSuTe.model.util;
 
 import java.util.List;
 

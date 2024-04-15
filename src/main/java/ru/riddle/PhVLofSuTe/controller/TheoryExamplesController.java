@@ -1,7 +1,7 @@
-package ru.riddle.PhSofSuTe.controller;
+package ru.riddle.PhVLofSuTe.controller;
 
 import javafx.event.ActionEvent;
-import ru.riddle.PhSofSuTe.model.theory.TheoryExamplesModel;
+import ru.riddle.PhVLofSuTe.model.theory.TheoryExamplesModel;
 
 public class TheoryExamplesController {
 

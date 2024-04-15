@@ -1,13 +1,13 @@
-package ru.riddle.PhSofSuTe;
+package ru.riddle.PhVLofSuTe;
 
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ru.riddle.PhSofSuTe.model.util.FXMLs;
-import ru.riddle.PhSofSuTe.model.util.ModelUtil;
+import ru.riddle.PhVLofSuTe.model.util.FXMLs;
+import ru.riddle.PhVLofSuTe.model.util.ModelUtil;
 
-public class PhSofSuTe extends Application {
+public class PhVLofSuTe extends Application {
 
     @Override
     public void start(Stage primaryStage){

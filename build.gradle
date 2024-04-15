@@ -5,19 +5,19 @@ plugins {
     id 'edu.sc.seis.launch4j' version '3.0.5'
 }
 
-group = 'ru.riddle.PhSofSuTe'
+group = 'ru.riddle.PhVLofSuTe'
 version = '0.1.1'
 
 launch4j {
-    outfile = 'PhSofSuTe_v' + project.version + '.exe'
-    mainClassName = 'ru.riddle.PhSofSuTe.AppLauncher'
+    outfile = 'PhVLofSuTe_v' + project.version + '.exe'
+    mainClassName = 'ru.riddle.PhVLofSuTe.AppLauncher'
     jreMinVersion = '21'
     outputDir = "PhSofSuTeEXE"
     downloadUrl = "https://www.oracle.com/java/technologies/downloads/#java21"
 }
 
 application {
-    mainClass.set("ru.riddle.PhSofSuTe.AppLauncher")
+    mainClass.set("ru.riddle.PhVLofSuTe.AppLauncher")
 }
 
 repositories {
