@@ -14,123 +14,136 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.controller.TheoryExamplesController">
-   <children>
-      <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Lavender;" text="Пример решения задачи #6" wrapText="true">
-         <font>
-            <Font name="Calibri Bold" size="40.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-         </padding>
-         <VBox.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </VBox.margin>
-      </Label>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-         <children>
-            <GridPane HBox.hgrow="ALWAYS">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="401.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <VBox alignment="CENTER" prefHeight="150.0" prefWidth="34.0" style="-fx-border-color: Navy; -fx-border-width: 3; -fx-background-color: LemonChiffon;" GridPane.columnIndex="1" GridPane.rowSpan="2">
-                     <GridPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </GridPane.margin>
-                     <children>
-                        <ImageView fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
-                           <viewport>
-                              <Rectangle2D />
-                           </viewport>
-                           <image>
-                              <Image url="@../../images/Image_SixthExample.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </VBox>
-                  <Label alignment="CENTER" prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: GreenYellow;" text="Решение" wrapText="true" GridPane.vgrow="ALWAYS">
-                     <font>
-                        <Font name="Calibri Bold" size="36.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
-                     </padding>
-                     <GridPane.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                     <children>
-                        <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="4) Сила Архимеда:&#10;Fₐ = ρₗ * V * g, где V = 0.5𝜋R²l " wrapText="true">
-                           <font>
-                              <Font name="Calibri Bold" size="32.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="5) Сила поверхностного натяжения: &#10;Fₚ = 2σl" wrapText="true">
-                           <font>
-                              <Font name="Calibri Bold" size="32.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="6) Сила тяжести:&#10;mg = ρₛ * V * g, где V = 𝜋R²l" wrapText="true">
-                           <font>
-                              <Font name="Calibri Bold" size="32.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets left="20.0" right="20.0" top="20.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </GridPane>
-         </children>
-      </HBox>
-      <BorderPane>
-         <right>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNextButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Next" textFill="#6b0000" BorderPane.alignment="CENTER">
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0"
+      style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.riddle.controller.TheoryExamplesController">
+   <Label alignment="CENTER"
+          style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Lavender;"
+          text="Пример решения задачи #6" wrapText="true">
+      <font>
+         <Font name="Calibri Bold" size="40.0"/>
+      </font>
+      <padding>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+      </padding>
+      <VBox.margin>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+      </VBox.margin>
+   </Label>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <GridPane HBox.hgrow="ALWAYS">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="401.0" vgrow="SOMETIMES"/>
+         </rowConstraints>
+         <VBox alignment="CENTER" prefHeight="150.0" prefWidth="34.0"
+               style="-fx-border-color: Navy; -fx-border-width: 3; -fx-background-color: LemonChiffon;"
+               GridPane.columnIndex="1" GridPane.rowSpan="2">
+            <GridPane.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </GridPane.margin>
+            <ImageView fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true"
+                       VBox.vgrow="ALWAYS">
+               <viewport>
+                  <Rectangle2D/>
+               </viewport>
+               <Image url="@../../images/Image_SixthExample.png"/>
+            </ImageView>
+         </VBox>
+         <Label alignment="CENTER" prefWidth="692.0"
+                style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: GreenYellow;"
+                text="Решение" wrapText="true" GridPane.vgrow="ALWAYS">
+            <font>
+               <Font name="Calibri Bold" size="36.0"/>
+            </font>
+            <padding>
+               <Insets bottom="10.0" left="50.0" right="10.0" top="10.0"/>
+            </padding>
+            <GridPane.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </GridPane.margin>
+         </Label>
+         <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+            <Label prefWidth="692.0"
+                   style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;"
+                   text="4) Сила Архимеда:&#10;Fₐ = ρₗ * V * g, где V = 0.5𝜋R²l " wrapText="true">
                <font>
-                  <Font name="Arial Black" size="50.0" />
+                  <Font name="Calibri Bold" size="32.0"/>
                </font>
-            </Button>
-         </right>
-         <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </VBox.margin>
-         <left>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePreviousButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Previous" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="692.0"
+                   style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;"
+                   text="5) Сила поверхностного натяжения: &#10;Fₚ = 2σl" wrapText="true">
                <font>
-                  <Font name="Arial Black" size="50.0" />
+                  <Font name="Calibri Bold" size="32.0"/>
                </font>
-            </Button>
-         </left>
-         <center>
-            <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Back to Menu" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="692.0"
+                   style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;"
+                   text="6) Сила тяжести:&#10;mg = ρₛ * V * g, где V = 𝜋R²l" wrapText="true">
                <font>
-                  <Font name="Arial Black" size="50.0" />
+                  <Font name="Calibri Bold" size="32.0"/>
                </font>
-            </Button>
-         </center>
-      </BorderPane>
-   </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0"/>
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0"/>
+               </VBox.margin>
+            </Label>
+         </VBox>
+      </GridPane>
+   </HBox>
+   <BorderPane>
+      <right>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                 onAction="#handleNextButtonAction"
+                 style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;"
+                 text="Next" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0"/>
+            </font>
+         </Button>
+      </right>
+      <VBox.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+      </VBox.margin>
+      <left>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                 onAction="#handlePreviousButtonAction"
+                 style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;"
+                 text="Previous" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0"/>
+            </font>
+         </Button>
+      </left>
+      <center>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                 onAction="#handleBackButtonAction"
+                 style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;"
+                 text="Back to Menu" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0"/>
+            </font>
+         </Button>
+      </center>
+   </BorderPane>
 </VBox>
