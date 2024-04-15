@@ -1,8 +1,8 @@
-package ru.riddle.model.menu;
+package ru.riddle.PhSofSuTe.model.menu;
 
 import javafx.event.ActionEvent;
-import ru.riddle.model.util.FXMLs;
-import ru.riddle.model.util.ModelUtil;
+import ru.riddle.PhSofSuTe.model.util.FXMLs;
+import ru.riddle.PhSofSuTe.model.util.ModelUtil;
 
 public class MainModel {
 

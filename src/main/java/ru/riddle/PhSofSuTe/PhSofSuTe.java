@@ -1,11 +1,11 @@
-package ru.riddle;
+package ru.riddle.PhSofSuTe;
 
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ru.riddle.model.util.FXMLs;
-import ru.riddle.model.util.ModelUtil;
+import ru.riddle.PhSofSuTe.model.util.FXMLs;
+import ru.riddle.PhSofSuTe.model.util.ModelUtil;
 
 public class PhSofSuTe extends Application {
 

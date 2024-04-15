@@ -1,9 +1,9 @@
-package ru.riddle.model.theory;
+package ru.riddle.PhSofSuTe.model.theory;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
-import ru.riddle.model.util.FXMLs;
-import ru.riddle.model.util.ModelUtil;
+import ru.riddle.PhSofSuTe.model.util.FXMLs;
+import ru.riddle.PhSofSuTe.model.util.ModelUtil;
 
 public class TheoryModel{
 

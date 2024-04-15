@@ -1,4 +1,4 @@
-package ru.riddle.model.menu;
+package ru.riddle.PhSofSuTe.model.menu;
 
 import javafx.scene.Parent;
 
