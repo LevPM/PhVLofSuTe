@@ -14,7 +14,7 @@ public class PhVLofSuTe extends Application {
         Parent root = ModelUtil.downloadRoot(FXMLs.MENU_SCREEN);
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("PhSofSuTe");
+        primaryStage.setTitle("PhVLofSuTe");
         primaryStage.show();
     }
 
