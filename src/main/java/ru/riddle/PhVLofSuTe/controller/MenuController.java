@@ -27,6 +27,6 @@ public class MenuController {
     }
 
     public void handleStartButtonAction(ActionEvent event) {
-        model.openMenuFormulasScreen(event);
+        model.openMenuTESelectionScreen(event);
     }
 }

@@ -24,7 +24,7 @@ public class MenuModel {
         System.exit(0);
     }
 
-    public void openMenuFormulasScreen(ActionEvent event){
-        ModelUtil.changeScreen(event, FXMLs.MENU_FORMULAS_SCREEN);
+    public void openMenuTESelectionScreen(ActionEvent event){
+        ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
     }
 }

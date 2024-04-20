@@ -50,6 +50,6 @@ public class TheoryModel{
     }
 
     public void leaveTheory(ActionEvent event) {
-        ModelUtil.changeScreen(event, FXMLs.MENU_FORMULAS_SCREEN);
+        ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
     }
 }

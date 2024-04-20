@@ -7,7 +7,6 @@ public enum FXMLs {
     SETTINGS_SCREEN("/view/SettingsScreenFXML.fxml"),
     AUTHORS_SCREEN("/view/AuthorsScreenFXML.fxml"),
 
-    MENU_FORMULAS_SCREEN("/view/MenuFormulasScreenFXML.fxml"),
     MENU_TE_SELECTION("/view/MenuTheoryExperimentsSelection.fxml"),
 
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
