@@ -37,4 +37,8 @@ public class MainController {
     public void handleTheoryButtonAction(ActionEvent event) {
         model.openTheory(event);
     }
+
+    public void handleExperimentsButtonAction(ActionEvent event) {
+
+    }
 }
