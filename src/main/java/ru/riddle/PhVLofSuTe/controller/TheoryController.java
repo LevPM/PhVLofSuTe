@@ -32,8 +32,10 @@ public class TheoryController {
     }
 
     public void handleExamplesButtonAction(ActionEvent event) {
+        model.openExamplesMenuScreen(event);
     }
 
     public void handleTheoryButtonAction(ActionEvent event) {
+        model.openTheory(event);
     }
 }

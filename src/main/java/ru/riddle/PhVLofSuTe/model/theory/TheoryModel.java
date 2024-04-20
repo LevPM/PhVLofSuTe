@@ -15,7 +15,6 @@ public class TheoryModel{
                 switch (id){
                         case "Second" -> FXMLs.THEORY_FIRST;
                         case "Third" -> FXMLs.THEORY_SECOND;
-                        case "ExamplesMenu" -> FXMLs.THEORY_THIRD;
                         default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
@@ -28,7 +27,6 @@ public class TheoryModel{
                 switch (id) {
                     case "First" -> FXMLs.THEORY_SECOND;
                     case "Second" -> FXMLs.THEORY_THIRD;
-                    case "Third" -> FXMLs.THEORY_EXAMPLES_MENU;
                     default -> throw new IllegalStateException("Unexpected value: " + id);
         });
 
@@ -47,6 +45,14 @@ public class TheoryModel{
                         default -> throw new IllegalStateException("Unexpected value: " + id);
         }
         );
+    }
+
+    public void openExamplesMenuScreen(ActionEvent event){
+        ModelUtil.changeScreen(event, FXMLs.THEORY_EXAMPLES_MENU);
+    }
+
+    public void openTheory(ActionEvent event){
+        ModelUtil.changeScreen(event, FXMLs.THEORY_FIRST);
     }
 
     public void backToTheoryExperimentsMenuScreen(ActionEvent event) {
