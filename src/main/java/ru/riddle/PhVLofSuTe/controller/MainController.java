@@ -11,25 +11,6 @@ public class MainController {
         model = new MainModel();
     }
 
-
-    public void handleEButtonAction(ActionEvent event) {
-    }
-
-    public void handleCEButtonAction(ActionEvent event) {
-    }
-
-    public void handleSButtonAction(ActionEvent event) {
-    }
-
-    public void handleCFButtonAction(ActionEvent event) {
-    }
-
-    public void handleFButtonAction(ActionEvent event) {
-    }
-
-    public void handleLButtonAction(ActionEvent event) {
-    }
-
     public void handleBackButtonAction(ActionEvent event) {
         model.backToMenuScreen(event);
     }
