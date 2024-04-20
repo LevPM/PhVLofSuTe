@@ -9,6 +9,8 @@ public enum FXMLs {
 
     MENU_TE_SELECTION("/view/MenuTheoryExperimentsSelection.fxml"),
 
+    THEORY_SELECTION("/view/theory/TheorySelection.fxml"),
+
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
     THEORY_SECOND("/view/theory/TheorySecondFXML.fxml", "Second"),
     THEORY_THIRD("/view/theory/TheoryThirdFXML.fxml", "Third"),

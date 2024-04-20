@@ -49,7 +49,11 @@ public class TheoryModel{
         );
     }
 
-    public void leaveTheory(ActionEvent event) {
+    public void backToTheoryExperimentsMenuScreen(ActionEvent event) {
         ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
+    }
+
+    public void leaveTheory(ActionEvent event) {
+        ModelUtil.changeScreen(event, FXMLs.THEORY_SELECTION);
     }
 }

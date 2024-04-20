@@ -26,4 +26,14 @@ public class TheoryController {
     public void handleExampleButtonAction(ActionEvent event) {
         model.openExample(event);
     }
+
+    public void handleBackButtonAction(ActionEvent event) {
+        model.backToTheoryExperimentsMenuScreen(event);
+    }
+
+    public void handleExamplesButtonAction(ActionEvent event) {
+    }
+
+    public void handleTheoryButtonAction(ActionEvent event) {
+    }
 }

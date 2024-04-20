@@ -11,6 +11,6 @@ public class MainModel {
     }
 
     public void openTheory(ActionEvent event){
-        ModelUtil.changeScreen(event, FXMLs.THEORY_FIRST);
+        ModelUtil.changeScreen(event, FXMLs.THEORY_SELECTION);
     }
 }
