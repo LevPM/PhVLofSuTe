@@ -27,6 +27,13 @@ public class ExperimentsController{
     private ImageView syringePiston;
 
 
+    @FXML
+    private Arc waterOnCoin;
+
+    @FXML
+    private ImageView dropS;
+
+
     public ExperimentsController() {
         this.model = new ExperimentsModel();
     }
@@ -61,5 +68,9 @@ public class ExperimentsController{
 
     public void handleLeaveEButtonAction(ActionEvent event) {
         model.leaveExperiments(event);
+    }
+
+    public void handleStartSecondExperimentButton() {
+        model.startSecondExperiment(dropS, waterOnCoin);
     }
 }

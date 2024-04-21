@@ -1,6 +1,7 @@
 package ru.riddle.PhVLofSuTe.model.experiments;
 
 import javafx.animation.ParallelTransition;
+import javafx.animation.ScaleTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
@@ -15,6 +16,7 @@ import ru.riddle.PhVLofSuTe.model.util.ModelUtil;
 public class ExperimentsModel {
 
     private boolean isFirstAnimationAnimating = false;
+    private boolean isSecondAnimationAnimating = false;
 
     public void leaveExperiments(ActionEvent event){
         ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
@@ -29,6 +31,7 @@ public class ExperimentsModel {
         ModelUtil.changeScreen(event,
                 switch (id){
                     case "FirstExperiment" -> FXMLs.firstExperiment.getFirst();
+                    case "SecondExperiment" -> FXMLs.EXPERIMENTS_SECOND_1;
                     default -> throw new IllegalStateException("Unexpected value: " + id);
                 }
         );
@@ -125,6 +128,44 @@ public class ExperimentsModel {
             transitionDrop.setOnFinished(event -> drop.setY(drop.getY() - 82));
 
             transitionArcDrop.setOnFinished(event -> arcDrop.setTranslateY(arcDrop.getTranslateY() - 3));
+        }
+    }
+
+    public void startSecondExperiment(ImageView drop, Arc waterOnCoin){
+        if(!isSecondAnimationAnimating){
+            drop.setVisible(true);
+
+            TranslateTransition dropTransition = new TranslateTransition();
+            dropTransition.setNode(drop);
+            dropTransition.setByY(275);
+            dropTransition.setDuration(Duration.millis(500));
+
+
+            ScaleTransition dropOCT = new ScaleTransition();
+            dropOCT.setNode(drop);
+            dropOCT.setFromX(1);
+            dropOCT.setToX(1.5f);
+            dropOCT.setFromY(1);
+            dropOCT.setToY(0.3f);
+            dropOCT.setDuration(Duration.millis(250));
+
+            dropOCT.setOnFinished(event -> {
+                waterOnCoin.setScaleY(waterOnCoin.getScaleY() * 1.17);
+                waterOnCoin.setScaleX(waterOnCoin.getScaleX() * 1.5);
+
+                if(waterOnCoin.getScaleX() > 10){
+                    waterOnCoin.setScaleX(10);
+                }
+            });
+
+            SequentialTransition dropSequential = new SequentialTransition(dropTransition, dropOCT);
+            dropSequential.setCycleCount(10);
+
+            waterOnCoin.setRadiusX(10);
+            waterOnCoin.setRadiusY(10);
+
+            dropSequential.play();
+            isSecondAnimationAnimating = true;
         }
     }
 
