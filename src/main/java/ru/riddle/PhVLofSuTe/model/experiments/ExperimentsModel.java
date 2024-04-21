@@ -15,7 +15,7 @@ public class ExperimentsModel {
     private boolean isFirstAnimationAnimating = false;
 
     public void leaveExperiments(ActionEvent event){
-        ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
+        ModelUtil.changeScreen(event, FXMLs.EXPERIMENTS_MENU);
     }
 
     public void openExperiment(ActionEvent event){
