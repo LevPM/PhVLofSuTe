@@ -12,7 +12,7 @@ public class ExperimentsController {
     }
 
     public void handleExperimentButtonAction(ActionEvent event) {
-
+        model.openExperiment(event);
     }
 
     public void handleLeaveButtonAction(ActionEvent event) {
