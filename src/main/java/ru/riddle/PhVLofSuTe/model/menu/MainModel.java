@@ -13,4 +13,8 @@ public class MainModel {
     public void openTheory(ActionEvent event){
         ModelUtil.changeScreen(event, FXMLs.THEORY_SELECTION);
     }
+
+    public void openExperiments(ActionEvent event){
+        ModelUtil.changeScreen(event, FXMLs.EXPERIMENTS_MENU);
+    }
 }

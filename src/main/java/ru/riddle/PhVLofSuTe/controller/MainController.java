@@ -20,6 +20,6 @@ public class MainController {
     }
 
     public void handleExperimentsButtonAction(ActionEvent event) {
-
+        model.openExperiments(event);
     }
 }
