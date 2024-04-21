@@ -53,6 +53,8 @@ public enum FXMLs {
 
 
     EXPERIMENTS_MENU("/view/experiments/ExperimentsMenu.fxml"),
+
+    EXPERIMENTS_FIRST("/view/experiments/firstExperiment/firstExperiment.fxml")
     ;
 
     public static final List<FXMLs> firstExample = List.of(
