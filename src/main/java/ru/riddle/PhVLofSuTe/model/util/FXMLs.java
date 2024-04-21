@@ -9,6 +9,7 @@ public enum FXMLs {
 
     MENU_TE_SELECTION("/view/MenuTheoryExperimentsSelection.fxml"),
 
+
     THEORY_SELECTION("/view/theory/TheorySelection.fxml"),
 
     THEORY_FIRST("/view/theory/TheoryFirstFXML.fxml", "First"),
@@ -49,6 +50,9 @@ public enum FXMLs {
     THEORY_SIXTH_EXAMPLE_4("/view/theory/examples/sixthExample/TheorySixthExample4.fxml", "SixthExample4"),
     THEORY_SIXTH_EXAMPLE_5("/view/theory/examples/sixthExample/TheorySixthExample5.fxml", "SixthExample5"),
     THEORY_SIXTH_EXAMPLE_6("/view/theory/examples/sixthExample/TheorySixthExample6.fxml", "SixthExample6"),
+
+
+    EXPERIMENTS_MENU("/view/experiments/ExperimentsMenu.fxml"),
     ;
 
     public static final List<FXMLs> firstExample = List.of(
