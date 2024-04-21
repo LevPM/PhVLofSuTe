@@ -11,9 +11,11 @@ public class ExperimentsController {
         this.model = new ExperimentsModel();
     }
 
-    public void handleExperimentButtonAction(ActionEvent actionEvent) {
+    public void handleExperimentButtonAction(ActionEvent event) {
+
     }
 
-    public void handleLeaveButtonAction(ActionEvent actionEvent) {
+    public void handleLeaveButtonAction(ActionEvent event) {
+        model.leaveExperiments(event);
     }
 }
