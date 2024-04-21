@@ -25,8 +25,8 @@ public class ExperimentsController{
         model.leaveExperiments(event);
     }
 
-    public void handleStartFirstExperimentButton(ActionEvent event) {
-        model.startFirstExperiment(event, syringePiston);
+    public void handleStartFirstExperimentButton() {
+        model.startFirstExperiment(syringePiston);
     }
 
     public void handleDropCountButtonAction(ActionEvent event) {

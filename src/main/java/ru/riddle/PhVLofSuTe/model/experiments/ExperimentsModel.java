@@ -28,7 +28,7 @@ public class ExperimentsModel {
         );
     }
 
-    public void startFirstExperiment(ActionEvent event, ImageView syringePiston){
+    public void startFirstExperiment(ImageView syringePiston){
         TranslateTransition translate = new TranslateTransition();
         translate.setNode(syringePiston);
         translate.setDuration(Duration.seconds(8));
