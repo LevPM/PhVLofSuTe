@@ -10,7 +10,8 @@ public class ExperimentsController{
     private final ExperimentsModel model;
 
     @FXML
-    public ImageView syringePiston;
+    private ImageView syringePiston;
+
 
     public ExperimentsController() {
         this.model = new ExperimentsModel();
@@ -26,5 +27,9 @@ public class ExperimentsController{
 
     public void handleStartFirstExperimentButton(ActionEvent event) {
         model.startFirstExperiment(event, syringePiston);
+    }
+
+    public void handleDropCountButtonAction(ActionEvent event) {
+        model.showDropCount(event);
     }
 }

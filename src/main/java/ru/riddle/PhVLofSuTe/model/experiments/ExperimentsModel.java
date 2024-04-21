@@ -3,6 +3,7 @@ package ru.riddle.PhVLofSuTe.model.experiments;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import ru.riddle.PhVLofSuTe.model.util.FXMLs;
@@ -33,5 +34,9 @@ public class ExperimentsModel {
         translate.setDuration(Duration.seconds(8));
         translate.setByY(194);
         translate.play();
+    }
+
+    public void showDropCount(ActionEvent event){
+        ((Button) (event.getSource())).setText("20 Капель");
     }
 }
