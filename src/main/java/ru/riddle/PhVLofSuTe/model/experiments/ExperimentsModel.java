@@ -15,6 +15,10 @@ public class ExperimentsModel {
     private boolean isFirstAnimationAnimating = false;
 
     public void leaveExperiments(ActionEvent event){
+        ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
+    }
+
+    public void leaveExperiment(ActionEvent event){
         ModelUtil.changeScreen(event, FXMLs.EXPERIMENTS_MENU);
     }
 
@@ -52,23 +56,23 @@ public class ExperimentsModel {
         );
     }
 
-    public void startFirstExperiment(ImageView syringePiston, ImageView drop, Arc acrDrop){
+    public void startFirstExperiment(ImageView syringePiston, ImageView drop, Arc arcDrop){
         if(!isFirstAnimationAnimating) {
             TranslateTransition translate = new TranslateTransition();
             translate.setNode(syringePiston);
-            translate.setDuration(Duration.seconds(10));
+            translate.setDuration(Duration.seconds(15));
             translate.setByY(194);
 
             TranslateTransition transitionDrop = new TranslateTransition();
             transitionDrop.setNode(drop);
-            transitionDrop.setDuration(Duration.millis(250));
+            transitionDrop.setDuration(Duration.millis(375));
             transitionDrop.setByY(82);
             transitionDrop.setCycleCount(40);
 
             TranslateTransition transitionArcDrop = new TranslateTransition();
-            transitionArcDrop.setNode(acrDrop);
-            transitionArcDrop.setDuration(Duration.millis(250));
-            transitionArcDrop.setByY(5);
+            transitionArcDrop.setNode(arcDrop);
+            transitionArcDrop.setDuration(Duration.millis(375));
+            transitionArcDrop.setByY(3);
             transitionArcDrop.setCycleCount(40);
 
             translate.play();
@@ -79,6 +83,8 @@ public class ExperimentsModel {
 
             translate.setOnFinished(event -> {
                 syringePiston.setY(syringePiston.getY() - 194);
+                drop.setY(drop.getY() - 82);
+                arcDrop.setTranslateY(arcDrop.getTranslateY() - 3);
                 isFirstAnimationAnimating = false;
             });
         }

@@ -33,7 +33,7 @@ public class ExperimentsController{
     }
 
     public void handleLeaveButtonAction(ActionEvent event) {
-        model.leaveExperiments(event);
+        model.leaveExperiment(event);
     }
 
     public void handleStartFirstExperimentButton() {
@@ -54,5 +54,9 @@ public class ExperimentsController{
 
     public void handleNextButtonAction(ActionEvent event) {
         model.goToNextScreen(event);
+    }
+
+    public void handleLeaveEButtonAction(ActionEvent event) {
+        model.leaveExperiments(event);
     }
 }
