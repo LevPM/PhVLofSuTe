@@ -54,8 +54,14 @@ public enum FXMLs {
 
     EXPERIMENTS_MENU("/view/experiments/ExperimentsMenu.fxml"),
 
-    EXPERIMENTS_FIRST("/view/experiments/firstExperiment/firstExperiment.fxml")
+    EXPERIMENTS_FIRST_1("/view/experiments/firstExperiment/firstExperiment1.fxml", "FirstExperiment1"),
+    EXPERIMENTS_FIRST_2("/view/experiments/firstExperiment/firstExperiment2.fxml", "FirstExperiment2"),
     ;
+
+    public static final List<FXMLs> firstExperiment = List.of(
+            EXPERIMENTS_FIRST_1,
+            EXPERIMENTS_FIRST_2
+    );
 
     public static final List<FXMLs> firstExample = List.of(
             THEORY_FIRST_EXAMPLE_1,
