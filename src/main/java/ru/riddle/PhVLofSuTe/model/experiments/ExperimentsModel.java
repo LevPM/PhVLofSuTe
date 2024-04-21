@@ -1,5 +1,7 @@
 package ru.riddle.PhVLofSuTe.model.experiments;
 
+import javafx.animation.ParallelTransition;
+import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -56,7 +58,7 @@ public class ExperimentsModel {
         );
     }
 
-    public void startFirstExperiment(ImageView syringePiston, ImageView drop, Arc arcDrop){
+    public void startFirstExperiment(ImageView syringePiston, ImageView drop, Arc arcDrop, ImageView waterBucket){
         if(!isFirstAnimationAnimating) {
             TranslateTransition translate = new TranslateTransition();
             translate.setNode(syringePiston);
@@ -75,18 +77,54 @@ public class ExperimentsModel {
             transitionArcDrop.setByY(3);
             transitionArcDrop.setCycleCount(40);
 
-            translate.play();
-            transitionArcDrop.play();
-            transitionDrop.play();
+            ParallelTransition drippingTransition = new ParallelTransition(translate, transitionDrop, transitionArcDrop);
+
+            drippingTransition.play();
 
             isFirstAnimationAnimating = true;
 
             translate.setOnFinished(event -> {
-                syringePiston.setY(syringePiston.getY() - 194);
-                drop.setY(drop.getY() - 82);
-                arcDrop.setTranslateY(arcDrop.getTranslateY() - 3);
+                TranslateTransition translate1 = new TranslateTransition();
+                translate1.setNode(syringePiston);
+                translate1.setDuration(Duration.seconds(5));
+                translate1.setByY(-194);
+
+                TranslateTransition waterBucketTransition1 = new TranslateTransition();
+                waterBucketTransition1.setNode(waterBucket);
+                waterBucketTransition1.setDuration(Duration.seconds(3));
+                waterBucketTransition1.setByX(-250);
+
+                TranslateTransition waterBucketTransition2 = new TranslateTransition();
+                waterBucketTransition2.setNode(waterBucket);
+                waterBucketTransition2.setDuration(Duration.seconds(1));
+                waterBucketTransition2.setByY(-13);
+
+                TranslateTransition waterBucketTransition3 = new TranslateTransition();
+                waterBucketTransition3.setNode(waterBucket);
+                waterBucketTransition3.setDuration(Duration.seconds(1));
+                waterBucketTransition3.setByY(13);
+
+                TranslateTransition waterBucketTransition4 = new TranslateTransition();
+                waterBucketTransition4.setNode(waterBucket);
+                waterBucketTransition4.setDuration(Duration.seconds(1));
+                waterBucketTransition4.setByX(250);
+
+                SequentialTransition refillingTransition = new SequentialTransition(
+                        waterBucketTransition1,
+                        waterBucketTransition2,
+                        translate1,
+                        waterBucketTransition3,
+                        waterBucketTransition4
+                );
+
+                refillingTransition.play();
+
                 isFirstAnimationAnimating = false;
             });
+
+            transitionDrop.setOnFinished(event -> drop.setY(drop.getY() - 82));
+
+            transitionArcDrop.setOnFinished(event -> arcDrop.setTranslateY(arcDrop.getTranslateY() - 3));
         }
     }
 

@@ -12,10 +12,13 @@ public class ExperimentsController{
     private final ExperimentsModel model;
 
     @FXML
-    public Arc arcDrop;
+    private Arc arcDrop;
 
     @FXML
-    public ImageView drop;
+    private ImageView drop;
+
+    @FXML
+    private ImageView waterBucket;
 
     @FXML
     private Button countHider;
@@ -37,7 +40,7 @@ public class ExperimentsController{
     }
 
     public void handleStartFirstExperimentButton() {
-        model.startFirstExperiment(syringePiston, drop, arcDrop);
+        model.startFirstExperiment(syringePiston, drop, arcDrop, waterBucket);
     }
 
     public void handleDropHiderButtonAction() {
