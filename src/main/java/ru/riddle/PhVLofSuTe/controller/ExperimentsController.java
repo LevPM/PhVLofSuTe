@@ -1,11 +1,16 @@
 package ru.riddle.PhVLofSuTe.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
 import ru.riddle.PhVLofSuTe.model.experiments.ExperimentsModel;
 
-public class ExperimentsController {
+public class ExperimentsController{
 
     private final ExperimentsModel model;
+
+    @FXML
+    public ImageView syringePiston;
 
     public ExperimentsController() {
         this.model = new ExperimentsModel();
@@ -17,5 +22,9 @@ public class ExperimentsController {
 
     public void handleLeaveButtonAction(ActionEvent event) {
         model.leaveExperiments(event);
+    }
+
+    public void handleStartFirstExperimentButton(ActionEvent event) {
+        model.startFirstExperiment(event, syringePiston);
     }
 }
