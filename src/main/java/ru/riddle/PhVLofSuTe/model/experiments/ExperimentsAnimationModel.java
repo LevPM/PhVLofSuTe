@@ -82,13 +82,12 @@ public class ExperimentsAnimationModel {
         Arc arcDrop = (Arc) paneChildren.get(0);
         ImageView waterBucket = (ImageView) paneChildren.get(6);
 
-        Rectangle liquid = (Rectangle) paneChildren.get(2);
-        liquid.setFill(
-                switch (liquid.getId()){
+        ((Rectangle) paneChildren.get(2)).setFill(
+                switch (pane.getId()){
                     case "firstExperimentSyringe",
                          "thirdExperimentSyringe2" -> TypesOfLiquids.WATER.getColor();
                     case "thirdExperimentSyringe1" -> TypesOfLiquids.SOAP_WATER.getColor();
-                    default -> throw new IllegalStateException("Unexpected value: " + liquid.getId());
+                    default -> throw new IllegalStateException("Unexpected value: " + pane.getId());
                 }
         );
 
