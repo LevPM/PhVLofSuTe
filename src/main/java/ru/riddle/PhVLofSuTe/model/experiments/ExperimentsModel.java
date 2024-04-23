@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
 import ru.riddle.PhVLofSuTe.model.util.FXMLs;
 import ru.riddle.PhVLofSuTe.model.util.ModelUtil;
@@ -30,6 +31,7 @@ public class ExperimentsModel {
                 switch (id){
                     case "FirstExperiment" -> FXMLs.firstExperiment.getFirst();
                     case "SecondExperiment" -> FXMLs.EXPERIMENTS_SECOND_1;
+                    case "ThirdExperiment" -> FXMLs.EXPERIMENTS_THIRD;
                     default -> throw new IllegalStateException("Unexpected value: " + id);
                 }
         );
@@ -59,14 +61,17 @@ public class ExperimentsModel {
         );
     }
 
-    public void startFirstExperiment(ImageView syringePiston, ImageView drop, Arc arcDrop, ImageView waterBucket){
-        animationModel.animateFirstExperiment(syringePiston, drop, arcDrop, waterBucket);
+    public void startFirstExperiment(AnchorPane firstExperimentSyringe){
+        animationModel.animateFirstExperiment(firstExperimentSyringe);
     }
 
     public void startSecondExperiment(ImageView drop, Arc waterOnCoin){
         animationModel.animateSecondExperiment(drop, waterOnCoin);
     }
 
+    public void startThirdExperiment(AnchorPane waterPane, AnchorPane soapWaterPane){
+        animationModel.animateThirdExperiment(waterPane, soapWaterPane);
+    }
     public void showDropCount(Button countHider){
         countHider.setVisible(false);
         countHider.setDisable(true);

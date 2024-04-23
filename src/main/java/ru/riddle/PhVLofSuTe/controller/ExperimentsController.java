@@ -4,12 +4,22 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
 import ru.riddle.PhVLofSuTe.model.experiments.ExperimentsModel;
 
 public class ExperimentsController{
 
     private final ExperimentsModel model;
+
+    @FXML
+    public AnchorPane firstExperimentSyringe;
+
+    @FXML
+    private AnchorPane waterPane;
+
+    @FXML
+    private AnchorPane soapWaterPane;
 
     @FXML
     private Arc arcDrop;
@@ -46,10 +56,6 @@ public class ExperimentsController{
         model.leaveExperiment(event);
     }
 
-    public void handleStartFirstExperimentButton() {
-        model.startFirstExperiment(syringePiston, drop, arcDrop, waterBucket);
-    }
-
     public void handleDropHiderButtonAction() {
         model.showDropCount(countHider);
     }
@@ -70,7 +76,15 @@ public class ExperimentsController{
         model.leaveExperiments(event);
     }
 
+    public void handleStartFirstExperimentButton() {
+        model.startFirstExperiment(firstExperimentSyringe);
+    }
+
     public void handleStartSecondExperimentButton() {
         model.startSecondExperiment(dropS, waterOnCoin);
+    }
+
+    public void handleStartThirdExperimentButton() {
+        model.startThirdExperiment(waterPane, soapWaterPane);
     }
 }
