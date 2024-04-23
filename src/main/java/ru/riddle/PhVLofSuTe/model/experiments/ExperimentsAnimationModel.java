@@ -64,15 +64,18 @@ public class ExperimentsAnimationModel {
     public void animateThirdExperiment(AnchorPane waterPane, AnchorPane soapWaterPane){
         if(!isThirdAnimationAnimating){
             isThirdAnimationAnimating = true;
-            ParallelTransition thirdAnimation = new ParallelTransition(getTransitionForSyringe(waterPane), getTransitionForSyringe(soapWaterPane));
+            ParallelTransition thirdAnimation = new ParallelTransition(
+                            getTransitionForSyringe(waterPane),
+                            getTransitionForSyringe(soapWaterPane));
+
             thirdAnimation.setOnFinished(event -> isThirdAnimationAnimating = false);
             thirdAnimation.play();
         }
     }
 
-    private Transition getTransitionForSyringe(AnchorPane waterPane){
+    private Transition getTransitionForSyringe(AnchorPane pane){
 
-        List<Node> paneChildren = waterPane.getChildren();
+        List<Node> paneChildren = pane.getChildren();
 
         ImageView syringePiston = (ImageView) paneChildren.get(3);
         ImageView drop = (ImageView) paneChildren.get(1);
@@ -82,8 +85,9 @@ public class ExperimentsAnimationModel {
         Rectangle liquid = (Rectangle) paneChildren.get(2);
         liquid.setFill(
                 switch (liquid.getId()){
-                    case "soap_water" -> TypesOfLiquids.SOAP_WATER.getColor();
-                    case "water" -> TypesOfLiquids.WATER.getColor();
+                    case "firstExperimentSyringe",
+                         "thirdExperimentSyringe2" -> TypesOfLiquids.WATER.getColor();
+                    case "thirdExperimentSyringe1" -> TypesOfLiquids.SOAP_WATER.getColor();
                     default -> throw new IllegalStateException("Unexpected value: " + liquid.getId());
                 }
         );

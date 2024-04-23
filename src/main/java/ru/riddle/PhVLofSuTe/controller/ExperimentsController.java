@@ -22,19 +22,7 @@ public class ExperimentsController{
     private AnchorPane soapWaterPane;
 
     @FXML
-    private Arc arcDrop;
-
-    @FXML
-    private ImageView drop;
-
-    @FXML
-    private ImageView waterBucket;
-
-    @FXML
     private Button countHider;
-
-    @FXML
-    private ImageView syringePiston;
 
 
     @FXML
