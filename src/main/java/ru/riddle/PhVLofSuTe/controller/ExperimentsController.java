@@ -16,10 +16,10 @@ public class ExperimentsController{
     public AnchorPane firstExperimentSyringe;
 
     @FXML
-    private AnchorPane waterPane;
+    private AnchorPane thirdExperimentSyringe1;
 
     @FXML
-    private AnchorPane soapWaterPane;
+    private AnchorPane thirdExperimentSyringe2;
 
     @FXML
     private Button countHider;
@@ -73,6 +73,6 @@ public class ExperimentsController{
     }
 
     public void handleStartThirdExperimentButton() {
-        model.startThirdExperiment(waterPane, soapWaterPane);
+        model.startThirdExperiment(thirdExperimentSyringe1, thirdExperimentSyringe2);
     }
 }
