@@ -22,8 +22,5 @@ public class Syringe extends AnchorPane{
     }
 
     private void buildSyringe(){
-        for(int i = countOfParts; i > 0; i--){
-
-        }
     }
 }
