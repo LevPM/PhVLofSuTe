@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.experiments;
+package ru.riddle.phVLofSuTe.model.experiments.syringe;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
