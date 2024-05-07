@@ -3,8 +3,8 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.shape.Line?>
 
-<Group fx:id="syringeTip" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <Group layoutX="-30.707107543945312" layoutY="-10.707106590270996">
+<fx:root type="javafx.scene.Group"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Group fx:id="syringeTip" layoutX="-30.707107543945312" layoutY="-10.707106590270996">
       <Group>
          <Line endX="-5.0" endY="5.0" startX="-5.0" strokeLineJoin="ROUND"/>
          <Line endX="-30.0" endY="-10.0" startX="-5.5" strokeLineJoin="ROUND"/>
@@ -14,4 +14,4 @@
          <Line endX="30.0" endY="-10.0" startX="5.5" strokeLineJoin="ROUND"/>
       </Group>
    </Group>
-</Group>
+</fx:root>
