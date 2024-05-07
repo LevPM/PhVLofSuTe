@@ -6,7 +6,10 @@ import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 public class SyringeSegment extends Group {
 
-    public SyringeSegment(){
+    private static final int HEIGHT = 50;
+
+    public SyringeSegment(int sequenceNumber){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_SEGMENT, this);
+        this.setLayoutY(-sequenceNumber * HEIGHT);
     }
 }
