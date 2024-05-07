@@ -65,6 +65,7 @@ public enum FXMLs {
 
     SYRINGE("/view/experiments/syringe/syringeFXML.fxml"),
     SYRINGE_SEGMENT("/view/experiments/syringe/syringeSegmentFXML.fxml"),
+    SYRINGE_TIP("/view/experiments/syringe/syringeTipFXML.fxml"),
     ;
 
     public static final List<FXMLs> firstExperiment = List.of(
