@@ -73,7 +73,7 @@
             </viewport>
             <Image url="@../images/WaterBucket.png" />
          </ImageView>
-         <Syringe> </Syringe>
+         <Syringe />
       </AnchorPane>
    </HBox>
    <BorderPane>
