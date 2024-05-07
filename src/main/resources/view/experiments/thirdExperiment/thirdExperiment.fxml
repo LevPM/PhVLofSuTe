@@ -51,23 +51,23 @@
          </Button>
       </AnchorPane>
       <AnchorPane fx:id="thirdExperimentSyringe" prefHeight="200.0" prefWidth="200.0">
-         <Arc fx:id="arcDrop11" fill="AQUA" layoutX="100.0" layoutY="330.0" length="180.0" radiusX="5.0" radiusY="4.0" startAngle="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
-         <ImageView fx:id="drop11" fitHeight="15.0" fitWidth="11.0" layoutX="95.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+         <Arc fx:id="arcDrop11" fill="AQUA" layoutX="100.0" layoutY="330.0" length="180.0" radiusX="5.0" radiusY="4.0" startAngle="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" visible="false" />
+         <ImageView fx:id="drop11" fitHeight="15.0" fitWidth="11.0" layoutX="95.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../images/Drop.png" />
          </ImageView>
-         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="AQUA" height="220.0" layoutX="75.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
-         <ImageView fx:id="syringePiston11" fitHeight="150.0" fitWidth="200.0" layoutX="86.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="AQUA" height="220.0" layoutX="75.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="50.0" />
+         <ImageView fx:id="syringePiston11" fitHeight="150.0" fitWidth="200.0" layoutX="86.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" visible="false">
             <Image url="@../images/Syringe_Piston.png.png" />
          </ImageView>
-         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="67.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" visible="false">
             <Image url="@../images/Syringe_Cylinder.png" />
          </ImageView>
-         <Label layoutX="41.0" layoutY="129.0" rotate="270.0" style="-fx-background-color: PapayaWhip;" text="2,5 мл">
+         <Label layoutX="41.0" layoutY="129.0" rotate="270.0" style="-fx-background-color: PapayaWhip;" text="2,5 мл" visible="false">
             <font>
                <Font name="Cambria Bold" size="17.0" />
             </font>
          </Label>
-         <ImageView fx:id="waterBucket11" fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" translateY="300.0">
+         <ImageView fx:id="waterBucket11" fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" translateY="300.0" visible="false">
             <viewport>
                <Rectangle2D />
             </viewport>
