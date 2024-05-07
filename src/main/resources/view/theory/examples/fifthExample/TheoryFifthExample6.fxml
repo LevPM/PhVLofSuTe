@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.PhVLofSuTe.controller.TheoryExamplesController">
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.TheoryExamplesController">
    <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Lavender;" text="Пример решения задачи #5" wrapText="true">
       <font>
          <Font name="Calibri Bold" size="40.0" />

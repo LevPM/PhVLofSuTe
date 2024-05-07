@@ -1,4 +1,4 @@
-package ru.riddle.PhVLofSuTe.controller;
+package ru.riddle.phVLofSuTe.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,8 +6,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Pair;
-import ru.riddle.PhVLofSuTe.model.experiments.ThirdExperimentModel;
-import ru.riddle.PhVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
+import ru.riddle.phVLofSuTe.model.util.FXMLs;
 
 import java.net.URL;
 import java.util.ResourceBundle;

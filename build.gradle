@@ -10,14 +10,14 @@ version = '0.1.4'
 
 launch4j {
     outfile = 'PhVLofSuTe_v' + project.version + '.exe'
-    mainClassName = 'ru.riddle.PhVLofSuTe.AppLauncher'
+    mainClassName = 'ru.riddle.phVLofSuTe.AppLauncher'
     jreMinVersion = '21'
     outputDir = 'PhVLofSuTeEXE'
     downloadUrl = "https://www.oracle.com/java/technologies/downloads/#java21"
 }
 
 application {
-    mainClass.set("ru.riddle.PhVLofSuTe.AppLauncher")
+    mainClass.set("ru.riddle.phVLofSuTe.AppLauncher")
 }
 
 repositories {

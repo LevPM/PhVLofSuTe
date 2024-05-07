@@ -1,4 +1,4 @@
-package ru.riddle.PhVLofSuTe.model.experiments;
+package ru.riddle.phVLofSuTe.model.experiments;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -6,8 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
-import ru.riddle.PhVLofSuTe.model.util.FXMLs;
-import ru.riddle.PhVLofSuTe.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 public class ExperimentsModel {
 
