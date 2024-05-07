@@ -62,6 +62,9 @@ public enum FXMLs {
     EXPERIMENTS_SECOND_1("/view/experiments/secondExperiment/secondExperiment1.fxml"),
 
     EXPERIMENTS_THIRD("/view/experiments/thirdExperiment/thirdExperiment.fxml"),
+
+    SYRINGE("/view/experiments/syringe/syringeFXML.fxml"),
+    SYRINGE_SEGMENT("/view/experiments/syringe/syringeSegmentFXML.fxml"),
     ;
 
     public static final List<FXMLs> firstExperiment = List.of(
