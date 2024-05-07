@@ -22,7 +22,7 @@
             <Line endX="30.0" endY="-10.0" startX="5.5" strokeLineJoin="ROUND" />
          </Group>
       </Group>
-      <Group fx:id="syringePart" layoutX="0.2071075439453125" layoutY="0.5">
+      <Group fx:id="syringePart">
          <Line endX="-30.0" endY="-60.0" startX="-30.0" startY="-10.0" strokeLineJoin="ROUND" />
          <Line endX="30.0" endY="-60.0" startX="30.0" startY="-10.0" strokeLineJoin="ROUND" />
          <Line endX="-5.0" endY="-10.0" startX="29.5" startY="-10.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.5" />
