@@ -10,6 +10,12 @@ import java.io.IOException;
 public class Syringe extends AnchorPane{
 
     @FXML
+    private Group syringeTip;
+
+    @FXML
+    private Group syringePiston;
+
+    @FXML
     private AnchorPane syringe;
 
     @FXML
