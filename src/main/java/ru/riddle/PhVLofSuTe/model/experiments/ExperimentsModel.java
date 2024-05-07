@@ -69,9 +69,6 @@ public class ExperimentsModel {
         animationModel.animateSecondExperiment(drop, waterOnCoin);
     }
 
-    public void startThirdExperiment(AnchorPane waterPane, AnchorPane soapWaterPane){
-        animationModel.animateThirdExperiment(waterPane, soapWaterPane);
-    }
     public void showDropCount(Button countHider){
         countHider.setVisible(false);
         countHider.setDisable(true);

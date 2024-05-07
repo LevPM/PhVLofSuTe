@@ -61,18 +61,6 @@ public class ExperimentsAnimationModel {
         }
     }
 
-    public void animateThirdExperiment(AnchorPane waterPane, AnchorPane soapWaterPane){
-        if(!isThirdAnimationAnimating){
-            isThirdAnimationAnimating = true;
-            ParallelTransition thirdAnimation = new ParallelTransition(
-                            getTransitionForSyringe(waterPane),
-                            getTransitionForSyringe(soapWaterPane));
-
-            thirdAnimation.setOnFinished(event -> isThirdAnimationAnimating = false);
-            thirdAnimation.play();
-        }
-    }
-
     private Transition getTransitionForSyringe(AnchorPane pane){
 
         List<Node> paneChildren = pane.getChildren();
