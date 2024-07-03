@@ -37,6 +37,8 @@ public class ThirdExperimentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.model = new ThirdExperimentModel(thirdExperimentSyringe);
+        this.model = new ThirdExperimentModel();
+
+        liquidComboBox = new ComboBox<>();
     }
 }
