@@ -2,7 +2,7 @@ package ru.riddle.phVLofSuTe.model.experiments;
 
 import javafx.scene.paint.Color;
 
-public enum TypesOfLiquids {
+public enum Liquid {
 
     WATER("Вода", Color.AQUA, 40),
     SOAP_WATER("Мыльная вода", Color.PALETURQUOISE, 110),
@@ -12,7 +12,7 @@ public enum TypesOfLiquids {
     private final Color color;
     private final int amountOfDrops;
 
-    TypesOfLiquids(String name, Color color, int amountOfDrops){ // Amount of drops -> for third experiment,
+    Liquid(String name, Color color, int amountOfDrops){ // Amount of drops -> for third experiment,
         this.name = name;
         this.color = color;
         this.amountOfDrops = amountOfDrops;

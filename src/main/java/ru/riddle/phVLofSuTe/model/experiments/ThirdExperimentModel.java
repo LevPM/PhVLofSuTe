@@ -19,11 +19,11 @@ public class ThirdExperimentModel {
         ModelUtil.changeScreen(event, FXMLs.EXPERIMENTS_MENU);
     }
 
-    public Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> getLiquidCellFactory(){
+    public Callback<ListView<Liquid>, ListCell<Liquid>> getLiquidCellFactory(){
         return null;
     }
 
-    public List<TypesOfLiquids> getListOfLiquids(){
-        return Arrays.asList(TypesOfLiquids.values());
+    public List<Liquid> getListOfLiquids(){
+        return Arrays.asList(Liquid.values());
     }
 }

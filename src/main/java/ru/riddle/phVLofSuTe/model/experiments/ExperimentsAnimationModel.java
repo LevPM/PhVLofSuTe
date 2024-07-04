@@ -73,8 +73,8 @@ public class ExperimentsAnimationModel {
         ((Rectangle) paneChildren.get(2)).setFill(
                 switch (pane.getId()){
                     case "firstExperimentSyringe",
-                         "thirdExperimentSyringe2" -> TypesOfLiquids.WATER.getColor();
-                    case "thirdExperimentSyringe1" -> TypesOfLiquids.SOAP_WATER.getColor();
+                         "thirdExperimentSyringe2" -> Liquid.WATER.getColor();
+                    case "thirdExperimentSyringe1" -> Liquid.SOAP_WATER.getColor();
                     default -> throw new IllegalStateException("Unexpected value: " + pane.getId());
                 }
         );
