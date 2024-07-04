@@ -6,7 +6,10 @@ import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 public class SyringePiston extends Group {
 
-    public SyringePiston(){
+    private final int countOfSegments;
+
+    public SyringePiston(int countOfSegments){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_PISTON, this);
+        this.countOfSegments = countOfSegments;
     }
 }

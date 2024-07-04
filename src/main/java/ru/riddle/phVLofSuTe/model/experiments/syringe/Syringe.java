@@ -26,7 +26,7 @@ public class Syringe extends AnchorPane implements Initializable {
     private void buildSyringe(){
         createSyringeBody();
 
-        syringe.getChildren().addAll(new SyringePiston(), new SyringeTip());
+        syringe.getChildren().addAll(new SyringePiston(countOfSegments), new SyringeTip());
         syringe.getChildren().addAll(syringeBody);
     }
 
