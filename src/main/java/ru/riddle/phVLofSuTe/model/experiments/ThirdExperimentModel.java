@@ -21,8 +21,8 @@ public class ThirdExperimentModel {
     }
 
     public Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> getLiquidCellFactory(){
-        Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> liquidCellFactory = (lv) ->
-                new ListCell<>() { //lv - listView
+        Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> liquidCellFactory = (lv) -> //lv - listView
+                new ListCell<>() {
                     @Override
                     protected void updateItem(TypesOfLiquids item, boolean empty){
                         super.updateItem(item, empty);
