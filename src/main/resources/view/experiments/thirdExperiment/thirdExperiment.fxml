@@ -51,28 +51,28 @@
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
             </columnConstraints>
             <rowConstraints>
-               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints vgrow="SOMETIMES" />
+               <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
             <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50;" text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
                <padding>
                   <Insets left="5.0" right="5.0" />
                </padding>
             </Label>
-            <ComboBox fx:id="liquidComboBox" prefWidth="150.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <ComboBox fx:id="liquidComboBox" prefHeight="50.0" prefWidth="300.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <padding>
                   <Insets left="5.0" right="5.0" />
                </padding>
             </ComboBox>
             <Button mnemonicParsing="false" onAction="#handleSaveLiquidFromComboBoxButtonAction" style="-fx-background-color: LightCyan; -fx-border-color: Maroon; -fx-border-width: 2; -fx-background-radius: 50; -fx-border-radius: 50;" text="Сохранить" GridPane.columnIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
                <font>
-                  <Font size="20.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
          </GridPane>
