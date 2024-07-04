@@ -13,8 +13,12 @@ public class SyringePiston extends Group{
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_PISTON, this);
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
+        int pistonHeight = countOfSegment * segmentHeight + 10 + 1;
         buildPiston();
-        this.getChildren().add(new SyringePistonTip());
+        this.getChildren().addAll(
+                new SyringePistonTip(),
+                new SyringePistonCap(pistonHeight)
+        );
     }
 
     private void buildPiston(){
