@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Group?>
-<?import javafx.scene.shape.Polygon?>
-<?import javafx.scene.shape.Rectangle?>
 
-<fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <Group fx:id="syringePiston" >
-      <Group>
-         <Rectangle arcWidth="5.0" fill="DIMGRAY" height="50.0" stroke="DARKSLATEGRAY" strokeType="OUTSIDE"
-                    width="10.0" x="-5.0" y="-60.0"/>
-      </Group>
-      <Polygon fill="DIMGRAY" points="5.0, 0.0, -5.0, 0.0, -29, -10, -29, -30, 29, -30, 29, -10"
-               stroke="DARKSLATEGRAY" strokeType="OUTSIDE"/>
-   </Group>
-</fx:root>
+<fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" />

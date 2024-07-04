@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
+import ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
@@ -11,6 +12,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Syringe extends AnchorPane implements Initializable {
+
+    private static final int SEGMENT_HEIGHT = 50;
 
     @FXML
     private AnchorPane syringe;
@@ -26,14 +29,15 @@ public class Syringe extends AnchorPane implements Initializable {
     private void buildSyringe(){
         createSyringeBody();
 
-        syringe.getChildren().addAll(new SyringePiston(countOfSegments), new SyringeTip());
+        syringe.getChildren().add(new SyringePiston(countOfSegments, SEGMENT_HEIGHT));
+        syringe.getChildren().add(new SyringeTip());
         syringe.getChildren().addAll(syringeBody);
     }
 
     private void createSyringeBody(){
         syringeBody = new Group();
         for(int i = 0; i < countOfSegments; i++){
-            syringeBody.getChildren().add(new SyringeBodySegment(i));
+            syringeBody.getChildren().add(new SyringeBodySegment(i, SEGMENT_HEIGHT));
         }
     }
 
