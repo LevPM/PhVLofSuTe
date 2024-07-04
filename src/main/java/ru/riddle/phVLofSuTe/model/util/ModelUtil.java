@@ -40,10 +40,10 @@ public class ModelUtil {
         return root;
     }
 
-    public static void downloadCustomComponentFXML(FXMLs fxml, Node node){
+    public static void downloadCustomComponentFXML(FXMLs fxml, Node controller){
         FXMLLoader loader = new FXMLLoader(ModelUtil.class.getResource(fxml.getPath()));
-        loader.setRoot(node);
-        loader.setController(node);
+        loader.setRoot(controller);
+        loader.setController(controller);
 
         try{
             loader.load();
