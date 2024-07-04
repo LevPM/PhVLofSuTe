@@ -33,7 +33,7 @@ public class Syringe extends AnchorPane implements Initializable {
     private void createSyringeBody(){
         syringeBody = new Group();
         for(int i = 0; i < countOfSegments; i++){
-            syringeBody.getChildren().add(new SyringeSegment(i));
+            syringeBody.getChildren().add(new SyringeBodySegment(i));
         }
     }
 

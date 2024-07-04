@@ -64,7 +64,7 @@ public enum FXMLs {
     EXPERIMENTS_THIRD("/view/experiments/thirdExperiment/thirdExperiment.fxml"),
 
     SYRINGE("/view/experiments/syringe/syringeFXML.fxml"),
-    SYRINGE_SEGMENT("/view/experiments/syringe/syringeSegmentFXML.fxml"),
+    SYRINGE_SEGMENT("/view/experiments/syringe/syringeBodySegmentFXML.fxml"),
     SYRINGE_TIP("/view/experiments/syringe/syringeTipFXML.fxml"),
     SYRINGE_PISTON("/view/experiments/syringe/syringePistonFXML.fxml"),
 

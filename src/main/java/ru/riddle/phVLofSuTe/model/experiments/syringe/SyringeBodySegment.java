@@ -4,11 +4,11 @@ import javafx.scene.Group;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
-public class SyringeSegment extends Group {
+public class SyringeBodySegment extends Group {
 
     private static final int HEIGHT = 50;
 
-    public SyringeSegment(int sequenceNumber){
+    public SyringeBodySegment(int sequenceNumber){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_SEGMENT, this);
         this.setLayoutY(-sequenceNumber * HEIGHT);
     }
