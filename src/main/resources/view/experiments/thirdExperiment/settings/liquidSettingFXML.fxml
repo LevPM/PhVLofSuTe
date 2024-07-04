@@ -6,23 +6,19 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="50.0" prefWidth="300.0"
-      style="-fx-background-color: LightCyan; -fx-border-color: OrangeRed; -fx-border-radius: 30; -fx-background-radius: 30;"
-      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="liquidSetting" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: LightCyan; -fx-border-color: OrangeRed; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <padding>
-      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
    </padding>
    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
       <padding>
-         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </padding>
       <Label fx:id="liquidNameLabel" text="Вода">
          <font>
-            <Font name="System Bold" size="20.0"/>
+            <Font name="System Bold" size="20.0" />
          </font>
       </Label>
    </HBox>
-   <Circle fx:id="liquidColorCircle" fill="AQUA" radius="20.0" stroke="BLACK" strokeType="INSIDE"/>
+   <Circle fx:id="liquidColorCircle" fill="AQUA" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
 </HBox>
