@@ -1,6 +1,5 @@
 package ru.riddle.phVLofSuTe.model.experiments;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -21,25 +20,10 @@ public class ThirdExperimentModel {
     }
 
     public Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> getLiquidCellFactory(){
-        Callback<ListView<TypesOfLiquids>, ListCell<TypesOfLiquids>> liquidCellFactory = (lv) -> //lv - listView
-                new ListCell<>() {
-                    @Override
-                    protected void updateItem(TypesOfLiquids item, boolean empty){
-                        super.updateItem(item, empty);
-                        if(empty){
-                            setText("");
-                        } else {
-                           setText(item.getName());
-
-                        }
-                    }
-                };
         return null;
     }
 
-    public ObservableList<TypesOfLiquids> getListOfLiquids(){
-        List<TypesOfLiquids> listOfLiquids = Arrays.asList(TypesOfLiquids.values());
-
-        return null;
+    public List<TypesOfLiquids> getListOfLiquids(){
+        return Arrays.asList(TypesOfLiquids.values());
     }
 }

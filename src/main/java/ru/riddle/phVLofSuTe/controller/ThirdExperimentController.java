@@ -5,9 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Pair;
 import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
-import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.experiments.TypesOfLiquids;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,7 +14,7 @@ import java.util.ResourceBundle;
 public class ThirdExperimentController implements Initializable {
 
     @FXML
-    private ComboBox<Pair<String, FXMLs>> liquidComboBox;
+    private ComboBox<TypesOfLiquids> liquidComboBox;
 
     @FXML
     private AnchorPane thirdExperimentSyringe;
@@ -39,6 +38,5 @@ public class ThirdExperimentController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.model = new ThirdExperimentModel();
 
-        liquidComboBox = new ComboBox<>();
     }
 }
