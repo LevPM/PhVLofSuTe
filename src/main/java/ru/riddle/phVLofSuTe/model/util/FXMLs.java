@@ -74,6 +74,9 @@ public enum FXMLs {
 
     LIQUID_CONTAINER("/view/experiments/syringe/liquidContainer.fxml"),
 
+    SYRINGE_LIQUID("/view/experiments/syringe/syringeLiquid/syringeLiquidFXML.fxml"),
+    SYRINGE_LIQUID_SEGMENT("/view/experiments/syringe/syringeLiquid/syringeLiquidSegmentFXML.fxml"),
+
     LIQUID_SETTING("/view/experiments/thirdExperiment/settings/liquidSettingFXML.fxml"),
     ;
 
