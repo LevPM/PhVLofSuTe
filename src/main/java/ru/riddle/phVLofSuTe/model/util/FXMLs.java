@@ -72,6 +72,8 @@ public enum FXMLs {
     SYRINGE_PISTON_TIP("/view/experiments/syringe/syringePiston/syringePistonTipFXML.fxml"),
     SYRINGE_PISTON_CAP("/view/experiments/syringe/syringePiston/syringePistonCap.fxml"),
 
+    LIQUID_CONTAINER("/view/experiments/syringe/liquidContainer.fxml"),
+
     LIQUID_SETTING("/view/experiments/thirdExperiment/settings/liquidSettingFXML.fxml"),
     ;
 
