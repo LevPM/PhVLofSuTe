@@ -22,15 +22,18 @@ public class Syringe extends AnchorPane implements Initializable {
 
     private Group syringeBody;
 
+    private SyringePiston piston;
+
     public Syringe(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
     }
 
     private void buildSyringe(){
         createSyringeBody();
+        piston = new SyringePiston(countOfSegments, SEGMENT_HEIGHT);
 
         syringe.getChildren().addAll(
-                new SyringePiston(countOfSegments, SEGMENT_HEIGHT),
+                piston,
                 new SyringeTip(),
                 syringeBody
         );
