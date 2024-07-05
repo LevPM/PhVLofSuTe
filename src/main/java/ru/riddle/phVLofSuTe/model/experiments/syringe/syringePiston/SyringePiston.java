@@ -1,6 +1,9 @@
 package ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston;
 
+import javafx.animation.Transition;
+import javafx.animation.TranslateTransition;
 import javafx.scene.Group;
+import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
@@ -25,5 +28,14 @@ public class SyringePiston extends Group {
         for(int i = 0; i < countOfSegments; i++){
             this.getChildren().add(new SyringePistonRodSegment(i, segmentHeight));
         }
+    }
+
+    public Transition getTransition(Duration duration, boolean isRefilling){
+        TranslateTransition transition = new TranslateTransition();
+        transition.setNode(this);
+        transition.setDuration(duration);
+        transition.setByY(isRefilling ? -250 : 250);
+
+        return transition;
     }
 }

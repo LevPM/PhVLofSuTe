@@ -7,6 +7,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
+import ru.riddle.phVLofSuTe.model.experiments.syringe.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.experiments.syringe.Syringe;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,11 +21,17 @@ public class ThirdExperimentController implements Initializable {
     @FXML
     private AnchorPane thirdExperimentSyringe;
 
+    @FXML
+    private Syringe syringe;
+
+    @FXML
+    private LiquidContainer liquidContainer;
+
     private
     ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton(ActionEvent event) {
-
+        syringe.animateWithContainer(liquidContainer);
     }
 
     public void handleSaveLiquidFromComboBoxButtonAction(ActionEvent event) {
@@ -37,6 +45,5 @@ public class ThirdExperimentController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.model = new ThirdExperimentModel();
-
     }
 }

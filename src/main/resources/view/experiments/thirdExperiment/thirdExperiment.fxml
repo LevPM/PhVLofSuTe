@@ -104,8 +104,8 @@
             </viewport>
             <Image url="@../images/WaterBucket.png" />
          </ImageView>
-         <Syringe />
-         <LiquidContainer />
+         <Syringe fx:id="syringe" translateX="100" translateY="350"/>
+         <LiquidContainer fx:id="liquidContainer"/>
       </AnchorPane>
    </HBox>
    <BorderPane>
