@@ -10,7 +10,7 @@ import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 public class Drop extends Group{
 
-    private Liquid liquidType;
+    private final Liquid liquidType;
 
     public Drop(Liquid liquidType, double layoutX, double layoutY){
         this.liquidType = liquidType;

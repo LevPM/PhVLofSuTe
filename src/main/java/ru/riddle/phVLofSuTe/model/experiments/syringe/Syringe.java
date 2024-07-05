@@ -27,7 +27,7 @@ public class Syringe extends AnchorPane implements Initializable {
     private SyringeBody body;
     private SyringePiston piston;
 
-    private Liquid liquidType;
+    private final Liquid liquidType;
 
     private boolean isAnimating;
 
@@ -46,10 +46,6 @@ public class Syringe extends AnchorPane implements Initializable {
                 piston,
                 body
         );
-    }
-
-    public boolean isAnimating() {
-        return isAnimating;
     }
 
     @Override
