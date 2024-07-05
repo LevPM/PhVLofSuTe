@@ -14,6 +14,12 @@ public class LiquidContainer extends Group {
     @FXML
     private Polygon liquid;
 
+    public LiquidContainer(){
+        ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
+        this.liquidType = Liquid.WATER;
+        liquid.setFill(liquidType.getColor());
+    }
+
     public LiquidContainer(Liquid liquidType){
         ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
         this.liquidType = liquidType;
