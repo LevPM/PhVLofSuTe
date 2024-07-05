@@ -37,8 +37,8 @@ public class Syringe extends AnchorPane implements Initializable {
 
         syringe.getChildren().addAll(
                 liquid,
-                body,
-                piston
+                piston,
+                body
         );
     }
 
