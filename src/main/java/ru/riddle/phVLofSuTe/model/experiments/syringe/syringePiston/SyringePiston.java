@@ -14,14 +14,14 @@ public class SyringePiston extends AnchorPane {
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
         int pistonHeight = countOfSegment * segmentHeight + 10 + 1;
-        buildSyringePiston();
+        buildSyringePistonRod();
         this.getChildren().addAll(
                 new SyringePistonTip(),
                 new SyringePistonCap(pistonHeight)
         );
     }
 
-    private void buildSyringePiston(){
+    private void buildSyringePistonRod(){
         for(int i = 0; i < countOfSegments; i++){
             this.getChildren().add(new SyringePistonRodSegment(i, segmentHeight));
         }
