@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
+import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBody;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBodySegment;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeTip;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston.SyringePiston;
@@ -22,30 +23,21 @@ public class Syringe extends AnchorPane implements Initializable {
 
     int countOfSegments = 6; //default count of parts = 6
 
-    private Group syringeBody;
-
     private SyringePiston piston;
+    private SyringeBody body;
 
     public Syringe(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
     }
 
     private void buildSyringe(){
-        createSyringeBody();
         piston = new SyringePiston(countOfSegments, SEGMENT_HEIGHT);
+        body = new SyringeBody(countOfSegments, SEGMENT_HEIGHT);
 
         syringe.getChildren().addAll(
                 piston,
-                new SyringeTip(),
-                syringeBody
+                body
         );
-    }
-
-    private void createSyringeBody(){
-        syringeBody = new Group();
-        for(int i = 0; i < countOfSegments; i++){
-            syringeBody.getChildren().add(new SyringeBodySegment(i, SEGMENT_HEIGHT));
-        }
     }
 
     @Override
