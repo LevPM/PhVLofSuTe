@@ -3,6 +3,7 @@ package ru.riddle.phVLofSuTe.model.experiments.syringe;
 import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
@@ -79,9 +80,20 @@ public class Syringe extends AnchorPane implements Initializable {
     private Transition getRefillingTransition(LiquidContainer container, Duration refillingDuration){
         return new SequentialTransition(
                 container.getTransition(Duration.seconds(3), this, false),
+                getSyringeLoweringTransition(Duration.seconds(2), container, true),
                 piston.getTransition(refillingDuration, true),
+                getSyringeLoweringTransition(Duration.seconds(2), container, false),
                 container.getTransition(Duration.seconds(3), this, true)
         );
+    }
+
+    private Transition getSyringeLoweringTransition(Duration duration, LiquidContainer container, boolean isLowering){
+        TranslateTransition transition = new TranslateTransition();
+        transition.setNode(this);
+        transition.setDuration(duration);
+        double height = container.getLayoutY() - this.getTranslateY() - 48;
+        transition.setByY(isLowering ? height : -height);
+        return transition;
     }
 
     private Transition getDrippingTransition(Duration drippingDuration){
