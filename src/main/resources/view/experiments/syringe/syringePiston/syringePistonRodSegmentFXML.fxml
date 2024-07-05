@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <Rectangle arcWidth="5.0" fill="DIMGRAY" height="50.0" stroke="DARKSLATEGRAY" strokeType="OUTSIDE" width="10.0"
-              x="-5.0" y="-60.0"/>
+   <Rectangle arcWidth="5.0" fill="DIMGRAY" height="50.0" stroke="DARKSLATEGRAY" strokeType="OUTSIDE" strokeWidth="0.0" width="10.0" x="-5.0" y="-60.0" />
 </fx:root>
