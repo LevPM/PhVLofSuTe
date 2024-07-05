@@ -2,11 +2,8 @@ package ru.riddle.phVLofSuTe.model.experiments.syringe;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBody;
-import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBodySegment;
-import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeTip;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
