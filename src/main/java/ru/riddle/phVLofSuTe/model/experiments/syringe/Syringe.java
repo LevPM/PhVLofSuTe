@@ -3,7 +3,6 @@ package ru.riddle.phVLofSuTe.model.experiments.syringe;
 import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;

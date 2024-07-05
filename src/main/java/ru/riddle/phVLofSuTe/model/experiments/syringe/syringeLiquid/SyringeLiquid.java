@@ -18,6 +18,7 @@ public class SyringeLiquid extends Group {
         this.segmentHeight = segmentHeight;
         this.liquidType = liquidType;
         buildSyringeLiquid();
+        this.getChildren().add(new SyringeLiquidTip(this.liquidType));
     }
 
     private void buildSyringeLiquid(){
