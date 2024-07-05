@@ -41,4 +41,8 @@ public class Syringe extends AnchorPane implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         buildSyringe();
     }
+
+    public void animate(){
+
+    }
 }
