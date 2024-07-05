@@ -14,14 +14,14 @@ public class SyringePiston extends Group{
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
         int pistonHeight = countOfSegment * segmentHeight + 10 + 1;
-        buildPiston();
+        buildSyringePiston();
         this.getChildren().addAll(
                 new SyringePistonTip(),
                 new SyringePistonCap(pistonHeight)
         );
     }
 
-    private void buildPiston(){
+    private void buildSyringePiston(){
         for(int i = 0; i < countOfSegments; i++){
             this.getChildren().add(new SyringePistonRodSegment(i, segmentHeight));
         }
