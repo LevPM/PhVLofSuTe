@@ -47,7 +47,7 @@ public class Syringe extends AnchorPane implements Initializable {
         buildSyringe();
     }
 
-    public void animate(){
+    public void animateWithContainer(LiquidContainer container){
 
     }
 }
