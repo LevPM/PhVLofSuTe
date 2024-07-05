@@ -64,12 +64,12 @@ public enum FXMLs {
     EXPERIMENTS_THIRD("/view/experiments/thirdExperiment/thirdExperiment.fxml"),
 
     SYRINGE("/view/experiments/syringe/syringeFXML.fxml"),
-    SYRINGE_BODY_SEGMENT("/view/experiments/syringe/syringeBodySegmentFXML.fxml"),
-    SYRINGE_TIP("/view/experiments/syringe/syringeTipFXML.fxml"),
-    SYRINGE_PISTON("/view/experiments/syringe/syringePistonFXML.fxml"),
-    SYRINGE_PISTON_SEGMENT("/view/experiments/syringe/syringePistonRodSegmentFXML.fxml"),
-    SYRINGE_PISTON_TIP("/view/experiments/syringe/syringePistonTipFXML.fxml"),
-    SYRINGE_PISTON_CAP("/view/experiments/syringe/syringePistonCap.fxml"),
+    SYRINGE_BODY_SEGMENT("/view/experiments/syringe/syringeBody/syringeBodySegmentFXML.fxml"),
+    SYRINGE_TIP("/view/experiments/syringe/syringeBody/syringeTipFXML.fxml"),
+    SYRINGE_PISTON("/view/experiments/syringe/syringePiston/syringePistonFXML.fxml"),
+    SYRINGE_PISTON_SEGMENT("/view/experiments/syringe/syringePiston/syringePistonRodSegmentFXML.fxml"),
+    SYRINGE_PISTON_TIP("/view/experiments/syringe/syringePiston/syringePistonTipFXML.fxml"),
+    SYRINGE_PISTON_CAP("/view/experiments/syringe/syringePiston/syringePistonCap.fxml"),
 
     LIQUID_SETTING("/view/experiments/thirdExperiment/settings/liquidSettingFXML.fxml"),
     ;
