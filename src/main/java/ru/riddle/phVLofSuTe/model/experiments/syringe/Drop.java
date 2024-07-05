@@ -15,9 +15,8 @@ public class Drop extends Group{
     public Drop(Liquid liquidType, double layoutX, double layoutY){
         this.liquidType = liquidType;
         ModelUtil.downloadCustomComponentFXML(FXMLs.DROP, this);
-        this.setLayoutX(layoutX);
-        this.setLayoutY(layoutY);
-        this.setVisible(false);
+        this.setTranslateX(layoutX);
+        this.setTranslateY(layoutY);
     }
 
     public Transition getTransition(Duration entireDuration){
