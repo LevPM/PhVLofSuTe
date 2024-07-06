@@ -52,7 +52,7 @@ public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer imp
         if(!isAnimating){
             isAnimating = true;
             Transition transition = getTransition(container, drop);
-            transition.setOnFinished(event -> isAnimating = false);;
+            transition.setOnFinished(event -> isAnimating = false);
             transition.play();
         }
 
