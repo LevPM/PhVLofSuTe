@@ -3,6 +3,8 @@ package ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.scene.Group;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
@@ -17,6 +19,7 @@ public class SyringePiston extends Group {
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
         int pistonHeight = countOfSegment * segmentHeight + 10 + 1;
+        createBackground(pistonHeight - 11);
         buildSyringePistonRod();
         this.getChildren().addAll(
                 new SyringePistonTip(),
@@ -28,6 +31,13 @@ public class SyringePiston extends Group {
         for(int i = 0; i < countOfSegments; i++){
             this.getChildren().add(new SyringePistonRodSegment(i, segmentHeight));
         }
+    }
+
+    private void createBackground(int pistonHeight){
+        Rectangle background = new Rectangle(60, pistonHeight, Color.PAPAYAWHIP);
+        background.setX(-30);
+        background.setY(-pistonHeight - 11);
+        this.getChildren().add(background);
     }
 
     public Transition getTransition(Duration duration, boolean isRefilling){
