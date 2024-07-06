@@ -5,9 +5,7 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBody;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeLiquid.SyringeLiquid;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston.SyringePiston;
@@ -17,7 +15,7 @@ import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Syringe extends AnchorPane implements Initializable {
+public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer implements Initializable {
 
     private static final int SEGMENT_HEIGHT = 50;
 
@@ -27,17 +25,14 @@ public class Syringe extends AnchorPane implements Initializable {
     private SyringeBody body;
     private SyringePiston piston;
 
-    private final Liquid liquidType;
-
     private boolean isAnimating;
 
     public Syringe(){
-        this.liquidType = Liquid.WATER;
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
     }
 
     private void buildSyringe(){
-        liquid = new SyringeLiquid(countOfSegments, SEGMENT_HEIGHT, liquidType);
+        liquid = new SyringeLiquid(countOfSegments, SEGMENT_HEIGHT, this.getLiquidType());
         body = new SyringeBody(countOfSegments, SEGMENT_HEIGHT);
         piston = new SyringePiston(countOfSegments, SEGMENT_HEIGHT);
 

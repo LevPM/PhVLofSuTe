@@ -3,30 +3,19 @@ package ru.riddle.phVLofSuTe.model.experiments.syringe;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
 import javafx.scene.shape.Polygon;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
-public class LiquidContainer extends Group {
-
-    private final Liquid liquidType;
+public class LiquidContainer extends ru.riddle.phVLofSuTe.model.util.LiquidContainer {
 
     @FXML
     private Polygon liquid;
 
     public LiquidContainer(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
-        this.liquidType = Liquid.WATER;
-        liquid.setFill(liquidType.getColor());
-    }
-
-    public LiquidContainer(Liquid liquidType){
-        ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
-        this.liquidType = liquidType;
-        liquid.setFill(liquidType.getColor());
+        liquid.setFill(this.getLiquidType().getColor());
     }
 
     public Transition getTransition(Duration duration, Syringe syringe, boolean isHiding){
