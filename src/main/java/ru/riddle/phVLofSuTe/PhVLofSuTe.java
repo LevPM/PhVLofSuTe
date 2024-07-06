@@ -15,6 +15,7 @@ public class PhVLofSuTe extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("PhVLofSuTe");
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
