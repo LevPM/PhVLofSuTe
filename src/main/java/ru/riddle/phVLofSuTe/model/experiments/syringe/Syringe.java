@@ -48,23 +48,23 @@ public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer imp
         buildSyringe();
     }
 
-    public void animateWithContainer(LiquidContainer container){
+    public void animateWithContainer(LiquidContainer container, Drop drop){
         if(!isAnimating){
             isAnimating = true;
-            Transition transition = getTransition(container);
-            transition.setOnFinished(event -> isAnimating = false);
+            Transition transition = getTransition(container, drop);
+            transition.setOnFinished(event -> isAnimating = false);;
             transition.play();
         }
 
     }
 
-    private Transition getTransition(LiquidContainer container){
+    private Transition getTransition(LiquidContainer container, Drop drop){
         Duration drippingDuration = Duration.seconds(20);
         Duration refillingDuration = Duration.seconds(10);
 
         return new SequentialTransition(
                 getRefillingTransition(container, refillingDuration),
-                getDrippingTransition(drippingDuration)
+                getDrippingTransition(drippingDuration, drop)
         );
     }
 
@@ -87,8 +87,7 @@ public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer imp
         return transition;
     }
 
-    private Transition getDrippingTransition(Duration drippingDuration){
-        Drop drop = new Drop();
+    private Transition getDrippingTransition(Duration drippingDuration, Drop drop){
         return new ParallelTransition(drop.getTransition(drippingDuration), piston.getTransition(drippingDuration, false));
     }
 }
