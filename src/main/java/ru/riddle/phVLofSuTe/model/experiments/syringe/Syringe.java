@@ -82,7 +82,7 @@ public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer imp
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setDuration(duration);
-        double height = container.getLayoutY() - this.getTranslateY() - 48;
+        double height = container.getTranslateY() - this.getTranslateY() - 48;
         transition.setByY(isLowering ? height : -height);
         return transition;
     }
