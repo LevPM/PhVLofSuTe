@@ -21,6 +21,8 @@ public class Drop extends LiquidContainer {
         ModelUtil.downloadCustomComponentFXML(FXMLs.DROP, this);
         dropTip.setFill(this.getLiquidType().getColor());
         dropCircle.setFill(this.getLiquidType().getColor());
+        this.setScaleX(0.5);
+        this.setScaleY(0.5);
     }
 
     public Transition getTransition(Duration entireDuration){
