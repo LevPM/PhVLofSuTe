@@ -93,7 +93,7 @@ public class Syringe extends AnchorPane implements Initializable {
     }
 
     private Transition getDrippingTransition(Duration drippingDuration){
-        Drop drop = new Drop(liquidType, this.getTranslateX(), this.getTranslateY());
+        Drop drop = new Drop();
         return new ParallelTransition(drop.getTransition(drippingDuration), piston.getTransition(drippingDuration, false));
     }
 }

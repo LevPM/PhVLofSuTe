@@ -106,6 +106,7 @@
          </ImageView>
          <Syringe fx:id="syringe" translateX="100" translateY="350" />
          <LiquidContainer fx:id="liquidContainer" />
+         <Drop />
       </AnchorPane>
    </HBox>
    <BorderPane>
