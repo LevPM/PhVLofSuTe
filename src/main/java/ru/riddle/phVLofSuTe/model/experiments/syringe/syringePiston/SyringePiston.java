@@ -43,7 +43,7 @@ public class SyringePiston extends Group {
     public Transition getTransition(Duration duration, boolean isRefilling){
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
-        transition.setDuration(duration);
+        transition.setDuration(Duration.millis(duration.toMillis() + 1000));
         transition.setByY(isRefilling ? -250 : 250);
 
         return transition;
