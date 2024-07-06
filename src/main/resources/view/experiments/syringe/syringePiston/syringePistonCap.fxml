@@ -3,6 +3,6 @@
 <?import javafx.scene.shape.Polygon?>
 
 <fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <Polygon fill="DIMGRAY" points="-40.0, -10.0, 40.0, -10.0, 35, 0, -35, 0" stroke="DARKSLATEGRAY"
+    <Polygon fill="DIMGRAY" points="-60.0, -8.0, -30.0, 0.0, 30.0, 0.0, 60.0, -8.0, 30.0, -6.0, -30.0, -6.0" stroke="DARKSLATEGRAY"
              strokeType="OUTSIDE"/>
 </fx:root>

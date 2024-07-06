@@ -15,7 +15,10 @@ public class SyringeBody extends Group {
         this.countOfSegments = countOfSegments;
         this.segmentHeight = segmentHeight;
         buildSyringeBody();
-        this.getChildren().add(new SyringeTip());
+        this.getChildren().addAll(
+                new SyringeTip(),
+                new SyringeBodyStub(countOfSegments * segmentHeight + 10)
+        );
     }
 
     private void buildSyringeBody(){
