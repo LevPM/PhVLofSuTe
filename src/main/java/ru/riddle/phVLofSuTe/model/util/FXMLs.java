@@ -3,11 +3,11 @@ package ru.riddle.phVLofSuTe.model.util;
 import java.util.List;
 
 public enum FXMLs {
-    MENU_SCREEN("/view/MenuScreenFXML.fxml"),
-    SETTINGS_SCREEN("/view/SettingsScreenFXML.fxml"),
-    AUTHORS_SCREEN("/view/AuthorsScreenFXML.fxml"),
+    MENU_SCREEN("/view/menu/MenuScreenFXML.fxml"),
+    SETTINGS_SCREEN("/view/menu/SettingsScreenFXML.fxml"),
+    AUTHORS_SCREEN("/view/menu/AuthorsScreenFXML.fxml"),
 
-    MENU_TE_SELECTION("/view/MenuTheoryExperimentsSelection.fxml"),
+    MENU_TE_SELECTION("/view/menu/MenuTheoryExperimentsSelection.fxml"),
 
 
     THEORY_SELECTION("/view/theory/TheorySelection.fxml"),
