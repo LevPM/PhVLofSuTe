@@ -5,7 +5,6 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.shape.Polygon;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.animation.syringe.Syringe;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
