@@ -10,12 +10,13 @@ import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeBody.SyringeBody;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringeLiquid.SyringeLiquid;
 import ru.riddle.phVLofSuTe.model.experiments.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.util.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Syringe extends ru.riddle.phVLofSuTe.model.util.LiquidContainer implements Initializable {
+public class Syringe extends LiquidTank implements Initializable {
 
     private static final int SEGMENT_HEIGHT = 50;
 

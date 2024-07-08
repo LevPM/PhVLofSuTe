@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Group;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 
-public abstract class LiquidContainer extends Group {
+public abstract class LiquidTank extends Group {
 
     private static final Liquid DEFAULT_LIQUID = Liquid.WATER;
 

@@ -6,9 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Polygon;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.util.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
-public class LiquidContainer extends ru.riddle.phVLofSuTe.model.util.LiquidContainer {
+public class LiquidContainer extends LiquidTank {
 
     @FXML
     private Polygon liquid;

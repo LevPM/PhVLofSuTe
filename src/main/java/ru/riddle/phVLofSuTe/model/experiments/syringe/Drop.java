@@ -6,10 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Arc;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.model.util.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.util.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
-public class Drop extends LiquidContainer {
+public class Drop extends LiquidTank {
 
     @FXML
     private Arc dropTip;
