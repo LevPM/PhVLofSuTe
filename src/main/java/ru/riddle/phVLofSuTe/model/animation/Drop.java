@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.experiments.syringe;
+package ru.riddle.phVLofSuTe.model.animation;
 
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Arc;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.model.util.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 public class Drop extends LiquidTank {

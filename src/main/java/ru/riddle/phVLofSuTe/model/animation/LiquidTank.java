@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.util;
+package ru.riddle.phVLofSuTe.model.animation;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

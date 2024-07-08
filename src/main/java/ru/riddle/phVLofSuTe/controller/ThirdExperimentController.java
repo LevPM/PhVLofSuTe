@@ -7,9 +7,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
-import ru.riddle.phVLofSuTe.model.experiments.syringe.Drop;
-import ru.riddle.phVLofSuTe.model.experiments.syringe.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.experiments.syringe.Syringe;
+import ru.riddle.phVLofSuTe.model.animation.Drop;
+import ru.riddle.phVLofSuTe.model.animation.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.animation.syringe.Syringe;
 
 import java.net.URL;
 import java.util.ResourceBundle;

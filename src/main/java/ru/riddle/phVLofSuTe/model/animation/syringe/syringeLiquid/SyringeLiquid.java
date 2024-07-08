@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.experiments.syringe.syringeLiquid;
+package ru.riddle.phVLofSuTe.model.animation.syringe.syringeLiquid;
 
 import javafx.scene.Group;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
