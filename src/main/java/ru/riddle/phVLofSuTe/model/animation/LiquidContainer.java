@@ -19,7 +19,7 @@ public class LiquidContainer extends LiquidTank {
         liquid.setFill(this.getLiquidType().getColor());
     }
 
-    public Transition getTransition(Duration duration, Syringe syringe, boolean isHiding){
+    public Transition getTransition(Duration duration, boolean isHiding){
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setByX(isHiding ? this.getTranslateX() : -this.getTranslateX());

@@ -73,11 +73,11 @@ public class Syringe extends LiquidTank implements Initializable {
 
     private Transition getRefillingTransition(LiquidContainer container, Duration refillingDuration){
         return new SequentialTransition(
-                container.getTransition(Duration.seconds(3), this, false),
+                container.getTransition(Duration.seconds(3), false),
                 getSyringeLoweringTransition(Duration.seconds(2), container, true),
                 piston.getTransition(refillingDuration, true),
                 getSyringeLoweringTransition(Duration.seconds(2), container, false),
-                container.getTransition(Duration.seconds(3), this, true)
+                container.getTransition(Duration.seconds(3), true)
         );
     }
 
