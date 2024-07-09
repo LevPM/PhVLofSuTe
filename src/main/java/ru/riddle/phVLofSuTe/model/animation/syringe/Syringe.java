@@ -4,6 +4,8 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.animation.Drop;
@@ -22,7 +24,9 @@ public class Syringe extends LiquidTank implements Initializable {
 
     private static final int SEGMENT_HEIGHT = 50;
 
-    int countOfSegments = 6; //default count of parts = 6
+    IntegerProperty countOfSegments;
+
+    private static final int DEFAULT_COUNT_OF_SEGMENTS = 6;
 
     private SyringeLiquid liquid;
     private SyringeBody body;
@@ -35,9 +39,9 @@ public class Syringe extends LiquidTank implements Initializable {
     }
 
     private void buildSyringe(){
-        liquid = new SyringeLiquid(countOfSegments, SEGMENT_HEIGHT, this.getLiquidType());
-        body = new SyringeBody(countOfSegments, SEGMENT_HEIGHT);
-        piston = new SyringePiston(countOfSegments, SEGMENT_HEIGHT);
+        liquid = new SyringeLiquid(getCountOfSegments(), SEGMENT_HEIGHT, this.getLiquidType());
+        body = new SyringeBody(getCountOfSegments(), SEGMENT_HEIGHT);
+        piston = new SyringePiston(getCountOfSegments(), SEGMENT_HEIGHT);
 
         this.getChildren().addAll(
                 liquid,
@@ -92,5 +96,20 @@ public class Syringe extends LiquidTank implements Initializable {
 
     private Transition getDrippingTransition(Duration drippingDuration, Drop drop){
         return new ParallelTransition(drop.getTransition(drippingDuration), piston.getTransition(drippingDuration, false));
+    }
+
+    public int getCountOfSegments(){
+        return (countOfSegments != null) ? countOfSegments.get() : DEFAULT_COUNT_OF_SEGMENTS;
+    }
+
+    public void setCountOfSegments(int countOfSegments){
+        this.countOfSegmentsProperty().set(countOfSegments);
+    }
+
+    public IntegerProperty countOfSegmentsProperty(){
+        if(countOfSegments == null){
+            countOfSegments = new SimpleIntegerProperty(this, "countOfSegments", DEFAULT_COUNT_OF_SEGMENTS);
+        }
+        return countOfSegments;
     }
 }
