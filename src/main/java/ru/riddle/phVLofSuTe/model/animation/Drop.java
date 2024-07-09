@@ -18,8 +18,10 @@ public class Drop extends LiquidTank {
 
     public Drop(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.DROP, this);
-        dropTip.setFill(this.getLiquidType().getColor());
-        dropCircle.setFill(this.getLiquidType().getColor());
+        this.setLiquidParts(
+                dropTip,
+                dropCircle
+        );
         this.setScaleX(0.5);
         this.setScaleY(0.5);
     }
