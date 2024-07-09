@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.shape.Shape;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,6 +19,11 @@ public abstract class LiquidTank extends Group {
     private List<Shape> shapeParts;
     private List<Fillable> fillableParts;
     //We need to lists of parts for classic javafx components and custom components
+
+    public LiquidTank(){
+        shapeParts = new ArrayList<>();
+        fillableParts = new ArrayList<>();
+    }
 
     public final Liquid getLiquidType(){
         return (liquidTypeProperty() != null) ? liquidType.get() : DEFAULT_LIQUID;
