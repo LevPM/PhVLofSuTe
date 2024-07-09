@@ -1,11 +1,13 @@
 package ru.riddle.phVLofSuTe.model.animation.syringe.syringeLiquid;
 
 import javafx.scene.Group;
+import javafx.scene.paint.Color;
+import ru.riddle.phVLofSuTe.model.animation.Fillable;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
-public class SyringeLiquid extends Group {
+public class SyringeLiquid extends Group implements Fillable {
 
     private final int countOfSegments;
     private final int segmentHeight;
@@ -25,5 +27,14 @@ public class SyringeLiquid extends Group {
         for(int i = 0; i < countOfSegments; i++){
             this.getChildren().add(new SyringeLiquidSegment(i, segmentHeight, liquidType));
         }
+    }
+
+    @Override
+    public void fill(Color color) {
+        this.getChildren().forEach(children -> {
+            if(children instanceof Fillable fillable){
+                fillable.fill(color);
+            }
+        });
     }
 }

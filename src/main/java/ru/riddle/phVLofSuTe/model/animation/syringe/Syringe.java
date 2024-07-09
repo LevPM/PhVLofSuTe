@@ -36,6 +36,7 @@ public class Syringe extends LiquidTank implements Initializable {
 
     public Syringe(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
+        this.setFillableParts(liquid);
     }
 
     private void buildSyringe(){
