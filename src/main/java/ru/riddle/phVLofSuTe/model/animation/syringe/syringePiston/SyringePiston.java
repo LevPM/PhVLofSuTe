@@ -44,7 +44,7 @@ public class SyringePiston extends Group {
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setDuration(Duration.millis(duration.toMillis() + 1000));
-        transition.setByY(isRefilling ? -250 : 250);
+        transition.setByY(isRefilling ? -segmentHeight * (countOfSegments - 1) : segmentHeight * (countOfSegments - 1));
 
         return transition;
     }
