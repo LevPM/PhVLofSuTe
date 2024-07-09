@@ -15,7 +15,7 @@ public class LiquidContainer extends LiquidTank {
 
     public LiquidContainer(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
-        liquid.setFill(this.getLiquidType().getColor());
+        liquidTypeProperty().addListener(event -> liquid.setFill(this.getLiquidType().getColor()));
     }
 
     public Transition getTransition(Duration duration, boolean isHiding){
