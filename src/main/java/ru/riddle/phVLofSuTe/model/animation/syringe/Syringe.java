@@ -51,6 +51,11 @@ public class Syringe extends LiquidTank implements Initializable {
         );
     }
 
+    private void rebuildSyringe(){
+        this.getChildren().clear();
+        buildSyringe();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         buildSyringe();
@@ -112,6 +117,9 @@ public class Syringe extends LiquidTank implements Initializable {
     public IntegerProperty countOfSegmentsProperty(){
         if(countOfSegments == null){
             countOfSegments = new SimpleIntegerProperty(this, "countOfSegments", DEFAULT_COUNT_OF_SEGMENTS);
+            countOfSegments.addListener(event -> {
+                rebuildSyringe();
+            });
         }
         return countOfSegments;
     }
