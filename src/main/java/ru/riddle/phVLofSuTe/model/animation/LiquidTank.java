@@ -15,7 +15,9 @@ public abstract class LiquidTank extends Group {
 
     private ObjectProperty<Liquid> liquidType;
 
-    private List<Shape> liquidParts;
+    private List<Shape> shapeParts;
+    private List<Fillable> fillableParts;
+    //We need to lists of parts for classic javafx components and custom components
 
     public final Liquid getLiquidType(){
         return (liquidTypeProperty() != null) ? liquidType.get() : DEFAULT_LIQUID;
@@ -33,12 +35,18 @@ public abstract class LiquidTank extends Group {
         return this.liquidType;
     }
 
-    protected void setLiquidParts(Shape... shapes) {
-        this.liquidParts = Arrays.asList(shapes);
+    protected void setShapeParts(Shape... shapes){
+        this.shapeParts = Arrays.asList(shapes);
+        fillParts();
+    }
+
+    protected void setFillableParts(Fillable... fillableParts){
+        this.fillableParts = Arrays.asList(fillableParts);
         fillParts();
     }
 
     private void fillParts(){
-        liquidParts.forEach(part -> part.setFill(this.getLiquidType().getColor()));
+        shapeParts.forEach(part -> part.setFill(this.getLiquidType().getColor()));
+        fillableParts.forEach(part -> part.fill(this.getLiquidType().getColor()));
     }
 }

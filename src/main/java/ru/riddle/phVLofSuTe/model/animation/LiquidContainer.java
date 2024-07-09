@@ -15,7 +15,7 @@ public class LiquidContainer extends LiquidTank {
 
     public LiquidContainer(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.LIQUID_CONTAINER, this);
-        this.setLiquidParts(liquid);
+        this.setShapeParts(liquid);
     }
 
     public Transition getTransition(Duration duration, boolean isHiding){

@@ -18,7 +18,7 @@ public class Drop extends LiquidTank {
 
     public Drop(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.DROP, this);
-        this.setLiquidParts(
+        this.setShapeParts(
                 dropTip,
                 dropCircle
         );
