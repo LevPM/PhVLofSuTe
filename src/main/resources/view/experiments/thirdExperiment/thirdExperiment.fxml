@@ -106,7 +106,7 @@
             <Image url="@../images/WaterBucket.png" />
          </ImageView>
          <Drop fx:id="drop" layoutX="100" layoutY="335"/>
-         <Syringe fx:id="syringe" translateX="100" translateY="350" countOfSegments="4"/>
+         <Syringe fx:id="syringe" translateX="100" translateY="350" countOfSegments="5"/>
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateY="450.0" translateX="300"/>
       </AnchorPane>
    </HBox>
