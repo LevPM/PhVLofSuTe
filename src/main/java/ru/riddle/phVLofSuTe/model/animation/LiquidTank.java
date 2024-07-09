@@ -11,22 +11,18 @@ public abstract class LiquidTank extends Group {
 
     private ObjectProperty<Liquid> liquidType;
 
-    public Liquid getLiquidType(){
-        return (liquidType != null) ? liquidType.get() : DEFAULT_LIQUID;
+    public final Liquid getLiquidType(){
+        return (liquidTypeProperty() != null) ? liquidType.get() : DEFAULT_LIQUID;
     }
 
-    public void setLiquidType(Liquid liquidType){
-        if((this.liquidType != null)){
-            if(!DEFAULT_LIQUID.equals(liquidType)){
-                this.liquidType.set(liquidType);
-            }
-        }
+    public final void setLiquidType(Liquid liquidType){
+        this.liquidTypeProperty().set(liquidType);
     }
 
-    public ObjectProperty<Liquid> liquidTypeProperty(){
+    public final ObjectProperty<Liquid> liquidTypeProperty(){
         if(liquidType == null){
             liquidType = new SimpleObjectProperty<>(this, "liquidType", DEFAULT_LIQUID);
         }
-        return liquidType;
+        return this.liquidType;
     }
 }
