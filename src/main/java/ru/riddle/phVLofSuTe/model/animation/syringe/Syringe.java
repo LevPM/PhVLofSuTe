@@ -59,6 +59,8 @@ public class Syringe extends LiquidTank implements Initializable {
     public void animateWithContainer(LiquidContainer container, Drop drop){
         if(!isAnimating){
             isAnimating = true;
+            this.setLiquidType(container.getLiquidType());
+            drop.setLiquidType(container.getLiquidType());
             Transition transition = getTransition(container, drop);
             transition.setOnFinished(event -> isAnimating = false);
             transition.play();
