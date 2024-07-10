@@ -38,10 +38,6 @@ public class ThirdExperimentController implements Initializable {
         syringe.animateWithContainer(liquidContainer, drop);
     }
 
-    public void handleSaveLiquidFromComboBoxButtonAction() {
-
-    }
-
     public void handleLeaveButtonAction(ActionEvent event) {
         model.leaveExperiment(event);
     }
