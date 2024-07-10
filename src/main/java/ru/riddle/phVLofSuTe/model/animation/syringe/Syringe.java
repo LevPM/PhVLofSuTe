@@ -81,6 +81,12 @@ public class Syringe extends LiquidTank implements Initializable {
         Duration drippingDuration = Duration.seconds(20);
         Duration refillingDuration = Duration.seconds(10);
 
+        if(getIsOpen()){
+            Transition drippingTransition = getDrippingTransition(drippingDuration, drop);
+            drippingTransition.setOnFinished(event -> setIsOpen(false));
+            return new SequentialTransition(drippingTransition);
+        }
+
         return new SequentialTransition(
                 getRefillingTransition(container, refillingDuration),
                 getDrippingTransition(drippingDuration, drop)
