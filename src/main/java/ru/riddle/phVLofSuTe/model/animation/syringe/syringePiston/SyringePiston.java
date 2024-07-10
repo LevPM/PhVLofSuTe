@@ -14,12 +14,15 @@ public class SyringePiston extends Group {
     private final int countOfSegments;
     private final int segmentHeight;
 
+    private final int openY; //Translate Y when syringe is open
+
     private boolean isOpen = false;
 
     public SyringePiston(int countOfSegment, int segmentHeight){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_PISTON, this);
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
+        this.openY = - segmentHeight * (countOfSegments - 1);
         int pistonHeight = countOfSegment * segmentHeight + 10 + 1;
         createBackground(pistonHeight - 11);
         buildSyringePistonRod();
@@ -57,14 +60,18 @@ public class SyringePiston extends Group {
 
     private void open(){
         if(!isOpen) {
-            this.setTranslateY(-segmentHeight * (countOfSegments - 1));
+            if(!(this.getTranslateY() == openY)){
+                this.setTranslateY(-segmentHeight * (countOfSegments - 1));
+            }
             this.isOpen = true;
         }
     }
 
     private void close(){
         if(isOpen) {
-            this.setTranslateY(segmentHeight * (countOfSegments - 1));
+            if(!(this.getTranslateY() == 0)){
+                this.setTranslateY(segmentHeight * (countOfSegments - 1));
+            }
             this.isOpen = false;
         }
     }
