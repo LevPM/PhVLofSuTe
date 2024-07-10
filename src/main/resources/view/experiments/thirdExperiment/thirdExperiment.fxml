@@ -114,4 +114,30 @@
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateX="300" translateY="450.0" />
       </AnchorPane>
    </HBox>
+   <BorderPane>
+      <left>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Назад" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </left>
+      <center>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLeaveButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+            <BorderPane.margin>
+               <Insets />
+            </BorderPane.margin>
+         </Button>
+      </center>
+      <right>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вперёд" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </right>
+   </BorderPane>
 </VBox>
