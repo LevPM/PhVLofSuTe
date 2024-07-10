@@ -133,7 +133,7 @@ public class Syringe extends LiquidTank implements Initializable {
     }
 
     public boolean getIsOpen(){
-        return isOpen.get();
+        return isOpenProperty().get();
     }
 
     public void setIsOpen(boolean isOpen){
