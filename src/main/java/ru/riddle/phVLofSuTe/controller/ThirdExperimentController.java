@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
+import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.animation.Drop;
 import ru.riddle.phVLofSuTe.model.animation.LiquidContainer;
