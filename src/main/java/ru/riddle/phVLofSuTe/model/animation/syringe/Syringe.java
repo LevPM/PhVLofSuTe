@@ -4,7 +4,9 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
@@ -25,8 +27,10 @@ public class Syringe extends LiquidTank implements Initializable {
     private static final int SEGMENT_HEIGHT = 50;
 
     IntegerProperty countOfSegments;
+    BooleanProperty isOpen;
 
     private static final int DEFAULT_COUNT_OF_SEGMENTS = 6;
+    private static final boolean DEFAULT_IS_OPEN = false;
 
     private SyringeLiquid liquid;
     private SyringeBody body;
@@ -122,5 +126,20 @@ public class Syringe extends LiquidTank implements Initializable {
             });
         }
         return countOfSegments;
+    }
+
+    public boolean isOpen(){
+        return isOpen.get();
+    }
+
+    public void setIsOpen(boolean isOpen){
+        this.isOpenProperty().set(isOpen);
+    }
+
+    public BooleanProperty isOpenProperty(){
+        if(isOpen == null){
+            isOpen = new SimpleBooleanProperty(this, "isOpen", DEFAULT_IS_OPEN);
+        }
+        return isOpen;
     }
 }
