@@ -62,7 +62,7 @@
                   <Font size="24.0" />
                </font>
                <padding>
-                  <Insets left="5.0" right="5.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
             </Label>
             <ComboBox fx:id="liquidComboBox" prefHeight="50.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" GridPane.rowIndex="1" GridPane.valignment="CENTER">
