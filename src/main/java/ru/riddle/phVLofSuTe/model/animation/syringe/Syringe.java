@@ -128,7 +128,7 @@ public class Syringe extends LiquidTank implements Initializable {
         return countOfSegments;
     }
 
-    public boolean isOpen(){
+    public boolean getIsOpen(){
         return isOpen.get();
     }
 
@@ -139,6 +139,7 @@ public class Syringe extends LiquidTank implements Initializable {
     public BooleanProperty isOpenProperty(){
         if(isOpen == null){
             isOpen = new SimpleBooleanProperty(this, "isOpen", DEFAULT_IS_OPEN);
+            isOpen.addListener(event -> piston.setIsOpen(getIsOpen()));
         }
         return isOpen;
     }
