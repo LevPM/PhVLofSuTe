@@ -30,11 +30,11 @@ public class ThirdExperimentController implements Initializable {
     private
     ThirdExperimentModel model;
 
-    public void handleStartThirdExperimentButton(ActionEvent event) {
+    public void handleStartThirdExperimentButton() {
         syringe.animateWithContainer(liquidContainer, drop);
     }
 
-    public void handleSaveLiquidFromComboBoxButtonAction(ActionEvent event) {
+    public void handleSaveLiquidFromComboBoxButtonAction() {
 
     }
 
