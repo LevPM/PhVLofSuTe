@@ -14,6 +14,8 @@ public class SyringePiston extends Group {
     private final int countOfSegments;
     private final int segmentHeight;
 
+    private boolean isOpen = false;
+
     public SyringePiston(int countOfSegment, int segmentHeight){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_PISTON, this);
         this.countOfSegments = countOfSegment;
@@ -41,11 +43,43 @@ public class SyringePiston extends Group {
     }
 
     public Transition getTransition(Duration duration, boolean isRefilling){
+        if(isOpen && isRefilling){
+            return new TranslateTransition();
+        }
+
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setDuration(Duration.millis(duration.toMillis() + 1000));
         transition.setByY(isRefilling ? -segmentHeight * (countOfSegments - 1) : segmentHeight * (countOfSegments - 1));
 
         return transition;
+    }
+
+    private void open(){
+        if(!isOpen) {
+            this.setTranslateY(-segmentHeight * (countOfSegments - 1));
+            this.isOpen = true;
+        }
+    }
+
+    private void close(){
+        if(isOpen) {
+            this.setTranslateY(segmentHeight * (countOfSegments - 1));
+            this.isOpen = false;
+        }
+    }
+
+    public boolean isOpen() {
+        return isOpen;
+    }
+
+    public void setIsOpen(boolean isOpen) {
+        if(isOpen != this.isOpen){
+            if(isOpen){
+                open();
+            } else {
+                close();
+            }
+        }
     }
 }
