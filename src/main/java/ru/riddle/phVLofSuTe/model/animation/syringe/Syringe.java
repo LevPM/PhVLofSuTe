@@ -127,9 +127,7 @@ public class Syringe extends LiquidTank implements Initializable {
     public IntegerProperty countOfSegmentsProperty(){
         if(countOfSegments == null){
             countOfSegments = new SimpleIntegerProperty(this, "countOfSegments", DEFAULT_COUNT_OF_SEGMENTS);
-            countOfSegments.addListener(event -> {
-                rebuildSyringe();
-            });
+            countOfSegments.addListener(event -> rebuildSyringe());
         }
         return countOfSegments;
     }
