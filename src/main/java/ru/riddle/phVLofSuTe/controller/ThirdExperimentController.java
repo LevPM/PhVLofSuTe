@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.layout.AnchorPane;
 import ru.riddle.phVLofSuTe.model.experiments.ThirdExperimentModel;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.animation.Drop;
@@ -18,9 +17,6 @@ public class ThirdExperimentController implements Initializable {
 
     @FXML
     private ComboBox<Liquid> liquidComboBox;
-
-    @FXML
-    private AnchorPane thirdExperimentSyringe;
 
     @FXML
     private Syringe syringe;
