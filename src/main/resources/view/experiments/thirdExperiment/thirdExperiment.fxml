@@ -50,6 +50,7 @@
             <rowConstraints>
                <RowConstraints vgrow="SOMETIMES" />
                <RowConstraints vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -67,11 +68,38 @@
                   <Insets left="5.0" right="5.0" />
                </padding>
             </ComboBox>
-            <Button mnemonicParsing="false" onAction="#handleSaveLiquidFromComboBoxButtonAction" style="-fx-background-color: LightCyan; -fx-border-color: Maroon; -fx-border-width: 2; -fx-background-radius: 50; -fx-border-radius: 50;" text="Сохранить" GridPane.columnIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Button>
+            <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <left>
+                  <Button fx:id="cancelEditionsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Отменить" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets right="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </left>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <center>
+                  <Button fx:id="setDefaultButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="По умолчанию" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets right="5.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </center>
+               <right>
+                  <Button fx:id="applySettingsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Применить" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </right>
+            </BorderPane>
          </GridPane>
          <opaqueInsets>
             <Insets />
@@ -83,33 +111,4 @@
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateX="300" translateY="450.0" />
       </AnchorPane>
    </HBox>
-   <BorderPane>
-      <VBox.margin>
-         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-      </VBox.margin>
-      <left>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Назад" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
-            <font>
-               <Font name="Arial Black" size="50.0" />
-            </font>
-         </Button>
-      </left>
-      <center>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLeaveButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
-            <font>
-               <Font name="Arial Black" size="50.0" />
-            </font>
-            <BorderPane.margin>
-               <Insets />
-            </BorderPane.margin>
-         </Button>
-      </center>
-      <right>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вперёд" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
-            <font>
-               <Font name="Arial Black" size="50.0" />
-            </font>
-         </Button>
-      </right>
-   </BorderPane>
 </VBox>
