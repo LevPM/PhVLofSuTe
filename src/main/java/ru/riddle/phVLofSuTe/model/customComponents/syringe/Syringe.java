@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.customComponents.Segmentable;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody.SyringeBody;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid.SyringeLiquid;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston.SyringePiston;
@@ -24,7 +25,7 @@ import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Syringe extends LiquidTank implements Initializable {
+public class Syringe extends LiquidTank implements Initializable, Segmentable {
 
     private static final int SEGMENT_HEIGHT = 50;
 
@@ -125,14 +126,17 @@ public class Syringe extends LiquidTank implements Initializable {
         return new ParallelTransition(drop.getTransition(drippingDuration), piston.getTransition(drippingDuration, false));
     }
 
+    @Override
     public int getCountOfSegments(){
         return (countOfSegments != null) ? countOfSegments.get() : DEFAULT_COUNT_OF_SEGMENTS;
     }
 
+    @Override
     public void setCountOfSegments(int countOfSegments){
         this.countOfSegmentsProperty().set(countOfSegments);
     }
 
+    @Override
     public IntegerProperty countOfSegmentsProperty(){
         if(countOfSegments == null){
             countOfSegments = new SimpleIntegerProperty(this, "countOfSegments", DEFAULT_COUNT_OF_SEGMENTS);
