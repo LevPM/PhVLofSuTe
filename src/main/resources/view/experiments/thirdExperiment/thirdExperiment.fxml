@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -106,7 +107,7 @@
             </BorderPane>
             <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="4" />
             <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Открыт:" GridPane.rowIndex="2">
+            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Состояние:" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font>
@@ -114,6 +115,11 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
             </Label>
+            <ToggleButton mnemonicParsing="false" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-radius: 50;" text="Закрыт" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </ToggleButton>
          </GridPane>
          <opaqueInsets>
             <Insets />
