@@ -70,7 +70,7 @@ public class SyringePiston extends Group {
     private void close(){
         if(isOpen) {
             if(!(this.getTranslateY() == 0)){
-                this.setTranslateY(segmentHeight * (countOfSegments - 1));
+                this.setTranslateY(this.getTranslateY() + segmentHeight * (countOfSegments - 1));
             }
             this.isOpen = false;
         }
