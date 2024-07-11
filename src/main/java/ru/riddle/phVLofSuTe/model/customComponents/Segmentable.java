@@ -9,6 +9,4 @@ public interface Segmentable{
     void setCountOfSegments(int countOfSegments);
 
     IntegerProperty countOfSegmentsProperty();
-    
-    void build();
 }
