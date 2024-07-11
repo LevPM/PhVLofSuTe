@@ -50,6 +50,8 @@
             </columnConstraints>
             <rowConstraints>
                <RowConstraints vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints vgrow="SOMETIMES" />
                <RowConstraints vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -57,7 +59,7 @@
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
-            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50;" text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <font>
                   <Font size="24.0" />
                </font>
@@ -65,12 +67,12 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
             </Label>
-            <ComboBox fx:id="liquidComboBox" visibleRowCount="3" prefHeight="50.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <ComboBox fx:id="liquidComboBox" prefHeight="50.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" visibleRowCount="3" GridPane.columnIndex="1" GridPane.valignment="CENTER">
                <padding>
                   <Insets left="5.0" right="5.0" />
                </padding>
             </ComboBox>
-            <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="5">
                <left>
                   <Button fx:id="cancelEditionsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Отменить" textAlignment="CENTER" BorderPane.alignment="CENTER">
                      <font>
@@ -102,7 +104,16 @@
                   </Button>
                </right>
             </BorderPane>
-            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Открыт:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Label>
          </GridPane>
          <opaqueInsets>
             <Insets />
