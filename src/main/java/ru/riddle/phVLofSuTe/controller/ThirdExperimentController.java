@@ -39,8 +39,7 @@ public class ThirdExperimentController implements Initializable {
     private ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton() {
-        liquidComboBox.setDisable(true);
-        syringe.setOnAnimationFinished(event -> liquidComboBox.setDisable(false));
+        setOnSyringeAnimationFinished();
         syringe.animateWithContainer(liquidContainer, drop);
     }
 
@@ -76,6 +75,20 @@ public class ThirdExperimentController implements Initializable {
             isOpenSettingToggleButton.setText(isOpenSettingToggleButton.isSelected() ? "Открыт" : "Закрыт");
             isOpenSettingToggleButton.setTextFill(isOpenSettingToggleButton.isSelected() ? Color.MAROON : Color.NAVY);
             syringe.setIsOpen(isOpenSettingToggleButton.isSelected());
+        });
+    }
+
+    private void setOnSyringeAnimationFinished(){
+        liquidComboBox.setDisable(true);
+        isOpenSettingToggleButton.setDisable(true);
+
+        syringe.setOnAnimationFinished(event -> {
+            liquidComboBox.setDisable(false);
+
+            isOpenSettingToggleButton.setDisable(false);
+            isOpenSettingToggleButton.setSelected(false);
+            isOpenSettingToggleButton.setText("Закрыт");
+            isOpenSettingToggleButton.setTextFill(Color.NAVY);
         });
     }
 }
