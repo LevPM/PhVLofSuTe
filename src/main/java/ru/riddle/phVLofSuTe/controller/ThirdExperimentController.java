@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ToggleButton;
 import javafx.util.Callback;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.LiquidSettingListCell;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
@@ -21,6 +22,9 @@ public class ThirdExperimentController implements Initializable {
 
     @FXML
     private ComboBox<Liquid> liquidComboBox;
+
+    @FXML
+    private ToggleButton isOpenSetting;
 
     @FXML
     private Syringe syringe;
