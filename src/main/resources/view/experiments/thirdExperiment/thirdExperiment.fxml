@@ -125,7 +125,7 @@
             <Insets />
          </opaqueInsets>
       </AnchorPane>
-      <AnchorPane fx:id="thirdExperimentSyringe" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <Drop fx:id="drop" layoutX="100" layoutY="335" />
          <Syringe fx:id="syringe" translateX="100" translateY="350" />
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateX="300" translateY="450.0" />
