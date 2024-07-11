@@ -35,6 +35,8 @@ public class ThirdExperimentController implements Initializable {
     ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton() {
+        liquidComboBox.setDisable(true);
+        syringe.setOnAnimationFinished(event -> liquidComboBox.setDisable(false));
         syringe.animateWithContainer(liquidContainer, drop);
     }
 
