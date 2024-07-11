@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.experiments;
+package ru.riddle.phVLofSuTe.model.customComponents;
 
 import javafx.scene.paint.Color;
 

@@ -5,7 +5,7 @@ import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import ru.riddle.phVLofSuTe.model.customComponents.Fillable;
-import ru.riddle.phVLofSuTe.model.experiments.Liquid;
+import ru.riddle.phVLofSuTe.model.customComponents.Liquid;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 

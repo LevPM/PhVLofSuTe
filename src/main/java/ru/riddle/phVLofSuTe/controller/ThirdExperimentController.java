@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.LiquidSettingListCell;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
-import ru.riddle.phVLofSuTe.model.experiments.Liquid;
+import ru.riddle.phVLofSuTe.model.customComponents.Liquid;
 import ru.riddle.phVLofSuTe.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.Syringe;

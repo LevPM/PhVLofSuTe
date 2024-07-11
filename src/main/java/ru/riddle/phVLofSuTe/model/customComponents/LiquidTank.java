@@ -4,7 +4,6 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Group;
 import javafx.scene.shape.Shape;
-import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 
 import java.util.ArrayList;
 import java.util.Arrays;
