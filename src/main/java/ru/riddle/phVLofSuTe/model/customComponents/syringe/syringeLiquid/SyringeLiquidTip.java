@@ -1,9 +1,9 @@
-package ru.riddle.phVLofSuTe.model.animation.syringe.syringeLiquid;
+package ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid;
 
 import javafx.fxml.FXML;
 import javafx.scene.Group;import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
-import ru.riddle.phVLofSuTe.model.animation.Fillable;
+import ru.riddle.phVLofSuTe.model.customComponents.Fillable;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;

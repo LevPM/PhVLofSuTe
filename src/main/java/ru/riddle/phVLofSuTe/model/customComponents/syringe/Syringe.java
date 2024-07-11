@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.animation.syringe;
+package ru.riddle.phVLofSuTe.model.customComponents.syringe;
 
 import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
@@ -12,13 +12,13 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.animation.Drop;
-import ru.riddle.phVLofSuTe.model.animation.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.animation.syringe.syringeBody.SyringeBody;
-import ru.riddle.phVLofSuTe.model.animation.syringe.syringeLiquid.SyringeLiquid;
-import ru.riddle.phVLofSuTe.model.animation.syringe.syringePiston.SyringePiston;
+import ru.riddle.phVLofSuTe.model.customComponents.Drop;
+import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody.SyringeBody;
+import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid.SyringeLiquid;
+import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.model.animation.LiquidTank;
+import ru.riddle.phVLofSuTe.model.customComponents.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;

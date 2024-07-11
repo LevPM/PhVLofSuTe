@@ -3,7 +3,7 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.shape.Polyline?>
 
-<fx:root type="ru.riddle.phVLofSuTe.model.animation.LiquidTank" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="ru.riddle.phVLofSuTe.model.customComponents.LiquidTank" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <Polygon fx:id="liquid" fill="AQUA" points="-95, -45, -80.0, 0.0, 80.0, 0.0, 95.0, -45.0" stroke="BLACK" strokeWidth="0.0" />
    <Polyline fill="TRANSPARENT" points="-100, -60, -80.0, 0.0, 80.0, 0.0, 100.0, -60.0" strokeType="INSIDE" strokeWidth="2.0" />
 </fx:root>

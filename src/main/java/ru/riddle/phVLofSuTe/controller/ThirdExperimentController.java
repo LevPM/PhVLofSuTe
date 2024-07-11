@@ -12,9 +12,9 @@ import javafx.util.Callback;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.LiquidSettingListCell;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
 import ru.riddle.phVLofSuTe.model.experiments.Liquid;
-import ru.riddle.phVLofSuTe.model.animation.Drop;
-import ru.riddle.phVLofSuTe.model.animation.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.animation.syringe.Syringe;
+import ru.riddle.phVLofSuTe.model.customComponents.Drop;
+import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.customComponents.syringe.Syringe;
 
 import java.net.URL;
 import java.util.ResourceBundle;

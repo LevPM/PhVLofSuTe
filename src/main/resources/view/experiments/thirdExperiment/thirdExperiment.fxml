@@ -14,8 +14,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import ru.riddle.phVLofSuTe.model.animation.*?>
-<?import ru.riddle.phVLofSuTe.model.animation.syringe.*?>
+<?import ru.riddle.phVLofSuTe.model.customComponents.*?>
+<?import ru.riddle.phVLofSuTe.model.customComponents.syringe.*?>
 
 <VBox alignment="CENTER_LEFT" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip; -fx-background-radius: 18;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ThirdExperimentController">
    <Label alignment="CENTER" prefHeight="105.0" prefWidth="638.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Orange;" text="Измерение коэффициента поверхностного натяжения методом отрыва капель" textAlignment="CENTER" wrapText="true">

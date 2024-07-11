@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.animation;
+package ru.riddle.phVLofSuTe.model.customComponents;
 
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;

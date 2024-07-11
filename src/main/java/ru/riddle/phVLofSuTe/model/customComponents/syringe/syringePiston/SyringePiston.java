@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.animation.syringe.syringePiston;
+package ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston;
 
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;

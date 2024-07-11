@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.animation.syringe.syringeBody;
+package ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody;
 
 import javafx.scene.Group;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
