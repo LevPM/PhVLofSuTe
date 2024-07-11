@@ -29,8 +29,8 @@ public class Syringe extends LiquidTank implements Initializable, Segmentable {
 
     private static final int SEGMENT_HEIGHT = 50;
 
-    IntegerProperty countOfSegments;
-    BooleanProperty isOpen;
+    private IntegerProperty countOfSegments;
+    private BooleanProperty isOpen;
 
     private static final int DEFAULT_COUNT_OF_SEGMENTS = 5;
     private static final boolean DEFAULT_IS_OPEN = false;
