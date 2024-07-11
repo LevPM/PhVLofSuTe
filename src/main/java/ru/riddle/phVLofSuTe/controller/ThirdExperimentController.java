@@ -56,5 +56,11 @@ public class ThirdExperimentController implements Initializable {
 
         liquidComboBox.setCellFactory(cellFactory);
         liquidComboBox.setButtonCell(cellFactory.call(null));
+
+        liquidComboBox.setOnAction(event -> {
+            syringe.setLiquidType(liquidComboBox.getValue());
+            liquidContainer.setLiquidType(liquidComboBox.getValue());
+            drop.setLiquidType(liquidComboBox.getValue());
+        });
     }
 }
