@@ -8,6 +8,8 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.animation.Drop;
@@ -37,6 +39,8 @@ public class Syringe extends LiquidTank implements Initializable {
     private SyringePiston piston;
 
     private boolean isAnimating;
+
+    private EventHandler<Event> onAnimationFinishedEventHandler;
 
     public Syringe(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
@@ -71,7 +75,12 @@ public class Syringe extends LiquidTank implements Initializable {
             this.setLiquidType(container.getLiquidType());
             drop.setLiquidType(container.getLiquidType());
             Transition transition = getTransition(container, drop);
-            transition.setOnFinished(event -> isAnimating = false);
+            transition.setOnFinished(event -> {
+                isAnimating = false;
+                if(onAnimationFinishedEventHandler !=  null){
+                    onAnimationFinishedEventHandler.handle(null);
+                }
+            });
             transition.play();
         }
 
@@ -146,5 +155,9 @@ public class Syringe extends LiquidTank implements Initializable {
             isOpen.addListener(event -> piston.setIsOpen(getIsOpen()));
         }
         return isOpen;
+    }
+
+    public void setOnAnimationFinished(EventHandler<Event> handler){
+        this.onAnimationFinishedEventHandler = handler;
     }
 }
