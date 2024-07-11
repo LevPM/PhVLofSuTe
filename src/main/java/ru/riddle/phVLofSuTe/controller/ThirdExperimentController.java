@@ -7,6 +7,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.LiquidSettingListCell;
 import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
@@ -24,7 +25,7 @@ public class ThirdExperimentController implements Initializable {
     private ComboBox<Liquid> liquidComboBox;
 
     @FXML
-    private ToggleButton isOpenSetting;
+    private ToggleButton isOpenSettingToggleButton;
 
     @FXML
     private Syringe syringe;
@@ -51,6 +52,7 @@ public class ThirdExperimentController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.model = new ThirdExperimentModel();
         initializeLiquidComboBox(liquidComboBox);
+        initializeIsOpenSettingToggleButton(isOpenSettingToggleButton);
     }
 
     private void initializeLiquidComboBox(ComboBox<Liquid> liquidComboBox){
@@ -66,6 +68,14 @@ public class ThirdExperimentController implements Initializable {
             syringe.setLiquidType(liquidComboBox.getValue());
             liquidContainer.setLiquidType(liquidComboBox.getValue());
             drop.setLiquidType(liquidComboBox.getValue());
+        });
+    }
+
+    private void initializeIsOpenSettingToggleButton(ToggleButton isOpenSettingToggleButton){
+        isOpenSettingToggleButton.setOnAction(event -> {
+            isOpenSettingToggleButton.setText(isOpenSettingToggleButton.isSelected() ? "Открыт" : "Закрыт");
+            isOpenSettingToggleButton.setTextFill(isOpenSettingToggleButton.isSelected() ? Color.MAROON : Color.NAVY);
+            syringe.setIsOpen(isOpenSettingToggleButton.isSelected());
         });
     }
 }
