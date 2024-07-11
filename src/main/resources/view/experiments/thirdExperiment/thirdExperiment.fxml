@@ -115,7 +115,7 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
             </Label>
-            <ToggleButton fx:id="isOpenSetting" mnemonicParsing="false" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-radius: 50;" text="Закрыт" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ToggleButton fx:id="isOpenSettingToggleButton" mnemonicParsing="false" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-radius: 50;" text="Закрыт" textFill="NAVY" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
