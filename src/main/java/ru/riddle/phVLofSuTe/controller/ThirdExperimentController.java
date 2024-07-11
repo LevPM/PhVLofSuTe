@@ -31,8 +31,7 @@ public class ThirdExperimentController implements Initializable {
     @FXML
     private Drop drop;
 
-    private
-    ThirdExperimentModel model;
+    private ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton() {
         liquidComboBox.setDisable(true);
