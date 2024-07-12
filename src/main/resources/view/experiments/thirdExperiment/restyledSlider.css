@@ -1,0 +1,8 @@
+.slider .thumb{
+	-fx-background-color: DarkOrange;
+}
+
+.slider .track{
+	-fx-background-color: DarkOrange, Gold;
+	-fx-background-insets: 0, 0.5;
+}
