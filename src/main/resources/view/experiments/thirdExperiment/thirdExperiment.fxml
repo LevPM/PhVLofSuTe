@@ -18,7 +18,7 @@
 <?import ru.riddle.phVLofSuTe.model.customComponents.*?>
 <?import ru.riddle.phVLofSuTe.model.customComponents.syringe.*?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip; -fx-background-radius: 18;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ThirdExperimentController">
+<VBox alignment="CENTER_LEFT" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip; -fx-background-radius: 18;" stylesheets="@restyledSlider.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ThirdExperimentController">
    <Label alignment="CENTER" prefHeight="105.0" prefWidth="638.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Orange;" text="Измерение коэффициента поверхностного натяжения методом отрыва капель" textAlignment="CENTER" wrapText="true">
       <font>
          <Font name="Calibri Bold" size="30.0" />
@@ -131,7 +131,7 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
             </Label>
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-color: Maroon; -fx-border-radius: 50;" value="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-color: Maroon; -fx-border-radius: 50;" value="3.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <padding>
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </padding>
