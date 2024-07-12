@@ -51,7 +51,7 @@ public class Syringe extends LiquidTank implements Initializable, Segmentable {
     private void buildSyringe(){
         liquid = new SyringeLiquid(getCountOfSegments(), SEGMENT_HEIGHT, this.getLiquidType());
         body = new SyringeBody(getCountOfSegments(), SEGMENT_HEIGHT);
-        piston = new SyringePiston(getCountOfSegments(), SEGMENT_HEIGHT);
+        piston = new SyringePiston(getCountOfSegments(), SEGMENT_HEIGHT, getIsOpen());
 
         this.getChildren().addAll(
                 liquid,

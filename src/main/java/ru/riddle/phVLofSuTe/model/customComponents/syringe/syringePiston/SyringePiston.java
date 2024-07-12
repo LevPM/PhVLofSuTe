@@ -18,7 +18,7 @@ public class SyringePiston extends Group {
 
     private boolean isOpen = false;
 
-    public SyringePiston(int countOfSegment, int segmentHeight){
+    public SyringePiston(int countOfSegment, int segmentHeight, boolean isOpen){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_PISTON, this);
         this.countOfSegments = countOfSegment;
         this.segmentHeight = segmentHeight;
@@ -30,6 +30,7 @@ public class SyringePiston extends Group {
                 new SyringePistonTip(),
                 new SyringePistonCap(pistonHeight)
         );
+        this.setIsOpen(isOpen);
     }
 
     private void buildSyringePistonRod(){
