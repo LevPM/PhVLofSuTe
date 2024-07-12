@@ -38,7 +38,7 @@
                <Font size="48.0" />
             </font>
          </Button>
-         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="14.0" style="-fx-background-color: PowderBlue; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 30; -fx-border-radius: 30;" text="Настройки" textFill="#3f00ff">
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="14.0" style="-fx-background-color: PowderBlue; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 30; -fx-border-radius: 30;" text="Настройки" textFill="#3f00ff">
             <font>
                <Font size="48.0" />
             </font>
