@@ -63,25 +63,25 @@ public enum FXMLs {
 
     EXPERIMENTS_THIRD("/view/experiments/thirdExperiment/thirdExperiment.fxml"),
 
-    SYRINGE("/view/animation/syringe/syringeFXML.fxml"),
+    SYRINGE("/view/customComponents/syringe/syringeFXML.fxml"),
 
-    SYRINGE_BODY("/view/animation/syringe/syringeBody/syringeBodyFXML.fxml"),
-    SYRINGE_BODY_STUB("/view/animation/syringe/syringeBody/SyringeBodyStub.fxml"),
-    SYRINGE_BODY_SEGMENT("/view/animation/syringe/syringeBody/syringeBodySegmentFXML.fxml"),
-    SYRINGE_TIP("/view/animation/syringe/syringeBody/syringeTipFXML.fxml"),
+    SYRINGE_BODY("/view/customComponents/syringe/syringeBody/syringeBodyFXML.fxml"),
+    SYRINGE_BODY_STUB("/view/customComponents/syringe/syringeBody/SyringeBodyStub.fxml"),
+    SYRINGE_BODY_SEGMENT("/view/customComponents/syringe/syringeBody/syringeBodySegmentFXML.fxml"),
+    SYRINGE_TIP("/view/customComponents/syringe/syringeBody/syringeTipFXML.fxml"),
 
-    SYRINGE_PISTON("/view/animation/syringe/syringePiston/syringePistonFXML.fxml"),
-    SYRINGE_PISTON_SEGMENT("/view/animation/syringe/syringePiston/syringePistonRodSegmentFXML.fxml"),
-    SYRINGE_PISTON_TIP("/view/animation/syringe/syringePiston/syringePistonTipFXML.fxml"),
-    SYRINGE_PISTON_CAP("/view/animation/syringe/syringePiston/syringePistonCap.fxml"),
+    SYRINGE_PISTON("/view/customComponents/syringe/syringePiston/syringePistonFXML.fxml"),
+    SYRINGE_PISTON_SEGMENT("/view/customComponents/syringe/syringePiston/syringePistonRodSegmentFXML.fxml"),
+    SYRINGE_PISTON_TIP("/view/customComponents/syringe/syringePiston/syringePistonTipFXML.fxml"),
+    SYRINGE_PISTON_CAP("/view/customComponents/syringe/syringePiston/syringePistonCap.fxml"),
 
-    LIQUID_CONTAINER("/view/animation/liquidContainer.fxml"),
+    LIQUID_CONTAINER("/view/customComponents/liquidContainer.fxml"),
 
-    SYRINGE_LIQUID("/view/animation/syringe/syringeLiquid/syringeLiquidFXML.fxml"),
-    SYRINGE_LIQUID_SEGMENT("/view/animation/syringe/syringeLiquid/syringeLiquidSegmentFXML.fxml"),
-    SYRINGE_LIQUID_TIP("/view/animation/syringe/syringeLiquid/luquidTipFXML.fxml"),
+    SYRINGE_LIQUID("/view/customComponents/syringe/syringeLiquid/syringeLiquidFXML.fxml"),
+    SYRINGE_LIQUID_SEGMENT("/view/customComponents/syringe/syringeLiquid/syringeLiquidSegmentFXML.fxml"),
+    SYRINGE_LIQUID_TIP("/view/customComponents/syringe/syringeLiquid/luquidTipFXML.fxml"),
 
-    DROP("/view/animation/drop.fxml"),
+    DROP("/view/customComponents/drop.fxml"),
 
     LIQUID_SETTING("/view/experiments/thirdExperiment/settings/liquidSettingFXML.fxml"),
     ;
