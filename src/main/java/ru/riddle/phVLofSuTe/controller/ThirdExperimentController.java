@@ -33,6 +33,9 @@ public class ThirdExperimentController implements Initializable {
     @FXML
     private Drop drop;
 
+    @FXML
+    private Slider countOfSegmentsSlider;
+
     private ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton() {
