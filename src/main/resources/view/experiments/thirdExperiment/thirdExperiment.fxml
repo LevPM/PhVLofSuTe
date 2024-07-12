@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.ToggleButton?>
@@ -45,98 +46,120 @@
                <Insets left="10.0" right="10.0" />
             </padding>
          </Label>
-         <GridPane alignment="CENTER" hgap="10.0" layoutX="100.0" layoutY="126.0" style="-fx-border-color: LimeGreen; -fx-border-radius: 20; -fx-background-color: LightYellow; -fx-background-radius: 20;" vgap="10.0">
-            <columnConstraints>
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-               <RowConstraints vgrow="ALWAYS" />
-            </rowConstraints>
-            <padding>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-               <font>
-                  <Font size="24.0" />
-               </font>
+         <ScrollPane fitToHeight="true" hbarPolicy="NEVER" layoutX="100.0" layoutY="126.0" maxHeight="280.0"
+                     vbarPolicy="NEVER">
+            <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+                  <RowConstraints vgrow="ALWAYS"/>
+               </rowConstraints>
                <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
                </padding>
-            </Label>
-            <ComboBox fx:id="liquidComboBox" prefHeight="50.0" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;" visibleRowCount="3" GridPane.columnIndex="1" GridPane.valignment="CENTER">
-               <padding>
-                  <Insets left="5.0" right="5.0" />
-               </padding>
-            </ComboBox>
-            <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="6">
-               <left>
-                  <Button fx:id="cancelEditionsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Отменить" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <BorderPane.margin>
-                        <Insets right="5.0" />
-                     </BorderPane.margin>
-                  </Button>
-               </left>
-               <GridPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </GridPane.margin>
-               <center>
-                  <Button fx:id="setDefaultButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="По умолчанию" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                     <BorderPane.margin>
-                        <Insets right="5.0" />
-                     </BorderPane.margin>
-                  </Button>
-               </center>
-               <right>
-                  <Button fx:id="applySettingsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Применить" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-               </right>
-            </BorderPane>
-            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Состояние:" GridPane.rowIndex="2">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-            </Label>
-            <ToggleButton fx:id="isOpenSettingToggleButton" mnemonicParsing="false" style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-radius: 50;" text="Закрыт" textFill="NAVY" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </ToggleButton>
-            <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-            <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Количество сегментов:" GridPane.rowIndex="4">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-            </Label>
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" maxWidth="200.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-color: Maroon; -fx-border-radius: 50;" value="3.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <padding>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </padding>
-            </Slider>
-         </GridPane>
+               <Label alignment="CENTER"
+                      style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;"
+                      text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+                  <padding>
+                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+                  </padding>
+               </Label>
+               <ComboBox fx:id="liquidComboBox" prefHeight="50.0"
+                         style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-border-radius: 50; -fx-background-radius: 50;"
+                         visibleRowCount="3" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                  <padding>
+                     <Insets left="5.0" right="5.0"/>
+                  </padding>
+               </ComboBox>
+               <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="6">
+                  <left>
+                     <Button fx:id="cancelEditionsButton" alignment="CENTER" mnemonicParsing="false"
+                             style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;"
+                             text="Отменить" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                        <font>
+                           <Font size="16.0"/>
+                        </font>
+                        <BorderPane.margin>
+                           <Insets right="5.0"/>
+                        </BorderPane.margin>
+                     </Button>
+                  </left>
+                  <GridPane.margin>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                  </GridPane.margin>
+                  <center>
+                     <Button fx:id="setDefaultButton" alignment="CENTER" mnemonicParsing="false"
+                             style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;"
+                             text="По умолчанию" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                        <font>
+                           <Font size="16.0"/>
+                        </font>
+                        <BorderPane.margin>
+                           <Insets right="5.0"/>
+                        </BorderPane.margin>
+                     </Button>
+                  </center>
+                  <right>
+                     <Button fx:id="applySettingsButton" alignment="CENTER" mnemonicParsing="false"
+                             style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;"
+                             text="Применить" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                        <font>
+                           <Font size="16.0"/>
+                        </font>
+                     </Button>
+                  </right>
+               </BorderPane>
+               <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+               <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+               <Label alignment="CENTER"
+                      style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;"
+                      text="Состояние:" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+                  <padding>
+                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+                  </padding>
+               </Label>
+               <ToggleButton fx:id="isOpenSettingToggleButton" mnemonicParsing="false"
+                             style="-fx-border-color: Maroon; -fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-radius: 50;"
+                             text="Закрыт" textFill="NAVY" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="20.0"/>
+                  </font>
+               </ToggleButton>
+               <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="5"/>
+               <Label alignment="CENTER"
+                      style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;"
+                      text="Количество сегментов:" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="24.0"/>
+                  </font>
+                  <padding>
+                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+                  </padding>
+               </Label>
+               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" maxWidth="200.0" min="1.0" minorTickCount="0"
+                       showTickLabels="true" showTickMarks="true" snapToTicks="true"
+                       style="-fx-background-color: PaleGreen; -fx-background-radius: 50; -fx-border-color: Maroon; -fx-border-radius: 50;"
+                       value="3.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <padding>
+                     <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+                  </padding>
+               </Slider>
+            </GridPane>
+         </ScrollPane>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

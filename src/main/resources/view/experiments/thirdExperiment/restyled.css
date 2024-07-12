@@ -6,3 +6,15 @@
 	-fx-background-color: DarkOrange, Gold;
 	-fx-background-insets: 0, 0.5;
 }
+
+.scroll-pane{
+	-fx-border-color: LimeGreen;
+	-fx-border-radius: 20;
+	-fx-background-color: LightYellow;
+	-fx-background-radius: 20;
+}
+
+.scroll-pane .viewport{
+	-fx-background-color: LightYellow;
+	-fx-background-radius: 20;
+}
