@@ -52,6 +52,7 @@ public class ThirdExperimentController implements Initializable {
         this.model = new ThirdExperimentModel();
         initializeLiquidComboBox(liquidComboBox);
         initializeIsOpenSettingToggleButton(isOpenSettingToggleButton);
+        initializeCountOfSegmentsSlider(countOfSegmentsSlider);
     }
 
     private void initializeLiquidComboBox(ComboBox<Liquid> liquidComboBox){
@@ -76,6 +77,11 @@ public class ThirdExperimentController implements Initializable {
             isOpenSettingToggleButton.setTextFill(isOpenSettingToggleButton.isSelected() ? Color.MAROON : Color.NAVY);
             syringe.setIsOpen(isOpenSettingToggleButton.isSelected());
         });
+    }
+
+    private void initializeCountOfSegmentsSlider(Slider countOfSegmentsSlider){
+        syringe.setCountOfSegments((int) countOfSegmentsSlider.getValue());
+        countOfSegmentsSlider.valueProperty().addListener(event -> syringe.setCountOfSegments((int) countOfSegmentsSlider.getValue()));
     }
 
     private void setOnSyringeAnimationFinished(){
