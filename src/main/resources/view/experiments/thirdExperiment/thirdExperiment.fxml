@@ -20,7 +20,7 @@
 <?import ru.riddle.phVLofSuTe.model.customComponents.syringe.*?>
 
 <VBox alignment="CENTER_LEFT" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip; -fx-background-radius: 18;" stylesheets="@restyled.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ThirdExperimentController">
-   <HBox alignment="CENTER">
+   <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
       <VBox.margin>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </VBox.margin>
@@ -35,7 +35,7 @@
    </HBox>
    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
       <AnchorPane HBox.hgrow="ALWAYS">
-         <Button alignment="CENTER" layoutX="846.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleStartThirdExperimentButton" style="-fx-background-color: PaleGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 70; -fx-border-radius: 70;" text="Начать" textFill="MAROON">
+         <Button alignment="CENTER" layoutX="846.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleStartThirdExperimentButton" style="-fx-background-color: PaleGreen; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 70; -fx-border-radius: 70;" text="Начать" textFill="MAROON">
             <font>
                <Font size="48.0" />
             </font>
@@ -152,7 +152,7 @@
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateX="300" translateY="450.0" />
       </AnchorPane>
    </HBox>
-   <BorderPane>
+   <BorderPane VBox.vgrow="ALWAYS">
       <left>
          <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Назад" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
             <font>
@@ -177,5 +177,8 @@
             </font>
          </Button>
       </right>
+      <VBox.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </VBox.margin>
    </BorderPane>
 </VBox>
