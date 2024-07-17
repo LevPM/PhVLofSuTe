@@ -46,6 +46,7 @@ public class Syringe extends LiquidTank implements Initializable, Segmentable {
     public Syringe(){
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
         this.setFillableParts(liquid);
+        this.liquidTypeProperty().addListener(event -> rebuildSyringe());
     }
 
     private void buildSyringe(){
