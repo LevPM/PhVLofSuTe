@@ -62,9 +62,10 @@
                   <RowConstraints vgrow="ALWAYS" />
                   <RowConstraints vgrow="ALWAYS" />
                   <RowConstraints vgrow="ALWAYS" />
+                  <RowConstraints vgrow="ALWAYS" />
                </rowConstraints>
                <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets left="10.0" right="10.0" top="10.0" />
                </padding>
                <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Жидкость:" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                   <font>
@@ -79,38 +80,6 @@
                      <Insets left="5.0" right="5.0" />
                   </padding>
                </ComboBox>
-               <BorderPane GridPane.columnSpan="2" GridPane.rowIndex="6">
-                  <left>
-                     <Button fx:id="cancelEditionsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Отменить" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                        <font>
-                           <Font size="16.0" />
-                        </font>
-                        <BorderPane.margin>
-                           <Insets right="5.0" />
-                        </BorderPane.margin>
-                     </Button>
-                  </left>
-                  <GridPane.margin>
-                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                  </GridPane.margin>
-                  <center>
-                     <Button fx:id="setDefaultButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="По умолчанию" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                        <font>
-                           <Font size="16.0" />
-                        </font>
-                        <BorderPane.margin>
-                           <Insets right="5.0" />
-                        </BorderPane.margin>
-                     </Button>
-                  </center>
-                  <right>
-                     <Button fx:id="applySettingsButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="Применить" textAlignment="CENTER" BorderPane.alignment="CENTER">
-                        <font>
-                           <Font size="16.0" />
-                        </font>
-                     </Button>
-                  </right>
-               </BorderPane>
                <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                <Separator style="-fx-background-color: Navy;" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                <Label alignment="CENTER" style="-fx-background-color: Azure; -fx-border-color: Indigo; -fx-border-radius: 50; -fx-background-radius: 50;" text="Состояние:" GridPane.rowIndex="2">
@@ -140,6 +109,11 @@
                      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                   </padding>
                </Slider>
+               <Button fx:id="setDefaultButton" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: Lime; -fx-border-color: Maroon; -fx-background-radius: 50; -fx-border-radius: 50;" text="По умолчанию" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Button>
             </GridPane>
          </ScrollPane>
          <opaqueInsets>
