@@ -36,6 +36,9 @@ public class ThirdExperimentController implements Initializable {
     @FXML
     private Slider countOfSegmentsSlider;
 
+    @FXML
+    private Button setDefaultButton;
+
     private ThirdExperimentModel model;
 
     public void handleStartThirdExperimentButton() {
@@ -53,6 +56,13 @@ public class ThirdExperimentController implements Initializable {
         initializeLiquidComboBox(liquidComboBox);
         initializeIsOpenSettingToggleButton(isOpenSettingToggleButton);
         initializeCountOfSegmentsSlider(countOfSegmentsSlider);
+
+        setDefaultButton.setOnAction(event -> {
+            liquidComboBox.setValue(Liquid.WATER);
+            isOpenSettingToggleButton.setSelected(false);
+            isOpenSettingToggleButton.getOnAction().handle(null);
+            countOfSegmentsSlider.setValue(5);
+        });
     }
 
     private void initializeLiquidComboBox(ComboBox<Liquid> liquidComboBox){
