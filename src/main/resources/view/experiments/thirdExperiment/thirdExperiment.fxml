@@ -150,6 +150,9 @@
          <Drop fx:id="drop" layoutX="100" layoutY="335" />
          <Syringe fx:id="syringe" translateX="100" translateY="350" />
          <LiquidContainer fx:id="liquidContainer" layoutX="100.0" translateX="300" translateY="450.0" />
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
       </AnchorPane>
    </HBox>
    <BorderPane VBox.vgrow="ALWAYS">
