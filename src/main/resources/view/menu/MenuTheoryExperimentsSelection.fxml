@@ -35,9 +35,9 @@
       <HBox alignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
          <ImageView fitHeight="104.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
             <HBox.margin>
-               <Insets top="10.0"/>
+               <Insets top="10.0" />
             </HBox.margin>
-            <Image url="@../images/book_icon.png"/>
+            <Image url="@../images/book_icon.png" />
          </ImageView>
          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTheoryButtonAction" styleClass="selection-button" text="Теория" textAlignment="CENTER" textFill="#6b0000">
             <font>
@@ -57,28 +57,27 @@
       </HBox>
       <HBox alignment="CENTER" GridPane.columnIndex="1">
          <GridPane.margin>
-            <Insets left="50.0"/>
+            <Insets left="50.0" />
          </GridPane.margin>
          <ImageView fitHeight="104.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
             <HBox.margin>
-               <Insets top="10.0"/>
+               <Insets top="10.0" />
             </HBox.margin>
-            <Image url="@../images/flask_icon.png"/>
+            <Image url="@../images/flask_icon.png" />
          </ImageView>
-         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTheoryButtonAction"
-                 styleClass="selection-button" text="Опыты" textAlignment="CENTER" textFill="#6b0000">
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExperimentsButtonAction" styleClass="selection-button" text="Опыты" textAlignment="CENTER" textFill="#6b0000">
             <font>
-               <Font name="Arial Black" size="96.0"/>
+               <Font name="Arial Black" size="96.0" />
             </font>
             <effect>
                <Lighting>
                   <bumpInput>
-                     <Shadow/>
+                     <Shadow />
                   </bumpInput>
                </Lighting>
             </effect>
             <HBox.margin>
-               <Insets left="-60.0"/>
+               <Insets left="-60.0" />
             </HBox.margin>
          </Button>
       </HBox>
