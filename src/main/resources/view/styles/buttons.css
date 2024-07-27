@@ -19,3 +19,9 @@
 	-fx-border-width: 2;
 	-fx-border-radius: 60;
 }
+
+.selection-button{
+	-fx-background-color: Transparent;
+	
+	-fx-text-fill: #020c0d;
+}
