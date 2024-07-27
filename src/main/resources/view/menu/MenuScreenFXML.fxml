@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -7,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.MenuController">
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.MenuController">
    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
-      <Label alignment="CENTER" text="Виртуальная &#10;Физическая Лаборатория" textAlignment="CENTER" textFill="NAVY" underline="true" wrapText="true" VBox.vgrow="ALWAYS">
+      <Label alignment="CENTER" styleClass="main-label" text="Виртуальная &#10;Физическая Лаборатория" textAlignment="CENTER" underline="true" wrapText="true" VBox.vgrow="ALWAYS">
          <font>
             <Font size="72.0" />
          </font>
@@ -20,9 +21,9 @@
             <Insets left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
-      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Поверхностное натяжение" textAlignment="JUSTIFY" textFill="NAVY" VBox.vgrow="ALWAYS">
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" styleClass="main-label" text="Поверхностное натяжение" textAlignment="JUSTIFY" VBox.vgrow="ALWAYS">
          <font>
-            <Font name="Corbel Italic" size="52.0" />
+            <Font name="Corbel Italic" size="56.0" />
          </font>
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" />
@@ -37,12 +38,12 @@
    </VBox>
    <VBox prefHeight="200.0" prefWidth="100.0">
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-         <Button id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Настройки" textFill="MAROON">
+         <Button id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" styleClass="secondary-button" text="Настройки" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
          </Button>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" style="-fx-border-color: Navy; -fx-border-width: 2; -fx-background-color: Goldenrod; -fx-background-radius: 50; -fx-border-radius: 50;" text="Начать" textAlignment="JUSTIFY" textFill="NAVY">
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" styleClass="main-button" text="Начать" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold Italic" size="56.0" />
             </font>
@@ -50,7 +51,7 @@
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </HBox.margin>
          </Button>
-         <Button id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Создатели" textFill="MAROON">
+         <Button id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" styleClass="secondary-button" text="Создатели" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
@@ -60,11 +61,16 @@
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>
-         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" style="-fx-border-color: Maroon; -fx-border-width: 2; -fx-background-color: DarkKhaki; -fx-background-radius: 60; -fx-border-radius: 60;" text="Закрыть" textFill="MAROON">
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" styleClass="secondary-button" text="Закрыть" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
          </Button>
       </HBox>
    </VBox>
+   <stylesheets>
+      <URL value="@../styles/main.css" />
+      <URL value="@../styles/labels.css" />
+      <URL value="@../styles/buttons.css" />
+   </stylesheets>
 </VBox>

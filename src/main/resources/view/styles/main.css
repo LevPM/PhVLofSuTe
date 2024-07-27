@@ -1,0 +1,8 @@
+.background {
+	-fx-background-color: PapayaWhip;
+	-fx-background-radius: 18;
+	
+	-fx-border-color: black;
+	-fx-border-radius: 18;
+	-fx-border-width: 6;
+}
