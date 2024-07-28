@@ -69,8 +69,6 @@
       </HBox>
    </VBox>
    <stylesheets>
-      <URL value="@../styles/main.css" />
-      <URL value="@../styles/labels.css" />
-      <URL value="@../styles/buttons.css" />
+      <URL value="@../styles/styles.css" />
    </stylesheets>
 </VBox>

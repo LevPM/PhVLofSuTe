@@ -1,3 +1,14 @@
+.root {
+	-fx-background-color: PapayaWhip;
+	-fx-background-radius: 18;
+	
+	-fx-border-color: black;
+	-fx-border-radius: 18;
+	-fx-border-width: 6;
+}
+
+
+
 .main-button{
 	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #a0522d 25.0%, #d2691e 50.0%, #9e512e 75.0%, #800000 100.0%);
 
@@ -22,6 +33,12 @@
 
 .selection-button{
 	-fx-background-color: Transparent;
-	
+
 	-fx-text-fill: #020c0d;
+}
+
+
+
+.main-label{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000080 0.0%, #800000 25.0%, #8b4513 50.0%, #800000 75.0%, #000080 100.0%);
 }
