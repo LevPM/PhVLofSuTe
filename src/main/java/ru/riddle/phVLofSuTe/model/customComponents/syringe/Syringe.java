@@ -27,6 +27,8 @@ import java.util.ResourceBundle;
 
 public class Syringe extends LiquidTank implements Initializable, Segmentable {
 
+    private static final String DEFAULT_STYLE_CLASS = "syringe";
+
     private static final int SEGMENT_HEIGHT = 50;
 
     private IntegerProperty countOfSegments;
@@ -47,7 +49,7 @@ public class Syringe extends LiquidTank implements Initializable, Segmentable {
         ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE, this);
         this.setFillableParts(liquid);
         this.liquidTypeProperty().addListener(event -> rebuildSyringe());
-        this.getStyleClass().add("syringe");
+        this.getStyleClass().add(DEFAULT_STYLE_CLASS);
     }
 
     private void buildSyringe(){
