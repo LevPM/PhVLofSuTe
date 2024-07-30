@@ -84,3 +84,21 @@
 	-fx-border-radius: 50;
 	-fx-border-width: 2;
 }
+
+.theory-condition-label{
+	-fx-background-color:  #f2c76c;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-decision-label{
+	-fx-background-color:  #a4ff5e;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
