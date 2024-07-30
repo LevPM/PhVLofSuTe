@@ -74,3 +74,13 @@
 	-fx-border-radius: 20;
 	-fx-border-width: 3;
 }
+
+.examples-cell{
+	-fx-background-color: Transparent;
+	
+	-fx-text-fill: Black;
+	
+	-fx-border-color: Black;
+	-fx-border-radius: 50;
+	-fx-border-width: 2;
+}
