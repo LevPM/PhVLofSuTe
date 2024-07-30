@@ -66,25 +66,6 @@
 	-fx-border-width: 3;
 }
 
-.theory-image{
-	-fx-background-color:  LemonChiffon;
-	-fx-background-radius: 20;
-	
-	-fx-border-color:  Navy;
-	-fx-border-radius: 20;
-	-fx-border-width: 3;
-}
-
-.examples-cell{
-	-fx-background-color: Transparent;
-	
-	-fx-text-fill: Black;
-	
-	-fx-border-color: Black;
-	-fx-border-radius: 50;
-	-fx-border-width: 2;
-}
-
 .theory-condition-label{
 	-fx-background-color:  #f2c76c;
 	-fx-background-radius: 20;
@@ -113,10 +94,30 @@
 }
 
 .theory-to-find-label{
-	-fx-background-color: LightBlue;
+	-fx-background-color: #9db7ff;
 	-fx-background-radius: 20;
 	
 	-fx-border-color: Maroon;
 	-fx-border-radius: 20;
 	-fx-border-width: 3;
+}
+
+
+.theory-image{
+	-fx-background-color:  LemonChiffon;
+	-fx-background-radius: 20;
+	
+	-fx-border-color:  Navy;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.examples-cell{
+	-fx-background-color: Transparent;
+	
+	-fx-text-fill: Black;
+	
+	-fx-border-color: Black;
+	-fx-border-radius: 50;
+	-fx-border-width: 2;
 }
