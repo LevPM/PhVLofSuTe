@@ -128,6 +128,29 @@
 	-fx-underline: true;
 }
 
+.experiments-experiment-header-label{
+	-fx-text-fill: Maroon;
+	-fx-underline: true;
+}
+
+.experiments-text-label{
+	-fx-background-color: Transparent;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.experiments-remark-label{
+	-fx-background-color:  #ffc9c9;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
 .experiments-grid-pane-column-title{
 	-fx-text-fill: Black;
 	-fx-underline: true;
@@ -152,5 +175,25 @@
 	
 	-fx-border-color: #ff8800;
 	-fx-border-radius: 100;
+	-fx-border-width: 3;
+}
+
+.experiments-start-experiment-button{
+	-fx-text-fill: #6b0000;
+	
+	-fx-background-color: #d27d7d;
+	-fx-background-radius: 50;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50;
+	-fx-border-width: 3;
+}
+
+.experiments-count-of-drops-button{
+	-fx-background-color: #ffa2a2;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
 	-fx-border-width: 3;
 }
