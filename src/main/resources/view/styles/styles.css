@@ -102,3 +102,12 @@
 	-fx-border-radius: 20;
 	-fx-border-width: 3;
 }
+
+.theory-given-label{
+	-fx-background-color: #ff8664;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
