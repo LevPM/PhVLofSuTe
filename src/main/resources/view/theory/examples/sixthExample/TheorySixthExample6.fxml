@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" style="-fx-border-color: black; -fx-border-radius: 18; -fx-border-width: 6; -fx-background-color: PapayaWhip;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.TheoryExamplesController">
-   <Label alignment="CENTER" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Lavender;" text="Пример решения задачи #6" wrapText="true">
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.TheoryExamplesController">
+   <Label alignment="CENTER" styleClass="theory-header-label" text="Пример решения задачи #6" wrapText="true">
       <font>
          <Font name="Calibri Bold" size="40.0" />
       </font>
@@ -28,7 +36,7 @@
             <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="435.0" minHeight="10.0" prefHeight="401.0" vgrow="SOMETIMES" />
          </rowConstraints>
-         <VBox alignment="CENTER" prefHeight="150.0" prefWidth="34.0" style="-fx-border-color: Navy; -fx-border-width: 3; -fx-background-color: LemonChiffon;" GridPane.columnIndex="1" GridPane.rowSpan="2">
+         <VBox alignment="CENTER" prefHeight="150.0" prefWidth="34.0" styleClass="theory-image" GridPane.columnIndex="1" GridPane.rowSpan="2">
             <GridPane.margin>
                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </GridPane.margin>
@@ -39,7 +47,7 @@
                <Image url="@../../images/Image_SixthExample.png" />
             </ImageView>
          </VBox>
-         <Label alignment="CENTER" prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Maroon; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: GreenYellow;" text="Решение" wrapText="true" GridPane.vgrow="ALWAYS">
+         <Label alignment="CENTER" prefWidth="692.0" styleClass="theory-decision-label" text="Решение" wrapText="true" GridPane.vgrow="ALWAYS">
             <font>
                <Font name="Calibri Bold" size="36.0" />
             </font>
@@ -51,7 +59,7 @@
             </GridPane.margin>
          </Label>
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-            <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="8) Выразим R:&#10;R = 2√(σ/(𝜋g(2ρₛ - ρₗ)))" wrapText="true">
+            <Label prefWidth="692.0" styleClass="theory-text-label" text="8) Выразим R:&#10;R = 2√(σ/(𝜋g(2ρₛ - ρₗ)))" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="32.0" />
                </font>
@@ -62,7 +70,7 @@
                   <Insets left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="9) Выразим d и вычислим:&#10;d = 4√(σ/(𝜋g(2ρₛ - ρₗ))) ≈ 0,0016 [м]" wrapText="true">
+            <Label prefWidth="692.0" styleClass="theory-text-label" text="9) Выразим d и вычислим:&#10;d = 4√(σ/(𝜋g(2ρₛ - ρₗ))) ≈ 0,0016 [м]" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="32.0" />
                </font>
@@ -73,7 +81,7 @@
                   <Insets left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Label prefWidth="692.0" style="-fx-border-radius: 20; -fx-border-color: Navy; -fx-border-width: 3; -fx-background-radius: 20; -fx-background-color: Moccasin;" text="Ответ: &#10;Диаметр иголки может быть равен 1,6 мм" wrapText="true">
+            <Label prefWidth="692.0" styleClass="theory-text-label" text="Ответ: &#10;Диаметр иголки может быть равен 1,6 мм" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="32.0" />
                </font>
@@ -89,7 +97,7 @@
    </HBox>
    <BorderPane>
       <right>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleNextButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вперёд" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#handleNextButtonAction" styleClass="secondary-button" text="Вперёд" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
             <font>
                <Font name="Arial Black" size="50.0" />
             </font>
@@ -99,14 +107,14 @@
          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
       </VBox.margin>
       <left>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePreviousButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Назад" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePreviousButtonAction" styleClass="secondary-button" text="Назад" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
             <font>
                <Font name="Arial Black" size="50.0" />
             </font>
          </Button>
       </left>
       <center>
-         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-border-color: Purple; -fx-background-color: LightSalmon; -fx-border-width: 3; -fx-background-radius: 50; -fx-border-radius: 50;" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" styleClass="secondary-button" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
             <font>
                <Font name="Arial Black" size="50.0" />
             </font>
