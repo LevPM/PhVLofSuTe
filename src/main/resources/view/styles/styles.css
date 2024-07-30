@@ -121,3 +121,36 @@
 	-fx-border-radius: 50;
 	-fx-border-width: 2;
 }
+
+
+.experiments-header-label{
+	-fx-text-fill: #f4621f;
+	-fx-underline: true;
+}
+
+.experiments-grid-pane-column-title{
+	-fx-text-fill: Black;
+	-fx-underline: true;
+}
+
+.experiments-grid-pane-row-title{
+	-fx-border-color:  #c35800;
+	-fx-border-radius: 80;
+	-fx-border-width: 3;
+}
+
+.experiments-grid-pane-row-title .label{
+	-fx-text-fill: Black;
+	-fx-background-color: Transparent;
+	-fx-font-family: Cambria;
+	-fx-font-weight: Bold;
+}
+
+.experiments-grid-pane-button{
+	-fx-background-color:  radial-gradient(focus-angle 0.0deg, focus-distance 1.5267% , center 48.3395% 51.5773%, radius 61.4504%, #ffd6b6 0.0%, #ffd6b6 24.6085%, #f29d3c 100.0%);
+	-fx-background-radius: 100;
+	
+	-fx-border-color: #ff8800;
+	-fx-border-radius: 100;
+	-fx-border-width: 3;
+}
