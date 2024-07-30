@@ -111,3 +111,12 @@
 	-fx-border-radius: 20;
 	-fx-border-width: 3;
 }
+
+.theory-to-find-label{
+	-fx-background-color: LightBlue;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
