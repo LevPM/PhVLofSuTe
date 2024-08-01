@@ -24,148 +24,118 @@
       </padding>
    </Label>
    <GridPane hgap="10.0" vgap="10.0" VBox.vgrow="ALWAYS">
-     <columnConstraints>
-       <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" />
-         <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS" />
-       <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
-     </columnConstraints>
-     <rowConstraints>
-       <RowConstraints fillHeight="false" minHeight="10.0" percentHeight="33.0" prefHeight="30.0" valignment="CENTER" />
-       <RowConstraints minHeight="10.0" percentHeight="33.0" prefHeight="30.0" vgrow="SOMETIMES" />
-       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-     </rowConstraints>
+      <columnConstraints>
+         <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES"/>
+         <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS"/>
+         <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints fillHeight="false" minHeight="10.0" percentHeight="33.0" prefHeight="30.0"
+                         valignment="CENTER"/>
+         <RowConstraints minHeight="10.0" percentHeight="33.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
       <VBox.margin>
-         <Insets left="100.0" right="50.0" />
+         <Insets left="100.0" right="50.0"/>
       </VBox.margin>
-      <children>
-         <HBox alignment="CENTER_LEFT" fillHeight="false">
-            <GridPane.margin>
-               <Insets />
-            </GridPane.margin>
-            <children>
-               <VBox alignment="CENTER" styleClass="authors-author-icon">
-                  <children>
-                     <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/lev_elkin_icon.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-               </VBox>
-            </children>
+      <HBox alignment="CENTER_LEFT" fillHeight="false">
+         <GridPane.margin>
+            <Insets/>
+         </GridPane.margin>
+         <VBox alignment="CENTER" styleClass="authors-author-icon">
+            <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/lev_elkin_icon.png"/>
+            </ImageView>
+         </VBox>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" GridPane.rowIndex="1">
+         <VBox alignment="CENTER" styleClass="authors-author-icon">
+            <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/akatov_daniil_icon.png"/>
+            </ImageView>
+         </VBox>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" GridPane.rowIndex="2">
+         <VBox alignment="CENTER" styleClass="authors-author-icon">
+            <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/dasha_bobylkina_icon.png"/>
+            </ImageView>
+         </VBox>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1">
+         <Label styleClass="authors-author-name" text="Елькин Лев Александрович" textAlignment="CENTER"
+                underline="true">
+            <font>
+               <Font size="48.0"/>
+            </font>
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+         </Label>
+         <Label styleClass="authors-author-role" text="Разработчик" textAlignment="CENTER">
+            <font>
+               <Font size="42.0"/>
+            </font>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <Label styleClass="authors-author-name" text="Акатов Даниил Олегович" textAlignment="CENTER"
+                underline="true">
+            <font>
+               <Font size="48.0"/>
+            </font>
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+         </Label>
+         <Label styleClass="authors-author-role" text="Дизайнер" textAlignment="CENTER">
+            <font>
+               <Font size="42.0"/>
+            </font>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <Label styleClass="authors-author-name" text="Бобылкина Дарья Михайловна" textAlignment="CENTER"
+                underline="true">
+            <font>
+               <Font size="48.0"/>
+            </font>
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+         </Label>
+         <Label styleClass="authors-author-role" text="Дизайнер" textAlignment="CENTER">
+            <font>
+               <Font size="42.0"/>
+            </font>
+            <VBox.margin>
+               <Insets left="10.0"/>
+            </VBox.margin>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER" GridPane.columnIndex="2">
+         <VBox alignment="CENTER" styleClass="authors-logo">
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/riddle_laboratory_icon.png"/>
+            </ImageView>
+         </VBox>
+         <HBox alignment="CENTER">
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+            <Label styleClass="authors-our-social-networks" text="Наши соцсети:" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0"/>
+               </font>
+            </Label>
          </HBox>
-         <HBox alignment="CENTER_LEFT" fillHeight="false" GridPane.rowIndex="1">
-            <children>
-               <VBox alignment="CENTER" styleClass="authors-author-icon">
-                  <children>
-                     <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/akatov_daniil_icon.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-               </VBox>
-            </children>
-         </HBox>
-         <HBox alignment="CENTER_LEFT" fillHeight="false" GridPane.rowIndex="2">
-            <children>
-               <VBox alignment="CENTER" styleClass="authors-author-icon">
-                  <children>
-                     <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/dasha_bobylkina_icon.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-               </VBox>
-            </children>
-         </HBox>
-         <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1">
-            <children>
-               <Label styleClass="authors-author-name" text="Елькин Лев Александрович" textAlignment="CENTER" underline="true">
-                  <font>
-                     <Font size="48.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-               </Label>
-               <Label styleClass="authors-author-role" text="Разработчик" textAlignment="CENTER">
-                  <font>
-                     <Font size="42.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets left="10.0" />
-                  </VBox.margin>
-               </Label>
-            </children>
-         </VBox>
-         <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
-            <children>
-               <Label styleClass="authors-author-name" text="Акатов Даниил Олегович" textAlignment="CENTER" underline="true">
-                  <font>
-                     <Font size="48.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-               </Label>
-               <Label styleClass="authors-author-role" text="Дизайнер" textAlignment="CENTER">
-                  <font>
-                     <Font size="42.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets left="10.0" />
-                  </VBox.margin>
-               </Label>
-            </children>
-         </VBox>
-         <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
-            <children>
-               <Label styleClass="authors-author-name" text="Бобылкина Дарья Михайловна" textAlignment="CENTER" underline="true">
-                  <font>
-                     <Font size="48.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-               </Label>
-               <Label styleClass="authors-author-role" text="Дизайнер" textAlignment="CENTER">
-                  <font>
-                     <Font size="42.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets left="10.0" />
-                  </VBox.margin>
-               </Label>
-            </children>
-         </VBox>
-         <VBox alignment="CENTER" GridPane.columnIndex="2">
-            <children>
-               <VBox alignment="CENTER" styleClass="authors-logo">
-                  <children>
-                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/riddle_laboratory_icon.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-               </VBox>
-               <HBox alignment="CENTER">
-                  <children>
-                     <Label styleClass="authors-our-social-networks" text="Наши соцсети:" textAlignment="CENTER">
-                        <font>
-                           <Font size="30.0" />
-                        </font>
-                     </Label>
-                  </children>
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-               </HBox>
-            </children>
-         </VBox>
-      </children>
+      </VBox>
    </GridPane>
    <BorderPane>
       <left>
