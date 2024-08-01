@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
@@ -93,13 +94,17 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Label prefWidth="407.0" styleClass="theory-text-label" text="Ответ: &#10;Радиус трубки равен 1,5 мм" wrapText="true">
+            <Label prefWidth="407.0" text="Ответ: &#10;Радиус трубки равен 1,5 мм" wrapText="true">
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
+               <styleClass>
+                  <String fx:value="theory-text-label" />
+                  <String fx:value="theory-answer-label" />
+               </styleClass>
             </Label>
          </VBox>
       </GridPane>

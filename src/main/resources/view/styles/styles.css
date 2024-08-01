@@ -66,6 +66,10 @@
 	-fx-border-width: 3;
 }
 
+.theory-answer-label{
+	-fx-border-color:  #d00000;
+}
+
 .theory-condition-label{
 	-fx-background-color:  #f2c76c;
 	-fx-background-radius: 20;

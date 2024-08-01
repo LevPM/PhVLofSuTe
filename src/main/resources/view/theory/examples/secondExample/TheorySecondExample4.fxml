@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
@@ -81,7 +82,7 @@
                   <Insets left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <Label prefWidth="736.0" styleClass="theory-text-label" text="Ответ:&#10;Поверхностное натяжение житкости равно 0,11 Н/м" wrapText="true" VBox.vgrow="ALWAYS">
+            <Label prefWidth="736.0" text="Ответ:&#10;Поверхностное натяжение житкости равно 0,11 Н/м" wrapText="true" VBox.vgrow="ALWAYS">
                <font>
                   <Font name="Calibri Bold" size="24.0" />
                </font>
@@ -91,6 +92,10 @@
                <VBox.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
+               <styleClass>
+                  <String fx:value="theory-text-label" />
+                  <String fx:value="theory-answer-label" />
+               </styleClass>
             </Label>
          </VBox>
       </GridPane>
