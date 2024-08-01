@@ -192,13 +192,13 @@
 }
 
 .experiments-start-experiment-button{
-	-fx-text-fill: #6b0000;
+	-fx-text-fill: #ffc2ad;
 	
 	-fx-background-color: #d27d7d;
-	-fx-background-radius: 50;
+	-fx-background-radius: 70;
 	
 	-fx-border-color: Maroon;
-	-fx-border-radius: 50;
+	-fx-border-radius: 70;
 	-fx-border-width: 3;
 }
 
@@ -208,15 +208,6 @@
 	
 	-fx-border-color: Maroon;
 	-fx-border-radius: 20;
-	-fx-border-width: 3;
-}
-
-.experiments-start-customizable-experiment-button{
-	-fx-background-color:  #ffc2ad;
-	-fx-background-radius: 70;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 70;
 	-fx-border-width: 3;
 }
 

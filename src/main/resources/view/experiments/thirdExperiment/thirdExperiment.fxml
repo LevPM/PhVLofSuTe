@@ -17,8 +17,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import ru.riddle.phVLofSuTe.model.customComponents.*?>
-<?import ru.riddle.phVLofSuTe.model.customComponents.syringe.*?>
 
 <VBox alignment="CENTER_LEFT" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ThirdExperimentController">
    <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
@@ -36,7 +34,7 @@
    </HBox>
    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
       <AnchorPane HBox.hgrow="ALWAYS">
-         <Button alignment="CENTER" layoutX="846.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleStartThirdExperimentButton" styleClass="experiments-start-customizable-experiment-button" text="Начать" textFill="MAROON">
+         <Button alignment="CENTER" layoutX="846.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleStartThirdExperimentButton" styleClass="experiments-start-experiment-button" text="Начать" textFill="MAROON">
             <font>
                <Font size="48.0" />
             </font>
