@@ -50,31 +50,29 @@
             <Font size="60.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" styleClass="experiments-grid-pane-row-title" GridPane.columnIndex="1"
-            GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <HBox alignment="CENTER" styleClass="experiments-grid-pane-row-title" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
          <Label text="Метод отрыва капель" textAlignment="CENTER">
             <font>
-               <Font size="48.0"/>
+               <Font size="48.0" />
             </font>
             <padding>
-               <Insets bottom="16.0" left="32.0" right="32.0" top="16.0"/>
+               <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
             </padding>
          </Label>
       </HBox>
-      <HBox alignment="CENTER" styleClass="experiments-grid-pane-row-title" GridPane.columnIndex="1"
-            GridPane.rowIndex="2">
+      <HBox alignment="CENTER" styleClass="experiments-grid-pane-row-title" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>
          <Label text="Вода на монетке" textAlignment="CENTER">
             <font>
-               <Font size="48.0"/>
+               <Font size="48.0" />
             </font>
             <padding>
-               <Insets bottom="16.0" left="32.0" right="32.0" top="16.0"/>
+               <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
             </padding>
          </Label>
       </HBox>
@@ -91,7 +89,7 @@
             <Font size="60.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" styleClass="experiments-grid-pane-button" text="   " GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <Button disable="true" mnemonicParsing="false" styleClass="experiments-grid-pane-button" text="   " GridPane.columnIndex="3" GridPane.rowIndex="2">
          <font>
             <Font size="60.0" />
          </font>
