@@ -302,3 +302,32 @@
 .experiments-liquid-type-setting .list-cell .label{
 	-fx-text-fill: Black;
 }
+
+
+.authors-header-label{
+	-fx-text-fill: Black;
+}
+
+.authors-author-icon{
+	-fx-border-color: Black;
+}
+
+.authors-author-name{
+	-fx-text-fill: Black;
+}
+
+.authors-author-role{
+	-fx-text-fill: Black;
+}
+
+.authors-feedback-label{
+	-fx-text-fill: Black;
+}
+
+.authors-our-social-networks{
+	-fx-text-fill: Black;
+}
+
+.authors-logo{
+	-fx-border-color: Black;
+}
