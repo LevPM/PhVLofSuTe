@@ -192,9 +192,9 @@
 }
 
 .experiments-start-experiment-button{
-	-fx-text-fill: #ffc2ad;
+	-fx-text-fill: Maroon;
 	
-	-fx-background-color: #d27d7d;
+	-fx-background-color:  #ffc2ad;
 	-fx-background-radius: 70;
 	
 	-fx-border-color: Maroon;
