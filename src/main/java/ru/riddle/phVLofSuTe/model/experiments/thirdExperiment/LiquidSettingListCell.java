@@ -29,11 +29,6 @@ public class LiquidSettingListCell extends ListCell<Liquid> {
             setText(null);
             setContentDisplay(ContentDisplay.TEXT_ONLY);
         } else {
-            liquidNameLabel.setTextFill(Color.BLACK);
-            if(this.isSelected()){
-                liquidNameLabel.setTextFill(Color.NAVY);
-            }
-
             liquidNameLabel.setText(item.getName());
             liquidColorCircle.setFill(item.getColor());
 
