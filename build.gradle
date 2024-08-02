@@ -40,4 +40,13 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml']
 }
 
+tasks {
+    processResources {
+        inputs.property("version", project.version)
+        filesMatching("app.properties") {
+            expand(version: project.version)
+        }
+    }
+}
+
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
