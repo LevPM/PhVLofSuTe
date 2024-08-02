@@ -68,6 +68,12 @@
          </Button>
       </HBox>
    </VBox>
+   <HBox alignment="CENTER_RIGHT">
+      <padding>
+         <Insets right="20.0"/>
+      </padding>
+      <Label fx:id="version_label" styleClass="version-label" text="v#.#.#"/>
+   </HBox>
    <stylesheets>
       <URL value="@../styles/styles.css" />
    </stylesheets>
