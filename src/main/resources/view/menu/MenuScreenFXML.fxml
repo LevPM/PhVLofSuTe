@@ -67,12 +67,15 @@
             </font>
          </Button>
       </HBox>
+      <VBox.margin>
+         <Insets bottom="-17.0" />
+      </VBox.margin>
    </VBox>
    <HBox alignment="CENTER_RIGHT">
       <padding>
-         <Insets right="20.0"/>
+         <Insets right="20.0" />
       </padding>
-      <Label fx:id="version_label" styleClass="version-label" text="v#.#.#"/>
+      <Label fx:id="versionLabel" styleClass="version-label" text="v#.#.#" />
    </HBox>
    <stylesheets>
       <URL value="@../styles/styles.css" />
