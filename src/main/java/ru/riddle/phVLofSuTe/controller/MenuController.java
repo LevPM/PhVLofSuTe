@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import ru.riddle.phVLofSuTe.model.menu.MenuModel;
 import ru.riddle.phVLofSuTe.model.util.AppProperties;
+import ru.riddle.phVLofSuTe.model.util.FXMLs;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,6 +44,8 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        versionLabel.setText(AppProperties.getAppVersion());
+        if(url.getPath().endsWith(FXMLs.MENU_SCREEN.getPath())) {
+            versionLabel.setText(AppProperties.getAppVersion());
+        }
     }
 }
