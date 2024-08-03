@@ -38,7 +38,7 @@
    </VBox>
    <VBox prefHeight="200.0" prefWidth="100.0">
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-         <Button id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" styleClass="secondary-button" text="Настройки" textAlignment="JUSTIFY">
+         <Button id="settingsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="657.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSettingButtonAction" styleClass="menu-secondary-button" text="Настройки" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
@@ -51,7 +51,7 @@
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </HBox.margin>
          </Button>
-         <Button id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" styleClass="secondary-button" text="Создатели" textAlignment="JUSTIFY">
+         <Button id="authorsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="568.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleAuthorsButtonAction" styleClass="menu-secondary-button" text="Создатели" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
@@ -61,7 +61,7 @@
          <VBox.margin>
             <Insets bottom="20.0" />
          </VBox.margin>
-         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" styleClass="secondary-button" text="Закрыть" textAlignment="JUSTIFY">
+         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCloseButtonAction" styleClass="menu-secondary-button" text="Закрыть" textAlignment="JUSTIFY">
             <font>
                <Font name="System Bold" size="40.0" />
             </font>
