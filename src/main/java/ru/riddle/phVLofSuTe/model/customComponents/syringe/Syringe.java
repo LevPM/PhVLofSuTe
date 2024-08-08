@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.customComponents.Segmentable;
+import ru.riddle.phVLofSuTe.model.customComponents.properties.Segmentable;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody.SyringeBody;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid.SyringeLiquid;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston.SyringePiston;
