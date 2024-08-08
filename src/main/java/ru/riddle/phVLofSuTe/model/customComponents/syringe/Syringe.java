@@ -12,6 +12,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
+import ru.riddle.phVLofSuTe.model.customComponents.BorderedLiquidTank;
 import ru.riddle.phVLofSuTe.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
 import ru.riddle.phVLofSuTe.model.customComponents.properties.Segmentable;
@@ -19,13 +20,12 @@ import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody.SyringeBo
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid.SyringeLiquid;
 import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.model.customComponents.LiquidTank;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Syringe extends LiquidTank implements Initializable, Segmentable {
+public class Syringe extends BorderedLiquidTank implements Initializable, Segmentable {
 
     private static final String DEFAULT_STYLE_CLASS = "syringe";
 
