@@ -67,19 +67,16 @@ public enum FXMLs {
 
     SYRINGE_BODY("/view/customComponents/syringe/body.fxml"),
 
-    SYRINGE_BODY_S("/view/customComponents/syringe/syringeBody/syringeBodyFXML.fxml"),
     SYRINGE_BODY_STUB("/view/customComponents/syringe/syringeBody/SyringeBodyStub.fxml"),
     SYRINGE_BODY_SEGMENT("/view/customComponents/syringe/syringeBody/syringeBodySegmentFXML.fxml"),
     SYRINGE_TIP("/view/customComponents/syringe/syringeBody/syringeTipFXML.fxml"),
 
-    SYRINGE_PISTON("/view/customComponents/syringe/syringePiston/syringePistonFXML.fxml"),
     SYRINGE_PISTON_SEGMENT("/view/customComponents/syringe/syringePiston/syringePistonRodSegmentFXML.fxml"),
     SYRINGE_PISTON_TIP("/view/customComponents/syringe/syringePiston/syringePistonTipFXML.fxml"),
     SYRINGE_PISTON_CAP("/view/customComponents/syringe/syringePiston/syringePistonCap.fxml"),
 
     LIQUID_CONTAINER("/view/customComponents/liquidContainer.fxml"),
 
-    SYRINGE_LIQUID("/view/customComponents/syringe/syringeLiquid/syringeLiquidFXML.fxml"),
     SYRINGE_LIQUID_SEGMENT("/view/customComponents/syringe/syringeLiquid/syringeLiquidSegmentFXML.fxml"),
     SYRINGE_LIQUID_TIP("/view/customComponents/syringe/syringeLiquid/luquidTipFXML.fxml"),
 
