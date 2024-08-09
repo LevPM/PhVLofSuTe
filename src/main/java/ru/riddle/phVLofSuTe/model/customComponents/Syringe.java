@@ -228,7 +228,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             super(FXMLs.SYRINGE_BODY_STUB,FXMLs.SYRINGE_TIP, FXMLs.SYRINGE_BODY_SEGMENT);
 
             Node cap = this.getChildren().getFirst();
-            cap.setLayoutY(cap.getLayoutY());
+            cap.setLayoutY(cap.getLayoutY() + 0.5);
         }
     }
 
@@ -246,7 +246,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
             this.setIsOpen(isOpen);
 
-            this.setLayoutY(getLayoutY() - 1);
+            this.setLayoutY(getLayoutY());
         }
 
         @Override
