@@ -98,6 +98,7 @@ public class ThirdExperimentController implements Initializable {
         liquidComboBox.setDisable(true);
         isOpenSettingToggleButton.setDisable(true);
         countOfSegmentsSlider.setDisable(true);
+        setDefaultButton.setDisable(true);
 
         syringe.setOnAnimationFinished(event -> {
             liquidComboBox.setDisable(false);
@@ -108,6 +109,8 @@ public class ThirdExperimentController implements Initializable {
             isOpenSettingToggleButton.setTextFill(Color.NAVY);
 
             countOfSegmentsSlider.setDisable(false);
+
+            setDefaultButton.setDisable(false);
         });
     }
 }
