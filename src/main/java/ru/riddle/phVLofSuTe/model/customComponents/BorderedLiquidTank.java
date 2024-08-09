@@ -42,7 +42,7 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
     @Override
     public ObjectProperty<Color> bodyColorProperty() {
         if(this.bodyColor == null){
-            bodyColor = new StyleableObjectProperty<>() {
+            bodyColor = new StyleableObjectProperty<>(Color.BLACK) {
                 @Override
                 public Object getBean() {
                     return BorderedLiquidTank.this;
