@@ -58,8 +58,8 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
     private void buildSyringe(){
         liquid = new LiquidBody(this.getLiquidType());
-        body = new CylinderBody();
         piston = new PistonBody(this.getIsOpen());
+        body = new CylinderBody();
 
         this.setColoredGroup(body);
 
@@ -189,11 +189,11 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         }
 
         protected void build(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML){
+            buildSegments(segmentFXML);
             this.getChildren().addAll(
                     new Cap(capFXML),
                     new Tip(tipFXML)
             );
-            buildSegments(segmentFXML);
         }
 
         protected void buildSegments(FXMLs segmentFXML){
@@ -251,13 +251,6 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             this.openY = - SEGMENT_HEIGHT * (getCountOfSegments() - 1);
 
             this.setIsOpen(isOpen);
-
-            this.setLayoutY(getLayoutY());
-        }
-
-        @Override
-        protected void buildSegments(FXMLs segmentFXML) {
-            super.buildSegments(segmentFXML);
         }
 
         @Override
@@ -333,7 +326,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         @Override
         public ObjectProperty<Color> bodyColorProperty() {
             if(this.bodyColor == null){
-                bodyColor = new StyleableObjectProperty<>() {
+                bodyColor = new StyleableObjectProperty<>(Color.DIMGRAY) {
                     @Override
                     public Object getBean() {
                         return PistonBody.this;
