@@ -67,6 +67,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
     private void rebuildSyringe(){
         this.getChildren().clear();
         buildSyringe();
+        this.recolor();
     }
 
     @Override

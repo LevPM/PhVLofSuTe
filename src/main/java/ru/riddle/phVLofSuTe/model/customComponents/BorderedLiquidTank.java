@@ -53,13 +53,7 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
                 }
             };
 
-            bodyColor.addListener(event -> {
-                System.out.println(getBodyColor().getRed());
-                System.out.println(getBodyColor().getGreen());
-                System.out.println(getBodyColor().getBlue());
-
-                colorGroup(this, getBodyColor());
-            });
+            bodyColor.addListener(event ->  colorGroup(this, getBodyColor()));
         }
         return this.bodyColor;
     }
@@ -73,6 +67,10 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
                 ((Shape) child).setStroke(color);
             }
         });
+    }
+
+    protected void recolor(){
+        colorGroup(this, getBodyColor());
     }
 
     public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
