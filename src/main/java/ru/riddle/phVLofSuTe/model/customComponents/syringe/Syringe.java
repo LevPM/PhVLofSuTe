@@ -24,7 +24,6 @@ import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
 public class Syringe extends BorderedLiquidTank implements Initializable, Segmentable {
