@@ -4,10 +4,12 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.*;
+import javafx.css.CssMetaData;
+import javafx.css.Styleable;
+import javafx.css.StyleableObjectProperty;
+import javafx.css.StyleableProperty;
+import javafx.css.converter.ColorConverter;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -17,13 +19,15 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.model.customComponents.properties.Segmentable;
+import ru.riddle.phVLofSuTe.model.customComponents.properties.styleable.ColorableBody;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class Syringe extends BorderedLiquidTank implements Initializable, Segmentable {
 
@@ -232,7 +236,9 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         }
     }
 
-    private class PistonBody extends Body{
+    private class PistonBody extends Body implements ColorableBody{
+
+        private ObjectProperty<Color> bodyColor;
 
         private boolean isOpen = false;
 
@@ -265,6 +271,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             background.getStyleClass().add("piston-background");
             background.setX(-30);
             background.setY(- bodyHeight - 11);
+            background.setId("pistonRodBackground");
             this.getChildren().add(background);
         }
 
@@ -309,6 +316,95 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
                     open();
                 } else {
                     close();
+                }
+            }
+        }
+
+        @Override
+        public Color getBodyColor() {
+            return bodyColorProperty().get();
+        }
+
+        @Override
+        public void setBodyColor(Color bodyColor) {
+            this.bodyColorProperty().set(bodyColor);
+        }
+
+        @Override
+        public ObjectProperty<Color> bodyColorProperty() {
+            if(this.bodyColor == null){
+                bodyColor = new StyleableObjectProperty<>() {
+                    @Override
+                    public Object getBean() {
+                        return PistonBody.this;
+                    }
+
+                    @Override
+                    public String getName() {
+                        return "bodyColor";
+                    }
+
+                    @Override
+                    public CssMetaData<? extends Styleable, Color> getCssMetaData() {
+                        return PistonBody.StyleableProperties.BODY_COLOR;
+                    }
+                };
+
+                bodyColor.addListener(event -> this.recolor());
+            }
+            return this.bodyColor;
+        }
+
+        private static void colorGroup(Group group, Color color){
+            group.getChildren().forEach(child ->{
+                if(child instanceof Group){
+                    colorGroup((Group) child, color);
+                }
+                if(child instanceof Shape){
+                    if(Objects.equals(child.getId(), "pistonRodBackground")) return;
+                    ((Shape) child).setFill(color);
+                }
+            });
+        }
+
+        private void recolor(){
+            colorGroup(this, getBodyColor());
+        }
+
+        public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+            return PistonBody.StyleableProperties.STYLEABLES;
+        }
+
+        @Override
+        public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+            return getClassCssMetaData();
+        }
+
+
+        private static class StyleableProperties{
+            private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
+
+            private static final CssMetaData<PistonBody, Color> BODY_COLOR;
+
+            static{
+                BODY_COLOR = new CssMetaData<>("-rl-body-color", ColorConverter.getInstance(), Color.BLACK, true) {
+                    @Override
+                    public boolean isSettable(PistonBody pistonBody) {
+                        return !pistonBody.bodyColorProperty().isBound();
+                    }
+
+                    @Override
+                    public StyleableProperty<Color> getStyleableProperty(PistonBody pistonBody) {
+                        return (StyleableProperty<Color>) pistonBody.bodyColorProperty();
+                    }
+                };
+
+                {
+                    var styleables = new ArrayList<>(Group.getClassCssMetaData());
+                    Collections.addAll(styleables,
+                            BODY_COLOR
+                    );
+                    STYLEABLES = Collections.unmodifiableList(styleables);
                 }
             }
         }

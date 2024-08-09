@@ -4,5 +4,5 @@
 <?import javafx.scene.shape.Rectangle?>
 
 <fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <Rectangle fill="DIMGRAY" height="52.0" stroke="DIMGRAY" strokeType="OUTSIDE" width="10.0" x="-5.0" y="-61.0" />
+   <Rectangle fill="DIMGRAY" height="52.0" width="10.0" x="-5.0" y="-61.0" />
 </fx:root>
