@@ -10,19 +10,21 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.customComponents.BorderedLiquidTank;
-import ru.riddle.phVLofSuTe.model.customComponents.Drop;
-import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
+import ru.riddle.phVLofSuTe.model.customComponents.*;
 import ru.riddle.phVLofSuTe.model.customComponents.properties.Segmentable;
-import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeBody.SyringeBody;
-import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringeLiquid.SyringeLiquid;
-import ru.riddle.phVLofSuTe.model.customComponents.syringe.syringePiston.SyringePiston;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 
 import java.net.URL;
+import java.sql.SQLOutput;
 import java.util.ResourceBundle;
 
 public class Syringe extends BorderedLiquidTank implements Initializable, Segmentable {
@@ -37,9 +39,9 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
     private static final int DEFAULT_COUNT_OF_SEGMENTS = 5;
     private static final boolean DEFAULT_IS_OPEN = false;
 
-    private SyringeLiquid liquid;
-    private SyringeBody body;
-    private SyringePiston piston;
+    private LiquidBody liquid;
+    private CylinderBody body;
+    private PistonBody piston;
 
     private boolean isAnimating;
 
@@ -53,9 +55,9 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
     }
 
     private void buildSyringe(){
-        liquid = new SyringeLiquid(getCountOfSegments(), SEGMENT_HEIGHT, this.getLiquidType());
-        body = new SyringeBody(getCountOfSegments(), SEGMENT_HEIGHT);
-        piston = new SyringePiston(getCountOfSegments(), SEGMENT_HEIGHT, getIsOpen());
+        liquid = new LiquidBody(this.getLiquidType());
+        body = new CylinderBody();
+        piston = new PistonBody(this.getIsOpen());
 
         this.getChildren().addAll(
                 liquid,
@@ -167,5 +169,221 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
     public void setOnAnimationFinished(EventHandler<Event> handler){
         this.onAnimationFinishedEventHandler = handler;
+    }
+
+    private abstract class Body extends Group {
+
+        private final double bodyHeight;
+
+        private Body(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML){
+            ModelUtil.downloadCustomComponentFXML(FXMLs.SYRINGE_BODY, this);
+            bodyHeight = SEGMENT_HEIGHT * getCountOfSegments();
+            build(capFXML, tipFXML, segmentFXML);
+        }
+
+        protected void build(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML){
+            this.getChildren().addAll(
+                    new Cap(capFXML),
+                    new Tip(tipFXML)
+            );
+            buildSegments(segmentFXML);
+        }
+
+        protected void buildSegments(FXMLs segmentFXML){
+            for(int i = 0; i < getCountOfSegments(); i++){
+                this.getChildren().add(new Segment(segmentFXML, i, SEGMENT_HEIGHT));
+            }
+        }
+
+        public double getBodyHeight() {
+            return bodyHeight;
+        }
+
+        protected class Cap extends Group{
+            public Cap(FXMLs capFXML){
+                ModelUtil.downloadCustomComponentFXML(capFXML, this);
+                this.setLayoutY(-bodyHeight - 10 + 0.5);
+            }
+        }
+
+        protected class Segment extends Group{
+            public Segment(FXMLs segmentFXML, int sequenceNumber, int segmentHeight) {
+                ModelUtil.downloadCustomComponentFXML(segmentFXML, this);
+                this.setLayoutY(-sequenceNumber * segmentHeight);
+            }
+        }
+
+        protected class Tip extends Group{
+            public Tip(FXMLs tipFXML) {
+                ModelUtil.downloadCustomComponentFXML(tipFXML, this);
+            }
+        }
+    }
+
+    private class CylinderBody extends Body{
+        public CylinderBody() {
+            super(FXMLs.SYRINGE_BODY_STUB,FXMLs.SYRINGE_TIP, FXMLs.SYRINGE_BODY_SEGMENT);
+            Node cap = this.getChildren().getFirst();
+            cap.setLayoutY(cap.getLayoutY() + 0.5);
+        }
+    }
+
+    private class PistonBody extends Body{
+
+        private boolean isOpen = false;
+
+        private final int openY; //Translate Y when syringe is open
+
+        public PistonBody(boolean isOpen) {
+            super(FXMLs.SYRINGE_PISTON_CAP, FXMLs.SYRINGE_PISTON_TIP, FXMLs. SYRINGE_PISTON_SEGMENT);
+            this.getStyleClass().add("syringe-piston");
+
+            this.openY = - SEGMENT_HEIGHT * (getCountOfSegments() - 1);
+
+            this.setIsOpen(isOpen);
+        }
+
+        @Override
+        protected void buildSegments(FXMLs segmentFXML) {
+            super.buildSegments(segmentFXML);
+        }
+
+        @Override
+        protected void build(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML) {
+            createBackground(getBodyHeight());
+            super.build(capFXML, tipFXML, segmentFXML);
+        }
+
+        private void createBackground(double bodyHeight){
+            Rectangle background = new Rectangle(60, bodyHeight, Color.PAPAYAWHIP);
+            background.getStyleClass().add("piston-background");
+            background.setX(-30);
+            background.setY(- bodyHeight - 11);
+            this.getChildren().add(background);
+        }
+
+        public Transition getTransition(Duration duration, boolean isRefilling){
+            if(isOpen && isRefilling){
+                return new TranslateTransition();
+            }
+
+            TranslateTransition transition = new TranslateTransition();
+            transition.setNode(this);
+            transition.setDuration(Duration.millis(duration.toMillis() + 1000));
+            transition.setByY(isRefilling ? openY : -openY);
+
+            return transition;
+        }
+
+        private void open(){
+            if(!isOpen) {
+                if(!(this.getTranslateY() == openY)){
+                    this.setTranslateY(openY);
+                }
+                this.isOpen = true;
+            }
+        }
+
+        private void close(){
+            if(isOpen) {
+                if(!(this.getTranslateY() == 0)){
+                    this.setTranslateY(this.getTranslateY() - openY);
+                }
+                this.isOpen = false;
+            }
+        }
+
+        public boolean isOpen() {
+            return isOpen;
+        }
+
+        public void setIsOpen(boolean isOpen) {
+            if(isOpen != this.isOpen){
+                if(isOpen){
+                    open();
+                } else {
+                    close();
+                }
+            }
+        }
+    }
+
+    public class LiquidBody extends Body implements Fillable {
+
+        private final Liquid liquidType;
+
+        public LiquidBody(Liquid liquidType) {
+            super(FXMLs.NULL, FXMLs.SYRINGE_LIQUID_TIP, FXMLs.SYRINGE_LIQUID_SEGMENT);
+            this.liquidType = liquidType;
+            build(liquidType);
+            this.setLayoutX(-30);
+            this.setLayoutY(-60);
+        }
+
+        @Override
+        public void fill(Color color) {
+            this.getChildren().forEach(children -> {
+                if(children instanceof Fillable fillable){
+                    fillable.fill(color);
+                }
+            });
+        }
+
+        @Override
+        protected void build(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML) {}
+
+        private void build(Liquid liquidType){
+            this.getChildren().addAll(
+                    new LiquidTip(liquidType)
+            );
+            buildSegments(liquidType);
+        }
+
+        private void buildSegments(Liquid liquidType){
+            for(int i = 0; i < getCountOfSegments(); i++){
+                this.getChildren().add(new LiquidSegment(i, SEGMENT_HEIGHT, liquidType));
+            }
+        }
+
+        @Override
+        protected void buildSegments(FXMLs segmentFXML) {}
+
+        private class LiquidTip extends Tip implements Fillable{
+
+            private final Liquid liquidType;
+
+            @FXML
+            private Polygon liquid;
+
+            public LiquidTip(Liquid liquidType) {
+                super(FXMLs.SYRINGE_LIQUID_TIP);
+                this.liquidType = liquidType;
+                this.liquid.setFill(liquidType.getColor());
+            }
+
+            @Override
+            public void fill(Color color) {
+                liquid.setFill(color);
+            }
+        }
+
+        private class LiquidSegment extends Segment implements  Fillable{
+
+            private final Liquid liquidType;
+
+            @FXML
+            private Rectangle liquid;
+
+            public LiquidSegment(int sequenceNumber, int segmentHeight, Liquid liquidType) {
+                super(FXMLs.SYRINGE_LIQUID_SEGMENT, sequenceNumber, segmentHeight);
+                this.liquidType = liquidType;
+                liquid.setFill(liquidType.getColor());
+            }
+
+            @Override
+            public void fill(Color color) {
+                liquid.setFill(color);
+            }
+        }
     }
 }

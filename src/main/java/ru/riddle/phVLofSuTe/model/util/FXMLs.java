@@ -65,7 +65,9 @@ public enum FXMLs {
 
     SYRINGE("/view/customComponents/syringe/syringeFXML.fxml"),
 
-    SYRINGE_BODY("/view/customComponents/syringe/syringeBody/syringeBodyFXML.fxml"),
+    SYRINGE_BODY("/view/customComponents/syringe/body.fxml"),
+
+    SYRINGE_BODY_S("/view/customComponents/syringe/syringeBody/syringeBodyFXML.fxml"),
     SYRINGE_BODY_STUB("/view/customComponents/syringe/syringeBody/SyringeBodyStub.fxml"),
     SYRINGE_BODY_SEGMENT("/view/customComponents/syringe/syringeBody/syringeBodySegmentFXML.fxml"),
     SYRINGE_TIP("/view/customComponents/syringe/syringeBody/syringeTipFXML.fxml"),
@@ -84,6 +86,8 @@ public enum FXMLs {
     DROP("/view/customComponents/drop.fxml"),
 
     LIQUID_SETTING("/view/experiments/thirdExperiment/settings/liquidSettingFXML.fxml"),
+
+    NULL("/view/customComponents/null.fxml"),
     ;
 
     public static final List<FXMLs> firstExperiment = List.of(
