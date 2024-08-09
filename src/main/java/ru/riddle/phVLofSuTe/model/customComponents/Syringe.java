@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.customComponents.syringe;
+package ru.riddle.phVLofSuTe.model.customComponents;
 
 import javafx.animation.ParallelTransition;
 import javafx.animation.SequentialTransition;
@@ -18,7 +18,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.model.customComponents.*;
 import ru.riddle.phVLofSuTe.model.customComponents.properties.Segmentable;
 import ru.riddle.phVLofSuTe.model.util.FXMLs;
 import ru.riddle.phVLofSuTe.model.util.ModelUtil;

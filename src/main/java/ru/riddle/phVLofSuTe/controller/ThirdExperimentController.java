@@ -11,7 +11,7 @@ import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentMod
 import ru.riddle.phVLofSuTe.model.customComponents.Liquid;
 import ru.riddle.phVLofSuTe.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.customComponents.syringe.Syringe;
+import ru.riddle.phVLofSuTe.model.customComponents.Syringe;
 
 import java.net.URL;
 import java.util.ResourceBundle;
