@@ -19,8 +19,14 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
 
     private ObjectProperty<Color> bodyColor;
 
+    private Group coloredGroup = this; // Used for custom recoloring of part of main group
+
     public BorderedLiquidTank() {
         this.getStyleClass().add("bordered-liquid-tank");
+    }
+
+    protected void setColoredGroup(Group coloredGroup){
+        this.coloredGroup = coloredGroup;
     }
 
     @Override
@@ -53,12 +59,12 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
                 }
             };
 
-            bodyColor.addListener(event ->  colorGroup(this, getBodyColor()));
+            bodyColor.addListener(event ->  recolor());
         }
         return this.bodyColor;
     }
 
-    private static void colorGroup(Group group, Color color){
+    protected static void colorGroup(Group group, Color color){
         group.getChildren().forEach(child ->{
             if(child instanceof Group){
                 colorGroup((Group) child, color);
@@ -70,7 +76,7 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
     }
 
     protected void recolor(){
-        colorGroup(this, getBodyColor());
+        colorGroup(coloredGroup, getBodyColor());
     }
 
     public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {

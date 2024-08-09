@@ -57,18 +57,22 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         body = new CylinderBody();
         piston = new PistonBody(this.getIsOpen());
 
+        this.setColoredGroup(body);
+
         this.getChildren().addAll(
                 liquid,
                 piston,
                 body
         );
+        recolor();
     }
 
     private void rebuildSyringe(){
         this.getChildren().clear();
         buildSyringe();
-        this.recolor();
     }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
