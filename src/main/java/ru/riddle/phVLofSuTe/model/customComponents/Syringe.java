@@ -70,7 +70,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
                 piston,
                 body
         );
-        recolor();
+        this.recolor();
     }
 
     private void rebuildSyringe(){
@@ -221,7 +221,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             };
 
             {
-                var styleables = new ArrayList<>(Group.getClassCssMetaData());
+                var styleables = new ArrayList<>(BorderedLiquidTank.getClassCssMetaData());
                 Collections.addAll(styleables,
                         IS_OPEN
                 );
