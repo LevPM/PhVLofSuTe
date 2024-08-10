@@ -5,10 +5,8 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.*;
-import javafx.css.CssMetaData;
-import javafx.css.Styleable;
-import javafx.css.StyleableObjectProperty;
-import javafx.css.StyleableProperty;
+import javafx.css.*;
+import javafx.css.converter.BooleanConverter;
 import javafx.css.converter.ColorConverter;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -38,6 +36,9 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
     private IntegerProperty countOfSegments;
     private BooleanProperty isOpen;
 
+    private static final PseudoClass OPENED_PSEUDOCLASS_STATE = PseudoClass.getPseudoClass("opened");
+    private static final PseudoClass CLOSED_PSEUDOCLASS_STATE = PseudoClass.getPseudoClass("closed");
+
     private static final int DEFAULT_COUNT_OF_SEGMENTS = 5;
     private static final boolean DEFAULT_IS_OPEN = false;
 
@@ -54,6 +55,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         this.setFillableParts(liquid);
         this.liquidTypeProperty().addListener(event -> rebuildSyringe());
         this.getStyleClass().add(DEFAULT_STYLE_CLASS);
+        this.pseudoClassStateChanged(CLOSED_PSEUDOCLASS_STATE, true);
     }
 
     private void buildSyringe(){
@@ -168,7 +170,29 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
     public BooleanProperty isOpenProperty(){
         if(isOpen == null){
-            isOpen = new SimpleBooleanProperty(this, "isOpen", DEFAULT_IS_OPEN);
+            isOpen = new StyleableBooleanProperty(DEFAULT_IS_OPEN) {
+                @Override
+                protected void invalidated() {
+                    boolean isClosed = this.get() == DEFAULT_IS_OPEN; //DEFAULT_IS_OPEN is closed
+                    Syringe.this.pseudoClassStateChanged(CLOSED_PSEUDOCLASS_STATE, isClosed);
+                    Syringe.this.pseudoClassStateChanged(OPENED_PSEUDOCLASS_STATE, !isClosed);
+                }
+
+                @Override
+                public Object getBean() {
+                    return Syringe.this;
+                }
+
+                @Override
+                public String getName() {
+                    return "isOpen";
+                }
+
+                @Override
+                public CssMetaData<? extends Styleable, Boolean> getCssMetaData() {
+                    return StyleableProperties.IS_OPEN;
+                }
+            };
             isOpen.addListener(event -> piston.setIsOpen(getIsOpen()));
         }
         return isOpen;
@@ -176,6 +200,43 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
     public void setOnAnimationFinished(EventHandler<Event> handler){
         this.onAnimationFinishedEventHandler = handler;
+    }
+
+    private static class StyleableProperties{
+        private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
+
+        private static final CssMetaData<Syringe, Boolean> IS_OPEN;
+
+        static{
+            IS_OPEN = new CssMetaData<>("-rl-is-open", BooleanConverter.getInstance(), true, true) {
+                @Override
+                public boolean isSettable(Syringe syringe) {
+                    return !syringe.isOpenProperty().isBound();
+                }
+
+                @Override
+                public StyleableProperty<Boolean> getStyleableProperty(Syringe syringe) {
+                    return (StyleableProperty<Boolean>) syringe.isOpenProperty();
+                }
+            };
+
+            {
+                var styleables = new ArrayList<>(Group.getClassCssMetaData());
+                Collections.addAll(styleables,
+                        IS_OPEN
+                );
+                STYLEABLES = Collections.unmodifiableList(styleables);
+            }
+        }
+    }
+
+    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+        return Syringe.StyleableProperties.STYLEABLES;
+    }
+
+    @Override
+    public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+        return getClassCssMetaData();
     }
 
     private abstract class Body extends Group {
