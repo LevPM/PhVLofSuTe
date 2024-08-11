@@ -64,15 +64,19 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
         return this.bodyColor;
     }
 
-    protected static void colorGroup(Group group, Color color){
+    private void colorGroup(Group group, Color color){
         group.getChildren().forEach(child ->{
             if(child instanceof Group){
                 colorGroup((Group) child, color);
             }
             if(child instanceof Shape){
-                ((Shape) child).setStroke(color);
+                colorShape((Shape) child, color);
             }
         });
+    }
+
+    protected void colorShape(Shape shape, Color color){
+        shape.setStroke(color);
     }
 
     protected void recolor(){
