@@ -321,7 +321,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         }
 
         private void createBackground(double bodyHeight){
-            Rectangle background = new Rectangle(60, bodyHeight, Color.PAPAYAWHIP);
+            Rectangle background = new Rectangle(60, bodyHeight, Color.GAINSBORO);
             background.getStyleClass().add("piston-background");
             background.setX(-30);
             background.setY(- bodyHeight - 11);
@@ -387,7 +387,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         @Override
         public ObjectProperty<Color> bodyColorProperty() {
             if(this.bodyColor == null){
-                bodyColor = new StyleableObjectProperty<>(Color.DIMGRAY) {
+                bodyColor = new StyleableObjectProperty<>(Color.LIGHTGRAY) {
                     @Override
                     public Object getBean() {
                         return PistonBody.this;
@@ -441,7 +441,7 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             private static final CssMetaData<PistonBody, Color> BODY_COLOR;
 
             static{
-                BODY_COLOR = new CssMetaData<>("-rl-body-color", ColorConverter.getInstance(), Color.BLACK, true) {
+                BODY_COLOR = new CssMetaData<>("-rl-body-color", ColorConverter.getInstance(), Color.LIGHTGRAY, true) {
                     @Override
                     public boolean isSettable(PistonBody pistonBody) {
                         return !pistonBody.bodyColorProperty().isBound();

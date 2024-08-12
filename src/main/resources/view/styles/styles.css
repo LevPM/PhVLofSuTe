@@ -315,6 +315,22 @@
 	-fx-text-fill: Black;
 }
 
+.syringe{
+    -rl-body-color: Black;
+}
+
+.syringe .syringe-piston{
+    -rl-body-color: DimGray;
+}
+
+.syringe .syringe-piston .piston-background{
+    -fx-fill: PapayaWhip;
+}
+
+.liquid-container{
+    -rl-body-color: Black;
+}
+
 
 .authors-header-label{
 	-fx-text-fill: Black;

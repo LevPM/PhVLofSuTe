@@ -42,7 +42,7 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
     @Override
     public ObjectProperty<Color> bodyColorProperty() {
         if(this.bodyColor == null){
-            bodyColor = new StyleableObjectProperty<>(Color.BLACK) {
+            bodyColor = new StyleableObjectProperty<>(Color.SILVER) {
                 @Override
                 public Object getBean() {
                     return BorderedLiquidTank.this;
@@ -98,7 +98,7 @@ public abstract class BorderedLiquidTank extends LiquidTank implements Colorable
         private static final CssMetaData<BorderedLiquidTank, Color> BODY_COLOR;
 
         static{
-            BODY_COLOR = new CssMetaData<>("-rl-body-color", ColorConverter.getInstance(), Color.BLACK, true) {
+            BODY_COLOR = new CssMetaData<>("-rl-body-color", ColorConverter.getInstance(), Color.SILVER, true) {
                 @Override
                 public boolean isSettable(BorderedLiquidTank borderedLiquidTank) {
                     return !borderedLiquidTank.bodyColorProperty().isBound();
