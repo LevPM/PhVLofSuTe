@@ -3,7 +3,6 @@ package ru.riddle.phVLofSuTe;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +14,10 @@ public class PhVLofSuTe extends Application {
 
     private static final Logger logger = LoggerFactory.getLogger(PhVLofSuTe.class);
 
+    static {
+        System.setProperty("-Dlog4j2.contextSelector", "org.apache.logging.log4j.core.async.BasicAsyncLoggerContextSelector");
+    }
+
     @Override
     public void start(Stage primaryStage){
         logger.info("Starting application");
@@ -23,7 +26,7 @@ public class PhVLofSuTe extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("PhVLofSuTe");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image(getClass().getResource("/view/images/blackboard_icon.png").toExternalForm()));
+        primaryStage.getIcons().add(ModelUtil.downloadIcon("/view/images/blackboard_icon.png"));
         logger.info("Showing stage");
         primaryStage.show();
     }

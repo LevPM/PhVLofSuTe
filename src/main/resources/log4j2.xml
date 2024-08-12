@@ -8,6 +8,7 @@
     <Appenders>
         <RollingFile name="fileLogger"
                      filePattern="${APP_LOG_ROOT}/PhVLofSuTe_%d{dd-MM-yyyy}_%i.log"
+                     immediateFlush="false"
                      append="false">
             <PatternLayout>
                 <pattern>
