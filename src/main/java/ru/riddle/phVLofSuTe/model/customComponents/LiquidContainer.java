@@ -25,7 +25,7 @@ public class LiquidContainer extends BorderedLiquidTank {
 
     @Override
     protected void colorShape(Shape shape, Color color) {
-        if(Objects.equals(shape.getId(), (liquid.getId()))) return;
+        if(Objects.equals(shape.getId(), liquid.getId())) return;
         super.colorShape(shape, color);
     }
 
