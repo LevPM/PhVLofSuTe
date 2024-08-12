@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{dd/MM/yyyy HH:mm:ss} [%t] %-6p: %C{1}: %m%n</Property>
+        <Property name="APP_LOG_ROOT">/PhVLofSuTe_logs</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="fileLogger"
+                     filePattern="${APP_LOG_ROOT}/PhVLofSuTe_%d{dd-MM-yyyy}_%i.log"
+                     append="false">
+            <PatternLayout>
+                <pattern>
+                    ${LOG_PATTERN}
+                </pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+
+            <DirectWriteRolloverStrategy maxFiles="15">
+                <Delete basePath="${APP_LOG_ROOT}" maxDepth="3">
+                    <IfLastModified age="7d">
+                        <IfAny>
+                            <IfAccumulatedFileSize exceeds="10MB" />
+                            <IfAccumulatedFileCount exceeds="15" />
+                        </IfAny>
+                    </IfLastModified>
+                </Delete>
+            </DirectWriteRolloverStrategy>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>
+                    ${LOG_PATTERN}
+                </pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="all" additivity="false">
+            <appender-ref ref="fileLogger" />
+            <appender-ref ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
