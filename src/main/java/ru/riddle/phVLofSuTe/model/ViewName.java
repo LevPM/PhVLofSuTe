@@ -5,20 +5,24 @@ import de.saxsys.mvvmfx.ViewModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.view.menu.AuthorsView;
+import ru.riddle.phVLofSuTe.view.menu.MenuTEView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.view.menu.SettingsView;
+import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
 
 public enum ViewName {
 
+    //Menu block
     MENU(MenuView.class),
-    MENU_TE(null),
+    MENU_TE(MenuTEView.class),
     AUTHORS(AuthorsView.class),
     SETTINGS(SettingsView.class),
 
+    //Theory block
+    THEORY_SELECTION(TheorySelectionView.class),
 
-    THEORY_SELECTION(null),
 
-
+    //Experiments block
     EXPERIMENTS_MENU(null),
     ;
 
