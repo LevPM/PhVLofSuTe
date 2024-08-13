@@ -6,13 +6,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.view.menu.AuthorsView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
+import ru.riddle.phVLofSuTe.view.menu.SettingsView;
 
 public enum ViewName {
 
     MENU(MenuView.class),
     MENU_TE(null),
     AUTHORS(AuthorsView.class),
-    SETTINGS(null),
+    SETTINGS(SettingsView.class),
     ;
 
     private final Class<? extends FxmlView<? extends ViewModel>> value;

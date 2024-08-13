@@ -25,7 +25,7 @@ public class MenuViewModel implements ViewModel {
 
     public void openSettingsScreen(ActionEvent event){
         logger.debug("Opening settings screen");
-        ModelUtil.changeScreen(event, FXMLs.SETTINGS_SCREEN);
+        ViewManager.changeScreen(event, ViewName.SETTINGS);
     }
 
     public void openAuthorsScreen(ActionEvent event){
@@ -34,7 +34,8 @@ public class MenuViewModel implements ViewModel {
     }
 
     public void openMenuTESelectionScreen(ActionEvent event){
-        ModelUtil.changeScreen(event, FXMLs.MENU_TE_SELECTION);
+        logger.debug("Opening TE selection screen");
+        ViewManager.changeScreen(event, ViewName.MENU_TE);
     }
 
     public void closeApp(){
