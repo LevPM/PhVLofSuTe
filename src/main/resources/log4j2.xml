@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="warn">
     <Properties>
-        <Property name="LOG_PATTERN">%d{dd/MM/yyyy HH:mm:ss} [%t] %-6p: %C{1}: %m%n</Property>
+        <Property name="LOG_PATTERN">%d{dd/MM/yyyy HH:mm:ss} %-6p [%t]: %C{1}: %m%n</Property>
         <Property name="APP_LOG_ROOT">/PhVLofSuTe_logs</Property>
     </Properties>
 
@@ -43,7 +43,7 @@
     <Loggers>
         <Root level="all" additivity="false">
             <appender-ref ref="fileLogger" />
-            <appender-ref ref="console"/>
+            <appender-ref ref="console" />
         </Root>
     </Loggers>
 </Configuration>
