@@ -1,5 +1,6 @@
 package ru.riddle.phVLofSuTe.model;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -75,5 +76,11 @@ public class ModelUtil {
     public static Image downloadIcon(String path){
         logger.debug("Creating icon with path: {}", path);
         return new Image(Objects.requireNonNull(ModelUtil.class.getResource(path)).toExternalForm());
+    }
+
+    public static void closeApp(){
+        logger.info("Closing app...");
+        Platform.exit();
+        System.exit(0);
     }
 }
