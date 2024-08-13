@@ -6,12 +6,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.util.Callback;
-import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.LiquidSettingListCell;
-import ru.riddle.phVLofSuTe.model.experiments.thirdExperiment.ThirdExperimentModel;
-import ru.riddle.phVLofSuTe.model.customComponents.Liquid;
-import ru.riddle.phVLofSuTe.model.customComponents.Drop;
-import ru.riddle.phVLofSuTe.model.customComponents.LiquidContainer;
-import ru.riddle.phVLofSuTe.model.customComponents.Syringe;
+import ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment.LiquidSettingListCell;
+import ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment.ThirdExperimentModel;
+import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
+import ru.riddle.phVLofSuTe.controller.model.customComponents.Drop;
+import ru.riddle.phVLofSuTe.controller.model.customComponents.LiquidContainer;
+import ru.riddle.phVLofSuTe.controller.model.customComponents.Syringe;
 
 import java.net.URL;
 import java.util.ResourceBundle;

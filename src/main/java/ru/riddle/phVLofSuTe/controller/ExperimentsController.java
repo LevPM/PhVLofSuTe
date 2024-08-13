@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
-import ru.riddle.phVLofSuTe.model.experiments.ExperimentsModel;
+import ru.riddle.phVLofSuTe.controller.model.experiments.ExperimentsModel;
 
 public class ExperimentsController{
 

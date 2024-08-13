@@ -4,9 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import ru.riddle.phVLofSuTe.model.menu.MenuModel;
-import ru.riddle.phVLofSuTe.model.util.AppProperties;
-import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.controller.model.menu.MenuModel;
+import ru.riddle.phVLofSuTe.controller.model.util.AppProperties;
+import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
 
 import java.net.URL;
 import java.util.ResourceBundle;
