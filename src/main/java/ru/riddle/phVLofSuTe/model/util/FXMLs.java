@@ -1,5 +1,8 @@
 package ru.riddle.phVLofSuTe.model.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 
 public enum FXMLs {
@@ -143,6 +146,8 @@ public enum FXMLs {
     private final String path;
     private String id;
 
+    private static final Logger logger = LoggerFactory.getLogger(FXMLs.class);
+
     FXMLs(String path) {
         this.path = path;
     }
@@ -153,10 +158,12 @@ public enum FXMLs {
     }
 
     public String getPath() {
+        logger.trace("Returning path: {}", path);
         return path;
     }
 
     public String getId() {
+        logger.trace("Returning id: {}", id);
         return id;
     }
 }

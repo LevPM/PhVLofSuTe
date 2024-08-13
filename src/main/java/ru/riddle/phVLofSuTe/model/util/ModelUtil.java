@@ -54,7 +54,7 @@ public class ModelUtil {
     }
 
     public static void downloadCustomComponentFXML(FXMLs fxml, Node controller){
-        logger.info("Starting downloading custom component. fxml: {}, controller: {}", fxml.name(), controller);
+        logger.debug("Starting downloading custom component. fxml: {}, controller: {}", fxml.name(), controller);
 
         logger.debug("Creating FXMLLoader...");
         FXMLLoader loader = new FXMLLoader(ModelUtil.class.getResource(fxml.getPath()));
@@ -64,16 +64,16 @@ public class ModelUtil {
         loader.setController(controller);
 
         try{
-            logger.debug("Downloading component...");
+            logger.info("Downloading component custom component: {}", fxml.name());
             loader.load();
         } catch(IOException e){
             logger.error("Exception during custom component downloading! Message: {}", e.getMessage());
         }
-        logger.info("Custom component downloading finished!");
+        logger.debug("Custom component downloading finished!");
     }
 
     public static Image downloadIcon(String path){
-        logger.info("Creating icon with path: {}", path);
+        logger.debug("Creating icon with path: {}", path);
         return new Image(Objects.requireNonNull(ModelUtil.class.getResource(path)).toExternalForm());
     }
 }
