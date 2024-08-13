@@ -18,7 +18,7 @@
       </padding>
    </Label>
    <VBox alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
-      <ListView fx:id="settingsList" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: PapayaWhip;" VBox.vgrow="ALWAYS">
+      <ListView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: PapayaWhip;" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
