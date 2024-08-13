@@ -20,7 +20,7 @@ public enum ViewName {
 
     //Theory block
     THEORY_SELECTION(TheorySelectionView.class),
-
+    THEORY_EXAMPLES_MENU(null),
 
     //Experiments block
     EXPERIMENTS_MENU(null),
@@ -35,7 +35,7 @@ public enum ViewName {
     }
 
     public Class<? extends FxmlView<? extends ViewModel>> getValue() {
-        logger.trace("Returning ViewName value: {}", value.getName());
+        if(value == null) logger.error("ViewName value is null! Name: {}", this.name());
         return value;
     }
 

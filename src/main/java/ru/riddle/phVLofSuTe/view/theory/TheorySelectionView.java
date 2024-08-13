@@ -16,14 +16,17 @@ public class TheorySelectionView implements FxmlView<TheorySelectionViewModel> {
 
 
     public void handleBackButtonAction(ActionEvent event) {
-
+        logger.trace("Handling backButtonAction");
+        viewModel.backToTheoryExperimentsMenu(event);
     }
 
     public void handleTheoryButtonAction(ActionEvent event) {
-
+        logger.trace("Handling theoryButtonAction");
+        viewModel.openTheory(event);
     }
 
     public void handleExamplesButtonAction(ActionEvent event) {
-
+        logger.trace("Handling examplesButtonAction");
+        viewModel.openExamplesMenu(event);
     }
 }
