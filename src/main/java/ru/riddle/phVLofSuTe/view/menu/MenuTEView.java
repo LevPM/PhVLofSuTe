@@ -16,14 +16,17 @@ public class MenuTEView implements FxmlView<MenuTEViewModel> {
 
 
     public void handleBackButtonAction(ActionEvent event) {
-
+        logger.debug("Handling back button action");
+        viewModel.backToMenuScreen(event);
     }
 
     public void handleTheoryButtonAction(ActionEvent event) {
-
+        logger.debug("Handling theory button action");
+        viewModel.openTheory(event);
     }
 
     public void handleExperimentsButtonAction(ActionEvent event) {
-
+        logger.debug("Handling experiments button action");
+        viewModel.openExperiments(event);
     }
 }

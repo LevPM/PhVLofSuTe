@@ -14,6 +14,12 @@ public enum ViewName {
     MENU_TE(null),
     AUTHORS(AuthorsView.class),
     SETTINGS(SettingsView.class),
+
+
+    THEORY_SELECTION(null),
+
+
+    EXPERIMENTS_MENU(null),
     ;
 
     private final Class<? extends FxmlView<? extends ViewModel>> value;

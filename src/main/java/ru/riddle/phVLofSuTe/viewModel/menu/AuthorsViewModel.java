@@ -12,7 +12,7 @@ public class AuthorsViewModel implements ViewModel {
     private static final Logger logger = LoggerFactory.getLogger(AuthorsViewModel.class);
 
     public void backToMenuScreen(ActionEvent event){
-        logger.debug("backing to MenuScreen");
+        logger.debug("Backing to MenuScreen");
         ViewManager.changeScreen(event, ViewName.MENU);
     }
 
