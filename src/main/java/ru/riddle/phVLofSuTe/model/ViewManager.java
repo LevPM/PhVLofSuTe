@@ -8,8 +8,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.view.menu.AuthorsView;
-import ru.riddle.phVLofSuTe.view.menu.MenuView;
 
 public class ViewManager {
 
@@ -26,15 +24,6 @@ public class ViewManager {
 
     private static Parent downloadRoot(ViewName view){
         logger.debug("Loading view: {}", view.name());
-        return FluentViewLoader.fxmlView(
-                switch (view){
-                    case MENU -> MenuView.class;
-                    case AUTHORS -> AuthorsView.class;
-                    default -> {
-                        logger.error("View not found! View name: {}", view.name());
-                        yield null;
-                    }
-                })
-                .load().getView();
+        return FluentViewLoader.fxmlView(view.getValue()).load().getView();
     }
 }
