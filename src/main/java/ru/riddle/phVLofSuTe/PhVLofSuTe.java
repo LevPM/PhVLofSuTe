@@ -33,7 +33,7 @@ public class PhVLofSuTe extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("PhVLofSuTe");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(ModelUtil.downloadIcon("/view/images/blackboard_icon.png"));
+        primaryStage.getIcons().add(ModelUtil.downloadIcon("/ru/riddle/phVLofSuTe/images/icons/blackboard_icon.png"));
         logger.info("Showing stage");
         primaryStage.show();
     }
