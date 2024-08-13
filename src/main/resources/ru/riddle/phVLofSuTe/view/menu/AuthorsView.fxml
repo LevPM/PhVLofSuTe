@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../styles/stylesV.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.MenuController">
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../styles/stylesV.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.menu.AuthorsView">
    <Label alignment="CENTER" styleClass="authors-header-label" text="Создатели" textAlignment="JUSTIFY">
       <font>
          <Font name="Arial Black" size="72.0" />

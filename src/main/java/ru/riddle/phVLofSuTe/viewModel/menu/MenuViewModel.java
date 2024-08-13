@@ -6,9 +6,7 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.model.AppProperties;
-import ru.riddle.phVLofSuTe.model.FXMLs;
-import ru.riddle.phVLofSuTe.model.ModelUtil;
+import ru.riddle.phVLofSuTe.model.*;
 
 public class MenuViewModel implements ViewModel {
 
@@ -32,12 +30,7 @@ public class MenuViewModel implements ViewModel {
 
     public void openAuthorsScreen(ActionEvent event){
         logger.debug("Opening authors screen");
-        ModelUtil.changeScreen(event, FXMLs.AUTHORS_SCREEN);
-    }
-
-    public void backToMenuScreen(ActionEvent event){
-        logger.debug("backing to MenuScreen");
-        ModelUtil.changeScreen(event, FXMLs.MENU_SCREEN);
+        ViewManager.changeScreen(event, ViewName.AUTHORS);
     }
 
     public void openMenuTESelectionScreen(ActionEvent event){

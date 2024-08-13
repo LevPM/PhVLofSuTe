@@ -27,16 +27,12 @@ public class MenuView implements FxmlView<MenuViewModel>, Initializable {
         viewModel.openAuthorsScreen(event);
     }
 
-    public void handleBackButtonAction(ActionEvent event){
-        viewModel.backToMenuScreen(event);
+    public void handleStartButtonAction(ActionEvent event) {
+        viewModel.openMenuTESelectionScreen(event);
     }
 
     public void handleCloseButtonAction(){
         viewModel.closeApp();
-    }
-
-    public void handleStartButtonAction(ActionEvent event) {
-        viewModel.openMenuTESelectionScreen(event);
     }
 
     @Override
