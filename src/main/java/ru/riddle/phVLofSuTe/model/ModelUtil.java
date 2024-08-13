@@ -22,13 +22,10 @@ public class ModelUtil {
         logger.info("Starting changing screen to {}", fxml.name());
         logger.debug("Getting stage...");
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        double height = stage.getHeight();
-        double width = stage.getWidth();
         boolean isFullScreen = stage.isFullScreen();
         Scene scene = new Scene(downloadRoot(fxml));
         stage.setScene(scene);
-        stage.setHeight(height);
-        stage.setWidth(width);
+        stage.sizeToScene();
         stage.setFullScreen(isFullScreen);
         logger.info("Showing stage");
         stage.show();
