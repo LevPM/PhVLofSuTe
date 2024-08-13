@@ -5,8 +5,8 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.shape.Arc;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.controller.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.FXMLs;
+import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 public class Drop extends LiquidTank {
 

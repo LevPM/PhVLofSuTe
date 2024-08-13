@@ -1,8 +1,8 @@
 package ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment;
 
 import javafx.event.ActionEvent;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.controller.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.FXMLs;
+import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 public class ThirdExperimentModel {
 

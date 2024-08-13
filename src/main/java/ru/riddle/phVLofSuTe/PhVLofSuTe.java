@@ -6,9 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.controller.model.util.AppProperties;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.controller.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.AppProperties;
+import ru.riddle.phVLofSuTe.model.FXMLs;
+import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 public class PhVLofSuTe extends Application {
 

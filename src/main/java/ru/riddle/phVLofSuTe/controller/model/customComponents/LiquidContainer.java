@@ -7,8 +7,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Shape;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.controller.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.FXMLs;
+import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 import java.util.Objects;
 

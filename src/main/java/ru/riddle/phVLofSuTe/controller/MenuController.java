@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import ru.riddle.phVLofSuTe.controller.model.menu.MenuModel;
-import ru.riddle.phVLofSuTe.controller.model.util.AppProperties;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.AppProperties;
+import ru.riddle.phVLofSuTe.model.FXMLs;
 
 import java.net.URL;
 import java.util.ResourceBundle;

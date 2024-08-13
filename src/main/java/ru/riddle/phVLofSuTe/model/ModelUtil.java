@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.controller.model.util;
+package ru.riddle.phVLofSuTe.model;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

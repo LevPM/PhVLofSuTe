@@ -6,8 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.shape.Circle;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
-import ru.riddle.phVLofSuTe.controller.model.util.FXMLs;
-import ru.riddle.phVLofSuTe.controller.model.util.ModelUtil;
+import ru.riddle.phVLofSuTe.model.FXMLs;
+import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 public class LiquidSettingListCell extends ListCell<Liquid> {
 
