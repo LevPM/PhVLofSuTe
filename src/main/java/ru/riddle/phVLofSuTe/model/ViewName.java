@@ -17,13 +17,24 @@ public enum ViewName {
     MENU_TE(MenuTEView.class),
     AUTHORS(AuthorsView.class),
     SETTINGS(SettingsView.class),
+    //------------------------------------
 
     //Theory block
     THEORY_SELECTION(TheorySelectionView.class),
-    THEORY_EXAMPLES_MENU(null),
+
+        //Basic theory block
+
+        //====================================
+
+        //Examples block
+        THEORY_EXAMPLES_MENU(null),
+        //====================================
+
+    //------------------------------------
 
     //Experiments block
     EXPERIMENTS_MENU(null),
+    //------------------------------------
     ;
 
     private final Class<? extends FxmlView<? extends ViewModel>> value;
