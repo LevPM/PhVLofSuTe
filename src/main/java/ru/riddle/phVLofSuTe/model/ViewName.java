@@ -9,6 +9,8 @@ import ru.riddle.phVLofSuTe.view.menu.MenuTEView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.view.menu.SettingsView;
 import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
+import ru.riddle.phVLofSuTe.view.theory.examples.BasicExampleView;
+import ru.riddle.phVLofSuTe.view.theory.examples.TheoryExamplesSelectionView;
 
 public enum ViewName {
 
@@ -23,11 +25,12 @@ public enum ViewName {
     THEORY_SELECTION(TheorySelectionView.class),
 
         //Basic theory block
-
         //====================================
 
         //Examples block
-        THEORY_EXAMPLES_MENU(null),
+        THEORY_EXAMPLES_MENU(TheoryExamplesSelectionView.class),
+
+        THEORY_BASIC_EXAMPLE(BasicExampleView.class),
         //====================================
 
     //------------------------------------

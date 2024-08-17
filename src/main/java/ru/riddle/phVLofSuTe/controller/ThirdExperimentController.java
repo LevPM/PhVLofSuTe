@@ -16,6 +16,7 @@ import ru.riddle.phVLofSuTe.controller.model.customComponents.Syringe;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+@Deprecated
 public class ThirdExperimentController implements Initializable {
 
     @FXML

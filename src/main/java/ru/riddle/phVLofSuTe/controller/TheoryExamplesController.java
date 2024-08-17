@@ -3,6 +3,7 @@ package ru.riddle.phVLofSuTe.controller;
 import javafx.event.ActionEvent;
 import ru.riddle.phVLofSuTe.controller.model.theory.TheoryExamplesModel;
 
+@Deprecated
 public class TheoryExamplesController {
 
     private final TheoryExamplesModel model;

@@ -360,3 +360,34 @@
 .version-label{
 	-fx-text-fill: Black;
 }
+
+.pagination {
+	-fx-arrows-visible: false;
+	-fx-tooltip-visible: false;
+	-fx-page-information-visible: true;
+	-fx-page-information-alignment: right;
+}
+
+.pagination .pagination-control{
+	-fx-font-size: 16px;
+	-fx-text-fill: Maroon;
+}
+
+.pagination .pagination-control .number-button{
+	-fx-background-radius: 50%;
+	-fx-background-color: Transparent;
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50%;
+}
+
+.pagination .pagination-control .number-button:selected{
+	-fx-border-color: Navy;
+	-fx-border-width: 2;
+	-fx-text-fill: Navy;
+	-fx-font-weight: 800;
+}
+
+
+.examples-separator{
+	-fx-background-color: Maroon;
+}

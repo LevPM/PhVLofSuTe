@@ -9,6 +9,7 @@ import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
+@Deprecated
 public class LiquidSettingListCell extends ListCell<Liquid> {
 
     @FXML

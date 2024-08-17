@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.theory.examples.BasicExampleView">
+   <Label fx:id="exampleNumberLabel" alignment="CENTER" styleClass="theory-header-label" text="Пример решения задачи #$№" wrapText="true">
+      <font>
+         <Font name="Calibri Bold" size="40.0" />
+      </font>
+      <padding>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </padding>
+      <VBox.margin>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </VBox.margin>
+   </Label>
+   <GridPane alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+      <columnConstraints>
+         <ColumnConstraints hgrow="ALWAYS" />
+         <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
+      <VBox>
+         <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
+      </VBox>
+      <VBox alignment="CENTER" fillWidth="false" styleClass="theory-image" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </GridPane.margin>
+         <ImageView fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <viewport>
+               <Rectangle2D />
+            </viewport>
+            <Image url="@../../../images/theory/examples/Example_4.png" />
+         </ImageView>
+      </VBox>
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin>
+   </GridPane>
+   <Separator prefWidth="200.0" styleClass="examples-separator" />
+   <BorderPane>
+      <right>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNextButtonAction" styleClass="secondary-button" text="Вперёд" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </right>
+      <VBox.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </VBox.margin>
+      <left>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlePreviousButtonAction" styleClass="secondary-button" text="Назад" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </left>
+      <center>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackButtonAction" styleClass="secondary-button" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </center>
+   </BorderPane>
+</VBox>

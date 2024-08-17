@@ -11,6 +11,7 @@ import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
 
 import java.util.List;
 
+@Deprecated
 public class ExperimentsAnimationModel {
 
     private boolean isFirstAnimationAnimating, isSecondAnimationAnimating, isThirdAnimationAnimating = false;

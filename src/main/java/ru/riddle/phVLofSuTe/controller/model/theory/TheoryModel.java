@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
+@Deprecated
 public class TheoryModel{
 
 

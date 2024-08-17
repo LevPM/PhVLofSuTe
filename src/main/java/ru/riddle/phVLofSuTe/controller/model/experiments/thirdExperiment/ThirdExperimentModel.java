@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
+@Deprecated
 public class ThirdExperimentModel {
 
     public ThirdExperimentModel(){

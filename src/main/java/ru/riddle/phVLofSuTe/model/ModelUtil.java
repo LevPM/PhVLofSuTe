@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Objects;
 
+@Deprecated
 public class ModelUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(ModelUtil.class);

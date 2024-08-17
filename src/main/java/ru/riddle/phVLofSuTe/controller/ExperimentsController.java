@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
 import ru.riddle.phVLofSuTe.controller.model.experiments.ExperimentsModel;
 
+@Deprecated
 public class ExperimentsController{
 
     private final ExperimentsModel model;

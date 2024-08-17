@@ -1,6 +1,7 @@
 package ru.riddle.phVLofSuTe.model;
 
 import de.saxsys.mvvmfx.FluentViewLoader;
+import de.saxsys.mvvmfx.Scope;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -13,17 +14,26 @@ public class ViewManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ViewManager.class);
 
-    public static void changeScreen(ActionEvent event, ViewName view){
+    public static void changeScreen(ActionEvent event, ViewName view, Scope... scopes){
         logger.info("Changing screen to {}", view.name());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(downloadRoot(view));
+        Scene scene = new Scene(downloadRoot(view, scopes));
         stage.setScene(scene);
         logger.debug("Showing stage");
         stage.show();
     }
 
-    private static Parent downloadRoot(ViewName view){
-        logger.debug("Loading view: {}", view.name());
-        return FluentViewLoader.fxmlView(view.getValue()).load().getView();
+    public static void changeScreen(ActionEvent event, ViewName view){
+        changeScreen(event, view, new Scope[]{});
+    }
+
+    private static Parent downloadRoot(ViewName view, Scope... scopes){
+        if(scopes.length == 0){
+            logger.debug("Loading view: {}", view.name());
+            return FluentViewLoader.fxmlView(view.getValue()).load().getView();
+        } else {
+            logger.debug("Loading view: {}. With Scopes(Count): {}", view.name(), scopes.length);
+            return FluentViewLoader.fxmlView(view.getValue()).providedScopes(scopes).load().getView();
+        }
     }
 }

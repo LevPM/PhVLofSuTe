@@ -9,6 +9,7 @@ import javafx.scene.shape.Arc;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
+@Deprecated
 public class ExperimentsModel {
 
     private final ExperimentsAnimationModel animationModel;
