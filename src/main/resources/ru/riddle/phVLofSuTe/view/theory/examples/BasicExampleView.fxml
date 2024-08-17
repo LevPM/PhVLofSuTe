@@ -42,7 +42,7 @@
          <GridPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
-         <ImageView fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+         <ImageView fx:id="exampleImage" fitHeight="385.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
             <viewport>
                <Rectangle2D />
             </viewport>
