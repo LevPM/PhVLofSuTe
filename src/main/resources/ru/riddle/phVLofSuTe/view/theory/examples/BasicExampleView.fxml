@@ -46,7 +46,6 @@
             <viewport>
                <Rectangle2D />
             </viewport>
-            <Image url="@../../../images/theory/examples/Example_4.png" />
          </ImageView>
       </VBox>
       <VBox.margin>
