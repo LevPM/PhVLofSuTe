@@ -16,6 +16,17 @@ launch4j {
     downloadUrl = "https://www.oracle.com/java/technologies/downloads/#java21"
 }
 
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': 'ru.riddle.phVLofSuTe.AppLauncher'
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 application {
     mainClass.set("ru.riddle.phVLofSuTe.AppLauncher")
 }
