@@ -361,6 +361,8 @@
 	-fx-text-fill: Black;
 }
 
+/* TODO: Move all selectors below to THEORY block */
+
 .pagination {
 	-fx-arrows-visible: false;
 	-fx-tooltip-visible: false;
@@ -387,7 +389,26 @@
 	-fx-font-weight: 800;
 }
 
-
 .examples-separator{
 	-fx-background-color: Maroon;
+}
+
+.basic-text-cell-view{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list-cell{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list {
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list .list-cell{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list .scroll-bar{
+	
 }

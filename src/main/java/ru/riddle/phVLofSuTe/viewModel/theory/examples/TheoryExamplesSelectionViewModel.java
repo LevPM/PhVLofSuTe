@@ -18,7 +18,6 @@ public class TheoryExamplesSelectionViewModel implements ViewModel {
 
     public void openExample(ActionEvent event, int id){
         logger.debug("Opening example...");
-
         ViewManager.changeScreen(event, ViewName.THEORY_BASIC_EXAMPLE, new SelectedExampleScope(id));
     }
 }

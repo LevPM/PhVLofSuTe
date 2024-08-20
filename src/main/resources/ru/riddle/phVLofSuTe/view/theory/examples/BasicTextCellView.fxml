@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListCell?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<ListCell styleClass="theory-examples-text-list-cell" contentDisplay="GRAPHIC_ONLY" maxWidth="745.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.theory.examples.BasicTextCellView">
+    <graphic>
+        <HBox styleClass="theory-text-label">
+            <Label fx:id="text" prefWidth="1000000.0" wrapText="true">
+                <font>
+                    <Font name="Calibri Bold" size="28.0" />
+                </font>
+                <padding>
+                    <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                </padding>
+            </Label>
+        </HBox>
+    </graphic>
+</ListCell>

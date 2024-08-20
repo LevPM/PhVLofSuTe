@@ -12,10 +12,14 @@ public class SelectedExampleScope implements Scope {
 
     private static final Logger logger = LoggerFactory.getLogger(SelectedExampleScope.class);
 
-    private ObjectProperty<Example> example = new SimpleObjectProperty<>();
+    private final ObjectProperty<Example> example = new SimpleObjectProperty<>();
 
     public ObjectProperty<Example> exampleProperty() {
         return example;
+    }
+
+    public Example getExample() {
+        return example.get();
     }
 
     public SelectedExampleScope(int id){

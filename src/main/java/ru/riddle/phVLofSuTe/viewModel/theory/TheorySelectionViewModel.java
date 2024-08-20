@@ -13,7 +13,7 @@ public class TheorySelectionViewModel implements ViewModel {
 
     public void openExamplesMenu(ActionEvent event){
         logger.debug("opening theory examples menu");
-        ViewManager.changeScreen(event, ViewName.THEORY_EXAMPLES_MENU);
+        ViewManager.changeScreen(event, ViewName.THEORY_EXAMPLES_SELECTION);
     }
 
     public void openTheory(ActionEvent event){

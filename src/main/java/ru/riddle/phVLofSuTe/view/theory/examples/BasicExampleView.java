@@ -3,6 +3,7 @@ package ru.riddle.phVLofSuTe.view.theory.examples;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Pagination;
 import javafx.scene.image.ImageView;
@@ -20,6 +21,12 @@ public class BasicExampleView implements FxmlView<BasicExampleViewModel>, Initia
     private static final Logger logger = LoggerFactory.getLogger(BasicExampleView.class);
 
     @FXML
+    private Button previousButton;
+
+    @FXML
+    private Button nextButton;
+
+    @FXML
     private Label exampleNumberLabel;
 
     @FXML
@@ -32,21 +39,32 @@ public class BasicExampleView implements FxmlView<BasicExampleViewModel>, Initia
     private BasicExampleViewModel viewModel;
 
     public void handlePreviousButtonAction(ActionEvent event) {
-
+        logger.trace("Handling PreviousButtonAction");
+        viewModel.backToPreviousScreen();
     }
 
     public void handleBackButtonAction(ActionEvent event) {
-
+        logger.trace("Handling BackButtonAction");
+        viewModel.backToTheoryExamplesSelection(event);
     }
 
     public void handleNextButtonAction(ActionEvent event) {
-
+        logger.trace("Handling NextButtonAction");
+        viewModel.goToNextScreen();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        logger.trace("Initializing...");
         pagination.currentPageIndexProperty().bindBidirectional(viewModel.currentPageIndexProperty());
         pagination.pageCountProperty().bind(viewModel.pageCountProperty());
         pagination.pageFactoryProperty().bind(viewModel.pageFactoryProperty());
+
+        previousButton.disableProperty().bind(viewModel.previousButtonDisableProperty());
+        nextButton.disableProperty().bind(viewModel.nextButtonDisableProperty());
+
+        exampleImage.imageProperty().bind(viewModel.exampleImageProperty());
+
+        exampleNumberLabel.textProperty().bind(viewModel.exampleNumberLabelProperty());
     }
 }

@@ -28,7 +28,7 @@ public enum ViewName {
         //====================================
 
         //Examples block
-        THEORY_EXAMPLES_MENU(TheoryExamplesSelectionView.class),
+        THEORY_EXAMPLES_SELECTION(TheoryExamplesSelectionView.class),
 
         THEORY_BASIC_EXAMPLE(BasicExampleView.class),
         //====================================
@@ -52,5 +52,4 @@ public enum ViewName {
         if(value == null) logger.error("ViewName value is null! Name: {}", this.name());
         return value;
     }
-
 }
