@@ -79,7 +79,12 @@
 }
 
 .theory-answer-label{
-	-fx-border-color:  #d00000;
+	-fx-background-color: #f4ff8f;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
 }
 
 .theory-condition-label{
@@ -410,5 +415,5 @@
 }
 
 .theory-examples-text-list .scroll-bar{
-	
+	-fx-background-color: BurlyWood;
 }
