@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.Example;
-import ru.riddle.phVLofSuTe.model.ExamplesManager;
+import ru.riddle.phVLofSuTe.model.JSONDataManager;
 
 public class SelectedExampleScope implements Scope {
 
@@ -24,6 +24,6 @@ public class SelectedExampleScope implements Scope {
 
     public SelectedExampleScope(int id){
         logger.trace("Creating scope with id: {}", id);
-        this.example.set(ExamplesManager.getExampleById(id));
+        this.example.set(JSONDataManager.getById(id, Example.class));
     }
 }

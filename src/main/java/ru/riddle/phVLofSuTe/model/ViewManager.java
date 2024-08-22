@@ -38,10 +38,10 @@ public class ViewManager {
 
     public static <T extends FxmlView<? extends ViewModel>> void downloadCustomComponent(T view, Class<T> clazz, Scope... scopes){
         if(scopes == null || scopes.length == 0){
-          logger.debug("Loading custom component: {}", clazz);
+          logger.debug("Loading custom component: {}", clazz.getSimpleName());
             FluentViewLoader.fxmlView(clazz).root(view).codeBehind(view).load();
         } else {
-            logger.debug("Loading custom component: {}. With Scopes(Count): {}", clazz, scopes.length);
+            logger.debug("Loading custom component: {}. With Scopes(Count): {}", clazz.getSimpleName(), scopes.length);
             FluentViewLoader.fxmlView(clazz).root(view).codeBehind(view).providedScopes(scopes).load();
         }
     }
