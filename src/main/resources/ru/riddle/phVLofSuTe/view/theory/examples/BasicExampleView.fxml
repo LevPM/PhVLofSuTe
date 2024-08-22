@@ -35,7 +35,7 @@
          <RowConstraints />
       </rowConstraints>
       <VBox>
-         <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
+         <Pagination fx:id="pagination" styleClass="theory-examples-pagination" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
       </VBox>
       <VBox alignment="CENTER" fillWidth="false" styleClass="theory-image" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
          <GridPane.margin>
@@ -51,7 +51,7 @@
          <Insets bottom="10.0" />
       </VBox.margin>
    </GridPane>
-   <Separator prefWidth="200.0" styleClass="examples-separator" />
+   <Separator prefWidth="200.0" styleClass="theory-examples-separator" />
    <BorderPane>
       <VBox.margin>
          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

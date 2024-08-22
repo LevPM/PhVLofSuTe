@@ -1,3 +1,6 @@
+
+/* Main */
+
 .root {
 	-fx-background-color: PapayaWhip;
 	-fx-background-radius: 18;
@@ -5,19 +8,6 @@
 	-fx-border-color: black;
 	-fx-border-radius: 18;
 	-fx-border-width: 6;
-}
-
-
-
-.main-button{
-	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #a0522d 25.0%, #d2691e 50.0%, #9e512e 75.0%, #800000 100.0%);
-
-	-fx-background-color:  linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eee8aa 0.0%, #ffe4b5 25.0%, #fafad2 50.0%, #ffe4b5 75.0%, #eee8aa 100.0%);
-	-fx-background-radius: 50;
-
-	-fx-border-color: Maroon;
-	-fx-border-width: 2;
-	-fx-border-radius: 50;
 }
 
 .secondary-button{
@@ -31,6 +21,29 @@
 	-fx-border-radius: 60;
 }
 
+.selection-button{
+	-fx-background-color: Transparent;
+
+	-fx-text-fill: #020c0d;
+}
+
+
+/* Menu */
+
+.main-button{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #a0522d 25.0%, #d2691e 50.0%, #9e512e 75.0%, #800000 100.0%);
+
+	-fx-background-color:  linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eee8aa 0.0%, #ffe4b5 25.0%, #fafad2 50.0%, #ffe4b5 75.0%, #eee8aa 100.0%);
+	-fx-background-radius: 50;
+
+	-fx-border-color: Maroon;
+	-fx-border-width: 2;
+	-fx-border-radius: 50;
+}
+
+.main-label{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000080 0.0%, #800000 25.0%, #8b4513 50.0%, #800000 75.0%, #000080 100.0%);
+}
 
 .menu-secondary-button{
 	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #8b4513 25.0%, #a0522d 50.0%, #8b4513 75.0%, #800000 100.0%);
@@ -43,17 +56,36 @@
 	-fx-border-radius: 60;
 }
 
-.selection-button{
-	-fx-background-color: Transparent;
+.authors-header-label{
+	-fx-text-fill: Black;
+}
 
-	-fx-text-fill: #020c0d;
+.authors-author-icon{
+	-fx-border-color: Black;
+}
+
+.authors-author-name{
+	-fx-text-fill: Black;
+}
+
+.authors-author-role{
+	-fx-text-fill: Black;
+}
+
+.authors-feedback-label{
+	-fx-text-fill: Black;
+}
+
+.authors-our-social-networks{
+	-fx-text-fill: Black;
+}
+
+.version-label{
+	-fx-text-fill: Black;
 }
 
 
-
-.main-label{
-	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000080 0.0%, #800000 25.0%, #8b4513 50.0%, #800000 75.0%, #000080 100.0%);
-}
+/* Theory */
 
 .theory-header-label{
 	-fx-text-fill: Navy;
@@ -123,6 +155,55 @@
 	-fx-border-width: 3;
 }
 
+.theory-examples-pagination {
+	-fx-arrows-visible: false;
+	-fx-tooltip-visible: false;
+	-fx-page-information-visible: true;
+	-fx-page-information-alignment: right;
+}
+
+.theory-examples-pagination .pagination-control{
+	-fx-font-size: 16px;
+	-fx-text-fill: Maroon;
+}
+
+.theory-examples-pagination .pagination-control .number-button{
+	-fx-background-radius: 50%;
+	-fx-background-color: Transparent;
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50%;
+}
+
+.theory-examples-pagination .pagination-control .number-button:selected{
+	-fx-border-color: Navy;
+	-fx-border-width: 2;
+	-fx-text-fill: Navy;
+	-fx-font-weight: 800;
+}
+
+.theory-examples-separator{
+	-fx-background-color: Maroon;
+}
+
+.basic-text-cell-view{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list-cell{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list {
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list .list-cell{
+	-fx-background-color: Transparent;
+}
+
+.theory-examples-text-list .scroll-bar{
+	-fx-background-color: BurlyWood;
+}
 
 .theory-image{
 	-fx-background-color:  LemonChiffon;
@@ -143,6 +224,8 @@
 	-fx-border-width: 2;
 }
 
+
+/* Experiments */
 
 .experiments-header-label{
 	-fx-text-fill: #f4621f;
@@ -334,86 +417,4 @@
 
 .liquid-container{
     -rl-body-color: Black;
-}
-
-
-.authors-header-label{
-	-fx-text-fill: Black;
-}
-
-.authors-author-icon{
-	-fx-border-color: Black;
-}
-
-.authors-author-name{
-	-fx-text-fill: Black;
-}
-
-.authors-author-role{
-	-fx-text-fill: Black;
-}
-
-.authors-feedback-label{
-	-fx-text-fill: Black;
-}
-
-.authors-our-social-networks{
-	-fx-text-fill: Black;
-}
-
-
-.version-label{
-	-fx-text-fill: Black;
-}
-
-/* TODO: Move all selectors below to THEORY block */
-
-.pagination {
-	-fx-arrows-visible: false;
-	-fx-tooltip-visible: false;
-	-fx-page-information-visible: true;
-	-fx-page-information-alignment: right;
-}
-
-.pagination .pagination-control{
-	-fx-font-size: 16px;
-	-fx-text-fill: Maroon;
-}
-
-.pagination .pagination-control .number-button{
-	-fx-background-radius: 50%;
-	-fx-background-color: Transparent;
-	-fx-border-color: Maroon;
-	-fx-border-radius: 50%;
-}
-
-.pagination .pagination-control .number-button:selected{
-	-fx-border-color: Navy;
-	-fx-border-width: 2;
-	-fx-text-fill: Navy;
-	-fx-font-weight: 800;
-}
-
-.examples-separator{
-	-fx-background-color: Maroon;
-}
-
-.basic-text-cell-view{
-	-fx-background-color: Transparent;
-}
-
-.theory-examples-text-list-cell{
-	-fx-background-color: Transparent;
-}
-
-.theory-examples-text-list {
-	-fx-background-color: Transparent;
-}
-
-.theory-examples-text-list .list-cell{
-	-fx-background-color: Transparent;
-}
-
-.theory-examples-text-list .scroll-bar{
-	-fx-background-color: BurlyWood;
 }
