@@ -10,7 +10,7 @@ public class ExamplesManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ExamplesManager.class);
 
-    private static final String PATH_TO_EXAMPLES = "/ru/riddle/phVLofSuTe/view/theory/examples/data/example_";
+    private static final String PATH_TO_EXAMPLES = "/ru/riddle/phVLofSuTe/json/theory/examples/data/example_";
 
     public static Example getExampleById(int id){
         logger.info("Downloading example data with id: {}", id);
