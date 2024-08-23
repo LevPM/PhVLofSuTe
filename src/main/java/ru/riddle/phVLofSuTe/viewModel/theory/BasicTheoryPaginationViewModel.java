@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory.examples;
+package ru.riddle.phVLofSuTe.viewModel.theory;
 
 import de.saxsys.mvvmfx.Initialize;
 import de.saxsys.mvvmfx.InjectScope;
@@ -12,13 +12,15 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.ViewManager;
 import ru.riddle.phVLofSuTe.model.ViewName;
-import ru.riddle.phVLofSuTe.view.theory.examples.BasicExamplePage;
+import ru.riddle.phVLofSuTe.view.theory.BasicTheoryPage;
+import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
+import ru.riddle.phVLofSuTe.viewModel.theory.examples.SelectedExampleScope;
 
 import java.util.Objects;
 
-public class BasicExampleViewModel implements ViewModel {
+public class BasicTheoryPaginationViewModel implements ViewModel {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicExampleViewModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPaginationViewModel.class);
 
     private final IntegerProperty currentPageIndex = new SimpleIntegerProperty(0);
     private final IntegerProperty pageCount = new SimpleIntegerProperty(1);
@@ -91,12 +93,12 @@ public class BasicExampleViewModel implements ViewModel {
 
         pageCount.set(5);
         pageFactory.set((pageIndex) -> switch (pageIndex){
-                case 0 -> new BasicExamplePage(new ExamplePageDataScope(selectedExampleScope.getExample().condition(), ExamplePageDataScope.PageType.CONDITION));
-                case 1 -> new BasicExamplePage(new ExamplePageDataScope(selectedExampleScope.getExample().given(), ExamplePageDataScope.PageType.GIVEN));
-                case 2 -> new BasicExamplePage(new ExamplePageDataScope(selectedExampleScope.getExample().toFind(), ExamplePageDataScope.PageType.TO_FIND));
-                case 3 -> new BasicExamplePage(new ExamplePageDataScope(selectedExampleScope.getExample().decision(), ExamplePageDataScope.PageType.DECISION));
-                case 4 -> new BasicExamplePage(new ExamplePageDataScope(selectedExampleScope.getExample().answer(), ExamplePageDataScope.PageType.ANSWER));
-                default -> new BasicExamplePage(new ExamplePageDataScope("Null page", ExamplePageDataScope.PageType.DECISION));
+                case 0 -> new BasicTheoryPage(new ExamplePageDataScope(selectedExampleScope.getExample().condition(), ExamplePageDataScope.PageType.CONDITION));
+                case 1 -> new BasicTheoryPage(new ExamplePageDataScope(selectedExampleScope.getExample().given(), ExamplePageDataScope.PageType.GIVEN));
+                case 2 -> new BasicTheoryPage(new ExamplePageDataScope(selectedExampleScope.getExample().toFind(), ExamplePageDataScope.PageType.TO_FIND));
+                case 3 -> new BasicTheoryPage(new ExamplePageDataScope(selectedExampleScope.getExample().decision(), ExamplePageDataScope.PageType.DECISION));
+                case 4 -> new BasicTheoryPage(new ExamplePageDataScope(selectedExampleScope.getExample().answer(), ExamplePageDataScope.PageType.ANSWER));
+                default -> new BasicTheoryPage(new ExamplePageDataScope("Null page", ExamplePageDataScope.PageType.DECISION));
             }
         );
     }

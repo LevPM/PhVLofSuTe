@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory.examples;
+package ru.riddle.phVLofSuTe.viewModel.theory;
 
 import de.saxsys.mvvmfx.Initialize;
 import de.saxsys.mvvmfx.InjectScope;
@@ -9,14 +9,15 @@ import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
 
-public class BasicExamplePageViewModel implements ViewModel {
+public class BasicTheoryPageViewModel implements ViewModel {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicExamplePageViewModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPageViewModel.class);
 
     private final StringProperty styleClass = new SimpleStringProperty();
 
-    private final ObservableList<BasicTextCellViewModel> textList = FXCollections.observableArrayList();
+    private final ObservableList<BasicTheoryTextCellViewModel> textList = FXCollections.observableArrayList();
 
     @InjectScope
     ExamplePageDataScope pageDataScope;
@@ -25,7 +26,7 @@ public class BasicExamplePageViewModel implements ViewModel {
         return pageDataScope.titleProperty();
     }
 
-    public ObservableList<BasicTextCellViewModel> textListProperty() {
+    public ObservableList<BasicTheoryTextCellViewModel> textListProperty() {
         return textList;
     }
 
@@ -39,7 +40,7 @@ public class BasicExamplePageViewModel implements ViewModel {
 
         textList.addAll(pageDataScope.textListProperty()
                 .stream()
-                .map(BasicTextCellViewModel::new)
+                .map(BasicTheoryTextCellViewModel::new)
                 .toList()
         );
 

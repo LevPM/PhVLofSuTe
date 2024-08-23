@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory.examples;
+package ru.riddle.phVLofSuTe.view.theory;
 
 import de.saxsys.mvvmfx.utils.viewlist.CachedViewModelCellFactory;
 import javafx.fxml.FXML;
@@ -11,28 +11,28 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import ru.riddle.phVLofSuTe.model.ViewManager;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.BasicExamplePageViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.BasicTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryPageViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryTextCellViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BasicExamplePage extends VBox implements FxmlView<BasicExamplePageViewModel>, Initializable {
+public class BasicTheoryPage extends VBox implements FxmlView<BasicTheoryPageViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicExamplePage.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPage.class);
 
     @FXML
     private Label title;
 
     @FXML
-    private ListView<BasicTextCellViewModel> textList;
+    private ListView<BasicTheoryTextCellViewModel> textList;
 
     @InjectViewModel
-    private BasicExamplePageViewModel viewModel;
+    private BasicTheoryPageViewModel viewModel;
 
-    public BasicExamplePage(ExamplePageDataScope scope){
-        ViewManager.downloadCustomComponent(this, BasicExamplePage.class, scope);
+    public BasicTheoryPage(ExamplePageDataScope scope){
+        ViewManager.downloadCustomComponent(this, BasicTheoryPage.class, scope);
     }
 
 
@@ -43,6 +43,6 @@ public class BasicExamplePage extends VBox implements FxmlView<BasicExamplePageV
         title.getStyleClass().add(viewModel.styleClassProperty().get());
         
         textList.setItems(viewModel.textListProperty());
-        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(BasicTextCellView.class));
+        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(ru.riddle.phVLofSuTe.view.theory.BasicTheoryTextCellView.class));
     }
 }

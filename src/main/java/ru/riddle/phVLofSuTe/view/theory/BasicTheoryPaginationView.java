@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory.examples;
+package ru.riddle.phVLofSuTe.view.theory;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,14 +11,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.BasicExampleViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryPaginationViewModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BasicExampleView implements FxmlView<BasicExampleViewModel>, Initializable {
+public class BasicTheoryPaginationView implements FxmlView<BasicTheoryPaginationViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicExampleView.class);
+    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPaginationView.class);
 
     @FXML
     private Button previousButton;
@@ -36,7 +36,7 @@ public class BasicExampleView implements FxmlView<BasicExampleViewModel>, Initia
     private Pagination pagination;
 
     @InjectViewModel
-    private BasicExampleViewModel viewModel;
+    private BasicTheoryPaginationViewModel viewModel;
 
     public void handlePreviousButtonAction(ActionEvent event) {
         logger.trace("Handling PreviousButtonAction");
