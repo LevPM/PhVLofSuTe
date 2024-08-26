@@ -13,9 +13,9 @@ import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.ViewManager;
 import ru.riddle.phVLofSuTe.model.ViewName;
 
-public class BasicTheoryPaginationViewModel<T extends Record> implements ViewModel {
+public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewModel {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPaginationViewModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPaginationViewModel.class);
 
     private final IntegerProperty currentPageIndex = new SimpleIntegerProperty(0);
     private final IntegerProperty pageCount = new SimpleIntegerProperty(1);

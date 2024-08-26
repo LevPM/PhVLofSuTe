@@ -9,7 +9,7 @@ import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
 
 public class ExamplesPageViewModel implements ViewModel {
 
@@ -17,7 +17,7 @@ public class ExamplesPageViewModel implements ViewModel {
 
     private final StringProperty styleClass = new SimpleStringProperty();
 
-    private final ObservableList<BasicTheoryTextCellViewModel> textList = FXCollections.observableArrayList();
+    private final ObservableList<SimpleTheoryTextCellViewModel> textList = FXCollections.observableArrayList();
 
     @InjectScope
     ExamplePageDataScope pageDataScope;
@@ -26,7 +26,7 @@ public class ExamplesPageViewModel implements ViewModel {
         return pageDataScope.titleProperty();
     }
 
-    public ObservableList<BasicTheoryTextCellViewModel> textListProperty() {
+    public ObservableList<SimpleTheoryTextCellViewModel> textListProperty() {
         return textList;
     }
 
@@ -40,7 +40,7 @@ public class ExamplesPageViewModel implements ViewModel {
 
         textList.addAll(pageDataScope.textListProperty()
                 .stream()
-                .map(BasicTheoryTextCellViewModel::new)
+                .map(SimpleTheoryTextCellViewModel::new)
                 .toList()
         );
 

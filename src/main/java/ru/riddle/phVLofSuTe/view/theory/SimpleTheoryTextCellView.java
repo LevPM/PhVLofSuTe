@@ -7,20 +7,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BasicTheoryTextCellView implements FxmlView<BasicTheoryTextCellViewModel>, Initializable {
+public class SimpleTheoryTextCellView implements FxmlView<SimpleTheoryTextCellViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryTextCellView.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryTextCellView.class);
 
     @FXML
     private Label text;
 
     @InjectViewModel
-    private BasicTheoryTextCellViewModel viewModel;
+    private SimpleTheoryTextCellViewModel viewModel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

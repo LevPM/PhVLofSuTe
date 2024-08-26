@@ -16,9 +16,9 @@ import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplesPaginationViewMode
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BasicTheoryExamplesPaginationView implements FxmlView<ExamplesPaginationViewModel>, Initializable {
+public class SimpleTheoryExamplesPaginationView implements FxmlView<ExamplesPaginationViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryExamplesPaginationView.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryExamplesPaginationView.class);
 
     @FXML
     private Button previousButton;

@@ -11,8 +11,9 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import ru.riddle.phVLofSuTe.model.ViewManager;
+import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryTextCellView;
 import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplesPageViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
 
 import java.net.URL;
@@ -26,7 +27,7 @@ public class ExamplesPage extends VBox implements FxmlView<ExamplesPageViewModel
     private Label title;
 
     @FXML
-    private ListView<BasicTheoryTextCellViewModel> textList;
+    private ListView<SimpleTheoryTextCellViewModel> textList;
 
     @InjectViewModel
     private ExamplesPageViewModel viewModel;
@@ -43,6 +44,6 @@ public class ExamplesPage extends VBox implements FxmlView<ExamplesPageViewModel
         title.getStyleClass().add(viewModel.styleClassProperty().get());
         
         textList.setItems(viewModel.textListProperty());
-        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(ru.riddle.phVLofSuTe.view.theory.BasicTheoryTextCellView.class));
+        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(SimpleTheoryTextCellView.class));
     }
 }

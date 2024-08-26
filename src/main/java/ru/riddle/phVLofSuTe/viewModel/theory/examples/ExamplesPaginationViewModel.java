@@ -7,12 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.Example;
 import ru.riddle.phVLofSuTe.view.theory.examples.ExamplesPage;
-import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryPaginationViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPaginationViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.SelectedDataScope;
 
 import java.util.Objects;
 
-public class ExamplesPaginationViewModel extends BasicTheoryPaginationViewModel<Example> {
+public class ExamplesPaginationViewModel extends SimpleTheoryPaginationViewModel<Example> {
 
     private static final Logger logger = LoggerFactory.getLogger(ExamplesPaginationViewModel.class);
 
