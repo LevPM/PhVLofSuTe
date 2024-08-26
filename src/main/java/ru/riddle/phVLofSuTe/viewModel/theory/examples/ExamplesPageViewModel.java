@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory;
+package ru.riddle.phVLofSuTe.viewModel.theory.examples;
 
 import de.saxsys.mvvmfx.Initialize;
 import de.saxsys.mvvmfx.InjectScope;
@@ -9,11 +9,11 @@ import javafx.collections.ObservableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
+import ru.riddle.phVLofSuTe.viewModel.theory.BasicTheoryTextCellViewModel;
 
-public class BasicTheoryPageViewModel implements ViewModel {
+public class ExamplesPageViewModel implements ViewModel {
 
-    private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPageViewModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(ExamplesPageViewModel.class);
 
     private final StringProperty styleClass = new SimpleStringProperty();
 
