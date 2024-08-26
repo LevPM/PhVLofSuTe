@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.data;
+package ru.riddle.phVLofSuTe.model.data.json;
 
 import java.util.List;
 
