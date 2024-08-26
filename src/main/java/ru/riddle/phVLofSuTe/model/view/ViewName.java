@@ -9,7 +9,8 @@ import ru.riddle.phVLofSuTe.view.menu.MenuTEView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.view.menu.SettingsView;
 import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
-import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryExamplesPaginationView;
+import ru.riddle.phVLofSuTe.view.theory.basicTheory.BasicTheoryPaginationView;
+import ru.riddle.phVLofSuTe.view.theory.examples.TheoryExamplesPaginationView;
 import ru.riddle.phVLofSuTe.view.theory.examples.TheoryExamplesSelectionView;
 
 public enum ViewName {
@@ -30,7 +31,9 @@ public enum ViewName {
         //Examples block
         THEORY_EXAMPLES_SELECTION(TheoryExamplesSelectionView.class),
 
-        THEORY_BASIC_EXAMPLE(SimpleTheoryExamplesPaginationView.class),
+        THEORY_BASIC_EXAMPLE(TheoryExamplesPaginationView.class),
+
+        THEORY_BASIC_THEORY_CHAPTER(BasicTheoryPaginationView.class),
         //====================================
 
     //------------------------------------

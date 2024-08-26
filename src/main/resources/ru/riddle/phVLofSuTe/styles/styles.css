@@ -155,26 +155,35 @@
 	-fx-border-width: 3;
 }
 
-.theory-examples-pagination {
+.theory-basic-theory-label{
+	-fx-background-color: Grey;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-pagination {
 	-fx-arrows-visible: false;
 	-fx-tooltip-visible: false;
 	-fx-page-information-visible: true;
 	-fx-page-information-alignment: right;
 }
 
-.theory-examples-pagination .pagination-control{
+.theory-pagination .pagination-control{
 	-fx-font-size: 16px;
 	-fx-text-fill: Maroon;
 }
 
-.theory-examples-pagination .pagination-control .number-button{
+.theory-pagination .pagination-control .number-button{
 	-fx-background-radius: 50%;
 	-fx-background-color: Transparent;
 	-fx-border-color: Maroon;
 	-fx-border-radius: 50%;
 }
 
-.theory-examples-pagination .pagination-control .number-button:selected{
+.theory-pagination .pagination-control .number-button:selected{
 	-fx-border-color: Navy;
 	-fx-border-width: 2;
 	-fx-text-fill: Navy;

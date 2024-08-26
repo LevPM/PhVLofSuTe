@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory;
+package ru.riddle.phVLofSuTe.view.theory.examples;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,14 +11,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplesPaginationViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.examples.TheoryExamplesPaginationViewModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SimpleTheoryExamplesPaginationView implements FxmlView<ExamplesPaginationViewModel>, Initializable {
+public class TheoryExamplesPaginationView implements FxmlView<TheoryExamplesPaginationViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryExamplesPaginationView.class);
+    private static final Logger logger = LoggerFactory.getLogger(TheoryExamplesPaginationView.class);
 
     @FXML
     private Button previousButton;
@@ -36,7 +36,7 @@ public class SimpleTheoryExamplesPaginationView implements FxmlView<ExamplesPagi
     private Pagination pagination;
 
     @InjectViewModel
-    private ExamplesPaginationViewModel viewModel;
+    private TheoryExamplesPaginationViewModel viewModel;
 
     public void handlePreviousButtonAction(ActionEvent event) {
         logger.trace("Handling PreviousButtonAction");
@@ -65,6 +65,6 @@ public class SimpleTheoryExamplesPaginationView implements FxmlView<ExamplesPagi
 
         exampleImage.imageProperty().bind(viewModel.imageProperty());
 
-        exampleNumberLabel.textProperty().bind(viewModel.numberLabelProperty());
+        exampleNumberLabel.textProperty().bind(viewModel.titleLabelProperty());
     }
 }

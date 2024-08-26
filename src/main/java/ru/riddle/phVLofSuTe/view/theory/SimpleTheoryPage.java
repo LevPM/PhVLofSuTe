@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory.examples;
+package ru.riddle.phVLofSuTe.view.theory;
 
 import de.saxsys.mvvmfx.utils.viewlist.CachedViewModelCellFactory;
 import javafx.fxml.FXML;
@@ -11,17 +11,16 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
-import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryTextCellView;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplesPageViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplePageDataScope;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageDataScope;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ExamplesPage extends VBox implements FxmlView<ExamplesPageViewModel>, Initializable {
+public class SimpleTheoryPage extends VBox implements FxmlView<SimpleTheoryPageViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(ExamplesPage.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPage.class);
 
     @FXML
     private Label title;
@@ -30,10 +29,10 @@ public class ExamplesPage extends VBox implements FxmlView<ExamplesPageViewModel
     private ListView<SimpleTheoryTextCellViewModel> textList;
 
     @InjectViewModel
-    private ExamplesPageViewModel viewModel;
+    private SimpleTheoryPageViewModel viewModel;
 
-    public ExamplesPage(ExamplePageDataScope scope){
-        ViewManager.downloadCustomComponent(this, ExamplesPage.class, scope);
+    public SimpleTheoryPage(SimpleTheoryPageDataScope scope){
+        ViewManager.downloadCustomComponent(this, SimpleTheoryPage.class, scope);
     }
 
 

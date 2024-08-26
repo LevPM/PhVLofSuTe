@@ -12,7 +12,7 @@ public class ImageDataManager {
 
     private static final String pathToImages = "/ru/riddle/phVLofSuTe/images/";
 
-    public static Image downloadIcon(String path){ /*Needs relative path to image from images folder*/
+    public static Image downloadImage(String path){ /*Needs relative path to image from images folder*/
         logger.debug("Creating icon with path: {}", path);
         return new Image(Objects.requireNonNull(ImageDataManager.class.getResource(pathToImages + path)).toExternalForm());
     }

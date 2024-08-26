@@ -26,7 +26,7 @@ public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewMo
 
     private final ObjectProperty<Image> image = new SimpleObjectProperty<>();
 
-    private final StringProperty numberLabel = new SimpleStringProperty();
+    private final StringProperty titleLabel = new SimpleStringProperty();
 
     @InjectScope
     SelectedDataScope<T> selectedDataScope;
@@ -62,8 +62,8 @@ public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewMo
         return pageFactory;
     }
 
-    public StringProperty numberLabelProperty() {
-        return numberLabel;
+    public StringProperty titleLabelProperty() {
+        return titleLabel;
     }
 
     public BooleanProperty nextButtonDisableProperty() {

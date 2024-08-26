@@ -36,7 +36,7 @@ public class PhVLofSuTe extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("PhVLofSuTe");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(ImageDataManager.downloadIcon("icons/blackboard_icon.png"));
+        primaryStage.getIcons().add(ImageDataManager.downloadImage("icons/blackboard_icon.png"));
         logger.debug("Showing stage");
         primaryStage.show();
     }

@@ -22,7 +22,7 @@ public class TheorySelectionView implements FxmlView<TheorySelectionViewModel> {
 
     public void handleTheoryButtonAction(ActionEvent event) {
         logger.trace("Handling theoryButtonAction");
-        viewModel.openTheory(event);
+        viewModel.openBasicTheory(event);
     }
 
     public void handleExamplesButtonAction(ActionEvent event) {
