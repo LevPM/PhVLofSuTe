@@ -16,7 +16,7 @@ import ru.riddle.phVLofSuTe.viewModel.theory.SelectedDataScope;
 
 import java.util.Objects;
 
-public class TheoryExamplesPaginationViewModel extends SimpleTheoryPaginationViewModel<Example> {
+public class TheoryExamplesPaginationViewModel extends SimpleTheoryPaginationViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(TheoryExamplesPaginationViewModel.class);
 

@@ -1,7 +1,6 @@
 package ru.riddle.phVLofSuTe.viewModel.theory;
 
 import de.saxsys.mvvmfx.Initialize;
-import de.saxsys.mvvmfx.InjectScope;
 import javafx.beans.property.*;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
@@ -11,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 
-public abstract class SimpleTheoryPaginationViewModel<T extends Record> implements ViewModel {
+public abstract class SimpleTheoryPaginationViewModel implements ViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPaginationViewModel.class);
 
@@ -25,9 +24,6 @@ public abstract class SimpleTheoryPaginationViewModel<T extends Record> implemen
     private final ObjectProperty<Image> image = new SimpleObjectProperty<>();
 
     private final StringProperty titleLabel = new SimpleStringProperty();
-
-    @InjectScope
-    SelectedDataScope<T> selectedDataScope;
 
     public void backToPreviousScreen(){
         logger.debug("Backing to PreviousScreen");
