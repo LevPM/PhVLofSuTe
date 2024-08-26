@@ -10,10 +10,8 @@ import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.model.view.ViewManager;
-import ru.riddle.phVLofSuTe.model.view.ViewName;
 
-public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewModel {
+public abstract class SimpleTheoryPaginationViewModel<T extends Record> implements ViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPaginationViewModel.class);
 
@@ -38,10 +36,7 @@ public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewMo
         }
     }
 
-    public void backToTheoryExamplesSelection(ActionEvent event){
-        logger.debug("Backing to TheoryExamplesSelection");
-        ViewManager.changeScreen(event, ViewName.THEORY_EXAMPLES_SELECTION);
-    }
+    public abstract void backToMenu(ActionEvent event);
 
     public void goToNextScreen(){
         logger.debug("Going to NextScreen");

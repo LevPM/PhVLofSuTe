@@ -45,7 +45,7 @@ public class BasicTheoryPaginationView implements FxmlView<BasicTheoryPagination
 
     public void handleBackButtonAction(ActionEvent event) {
         logger.trace("Handling BackButtonAction");
-        viewModel.backToTheoryExamplesSelection(event);
+        viewModel.backToMenu(event);
     }
 
     public void handleNextButtonAction() {

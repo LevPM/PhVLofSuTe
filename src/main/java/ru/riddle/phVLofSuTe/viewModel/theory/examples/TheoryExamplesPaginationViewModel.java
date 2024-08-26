@@ -2,10 +2,13 @@ package ru.riddle.phVLofSuTe.viewModel.theory.examples;
 
 import de.saxsys.mvvmfx.Initialize;
 import de.saxsys.mvvmfx.InjectScope;
+import javafx.event.ActionEvent;
 import javafx.scene.image.Image;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.data.json.Example;
+import ru.riddle.phVLofSuTe.model.view.ViewManager;
+import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryPage;
 import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageDataScope;
 import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPaginationViewModel;
@@ -19,6 +22,12 @@ public class TheoryExamplesPaginationViewModel extends SimpleTheoryPaginationVie
 
     @InjectScope
     SelectedDataScope<Example> selectedExample;
+
+    @Override
+    public void backToMenu(ActionEvent event) {
+        logger.debug("Backing to TheoryExamplesSelection");
+        ViewManager.changeScreen(event, ViewName.THEORY_EXAMPLES_SELECTION);
+    }
 
     @Initialize
     protected void initialize(){

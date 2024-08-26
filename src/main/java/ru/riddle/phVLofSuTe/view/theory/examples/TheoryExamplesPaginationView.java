@@ -38,17 +38,17 @@ public class TheoryExamplesPaginationView implements FxmlView<TheoryExamplesPagi
     @InjectViewModel
     private TheoryExamplesPaginationViewModel viewModel;
 
-    public void handlePreviousButtonAction(ActionEvent event) {
+    public void handlePreviousButtonAction() {
         logger.trace("Handling PreviousButtonAction");
         viewModel.backToPreviousScreen();
     }
 
     public void handleBackButtonAction(ActionEvent event) {
         logger.trace("Handling BackButtonAction");
-        viewModel.backToTheoryExamplesSelection(event);
+        viewModel.backToMenu(event);
     }
 
-    public void handleNextButtonAction(ActionEvent event) {
+    public void handleNextButtonAction() {
         logger.trace("Handling NextButtonAction");
         viewModel.goToNextScreen();
     }
