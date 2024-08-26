@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model.viewManagement;
+package ru.riddle.phVLofSuTe.model.view;
 
 import de.saxsys.mvvmfx.*;
 import javafx.event.ActionEvent;

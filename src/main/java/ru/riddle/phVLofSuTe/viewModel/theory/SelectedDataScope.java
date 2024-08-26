@@ -5,7 +5,7 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.model.dataManagement.JSONDataManager;
+import ru.riddle.phVLofSuTe.model.data.JSONDataManager;
 
 public class SelectedDataScope<T extends Record> implements Scope {
 

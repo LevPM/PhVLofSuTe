@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.AppProperties;
-import ru.riddle.phVLofSuTe.model.ModelUtil;
+import ru.riddle.phVLofSuTe.model.data.ImageDataManager;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.viewModel.menu.MenuViewModel;
 
@@ -36,7 +36,7 @@ public class PhVLofSuTe extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("PhVLofSuTe");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(ModelUtil.downloadIcon("/ru/riddle/phVLofSuTe/images/icons/blackboard_icon.png"));
+        primaryStage.getIcons().add(ImageDataManager.downloadIcon("icons/blackboard_icon.png"));
         logger.debug("Showing stage");
         primaryStage.show();
     }

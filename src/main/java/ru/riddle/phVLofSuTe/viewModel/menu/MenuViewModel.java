@@ -7,8 +7,8 @@ import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.*;
-import ru.riddle.phVLofSuTe.model.viewManagement.ViewManager;
-import ru.riddle.phVLofSuTe.model.viewManagement.ViewName;
+import ru.riddle.phVLofSuTe.model.view.ViewManager;
+import ru.riddle.phVLofSuTe.model.view.ViewName;
 
 public class MenuViewModel implements ViewModel {
 
@@ -41,6 +41,6 @@ public class MenuViewModel implements ViewModel {
     }
 
     public void closeApp(){
-        ModelUtil.closeApp();
+        AppUtil.closeApp();
     }
 }

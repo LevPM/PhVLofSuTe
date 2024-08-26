@@ -5,7 +5,7 @@ import de.saxsys.mvvmfx.InjectScope;
 import javafx.scene.image.Image;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.model.dataManagement.Example;
+import ru.riddle.phVLofSuTe.model.data.Example;
 import ru.riddle.phVLofSuTe.view.theory.examples.ExamplesPage;
 import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPaginationViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.SelectedDataScope;
