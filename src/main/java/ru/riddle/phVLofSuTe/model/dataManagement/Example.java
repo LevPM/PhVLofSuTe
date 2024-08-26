@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model;
+package ru.riddle.phVLofSuTe.model.dataManagement;
 
 import java.util.List;
 

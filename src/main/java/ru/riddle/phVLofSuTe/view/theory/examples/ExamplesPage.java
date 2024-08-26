@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.model.ViewManager;
+import ru.riddle.phVLofSuTe.model.viewManagement.ViewManager;
 import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryTextCellView;
 import ru.riddle.phVLofSuTe.viewModel.theory.examples.ExamplesPageViewModel;
 import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;

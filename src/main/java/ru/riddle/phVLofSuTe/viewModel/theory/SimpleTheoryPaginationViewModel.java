@@ -10,8 +10,8 @@ import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.model.ViewManager;
-import ru.riddle.phVLofSuTe.model.ViewName;
+import ru.riddle.phVLofSuTe.model.viewManagement.ViewManager;
+import ru.riddle.phVLofSuTe.model.viewManagement.ViewName;
 
 public class SimpleTheoryPaginationViewModel<T extends Record> implements ViewModel {
 

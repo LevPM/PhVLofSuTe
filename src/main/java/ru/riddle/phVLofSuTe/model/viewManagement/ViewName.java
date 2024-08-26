@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model;
+package ru.riddle.phVLofSuTe.model.viewManagement;
 
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.ViewModel;

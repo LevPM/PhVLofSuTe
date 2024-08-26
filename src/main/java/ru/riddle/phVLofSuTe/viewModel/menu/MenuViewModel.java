@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.*;
+import ru.riddle.phVLofSuTe.model.viewManagement.ViewManager;
+import ru.riddle.phVLofSuTe.model.viewManagement.ViewName;
 
 public class MenuViewModel implements ViewModel {
 

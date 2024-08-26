@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.model;
+package ru.riddle.phVLofSuTe.model.dataManagement;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
