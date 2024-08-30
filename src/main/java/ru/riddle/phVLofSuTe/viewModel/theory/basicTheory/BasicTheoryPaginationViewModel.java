@@ -12,9 +12,9 @@ import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.view.SimpleTextPage;
 import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
 import ru.riddle.phVLofSuTe.viewModel.SimpleTextPageDataScope;
-import ru.riddle.phVLofSuTe.viewModel.SimpleTextPaginationViewModel;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTextImagePaginationViewModel;
 
-public class BasicTheoryPaginationViewModel extends SimpleTextPaginationViewModel {
+public class BasicTheoryPaginationViewModel extends SimpleTextImagePaginationViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPaginationViewModel.class);
 
@@ -26,6 +26,7 @@ public class BasicTheoryPaginationViewModel extends SimpleTextPaginationViewMode
         logger.debug("Backing to TheoryExamplesSelection");
         ViewManager.changeScreen(event, ViewName.THEORY_SELECTION);
     }
+
     @Initialize
     protected void initialize(){
         super.initialize();

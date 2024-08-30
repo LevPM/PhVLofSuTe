@@ -4,7 +4,6 @@ import de.saxsys.mvvmfx.Initialize;
 import javafx.beans.property.*;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
-import javafx.scene.image.Image;
 import javafx.util.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,8 +19,6 @@ public abstract class SimpleTextPaginationViewModel implements ViewModel {
 
     private final BooleanProperty previousButtonDisable = new SimpleBooleanProperty(true);
     private final BooleanProperty nextButtonDisable = new SimpleBooleanProperty(false);
-
-    private final ObjectProperty<Image> image = new SimpleObjectProperty<>();
 
     private final StringProperty titleLabel = new SimpleStringProperty();
 
@@ -65,10 +62,6 @@ public abstract class SimpleTextPaginationViewModel implements ViewModel {
     public BooleanProperty previousButtonDisableProperty() {
         currentPageIndex.addListener(event -> previousButtonDisable.set(currentPageIndex.get() == 0));
         return previousButtonDisable;
-    }
-
-    public ObjectProperty<Image> imageProperty() {
-        return image;
     }
 
     @Initialize

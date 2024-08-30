@@ -11,12 +11,12 @@ import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.view.SimpleTextPage;
 import ru.riddle.phVLofSuTe.viewModel.SimpleTextPageDataScope;
-import ru.riddle.phVLofSuTe.viewModel.SimpleTextPaginationViewModel;
 import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
+import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTextImagePaginationViewModel;
 
 import java.util.Objects;
 
-public class TheoryExamplesPaginationViewModel extends SimpleTextPaginationViewModel {
+public class TheoryExamplesPaginationViewModel extends SimpleTextImagePaginationViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(TheoryExamplesPaginationViewModel.class);
 
