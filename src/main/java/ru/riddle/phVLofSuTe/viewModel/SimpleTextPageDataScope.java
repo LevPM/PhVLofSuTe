@@ -12,24 +12,24 @@ public class SimpleTextPageDataScope implements Scope {
 
     private final ListProperty<String> textList = new SimpleListProperty<>();
 
-    private final ObjectProperty<ExamplePageType> type = new SimpleObjectProperty<>();
+    private final StringProperty styleClass = new SimpleStringProperty();
 
-    public SimpleTextPageDataScope(List<String> text, ExamplePageType type) {
+    public SimpleTextPageDataScope(List<String> text, String styleClass) {
         this.textList.set(FXCollections.observableArrayList(text));
-        this.type.set(type);
+        this.styleClass.set(styleClass);
     }
 
-    public SimpleTextPageDataScope(String text, ExamplePageType type) {
-        this(List.of(text), type);
+    public SimpleTextPageDataScope(String text, String styleClass) {
+        this(List.of(text), styleClass);
     }
 
-    public SimpleTextPageDataScope(List<String> text, ExamplePageType type, String title) {
-        this(text, type);
+    public SimpleTextPageDataScope(List<String> text, String styleClass, String title) {
+        this(text, styleClass);
         this.title.set(title);
     }
 
-    public SimpleTextPageDataScope(String text, ExamplePageType type, String title) {
-        this(List.of(text), type, title);
+    public SimpleTextPageDataScope(String text, String styleClass, String title) {
+        this(List.of(text), styleClass, title);
     }
 
     public String getTitle() {
@@ -40,24 +40,11 @@ public class SimpleTextPageDataScope implements Scope {
         return title;
     }
 
-    public ExamplePageType getType() {
-        return type.get();
-    }
-
-    public ObjectProperty<ExamplePageType> typeProperty() {
-        return type;
-    }
-
     public ListProperty<String> textListProperty() {
         return textList;
     }
 
-    public enum ExamplePageType {
-        CONDITION,
-        GIVEN,
-        TO_FIND,
-        DECISION,
-        ANSWER,
-        BASIC_TITLE
+    public String getStyleClass() {
+        return styleClass.get();
     }
 }

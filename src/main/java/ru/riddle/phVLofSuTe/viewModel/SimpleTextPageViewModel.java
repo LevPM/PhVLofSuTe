@@ -43,31 +43,6 @@ public class SimpleTextPageViewModel implements ViewModel {
                 .toList()
         );
 
-        switch (pageDataScope.getType()){
-            case CONDITION -> {
-                pageDataScope.titleProperty().set("Условие");
-                styleClass.set("theory-condition-label");
-            }
-            case GIVEN -> {
-                pageDataScope.titleProperty().set("Дано");
-                styleClass.set("theory-given-label");
-            }
-            case TO_FIND -> {
-                pageDataScope.titleProperty().set("Найти");
-                styleClass.set("theory-to-find-label");
-            }
-            case DECISION -> {
-                pageDataScope.titleProperty().set("Решение");
-                styleClass.set("theory-decision-label");
-            }
-            case ANSWER -> {
-                pageDataScope.titleProperty().set("Ответ");
-                styleClass.set("theory-answer-label");
-            }
-            case BASIC_TITLE -> {
-                pageDataScope.titleProperty().set(pageDataScope.getTitle());
-                styleClass.set("theory-basic-theory-label");
-            }
-        }
+        styleClass.set(pageDataScope.getStyleClass());
     }
 }

@@ -37,12 +37,12 @@ public class TheoryExamplesPaginationViewModel extends SimpleTextPaginationViewM
 
         pageCountProperty().set(5);
         pageFactoryProperty().set((pageIndex) -> switch (pageIndex){
-                    case 0 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().condition(), SimpleTextPageDataScope.ExamplePageType.CONDITION));
-                    case 1 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().given(), SimpleTextPageDataScope.ExamplePageType.GIVEN));
-                    case 2 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().toFind(), SimpleTextPageDataScope.ExamplePageType.TO_FIND));
-                    case 3 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().decision(), SimpleTextPageDataScope.ExamplePageType.DECISION));
-                    case 4 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().answer(), SimpleTextPageDataScope.ExamplePageType.ANSWER));
-                    default -> new SimpleTextPage(new SimpleTextPageDataScope("Null page", SimpleTextPageDataScope.ExamplePageType.DECISION));
+                    case 0 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().condition(), "theory-condition-label", "Условие"));
+                    case 1 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().given(), "theory-given-label", "Дано"));
+                    case 2 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().toFind(), "theory-to-find-label", "Найти"));
+                    case 3 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().decision(), "theory-decision-label", "Решение"));
+                    case 4 -> new SimpleTextPage(new SimpleTextPageDataScope(selectedExample.getData().answer(), "theory-answer-label", "Ответ"));
+                    default -> new SimpleTextPage(new SimpleTextPageDataScope("Null page", "theory-basic-theory-label", "Error`"));
                 }
         );
     }
