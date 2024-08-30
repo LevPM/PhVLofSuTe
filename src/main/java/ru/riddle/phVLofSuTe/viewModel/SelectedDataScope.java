@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory;
+package ru.riddle.phVLofSuTe.viewModel;
 
 import de.saxsys.mvvmfx.Scope;
 import javafx.beans.property.ObjectProperty;

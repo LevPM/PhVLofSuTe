@@ -9,12 +9,12 @@ import ru.riddle.phVLofSuTe.model.data.ImageDataManager;
 import ru.riddle.phVLofSuTe.model.data.json.TheoryChapter;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
-import ru.riddle.phVLofSuTe.view.theory.SimpleTheoryPage;
-import ru.riddle.phVLofSuTe.viewModel.theory.SelectedDataScope;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageDataScope;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPaginationViewModel;
+import ru.riddle.phVLofSuTe.view.SimpleTextPage;
+import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextPageDataScope;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextPaginationViewModel;
 
-public class BasicTheoryPaginationViewModel extends SimpleTheoryPaginationViewModel{
+public class BasicTheoryPaginationViewModel extends SimpleTextPaginationViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(BasicTheoryPaginationViewModel.class);
 
@@ -33,7 +33,7 @@ public class BasicTheoryPaginationViewModel extends SimpleTheoryPaginationViewMo
         pageCountProperty().set(selectedTheoryChapter.getData().pages().size());
         pageFactoryProperty().set((pageIndex) -> {
             imageProperty().set(ImageDataManager.downloadImage(String.format("theory/basicTheory/theoryChapter_%d/theoryPage_%d.png", selectedTheoryChapter.getData().id(), pageIndex + 1)));
-            return new SimpleTheoryPage(new SimpleTheoryPageDataScope(selectedTheoryChapter.getData().pages().get(pageIndex).text(), SimpleTheoryPageDataScope.ExamplePageType.BASIC_TITLE, selectedTheoryChapter.getData().pages().get(pageIndex).title()));
+            return new SimpleTextPage(new SimpleTextPageDataScope(selectedTheoryChapter.getData().pages().get(pageIndex).text(), SimpleTextPageDataScope.ExamplePageType.BASIC_TITLE, selectedTheoryChapter.getData().pages().get(pageIndex).title()));
         });
     }
 }

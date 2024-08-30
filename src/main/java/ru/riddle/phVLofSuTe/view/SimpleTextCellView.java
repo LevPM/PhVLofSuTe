@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory;
+package ru.riddle.phVLofSuTe.view;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,20 +7,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextCellViewModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SimpleTheoryTextCellView implements FxmlView<SimpleTheoryTextCellViewModel>, Initializable {
+public class SimpleTextCellView implements FxmlView<SimpleTextCellViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryTextCellView.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTextCellView.class);
 
     @FXML
     private Label text;
 
     @InjectViewModel
-    private SimpleTheoryTextCellViewModel viewModel;
+    private SimpleTextCellViewModel viewModel;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

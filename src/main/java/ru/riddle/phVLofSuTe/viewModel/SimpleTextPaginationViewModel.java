@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory;
+package ru.riddle.phVLofSuTe.viewModel;
 
 import de.saxsys.mvvmfx.Initialize;
 import javafx.beans.property.*;
@@ -10,9 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 
-public abstract class SimpleTheoryPaginationViewModel implements ViewModel {
+public abstract class SimpleTextPaginationViewModel implements ViewModel {
 
-    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPaginationViewModel.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTextPaginationViewModel.class);
 
     private final IntegerProperty currentPageIndex = new SimpleIntegerProperty(0);
     private final IntegerProperty pageCount = new SimpleIntegerProperty(1);

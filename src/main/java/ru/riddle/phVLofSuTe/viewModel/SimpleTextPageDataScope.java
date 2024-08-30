@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.theory;
+package ru.riddle.phVLofSuTe.viewModel;
 
 import de.saxsys.mvvmfx.Scope;
 import javafx.beans.property.*;
@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 
 import java.util.List;
 
-public class SimpleTheoryPageDataScope implements Scope {
+public class SimpleTextPageDataScope implements Scope {
 
     private final StringProperty title = new SimpleStringProperty();
 
@@ -14,21 +14,21 @@ public class SimpleTheoryPageDataScope implements Scope {
 
     private final ObjectProperty<ExamplePageType> type = new SimpleObjectProperty<>();
 
-    public SimpleTheoryPageDataScope(List<String> text, ExamplePageType type) {
+    public SimpleTextPageDataScope(List<String> text, ExamplePageType type) {
         this.textList.set(FXCollections.observableArrayList(text));
         this.type.set(type);
     }
 
-    public SimpleTheoryPageDataScope(String text, ExamplePageType type) {
+    public SimpleTextPageDataScope(String text, ExamplePageType type) {
         this(List.of(text), type);
     }
 
-    public SimpleTheoryPageDataScope(List<String> text, ExamplePageType type, String title) {
+    public SimpleTextPageDataScope(List<String> text, ExamplePageType type, String title) {
         this(text, type);
         this.title.set(title);
     }
 
-    public SimpleTheoryPageDataScope(String text, ExamplePageType type, String title) {
+    public SimpleTextPageDataScope(String text, ExamplePageType type, String title) {
         this(List.of(text), type, title);
     }
 

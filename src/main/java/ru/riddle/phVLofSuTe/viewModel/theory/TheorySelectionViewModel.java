@@ -7,6 +7,7 @@ import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.data.json.TheoryChapter;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
+import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
 
 public class TheorySelectionViewModel implements ViewModel {
 

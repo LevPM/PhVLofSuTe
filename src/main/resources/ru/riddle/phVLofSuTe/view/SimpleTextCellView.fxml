@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<ListCell styleClass="theory-examples-text-list-cell" contentDisplay="GRAPHIC_ONLY" maxWidth="745.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.theory.SimpleTheoryTextCellView">
+<ListCell styleClass="theory-examples-text-list-cell" contentDisplay="GRAPHIC_ONLY" maxWidth="745.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.SimpleTextCellView">
     <graphic>
         <HBox styleClass="theory-text-label">
             <Label fx:id="text" prefWidth="1000000.0" wrapText="true">

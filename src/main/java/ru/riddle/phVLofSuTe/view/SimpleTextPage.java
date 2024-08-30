@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.view.theory;
+package ru.riddle.phVLofSuTe.view;
 
 import de.saxsys.mvvmfx.utils.viewlist.CachedViewModelCellFactory;
 import javafx.fxml.FXML;
@@ -11,28 +11,28 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryTextCellViewModel;
-import ru.riddle.phVLofSuTe.viewModel.theory.SimpleTheoryPageDataScope;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextPageViewModel;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextCellViewModel;
+import ru.riddle.phVLofSuTe.viewModel.SimpleTextPageDataScope;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SimpleTheoryPage extends VBox implements FxmlView<SimpleTheoryPageViewModel>, Initializable {
+public class SimpleTextPage extends VBox implements FxmlView<SimpleTextPageViewModel>, Initializable {
 
-    private static final Logger logger = LoggerFactory.getLogger(SimpleTheoryPage.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleTextPage.class);
 
     @FXML
     private Label title;
 
     @FXML
-    private ListView<SimpleTheoryTextCellViewModel> textList;
+    private ListView<SimpleTextCellViewModel> textList;
 
     @InjectViewModel
-    private SimpleTheoryPageViewModel viewModel;
+    private SimpleTextPageViewModel viewModel;
 
-    public SimpleTheoryPage(SimpleTheoryPageDataScope scope){
-        ViewManager.downloadCustomComponent(this, SimpleTheoryPage.class, scope);
+    public SimpleTextPage(SimpleTextPageDataScope scope){
+        ViewManager.downloadCustomComponent(this, SimpleTextPage.class, scope);
     }
 
 
@@ -43,6 +43,6 @@ public class SimpleTheoryPage extends VBox implements FxmlView<SimpleTheoryPageV
         title.getStyleClass().add(viewModel.styleClassProperty().get());
         
         textList.setItems(viewModel.textListProperty());
-        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(SimpleTheoryTextCellView.class));
+        textList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(SimpleTextCellView.class));
     }
 }
