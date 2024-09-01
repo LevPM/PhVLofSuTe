@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Water",
+    "name": "Вода",
+    "color": "#00FFFF",
+    "amountOfDrops": 40
+  },
+  {
+    "id": "SoapWater",
+    "name": "Мыльная вода",
+    "color": "#AFEEEE",
+    "amountOfDrops": 110
+  }
+]

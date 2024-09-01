@@ -9,7 +9,7 @@ import javafx.css.converter.ColorConverter;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Shape;
-import ru.riddle.phVLofSuTe.controller.model.customComponents.properties.styleable.ColorableBody;
+import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.styleable.ColorableBody;
 
 import java.util.ArrayList;
 import java.util.Collections;

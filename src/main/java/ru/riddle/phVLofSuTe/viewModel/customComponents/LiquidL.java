@@ -1,8 +1,8 @@
-package ru.riddle.phVLofSuTe.controller.model.customComponents;
+package ru.riddle.phVLofSuTe.viewModel.customComponents;
 
 import javafx.scene.paint.Color;
 
-public enum Liquid {
+public enum LiquidL {
 
     WATER("Вода", Color.AQUA, 40),
     SOAP_WATER("Мыльная вода", Color.PALETURQUOISE, 110),
@@ -12,7 +12,7 @@ public enum Liquid {
     private final Color color;
     private final int amountOfDrops;
 
-    Liquid(String name, Color color, int amountOfDrops){ // Amount of drops -> for third experiment,
+    LiquidL(String name, Color color, int amountOfDrops){ // Amount of drops -> for third experiment,
         this.name = name;
         this.color = color;
         this.amountOfDrops = amountOfDrops;

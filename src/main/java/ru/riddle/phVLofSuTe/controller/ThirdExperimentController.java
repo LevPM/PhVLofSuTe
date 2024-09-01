@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment.LiquidSettingListCell;
 import ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment.ThirdExperimentModel;
-import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
+import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.LiquidContainer;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.Syringe;
@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 public class ThirdExperimentController implements Initializable {
 
     @FXML
-    private ComboBox<Liquid> liquidComboBox;
+    private ComboBox<LiquidL> liquidComboBox;
 
     @FXML
     private ToggleButton isOpenSettingToggleButton;
@@ -59,18 +59,18 @@ public class ThirdExperimentController implements Initializable {
         initializeCountOfSegmentsSlider(countOfSegmentsSlider);
 
         setDefaultButton.setOnAction(event -> {
-            liquidComboBox.setValue(Liquid.WATER);
+            liquidComboBox.setValue(LiquidL.WATER);
             isOpenSettingToggleButton.setSelected(false);
             isOpenSettingToggleButton.getOnAction().handle(null);
             countOfSegmentsSlider.setValue(5);
         });
     }
 
-    private void initializeLiquidComboBox(ComboBox<Liquid> liquidComboBox){
-        liquidComboBox.getItems().addAll(Liquid.values());
-        liquidComboBox.setValue(Liquid.WATER);
+    private void initializeLiquidComboBox(ComboBox<LiquidL> liquidComboBox){
+        liquidComboBox.getItems().addAll(LiquidL.values());
+        liquidComboBox.setValue(LiquidL.WATER);
 
-        Callback<ListView<Liquid>, ListCell<Liquid>> cellFactory = lv -> new LiquidSettingListCell();
+        Callback<ListView<LiquidL>, ListCell<LiquidL>> cellFactory = lv -> new LiquidSettingListCell();
 
         liquidComboBox.setCellFactory(cellFactory);
         liquidComboBox.setButtonCell(cellFactory.call(null));

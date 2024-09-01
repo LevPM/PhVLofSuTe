@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.controller.model.customComponents.Liquid;
+import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
 
 import java.util.List;
 
@@ -75,8 +75,8 @@ public class ExperimentsAnimationModel {
         ((Rectangle) paneChildren.get(2)).setFill(
                 switch (pane.getId()){
                     case "firstExperimentSyringe",
-                         "thirdExperimentSyringe2" -> Liquid.WATER.getColor();
-                    case "thirdExperimentSyringe1" -> Liquid.SOAP_WATER.getColor();
+                         "thirdExperimentSyringe2" -> LiquidL.WATER.getColor();
+                    case "thirdExperimentSyringe1" -> LiquidL.SOAP_WATER.getColor();
                     default -> throw new IllegalStateException("Unexpected value: " + pane.getId());
                 }
         );
