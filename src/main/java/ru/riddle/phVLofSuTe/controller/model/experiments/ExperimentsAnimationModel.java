@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
+import ru.riddle.phVLofSuTe.controller.LiquidL;
 
 import java.util.List;
 

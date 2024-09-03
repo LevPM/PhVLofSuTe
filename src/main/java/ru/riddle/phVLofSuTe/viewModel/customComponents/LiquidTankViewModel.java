@@ -5,7 +5,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.controller.model.customComponents.Fillable;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.LiquidManager;
 import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.LiquidTypeable;
 
 import java.util.ArrayList;
@@ -16,41 +17,41 @@ public class LiquidTankViewModel implements ViewModel, LiquidTypeable {
 
     private static final Logger logger = LoggerFactory.getLogger(LiquidTankViewModel.class);
 
-    private static final LiquidL DEFAULT_LIQUID = LiquidL.WATER;
+    private static final Liquid DEFAULT_LIQUID = LiquidManager.getLiquid("Water");
 
-    private ObjectProperty<LiquidL> liquidType;
+    private ObjectProperty<Liquid> liquidType;
 
     private List<Fillable> fillableParts;
 
-    public LiquidTankViewModel() {
+    {
         fillableParts = new ArrayList<>();
     }
 
     @Override
-    public final LiquidL getLiquidType(){
+    public final Liquid getLiquidType(){
         return liquidTypeProperty().get();
     }
 
     @Override
-    public final void setLiquidType(LiquidL liquidType){
+    public final void setLiquidType(Liquid liquidType){
         this.liquidTypeProperty().set(liquidType);
     }
 
     @Override
-    public final ObjectProperty<LiquidL> liquidTypeProperty(){
+    public final ObjectProperty<Liquid> liquidTypeProperty(){
         if(liquidType == null){
             liquidType = new SimpleObjectProperty<>(this, "liquidType", DEFAULT_LIQUID);
-            liquidType.addListener(event -> fillParts());
+            liquidType.addListener(event -> refillParts());
         }
         return this.liquidType;
     }
 
-    protected void setFillableParts(Fillable... fillableParts){
+    protected final void setFillableParts(Fillable... fillableParts){
         this.fillableParts = Arrays.asList(fillableParts);
-        fillParts();
+        refillParts();
     }
 
-    private void fillParts(){
-        fillableParts.forEach(part -> part.fill(this.getLiquidType().getColor()));
+    private void refillParts(){
+        fillableParts.forEach(part -> part.fill(this.getLiquidType().color()));
     }
 }

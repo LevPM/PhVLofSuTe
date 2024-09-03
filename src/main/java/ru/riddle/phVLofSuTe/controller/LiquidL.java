@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.customComponents;
+package ru.riddle.phVLofSuTe.controller;
 
 import javafx.scene.paint.Color;
 

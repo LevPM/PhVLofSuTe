@@ -5,7 +5,7 @@ import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.shape.Circle;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
+import ru.riddle.phVLofSuTe.controller.LiquidL;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 

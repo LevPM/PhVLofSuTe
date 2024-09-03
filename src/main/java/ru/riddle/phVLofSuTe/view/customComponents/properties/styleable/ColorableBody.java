@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.customComponents.properties.styleable;
+package ru.riddle.phVLofSuTe.view.customComponents.properties.styleable;
 
 import javafx.scene.paint.Color;
 import javafx.beans.property.ObjectProperty;

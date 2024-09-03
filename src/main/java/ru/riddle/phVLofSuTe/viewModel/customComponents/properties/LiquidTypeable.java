@@ -1,13 +1,13 @@
 package ru.riddle.phVLofSuTe.viewModel.customComponents.properties;
 
 import javafx.beans.property.ObjectProperty;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 
 public interface LiquidTypeable {
 
-    LiquidL getLiquidType();
+    Liquid getLiquidType();
 
-    void setLiquidType(LiquidL liquidType);
+    void setLiquidType(Liquid liquidType);
 
-    ObjectProperty<LiquidL> liquidTypeProperty();
+    ObjectProperty<Liquid> liquidTypeProperty();
 }

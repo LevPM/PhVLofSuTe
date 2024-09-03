@@ -19,9 +19,10 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.LiquidL;
+import ru.riddle.phVLofSuTe.controller.LiquidL;
+import ru.riddle.phVLofSuTe.viewModel.customComponents.Fillable;
 import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.Segmentable;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.styleable.ColorableBody;
+import ru.riddle.phVLofSuTe.view.customComponents.properties.styleable.ColorableBody;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
