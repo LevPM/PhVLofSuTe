@@ -23,9 +23,9 @@ public class DropViewModel extends LiquidTankViewModel implements Fillable {
         logger.trace("Creating transition...");
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(node);
-        transition.setDuration(Duration.millis(entireDuration.toMillis()/this.getLiquidType().amountOfDrops()));
+        transition.setDuration(Duration.millis(entireDuration.toMillis()/this.liquidTypeProperty().get().amountOfDrops()));
         transition.setByY(100);
-        transition.setCycleCount(this.getLiquidType().amountOfDrops());
+        transition.setCycleCount(this.liquidTypeProperty().get().amountOfDrops());
         transition.setOnFinished(event -> node.setLayoutY(node.getLayoutY() - 100));
 
         return transition;

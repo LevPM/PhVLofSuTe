@@ -1,4 +1,4 @@
-package ru.riddle.phVLofSuTe.viewModel.customComponents.properties;
+package ru.riddle.phVLofSuTe.view.customComponents.properties;
 
 import javafx.beans.property.IntegerProperty;
 

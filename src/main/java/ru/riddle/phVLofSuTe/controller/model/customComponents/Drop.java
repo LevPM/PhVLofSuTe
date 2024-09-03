@@ -29,9 +29,9 @@ public class Drop extends LiquidTank {
     public Transition getTransition(Duration entireDuration){
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
-        transition.setDuration(Duration.millis(entireDuration.toMillis()/this.getLiquidType().getAmountOfDrops()));
+        transition.setDuration(Duration.millis(entireDuration.toMillis()/this.getLiquidType().amountOfDrops()));
         transition.setByY(100);
-        transition.setCycleCount(this.getLiquidType().getAmountOfDrops());
+        transition.setCycleCount(this.getLiquidType().amountOfDrops());
         transition.setOnFinished(event -> this.setLayoutY(this.getLayoutY() - 100));
 
         return transition;

@@ -4,9 +4,9 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Group;
 import javafx.scene.shape.Shape;
-import ru.riddle.phVLofSuTe.controller.LiquidL;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 import ru.riddle.phVLofSuTe.viewModel.customComponents.Fillable;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.LiquidTypeable;
+import ru.riddle.phVLofSuTe.view.customComponents.properties.LiquidTypeable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,9 +14,9 @@ import java.util.List;
 
 public abstract class LiquidTank extends Group implements LiquidTypeable {
 
-    private static final LiquidL DEFAULT_LIQUID = LiquidL.WATER;
+    private static final Liquid DEFAULT_LIQUID = null;
 
-    private ObjectProperty<LiquidL> liquidType;
+    private ObjectProperty<Liquid> liquidType;
 
     private List<Shape> shapeParts;
     private List<Fillable> fillableParts;
@@ -28,17 +28,17 @@ public abstract class LiquidTank extends Group implements LiquidTypeable {
     }
 
     @Override
-    public final LiquidL getLiquidType(){
+    public final Liquid getLiquidType(){
         return (liquidTypeProperty() != null) ? liquidType.get() : DEFAULT_LIQUID;
     }
 
     @Override
-    public final void setLiquidType(LiquidL liquidType){
+    public final void setLiquidType(Liquid liquidType){
         this.liquidTypeProperty().set(liquidType);
     }
 
     @Override
-    public final ObjectProperty<LiquidL> liquidTypeProperty(){
+    public final ObjectProperty<Liquid> liquidTypeProperty(){
         if(liquidType == null){
             liquidType = new SimpleObjectProperty<>(this, "liquidType", DEFAULT_LIQUID);
             liquidType.addListener(event -> fillParts());
@@ -57,7 +57,7 @@ public abstract class LiquidTank extends Group implements LiquidTypeable {
     }
 
     private void fillParts(){
-        shapeParts.forEach(part -> part.setFill(this.getLiquidType().getColor()));
-        fillableParts.forEach(part -> part.fill(this.getLiquidType().getColor()));
+        shapeParts.forEach(part -> part.setFill(this.getLiquidType().color()));
+        fillableParts.forEach(part -> part.fill(this.getLiquidType().color()));
     }
 }

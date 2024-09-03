@@ -20,8 +20,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.util.Duration;
 import ru.riddle.phVLofSuTe.controller.LiquidL;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 import ru.riddle.phVLofSuTe.viewModel.customComponents.Fillable;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.Segmentable;
+import ru.riddle.phVLofSuTe.view.customComponents.properties.Segmentable;
 import ru.riddle.phVLofSuTe.view.customComponents.properties.styleable.ColorableBody;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
@@ -468,9 +469,9 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
     public class LiquidBody extends Body implements Fillable {
 
-        private final LiquidL liquidType;
+        private final Liquid liquidType;
 
-        public LiquidBody(LiquidL liquidType) {
+        public LiquidBody(Liquid liquidType) {
             super(FXMLs.NULL, FXMLs.SYRINGE_LIQUID_TIP, FXMLs.SYRINGE_LIQUID_SEGMENT);
             this.liquidType = liquidType;
             build(liquidType);
@@ -490,14 +491,14 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
         @Override
         protected void build(FXMLs capFXML, FXMLs tipFXML, FXMLs segmentFXML) {}
 
-        private void build(LiquidL liquidType){
+        private void build(Liquid liquidType){
             this.getChildren().addAll(
                     new LiquidTip(liquidType)
             );
             buildSegments(liquidType);
         }
 
-        private void buildSegments(LiquidL liquidType){
+        private void buildSegments(Liquid liquidType){
             for(int i = 0; i < getCountOfSegments(); i++){
                 this.getChildren().add(new LiquidSegment(i, SEGMENT_HEIGHT, liquidType));
             }
@@ -508,15 +509,15 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
         private class LiquidTip extends Tip implements Fillable{
 
-            private final LiquidL liquidType;
+            private final Liquid liquidType;
 
             @FXML
             private Polygon liquid;
 
-            public LiquidTip(LiquidL liquidType) {
+            public LiquidTip(Liquid liquidType) {
                 super(FXMLs.SYRINGE_LIQUID_TIP);
                 this.liquidType = liquidType;
-                this.liquid.setFill(liquidType.getColor());
+                this.liquid.setFill(liquidType.color());
             }
 
             @Override
@@ -527,15 +528,15 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
 
         private class LiquidSegment extends Segment implements  Fillable{
 
-            private final LiquidL liquidType;
+            private final Liquid liquidType;
 
             @FXML
             private Rectangle liquid;
 
-            public LiquidSegment(int sequenceNumber, int segmentHeight, LiquidL liquidType) {
+            public LiquidSegment(int sequenceNumber, int segmentHeight, Liquid liquidType) {
                 super(FXMLs.SYRINGE_LIQUID_SEGMENT, sequenceNumber, segmentHeight);
                 this.liquidType = liquidType;
-                liquid.setFill(liquidType.getColor());
+                liquid.setFill(liquidType.color());
             }
 
             @Override

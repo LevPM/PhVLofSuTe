@@ -8,9 +8,10 @@ import javafx.scene.shape.Circle;
 import ru.riddle.phVLofSuTe.controller.LiquidL;
 import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 
 @Deprecated
-public class LiquidSettingListCell extends ListCell<LiquidL> {
+public class LiquidSettingListCell extends ListCell<Liquid> {
 
     @FXML
     private Label liquidNameLabel;
@@ -23,14 +24,14 @@ public class LiquidSettingListCell extends ListCell<LiquidL> {
     }
 
     @Override
-    protected void updateItem(LiquidL item, boolean empty){
+    protected void updateItem(Liquid item, boolean empty){
         super.updateItem(item, empty);
         if(empty || item == null){
             setText(null);
             setContentDisplay(ContentDisplay.TEXT_ONLY);
         } else {
-            liquidNameLabel.setText(item.getName());
-            liquidColorCircle.setFill(item.getColor());
+            liquidNameLabel.setText(item.name());
+            liquidColorCircle.setFill(item.color());
 
             setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
         }

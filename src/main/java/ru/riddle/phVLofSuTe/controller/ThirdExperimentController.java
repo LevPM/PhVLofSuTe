@@ -11,6 +11,7 @@ import ru.riddle.phVLofSuTe.controller.model.experiments.thirdExperiment.ThirdEx
 import ru.riddle.phVLofSuTe.controller.model.customComponents.Drop;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.LiquidContainer;
 import ru.riddle.phVLofSuTe.controller.model.customComponents.Syringe;
+import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +20,7 @@ import java.util.ResourceBundle;
 public class ThirdExperimentController implements Initializable {
 
     @FXML
-    private ComboBox<LiquidL> liquidComboBox;
+    private ComboBox<Liquid> liquidComboBox;
 
     @FXML
     private ToggleButton isOpenSettingToggleButton;
@@ -58,18 +59,18 @@ public class ThirdExperimentController implements Initializable {
         initializeCountOfSegmentsSlider(countOfSegmentsSlider);
 
         setDefaultButton.setOnAction(event -> {
-            liquidComboBox.setValue(LiquidL.WATER);
+            liquidComboBox.setValue(null);
             isOpenSettingToggleButton.setSelected(false);
             isOpenSettingToggleButton.getOnAction().handle(null);
             countOfSegmentsSlider.setValue(5);
         });
     }
 
-    private void initializeLiquidComboBox(ComboBox<LiquidL> liquidComboBox){
-        liquidComboBox.getItems().addAll(LiquidL.values());
-        liquidComboBox.setValue(LiquidL.WATER);
+    private void initializeLiquidComboBox(ComboBox<Liquid> liquidComboBox){
+        liquidComboBox.getItems().addAll(null, null);
+        liquidComboBox.setValue(null);
 
-        Callback<ListView<LiquidL>, ListCell<LiquidL>> cellFactory = lv -> new LiquidSettingListCell();
+        Callback<ListView<Liquid>, ListCell<Liquid>> cellFactory = lv -> new LiquidSettingListCell();
 
         liquidComboBox.setCellFactory(cellFactory);
         liquidComboBox.setButtonCell(cellFactory.call(null));

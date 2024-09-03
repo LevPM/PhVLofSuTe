@@ -7,13 +7,13 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.LiquidManager;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.properties.LiquidTypeable;
+import ru.riddle.phVLofSuTe.view.customComponents.properties.LiquidTypeable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class LiquidTankViewModel implements ViewModel, LiquidTypeable {
+public class LiquidTankViewModel implements ViewModel{
 
     private static final Logger logger = LoggerFactory.getLogger(LiquidTankViewModel.class);
 
@@ -27,17 +27,6 @@ public class LiquidTankViewModel implements ViewModel, LiquidTypeable {
         fillableParts = new ArrayList<>();
     }
 
-    @Override
-    public final Liquid getLiquidType(){
-        return liquidTypeProperty().get();
-    }
-
-    @Override
-    public final void setLiquidType(Liquid liquidType){
-        this.liquidTypeProperty().set(liquidType);
-    }
-
-    @Override
     public final ObjectProperty<Liquid> liquidTypeProperty(){
         if(liquidType == null){
             liquidType = new SimpleObjectProperty<>(this, "liquidType", DEFAULT_LIQUID);
@@ -52,6 +41,6 @@ public class LiquidTankViewModel implements ViewModel, LiquidTypeable {
     }
 
     private void refillParts(){
-        fillableParts.forEach(part -> part.fill(this.getLiquidType().color()));
+        fillableParts.forEach(part -> part.fill(this.liquidTypeProperty().get().color()));
     }
 }
