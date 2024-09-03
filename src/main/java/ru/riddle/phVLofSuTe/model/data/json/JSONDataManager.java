@@ -40,7 +40,8 @@ public class JSONDataManager {
             return new ObjectMapper().readValue(JSONDataManager.class.getResource(
                     getPathByDataClass(clazz) +
                             decapitalize(clazz.getSimpleName()) +
-                            "s.json"), new TypeReference<>(){});
+                            "s.json"), new TypeReference<>() {}
+            );
         } catch (IOException e) {
             logger.error("Error during downloading list of json data! Message: {}", e.getMessage());
             return null;
