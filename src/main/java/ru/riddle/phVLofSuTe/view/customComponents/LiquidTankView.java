@@ -59,6 +59,7 @@ public abstract class LiquidTankView<T extends LiquidTankViewModel> extends Grou
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        logger.trace("Initializing...");
         liquidTypeProperty().bind(viewModel.liquidTypeProperty());
         liquidTypeProperty().addListener(event -> refillParts());
     }

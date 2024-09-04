@@ -36,7 +36,7 @@ import java.util.*;
 @FxmlPath("/ru/riddle/phVLoSuTe/view/customComponents/syringe/Syringe.fxml")
 public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements Segmentable, Initializable, Openable {
 
-    private static final Logger logger = LoggerFactory.getLogger(Syringe.class);
+    private static final Logger syringeLogger = LoggerFactory.getLogger(Syringe.class);
 
     @InjectViewModel
     private SyringeViewModel viewModel;
@@ -56,6 +56,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     private EventHandler<Event> onAnimationFinishedEventHandler;
 
     public Syringe() {
+        syringeLogger.trace("Creating syringe...");
         ViewManager.downloadCustomComponent(this, Syringe.class);
         this.getStyleClass().add("syringe");
         this.liquidTypeProperty().addListener(event -> rebuildSyringe());
@@ -64,6 +65,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     }
 
     private void buildSyringe(){
+        syringeLogger.trace("Building syringe...");
         liquid = new LiquidBody();
         piston = new PistonBody(isOpen.get());
         body = new CylinderBody();
@@ -100,6 +102,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        syringeLogger.trace("Initializing Syringe...");
         countOfSegmentsProperty.bind(viewModel.countOfSegmentsProperty());
         isOpen.bindBidirectional(viewModel.isOpenProperty());
     }
@@ -150,6 +153,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     }
 
     public void animateWithContainer(LiquidContainer container, Drop drop){
+        syringeLogger.debug("Animating with container and drop...");
         if(!isAnimating.get()){
             isAnimating.set(true);
             this.setLiquidType(container.getLiquidType());
@@ -161,11 +165,13 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
                     onAnimationFinishedEventHandler.handle(null);
                 }
             });
+            syringeLogger.info("Starting syringe animation...");
             transition.play();
         }
     }
 
     private Transition getTransition(LiquidContainer container, Drop drop){
+        syringeLogger.trace("Getting Transition...");
         Duration drippingDuration = Duration.seconds(20);
         Duration refillingDuration = Duration.seconds(10);
 
@@ -182,6 +188,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     }
 
     private Transition getRefillingTransition(LiquidContainer container, Duration refillingDuration){
+        syringeLogger.trace("Getting refilling transition...");
         return new SequentialTransition(
                 container.getTransition(Duration.seconds(3), false),
                 getSyringeLoweringTransition(Duration.seconds(2), container, true),
@@ -192,6 +199,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     }
 
     private Transition getSyringeLoweringTransition(Duration duration, LiquidContainer container, boolean isLowering){
+        syringeLogger.trace("Getting lowering transition");
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setDuration(duration);
@@ -201,6 +209,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     }
 
     private Transition getDrippingTransition(Duration drippingDuration, Drop drop){
+        syringeLogger.trace("Getting dripping transition");
         return new ParallelTransition(drop.getTransition(drippingDuration), piston.getTransition(drippingDuration, false));
     }
 
@@ -244,6 +253,8 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
 
     private abstract class Body<B extends SyringeViewModel.BodyViewModel> extends Group implements FxmlView<SyringeViewModel.BodyViewModel> {
 
+
+        private static final Logger bodyLogger = LoggerFactory.getLogger(Body.class);
         private final double bodyHeight;
 
         @InjectViewModel
@@ -259,6 +270,11 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
                 T extends Tip<? extends SyringeViewModel.BodyViewModel.TipViewModel>
                 > void build(C cap, List<S> segments, T tip){
 
+            bodyLogger.trace("Building syringe body. Cap: {}, Segment: {} Tip: {}",
+                    cap.getClass().getSimpleName(),
+                    segments.getFirst().getClass().getSimpleName(),
+                    tip.getClass().getSimpleName()
+            );
             this.getChildren().addAll(cap, tip);
             segments.forEach(segment -> this.getChildren().add(segment));
         }
@@ -351,12 +367,15 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     @FxmlPath("/ru/riddle/phVLofSuTe/view/customComponents/syringe/piston/PistonBody.fxml")
     private class PistonBody extends Body<SyringeViewModel.PistonBodyViewModel> implements ColorableBody, Openable, Initializable {
 
+        Logger pistonLogger = LoggerFactory.getLogger(PistonBody.class);
+
         private ObjectProperty<Color> bodyColor; //styleable
 
         private final BooleanProperty isOpen = new SimpleBooleanProperty();
         private final DoubleProperty openY = new SimpleDoubleProperty();
 
         public PistonBody(boolean isOpen) {
+            pistonLogger.trace("Creating piston body, isOpen: {}", isOpen);
             ViewManager.downloadCustomComponent(this, PistonBody.class);
             this.getStyleClass().add("syringe-piston");
             this.openY.set(-SyringeViewModel.SEGMENT_HEIGHT * (getCountOfSegments() - 1));
@@ -421,6 +440,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
 
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
+            pistonLogger.trace("Initializing piston body");
             bodyColor.addListener(event -> this.recolor());
             bodyColor.bindBidirectional(bodyViewModel.bodyColorProperty());
 
@@ -453,6 +473,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
         }
 
         private void createBackground(){
+            pistonLogger.trace("Creating background");
             Rectangle background = new Rectangle(60, getBodyHeight(), Color.GAINSBORO);
             background.getStyleClass().add("piston-background");
             background.setX(-30);
@@ -462,6 +483,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
         }
 
         public Transition getTransition(Duration duration, boolean isRefilling){
+            pistonLogger.debug("Getting transition");
             if(getIsOpen() && isRefilling){
                 return new TranslateTransition();
             }
@@ -479,6 +501,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
                 if(!(this.getTranslateY() == openY.get())){
                     this.setTranslateY(openY.get());
                 }
+                pistonLogger.debug("Opening piston");
                 this.isOpen.set(true);
             }
         }
@@ -488,6 +511,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
                 if(!(this.getTranslateY() == 0)){
                     this.setTranslateY(this.getTranslateY() - openY.get());
                 }
+                pistonLogger.debug("Closing piston");
                 this.isOpen.set(false);
             }
         }
@@ -556,16 +580,21 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     @FxmlPath("/ru/riddle/phVLofSuTe/view/customComponents/syringe/liquid/Liquid.fxml")
     private class LiquidBody extends Body<SyringeViewModel.LiquidBodyViewModel> implements Fillable {
 
+        Logger liquidLogger = LoggerFactory.getLogger(LiquidBody.class);
+
         private final ObjectProperty<Liquid> liquidType = new SimpleObjectProperty<>();
 
         public LiquidBody(){
+            liquidLogger.trace("Creating liquid body");
             ViewManager.downloadCustomComponent(this, LiquidBody.class);
             this.liquidType.bind(viewModel.liquidTypeProperty());
         }
 
         @Override
         public void fill(Color color) {
-        this.getChildren().forEach(child -> {if(child instanceof Fillable fillable) fillable.fill(color);});
+            this.getChildren().forEach(child -> {
+                if(child instanceof Fillable fillable) fillable.fill(color);
+            });
         }
 
         @Override

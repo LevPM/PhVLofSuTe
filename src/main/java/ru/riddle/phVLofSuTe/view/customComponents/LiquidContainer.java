@@ -29,6 +29,7 @@ public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewM
     private Polygon liquid;
 
     public LiquidContainer(){
+        logger.trace("Creating liquid container");
         ViewManager.downloadCustomComponent(this, LiquidContainer.class);
         this.getStyleClass().add("liquid-container");
     }
@@ -45,6 +46,7 @@ public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewM
     }
 
     public Transition getTransition(Duration duration, boolean isHiding){
+        logger.debug("Getting transition");
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(this);
         transition.setByX(isHiding ? this.getTranslateX() : -this.getTranslateX());
@@ -55,6 +57,7 @@ public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewM
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        logger.trace("Initializing...");
         this.setFillableParts(this);
         liquid.fillProperty().bind(viewModel.liquidColorProperty());
     }
