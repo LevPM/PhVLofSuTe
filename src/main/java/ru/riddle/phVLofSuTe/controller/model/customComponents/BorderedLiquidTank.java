@@ -14,7 +14,7 @@ import ru.riddle.phVLofSuTe.view.customComponents.properties.styleable.Colorable
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+@Deprecated
 public abstract class BorderedLiquidTank extends LiquidTank implements ColorableBody {
 
     private ObjectProperty<Color> bodyColor;

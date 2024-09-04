@@ -29,6 +29,7 @@ import ru.riddle.phVLofSuTe.model.ModelUtil;
 import java.net.URL;
 import java.util.*;
 
+@Deprecated
 public class Syringe extends BorderedLiquidTank implements Initializable, Segmentable {
 
     private static final String DEFAULT_STYLE_CLASS = "syringe";

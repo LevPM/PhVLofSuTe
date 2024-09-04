@@ -11,7 +11,7 @@ import ru.riddle.phVLofSuTe.model.FXMLs;
 import ru.riddle.phVLofSuTe.model.ModelUtil;
 
 import java.util.Objects;
-
+@Deprecated
 public class LiquidContainer extends BorderedLiquidTank {
 
     @FXML

@@ -2,6 +2,7 @@ package ru.riddle.phVLofSuTe.controller;
 
 import javafx.scene.paint.Color;
 
+@Deprecated
 public enum LiquidL {
 
     WATER("Вода", Color.AQUA, 40),

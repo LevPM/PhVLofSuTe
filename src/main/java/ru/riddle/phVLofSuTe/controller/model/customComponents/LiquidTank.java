@@ -11,7 +11,7 @@ import ru.riddle.phVLofSuTe.view.customComponents.properties.LiquidTypeable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+@Deprecated
 public abstract class LiquidTank extends Group implements LiquidTypeable {
 
     private static final Liquid DEFAULT_LIQUID = null;
