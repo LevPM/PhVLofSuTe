@@ -19,9 +19,8 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.util.Duration;
-import ru.riddle.phVLofSuTe.controller.LiquidL;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.Fillable;
+import ru.riddle.phVLofSuTe.view.customComponents.Fillable;
 import ru.riddle.phVLofSuTe.view.customComponents.properties.Segmentable;
 import ru.riddle.phVLofSuTe.view.customComponents.properties.styleable.ColorableBody;
 import ru.riddle.phVLofSuTe.model.FXMLs;
@@ -102,7 +101,6 @@ public class Syringe extends BorderedLiquidTank implements Initializable, Segmen
             });
             transition.play();
         }
-
     }
 
     private Transition getTransition(LiquidContainer container, Drop drop){

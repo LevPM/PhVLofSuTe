@@ -10,8 +10,9 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.riddle.phVLofSuTe.view.customComponents.Fillable;
 
-public class DropViewModel extends LiquidTankViewModel implements Fillable {
+public class DropViewModel extends LiquidTankViewModel{
 
     private static final Logger logger = LoggerFactory.getLogger(DropViewModel.class);
 
@@ -31,16 +32,9 @@ public class DropViewModel extends LiquidTankViewModel implements Fillable {
         return transition;
     }
 
-    @Override
-    public void fill(Color color) {
-        this.dropTipColor.set(color);
-        this.dropCircleColor.set(color);
-    }
-
     @Initialize
     private void initialize(){
         logger.trace("Initializing...");
-        this.setFillableParts(this);
     }
 
     public ObjectProperty<Color> dropTipColorProperty() {

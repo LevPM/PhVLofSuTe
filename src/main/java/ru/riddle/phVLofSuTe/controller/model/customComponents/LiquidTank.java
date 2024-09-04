@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Group;
 import javafx.scene.shape.Shape;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
-import ru.riddle.phVLofSuTe.viewModel.customComponents.Fillable;
+import ru.riddle.phVLofSuTe.view.customComponents.Fillable;
 import ru.riddle.phVLofSuTe.view.customComponents.properties.LiquidTypeable;
 
 import java.util.ArrayList;

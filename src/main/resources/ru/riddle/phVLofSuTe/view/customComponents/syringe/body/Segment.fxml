@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Line?>
+
+<fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Group>
+      <Line endX="-30.0" endY="-60.0" startX="-30.0" startY="-10.0" strokeLineJoin="ROUND" />
+      <Line endX="30.0" endY="-60.0" startX="30.0" startY="-10.0" strokeLineJoin="ROUND" />
+      <Line endX="-5.0" endY="-10.0" startX="29.5" startY="-10.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="1.5" />
+      <Line endX="15.0" endY="-20.0" startX="30.0" startY="-20.0" strokeWidth="1.2" />
+      <Line endX="15.0" endY="-30.0" startX="30.0" startY="-30.0" strokeWidth="1.2" />
+      <Line endX="15.0" endY="-40.0" startX="30.0" startY="-40.0" strokeWidth="1.2" />
+      <Line endX="15.0" endY="-50.0" startX="30.0" startY="-50.0" strokeWidth="1.2" />
+   </Group>
+</fx:root>

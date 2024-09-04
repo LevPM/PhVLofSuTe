@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.Polygon?>
+
+<fx:root type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Polygon fill="DIMGRAY" points="5.0, 0.0, 5.0, 5.0, -5.0, 5.0, -5.0, 0.0, -29, -10, -29, -30, 29, -30, 29, -10"/>
+</fx:root>

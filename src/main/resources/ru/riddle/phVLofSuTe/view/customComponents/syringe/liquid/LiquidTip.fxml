@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Polygon?>
+
+<fx:root layoutX="30.0" layoutY="60.0" type="javafx.scene.Group" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <Polygon fx:id="liquid" fill="AQUA" points="-30.0, -10.0, -5.0, 0.0, -5.0, 5.0, 5.0, 5.0, 5.0, 0.0, 30.0, -10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+</fx:root>

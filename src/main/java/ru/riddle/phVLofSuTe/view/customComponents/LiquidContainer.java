@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewModel> implements Initializable {
+public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewModel> implements Initializable, Fillable {
 
     private static final Logger logger = LoggerFactory.getLogger(LiquidContainer.class);
 
@@ -31,6 +31,11 @@ public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewM
     public LiquidContainer(){
         ViewManager.downloadCustomComponent(this, LiquidContainer.class);
         this.getStyleClass().add("liquid-container");
+    }
+
+    @Override
+    public void fill(Color color) {
+        liquid.setFill(color);
     }
 
     @Override
@@ -50,6 +55,7 @@ public class LiquidContainer extends BorderedLiquidTankView<LiquidContainerViewM
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.setFillableParts(this);
         liquid.fillProperty().bind(viewModel.liquidColorProperty());
     }
 }
