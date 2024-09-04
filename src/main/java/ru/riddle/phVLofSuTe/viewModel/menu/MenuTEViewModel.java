@@ -23,6 +23,6 @@ public class MenuTEViewModel implements ViewModel {
 
     public void openExperiments(ActionEvent event){
         logger.debug("Opening experiments");
-        ViewManager.changeScreen(event, ViewName.EXPERIMENTS_MENU);
+        ViewManager.changeScreen(event, ViewName.EXPERIMENTS_SELECTION);
     }
 }

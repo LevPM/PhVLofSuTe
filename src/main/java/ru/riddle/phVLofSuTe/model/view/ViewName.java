@@ -4,6 +4,7 @@ import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.ViewModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.riddle.phVLofSuTe.view.experiments.ExperimentsSelectionView;
 import ru.riddle.phVLofSuTe.view.menu.AuthorsView;
 import ru.riddle.phVLofSuTe.view.menu.MenuTEView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
@@ -39,7 +40,8 @@ public enum ViewName {
     //------------------------------------
 
     //Experiments block
-    EXPERIMENTS_MENU(null),
+    EXPERIMENTS_SELECTION(ExperimentsSelectionView.class),
+    
     //------------------------------------
     ;
 
