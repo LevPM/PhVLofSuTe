@@ -60,7 +60,7 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
         this.getStyleClass().add("syringe");
         this.liquidTypeProperty().addListener(event -> rebuildSyringe());
         this.setFillableParts(liquid);
-        //TODO: PseudoClass...
+        this.pseudoClassStateChanged(CLOSED_PSEUDOCLASS_STATE, true);
     }
 
     private void buildSyringe(){
