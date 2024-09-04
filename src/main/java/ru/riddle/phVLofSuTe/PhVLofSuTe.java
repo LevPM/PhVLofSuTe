@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.AppProperties;
 import ru.riddle.phVLofSuTe.model.data.ImageDataManager;
-import ru.riddle.phVLofSuTe.view.customComponents.Syringe;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.viewModel.menu.MenuViewModel;
 
