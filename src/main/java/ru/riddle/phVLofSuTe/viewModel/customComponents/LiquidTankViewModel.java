@@ -7,11 +7,6 @@ import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.Liquid;
 import ru.riddle.phVLofSuTe.model.data.json.liquid.LiquidManager;
-import ru.riddle.phVLofSuTe.view.customComponents.Fillable;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class LiquidTankViewModel implements ViewModel{
 

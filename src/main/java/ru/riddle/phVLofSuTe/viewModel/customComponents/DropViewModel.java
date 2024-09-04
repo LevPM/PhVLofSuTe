@@ -10,7 +10,6 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.view.customComponents.Fillable;
 
 public class DropViewModel extends LiquidTankViewModel{
 
@@ -30,11 +29,6 @@ public class DropViewModel extends LiquidTankViewModel{
         transition.setOnFinished(event -> node.setLayoutY(node.getLayoutY() - 100));
 
         return transition;
-    }
-
-    @Initialize
-    private void initialize(){
-        logger.trace("Initializing...");
     }
 
     public ObjectProperty<Color> dropTipColorProperty() {
