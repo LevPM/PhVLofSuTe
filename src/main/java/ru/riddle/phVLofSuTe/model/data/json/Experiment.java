@@ -8,5 +8,5 @@ public record Experiment(
         String title,
         List<String> text,
         List<String> experimentText,
-        List<String> Conclusion
+        List<String> conclusion
 ) {}
