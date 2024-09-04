@@ -66,6 +66,16 @@ public class Syringe extends BorderedLiquidTankView<SyringeViewModel> implements
     private void buildSyringe(){
         liquid = new LiquidBody();
         piston = new PistonBody(isOpen.get());
+        body = new CylinderBody();
+
+        this.setColoredGroup(body);
+
+        this.getChildren().addAll(
+                liquid,
+                piston,
+                body
+        );
+        this.recolor();
     }
 
     private void rebuildSyringe(){
