@@ -60,9 +60,12 @@ public class JSONDataManager {
         logger.trace("Getting path by data class: {}", clazz.getSimpleName());
         return switch (clazz.getSimpleName()){
             case "Example" -> PATH_TO_EXAMPLES;
-            case "TheoryChapter" -> PATH_TO_BASIC_THEORY;
+            case "TheoryChapter", "TheoryChapterInfo" -> PATH_TO_BASIC_THEORY;
             case "Liquid" -> PATH_TO_LIQUIDS;
-            default -> throw new IllegalStateException("Unexpected value: " + clazz.getSimpleName());
+            default -> {
+                logger.warn("There is no class with name: {}", clazz.getSimpleName());
+                throw new IllegalStateException("Unexpected value: " + clazz.getSimpleName());
+            }
         };
     }
 }

@@ -16,4 +16,14 @@ public class ImageDataManager {
         logger.debug("Creating icon with path: {}", path);
         return new Image(Objects.requireNonNull(ImageDataManager.class.getResource(pathToImages + path)).toExternalForm());
     }
+
+    public static Image downloadImageIfExist(String path, String alternativePath){
+        logger.debug("Trying to create icon with path: {}, alternative path: {}", path, alternativePath);
+        return
+                new Image(
+                        ImageDataManager.class.getResource(pathToImages + path) == null ?
+                                Objects.requireNonNull(ImageDataManager.class.getResource(pathToImages + alternativePath)).toExternalForm() :
+                                Objects.requireNonNull(ImageDataManager.class.getResource(pathToImages + path)).toExternalForm()
+                        );
+    }
 }
