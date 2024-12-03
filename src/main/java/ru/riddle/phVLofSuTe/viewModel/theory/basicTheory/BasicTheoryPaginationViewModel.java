@@ -33,7 +33,13 @@ public class BasicTheoryPaginationViewModel extends SimpleTextImagePaginationVie
         titleLabelProperty().set(selectedTheoryChapter.getData().title());
         pageCountProperty().set(selectedTheoryChapter.getData().pages().size());
         pageFactoryProperty().set((pageIndex) -> {
-            imageProperty().set(ImageDataManager.downloadImage(String.format("theory/basicTheory/theoryChapter_%d/theoryPage_%d.png", selectedTheoryChapter.getData().id(), pageIndex + 1)));
+            imageProperty().set(
+                    ImageDataManager.downloadImage(
+                            String.format(
+                                    "theory/basicTheory/theoryChapter_%d/theoryPage_%d.png",
+                                    selectedTheoryChapter.getData().id(),
+                                    pageIndex + 1)
+                    ));
             return new SimpleTextPage(
                     new SimpleTextPageDataScope(
                             selectedTheoryChapter.getData().pages().get(pageIndex).text(),
