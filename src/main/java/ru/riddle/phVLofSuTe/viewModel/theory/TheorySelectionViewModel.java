@@ -4,10 +4,8 @@ import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.model.data.json.TheoryChapter;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
-import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
 
 public class TheorySelectionViewModel implements ViewModel {
 
@@ -20,7 +18,7 @@ public class TheorySelectionViewModel implements ViewModel {
 
     public void openBasicTheory(ActionEvent event){
         logger.debug("Opening basic theory"); //TODO: Change message
-        ViewManager.changeScreen(event, ViewName.THEORY_BASIC_THEORY_CHAPTER, new SelectedDataScope<>(1, TheoryChapter.class ));
+        ViewManager.changeScreen(event, ViewName.THEORY_BASIC_THEORY_CHAPTERS_LIST);
     }
 
     public void backToTheoryExperimentsMenu(ActionEvent event) {

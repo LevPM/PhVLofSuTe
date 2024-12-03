@@ -24,7 +24,7 @@ public class BasicTheoryPaginationViewModel extends SimpleTextImagePaginationVie
     @Override
     public void backToMenu(ActionEvent event) {
         logger.debug("Backing to TheoryExamplesSelection");
-        ViewManager.changeScreen(event, ViewName.THEORY_SELECTION);
+        ViewManager.changeScreen(event, ViewName.THEORY_BASIC_THEORY_CHAPTERS_LIST);
     }
 
     @Initialize

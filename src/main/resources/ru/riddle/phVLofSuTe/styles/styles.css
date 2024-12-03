@@ -92,6 +92,26 @@
 	-fx-underline: true;
 }
 
+.theory-chapter-cell-label{
+	-fx-background-color: Transparent;
+}
+
+.theory-chapter-cell-label .button{
+	-fx-background-color: Transparent;
+}
+
+.theory-chapters-list {
+	-fx-background-color: Transparent;
+}
+
+.theory-chapters-list .list-cell{
+	-fx-background-color: Transparent;
+}
+
+.theory-chapters-list .scroll-bar{
+	-fx-background-color: BurlyWood;
+}
+
 .theory-definition-label{
 	-fx-background-color: Transparent;
 	-fx-background-radius: 20;

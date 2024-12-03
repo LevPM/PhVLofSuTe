@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Основы",
+    "isSpecial": false
+  },
+  {
+    "id": 2,
+    "title": "Капилляры",
+    "isSpecial": false
+  },
+  {
+    "id": 3,
+    "title": "Смачиваемость",
+    "isSpecial": false
+  },
+  {
+    "id": 4,
+    "title": "Эффект Ребиндера",
+    "isSpecial": true
+  }
+]
