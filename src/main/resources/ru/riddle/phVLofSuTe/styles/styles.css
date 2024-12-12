@@ -253,197 +253,107 @@
 	-fx-border-width: 2;
 }
 
-
-/* Experiments */
-
-.experiments-header-label{
-	-fx-text-fill: #f4621f;
+/* Tasks */
+.tasks-header-label{
+	-fx-text-fill: Navy;
 	-fx-underline: true;
 }
 
-.experiments-experiment-header-label{
-	-fx-text-fill: Maroon;
-	-fx-underline: true;
+.tasks-generator-scroll-pane{
+	-fx-background-color: LemonChiffon;
+	-fx-background-radius: 8;
+	-fx-border-color: Navy;
+	-fx-border-radius: 8;
 }
 
-.experiments-text-label{
-	-fx-background-color: Transparent;
-	-fx-background-radius: 20;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 20;
-	-fx-border-width: 3;
-}
-
-.experiments-remark-label{
-	-fx-background-color:  #ffc9c9;
-	-fx-background-radius: 20;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 20;
-	-fx-border-width: 3;
-}
-
-.experiments-settings-header-label{
-	-fx-text-fill: Black;
-	-fx-underline: true;
-}
-
-.experiments-setting-name-label{
-	-fx-background-color: #ffd2ac;
+.tasks-generator-scroll-pane .scroll-bar{
+	-fx-background-color: DarkKhaki;
 	-fx-background-radius: 50;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 50;
 }
 
-.experiments-grid-pane-column-title{
-	-fx-text-fill: Black;
-	-fx-underline: true;
+.tasks-generator-scroll-pane .scroll-bar .thumb{
+	-fx-background-color: Moccasin;
 }
 
-.experiments-grid-pane-row-title{
-	-fx-border-color:  #c35800;
-	-fx-border-radius: 80;
-	-fx-border-width: 3;
-}
-
-.experiments-grid-pane-row-title .label{
-	-fx-text-fill: Black;
-	-fx-background-color: Transparent;
-	-fx-font-family: Cambria;
-	-fx-font-weight: Bold;
-}
-
-.experiments-grid-pane-button{
-	-fx-background-color:  radial-gradient(focus-angle 0.0deg, focus-distance 1.5267% , center 48.3395% 51.5773%, radius 61.4504%, #ffd6b6 0.0%, #ffd6b6 24.6085%, #f29d3c 100.0%);
-	-fx-background-radius: 100;
-	
-	-fx-border-color: #ff8800;
-	-fx-border-radius: 100;
-	-fx-border-width: 3;
-}
-
-.experiments-start-experiment-button{
-	-fx-text-fill: Maroon;
-	
-	-fx-background-color:  #ffc2ad;
-	-fx-background-radius: 70;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 70;
-	-fx-border-width: 3;
-}
-
-.experiments-count-of-drops-button{
-	-fx-background-color: #ffa2a2;
-	-fx-background-radius: 20;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 20;
-	-fx-border-width: 3;
-}
-
-.experiments-settings-by-default-button{
-	-fx-background-color:  #fffcc2;
-	-fx-background-radius: 50;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 50;
-}
-
-.experiments-settings-scroll-pane{
-	-fx-background-color: Transparent;
-	-fx-background-radius: 20;
-	
-	-fx-border-color: Maroon;
-	-fx-border-radius: 20;
-}
-
-.experiments-settings-scroll-pane .viewport{
-	-fx-background-color: Transparent;
-}
-
-.experiments-settings-separator{
+.tasks-generator-scroll-pane .scroll-bar .decrement-button .decrement-arrow{
 	-fx-background-color: Maroon;
 }
 
-.experiments-setting{
-	-fx-background-color:  LightGoldenrodYellow;
-	-fx-background-radius: 50;
-	
+.tasks-generator-scroll-pane .scroll-bar .increment-button .increment-arrow{
+	-fx-background-color: Maroon;
+}
+
+.tasks-generator-scroll-pane .viewport{
+	-fx-background-color: Transparent;
+}
+
+.tasks-generator-create-button{
+	-fx-background-color: LemonChiffon;
+}
+
+.tasks-generator-parameter-vbox{
 	-fx-border-color: Maroon;
-	-fx-border-radius: 50;
+	-fx-border-radius: 20;
 }
 
-.experiments-state-setting{
-	-fx-text-fill: Black;
+.tasks-generator-parameter-vbox .label{
+	-fx-text-fill: DarkGreen;
 }
 
-.experiments-count-of-segments-slider .thumb{
-	-fx-background-color: #f2a659;
-}
-
-.experiments-count-of-segments-slider .track{
-	-fx-background-color: DarkOrange,  #ffd2ac;
-	-fx-background-insets: 0, 0.5;
-}
-
-.experiments-liquid-type-setting .combo-box-popup .list-view{
-	-fx-background-color: PapayaWhip;
-	-fx-background-radius: 25;
-	-fx-padding: 2, 5;
-}
-
-.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell{
-	-fx-background-color: #ffd8b1;
-	-fx-background-radius: 40;
-}
-
-.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell .label{
-	-fx-text-fill: black;
-}
-
-.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell:selected{
-	-fx-background-color: Orange;
-}
-.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell:hover{
-	-fx-background-color: Orange;
-}
-
-.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell .body{
-	-fx-background-color: LightGoldenrodYellow;
-	-fx-background-radius: 30;
-	
+.tasks-generator-parameter-vbox .slider .track{
+	-fx-background-color: DarkKhaki;
 	-fx-border-color: Maroon;
-	-fx-border-radius: 30;
+	-fx-border-radius: 100%;
+	-fx-border-width: 0.8;
 }
 
-.experiments-liquid-type-setting .list-cell .body{
-	-fx-background-color: LightGoldenrodYellow;
-	-fx-background-radius: 30;
-	
+.tasks-generator-parameter-vbox .slider .thumb {
+	-fx-background-color: DarkKhaki;
 	-fx-border-color: Maroon;
-	-fx-border-radius: 30;
+	-fx-border-radius: 100%;
+	-fx-border-width: 1;
 }
 
-
-.experiments-liquid-type-setting .list-cell .label{
-	-fx-text-fill: Black;
+.tasks-generator-parameter-vbox .slider .axis{
+	-fx-tick-label-fill: Maroon;
 }
 
-.syringe{
-    -rl-body-color: Black;
+.tasks-generator-parameter-vbox .list-view{
+	-fx-background-color: Moccasin;
+	-fx-background-radius: 20;
+	-fx-border-color: Maroon;
+	-fx-border-radius: 10;
+	-fx-padding: 5;
 }
 
-.syringe .syringe-piston{
-    -rl-body-color: DimGray;
+.tasks-generator-parameter-vbox .list-view .list-cell{
+	-fx-background-color: LemonChiffon;
+	-fx-background-radius: 20;
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-text-fill: Maroon;
+	-fx-font-size: 20;
+	-fx-cell-size: 20;
 }
 
-.syringe .syringe-piston .piston-background{
-    -fx-fill: PapayaWhip;
+.tasks-generator-parameter-vbox .list-view .list-cell:selected{
+	-fx-background-color: Khaki
 }
 
-.liquid-container{
-    -rl-body-color: Black;
+.tasks-generated-tasks-task-number{
+	-fx-text-fill: Navy;
+}
+
+.tasks-generated-tasks-task-text{
+	-fx-text-fill: Maroon;
+}
+
+.tasks-generated-tasks-task-answer{
+	-fx-text-fill: Maroon;
+	-fx-prompt-text-fill: DarkGrey;
+	-fx-background-color: Transparent;
+	-fx-border-color: Navy;
+	-fx-border-radius: 100%;
+	-fx-border-width: 2;
+	
 }

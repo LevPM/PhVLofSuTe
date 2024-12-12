@@ -32,7 +32,7 @@ public class MenuViewModel implements ViewModel {
 
     public void openTasks(ActionEvent event){
         logger.debug("Opening tasks");
-        ViewManager.changeScreen(event, ViewName.EXPERIMENTS_SELECTION);
+        ViewManager.changeScreen(event, ViewName.TASKS_GENERATOR);
     }
 
     public void closeApp(){

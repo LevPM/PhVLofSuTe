@@ -4,7 +4,8 @@ import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.ViewModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.view.experiments.ExperimentsSelectionView;
+import ru.riddle.phVLofSuTe.view.tasks.GeneratedTasksView;
+import ru.riddle.phVLofSuTe.view.tasks.TasksGeneratorView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
 import ru.riddle.phVLofSuTe.view.theory.basicTheory.BasicTheoryChaptersListView;
@@ -36,8 +37,9 @@ public enum ViewName {
 
     //------------------------------------
 
-    //Experiments block
-    EXPERIMENTS_SELECTION(ExperimentsSelectionView.class),
+    //Tasks block
+    TASKS_GENERATOR(TasksGeneratorView.class),
+    TASKS_GENERATED(GeneratedTasksView.class),
     
     //------------------------------------
     ;
