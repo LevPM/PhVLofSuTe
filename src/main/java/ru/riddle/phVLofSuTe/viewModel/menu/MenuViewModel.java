@@ -25,19 +25,14 @@ public class MenuViewModel implements ViewModel {
         return version;
     }
 
-    public void openSettingsScreen(ActionEvent event){
-        logger.debug("Opening settings screen");
-        ViewManager.changeScreen(event, ViewName.SETTINGS);
+    public void openTheory(ActionEvent event){
+        logger.debug("Opening theory");
+        ViewManager.changeScreen(event, ViewName.THEORY_SELECTION);
     }
 
-    public void openAuthorsScreen(ActionEvent event){
-        logger.debug("Opening authors screen");
-        ViewManager.changeScreen(event, ViewName.AUTHORS);
-    }
-
-    public void openMenuTESelectionScreen(ActionEvent event){
-        logger.debug("Opening TE selection screen");
-        ViewManager.changeScreen(event, ViewName.MENU_TE);
+    public void openTasks(ActionEvent event){
+        logger.debug("Opening tasks");
+        ViewManager.changeScreen(event, ViewName.EXPERIMENTS_SELECTION);
     }
 
     public void closeApp(){

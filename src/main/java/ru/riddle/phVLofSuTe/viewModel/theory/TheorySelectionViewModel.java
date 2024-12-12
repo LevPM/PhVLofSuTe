@@ -23,6 +23,6 @@ public class TheorySelectionViewModel implements ViewModel {
 
     public void backToTheoryExperimentsMenu(ActionEvent event) {
         logger.debug("Backing to Menu TE screen");
-        ViewManager.changeScreen(event, ViewName.MENU_TE);
+        ViewManager.changeScreen(event, ViewName.MENU);
     }
 }

@@ -23,19 +23,14 @@ public class MenuView implements FxmlView<MenuViewModel>, Initializable {
     @InjectViewModel
     private MenuViewModel viewModel;
 
-    public void handleSettingButtonAction(ActionEvent event){
-        logger.trace("Handling SettingsButtonAction");
-        viewModel.openSettingsScreen(event);
+    public void handleTheoryButtonAction(ActionEvent event) {
+        logger.trace("Handling TheoryButtonAction");
+        viewModel.openTheory(event);
     }
 
-    public void handleAuthorsButtonAction(ActionEvent event){
-        logger.trace("Handling AuthorsButtonAction");
-        viewModel.openAuthorsScreen(event);
-    }
-
-    public void handleStartButtonAction(ActionEvent event) {
-        logger.trace("Handling StartButtonAction");
-        viewModel.openMenuTESelectionScreen(event);
+    public void handleTasksButtonAction(ActionEvent event) {
+        logger.trace("Handling TasksButtonAction");
+        viewModel.openTasks(event);
     }
 
     public void handleCloseButtonAction(){

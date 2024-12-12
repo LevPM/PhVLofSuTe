@@ -5,10 +5,7 @@ import de.saxsys.mvvmfx.ViewModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.view.experiments.ExperimentsSelectionView;
-import ru.riddle.phVLofSuTe.view.menu.AuthorsView;
-import ru.riddle.phVLofSuTe.view.menu.MenuTEView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
-import ru.riddle.phVLofSuTe.view.menu.SettingsView;
 import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
 import ru.riddle.phVLofSuTe.view.theory.basicTheory.BasicTheoryChaptersListView;
 import ru.riddle.phVLofSuTe.view.theory.basicTheory.BasicTheoryPaginationView;
@@ -19,9 +16,6 @@ public enum ViewName {
 
     //Menu block
     MENU(MenuView.class),
-    MENU_TE(MenuTEView.class),
-    AUTHORS(AuthorsView.class),
-    SETTINGS(SettingsView.class),
     //------------------------------------
 
     //Theory block

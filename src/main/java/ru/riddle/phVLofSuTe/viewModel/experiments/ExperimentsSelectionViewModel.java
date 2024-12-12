@@ -13,7 +13,7 @@ public class ExperimentsSelectionViewModel implements ViewModel {
 
     public void leaveExperimentsSelection(ActionEvent event){
         logger.debug("Leaving experiments selection");
-        ViewManager.changeScreen(event, ViewName.MENU_TE);
+        ViewManager.changeScreen(event, ViewName.MENU);
     }
 
     public void openExperiment(ActionEvent event, int id, boolean isStandard){
