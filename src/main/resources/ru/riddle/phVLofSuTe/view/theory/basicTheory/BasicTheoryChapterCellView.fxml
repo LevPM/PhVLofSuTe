@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 <Group styleClass="theory-chapter-cell-label" stylesheets="@../../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.theory.basicTheory.BasicTheoryChapterCellView">
-   <Button fx:id="button" alignment="CENTER" mnemonicParsing="false" text="Глава 1" textAlignment="CENTER">
+   <Button fx:id="button" alignment="CENTER" maxWidth="600.0" mnemonicParsing="false" text="Глава 1" wrapText="true">
       <graphic>
          <ImageView fx:id="icon" fitHeight="70.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../images/icons/theoryChaptersIcons/chapter_0_icon.png" />
