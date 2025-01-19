@@ -1,5 +1,6 @@
 package ru.riddle.phVLofSuTe.view.tasks;
 
+import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
@@ -14,4 +15,8 @@ public class GeneratedTasksView implements FxmlView<GeneratedTasksViewModel> {
     private GeneratedTasksViewModel viewModel;
 
 
+    public void handleLeaveButtonAction(ActionEvent event) {
+        logger.trace("Handling LeaveButtonAction");
+        viewModel.leaveGeneratedTasks(event);
+    }
 }
