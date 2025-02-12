@@ -32,7 +32,7 @@ public class TasksGeneratorView implements FxmlView<TasksGeneratorViewModel>, In
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         logger.debug("Initializing");
-        themesList.setItems(viewModel.stubThemesListProperty());
+        themesList.setItems(viewModel.themesListProperty());
     }
 
     public void handleCreateButtonAction(ActionEvent event) {
