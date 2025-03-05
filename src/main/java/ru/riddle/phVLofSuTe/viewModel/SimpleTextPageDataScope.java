@@ -9,9 +9,7 @@ import java.util.List;
 public class SimpleTextPageDataScope implements Scope {
 
     private final StringProperty title = new SimpleStringProperty();
-
     private final ListProperty<String> textList = new SimpleListProperty<>();
-
     private final StringProperty styleClass = new SimpleStringProperty();
 
     public SimpleTextPageDataScope(List<String> text, String styleClass) {

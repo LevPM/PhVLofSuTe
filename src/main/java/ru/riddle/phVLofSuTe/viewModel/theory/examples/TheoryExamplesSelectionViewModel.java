@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
-import ru.riddle.phVLofSuTe.model.data.json.Example;
+import ru.riddle.phVLofSuTe.model.data.json.Task;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
@@ -20,6 +20,6 @@ public class TheoryExamplesSelectionViewModel implements ViewModel {
 
     public void openExample(ActionEvent event, int id){
         logger.debug("Opening example...");
-        ViewManager.changeScreen(event, ViewName.THEORY_BASIC_EXAMPLE, new SelectedDataScope<>(id, Example.class));
+        ViewManager.changeScreen(event, ViewName.THEORY_BASIC_EXAMPLE, new SelectedDataScope<>(id, Task.class));
     }
 }

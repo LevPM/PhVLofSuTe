@@ -15,7 +15,7 @@ public class JSONDataManager {
     private static final String PATH_TO_CUSTOM_COMPONENTS = PATH_TO_JSON_DATA + "customComponents/";
     private static final String THEORY_BLOCK = PATH_TO_JSON_DATA + "theory/";
 
-    private static final String PATH_TO_EXAMPLES = THEORY_BLOCK + "examples/";
+    private static final String PATH_TO_TASKS = THEORY_BLOCK + "tasks/";
     private static final String PATH_TO_BASIC_THEORY = THEORY_BLOCK + "basicTheory/";
 
     private static final String PATH_TO_LIQUIDS = PATH_TO_CUSTOM_COMPONENTS + "liquids/";
@@ -59,7 +59,7 @@ public class JSONDataManager {
     private static <T extends Record> String getPathByDataClass(Class<T> clazz){
         logger.trace("Getting path by data class: {}", clazz.getSimpleName());
         return switch (clazz.getSimpleName()){
-            case "Example" -> PATH_TO_EXAMPLES;
+            case "Task" -> PATH_TO_TASKS;
             case "TheoryChapter", "TheoryChapterInfo" -> PATH_TO_BASIC_THEORY;
             case "Liquid" -> PATH_TO_LIQUIDS;
             default -> {

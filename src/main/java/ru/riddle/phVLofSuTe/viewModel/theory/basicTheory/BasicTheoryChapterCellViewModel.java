@@ -35,7 +35,7 @@ public class BasicTheoryChapterCellViewModel implements ViewModel {
     }
 
     public void openChapter(ActionEvent event){
-        logger.debug("Openning chapter with title: {}", text.get());
+        logger.debug("Opening chapter with title: {}", text.get());
         ViewManager.changeScreen(event, ViewName.THEORY_BASIC_THEORY_CHAPTER, new SelectedDataScope<>(id.get(), TheoryChapter.class));
     }
 }
