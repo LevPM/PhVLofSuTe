@@ -5,6 +5,7 @@ import de.saxsys.mvvmfx.ViewModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.view.tasks.GeneratedTaskView;
+import ru.riddle.phVLofSuTe.view.tasks.GeneratedTasksPaginationView;
 import ru.riddle.phVLofSuTe.view.tasks.TasksGeneratorView;
 import ru.riddle.phVLofSuTe.view.menu.MenuView;
 import ru.riddle.phVLofSuTe.view.theory.TheorySelectionView;
@@ -39,6 +40,7 @@ public enum ViewName {
 
     //Tasks block
     TASKS_GENERATOR(TasksGeneratorView.class),
+    TASKS_PAGINATION(GeneratedTasksPaginationView.class),
     TASKS_GENERATED(GeneratedTaskView.class),
     
     //------------------------------------

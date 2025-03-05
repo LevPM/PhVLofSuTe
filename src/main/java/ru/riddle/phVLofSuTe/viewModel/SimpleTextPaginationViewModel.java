@@ -55,7 +55,7 @@ public abstract class SimpleTextPaginationViewModel implements ViewModel {
     }
 
     public BooleanProperty nextButtonDisableProperty() {
-        currentPageIndex.addListener(event -> nextButtonDisable.set(currentPageIndex.get() == pageCount.get() - 1));
+        currentPageIndex.addListener(event -> nextButtonDisable.set((currentPageIndex.get() == pageCount.get() - 1)));
         return nextButtonDisable;
     }
 
@@ -67,5 +67,6 @@ public abstract class SimpleTextPaginationViewModel implements ViewModel {
     @Initialize
     protected void initialize(){
         logger.debug("Initializing...");
+        nextButtonDisable.set(currentPageIndex.get() == pageCount.get() - 1);
     }
 }

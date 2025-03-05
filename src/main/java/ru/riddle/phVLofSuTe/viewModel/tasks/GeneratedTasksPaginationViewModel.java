@@ -5,19 +5,14 @@ import de.saxsys.mvvmfx.InjectScope;
 import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.riddle.phVLofSuTe.model.data.json.Task;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.view.tasks.GeneratedTaskView;
-import ru.riddle.phVLofSuTe.viewModel.SelectedDataScope;
 import ru.riddle.phVLofSuTe.viewModel.SimpleTextPaginationViewModel;
 
 public class GeneratedTasksPaginationViewModel extends SimpleTextPaginationViewModel {
 
     private static final Logger logger = LoggerFactory.getLogger(GeneratedTasksPaginationViewModel.class);
-
-    @InjectScope
-    SelectedDataScope<Task> selectedTask;
 
     @InjectScope
     private GeneratorInfoScope generatorInfo;
@@ -35,14 +30,14 @@ public class GeneratedTasksPaginationViewModel extends SimpleTextPaginationViewM
     @Initialize
     protected void initialize(){
         super.initialize();
-        titleLabelProperty().set("Сгенерированные задачи");
-        pageCountProperty().set(generatorInfo.countOfGeneratedTasksProperty().get());
-        pageFactoryProperty().set((pageIndex)-> new GeneratedTaskView(
-                new GeneratedTaskDataScope(
-                        "Задание №" + generatorInfo.countOfGeneratedTasksProperty().get(),
-                        selectedTask.getData().level(),
-                        selectedTask.getData().condition()
-                    )
-            ));
+        pageCountProperty().set(generatorInfo.generatedTasksProperty().get().size());
+        pageFactoryProperty().set((pageIndex)-> {
+            titleLabelProperty().set("Задание №" + (pageIndex + 1));
+            return new GeneratedTaskView(
+                    new GeneratedTaskDataScope(
+                            generatorInfo.generatedTasksProperty().get(pageIndex).level(),
+                            generatorInfo.generatedTasksProperty().get(pageIndex).condition()
+                    ));
+            });
     }
 }

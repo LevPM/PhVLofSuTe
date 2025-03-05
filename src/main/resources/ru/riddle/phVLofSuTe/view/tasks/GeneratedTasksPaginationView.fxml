@@ -7,9 +7,6 @@
 <?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -25,21 +22,7 @@
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </VBox.margin>
    </Label>
-   <GridPane alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
-      <columnConstraints>
-         <ColumnConstraints hgrow="ALWAYS" />
-         <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
-      <VBox>
-         <Pagination fx:id="pagination" maxPageIndicatorCount="8" styleClass="theory-pagination" VBox.vgrow="ALWAYS" />
-      </VBox>
-      <VBox.margin>
-         <Insets bottom="10.0" />
-      </VBox.margin>
-   </GridPane>
+   <Pagination fx:id="pagination" styleClass="theory-pagination" VBox.vgrow="ALWAYS" />
    <Separator prefWidth="200.0" styleClass="theory-examples-separator" />
    <BorderPane>
       <VBox.margin>

@@ -1,17 +1,21 @@
 package ru.riddle.phVLofSuTe.viewModel.tasks;
 
 import de.saxsys.mvvmfx.Scope;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
+import ru.riddle.phVLofSuTe.model.data.json.Task;
+
+import java.util.List;
 
 public class GeneratorInfoScope implements Scope {
-    private final IntegerProperty countOfGeneratedTasks = new SimpleIntegerProperty();
+    private final ListProperty<Task> generatedTasks = new SimpleListProperty<>();
 
-    public GeneratorInfoScope(int countOfGeneratedTasks){
-        this.countOfGeneratedTasks.set(countOfGeneratedTasks);
+    public GeneratorInfoScope(List<Task> generatedTasks){
+        this.generatedTasks.set(FXCollections.observableArrayList(generatedTasks));
     }
 
-    public IntegerProperty countOfGeneratedTasksProperty(){
-        return countOfGeneratedTasks;
+    public ListProperty<Task> generatedTasksProperty(){
+        return generatedTasks;
     }
 }
