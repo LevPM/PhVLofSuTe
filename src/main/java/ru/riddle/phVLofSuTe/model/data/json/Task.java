@@ -5,6 +5,8 @@ import java.util.List;
 public record Task(
         int id,
         String condition,
+        List<String> vars,
+        List<String> defvars,
         String given,
         String toFind,
         List<String> decision,
