@@ -13,7 +13,7 @@ public class SelectedDataScope<T extends Record> implements Scope {
 
     private final ObjectProperty<T> data = new SimpleObjectProperty<>();
 
-    private SelectedDataScope(T data) {
+    public SelectedDataScope(T data) {
         this.data.set(data);
     }
 
