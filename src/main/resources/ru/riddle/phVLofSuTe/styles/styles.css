@@ -360,3 +360,13 @@
 	-fx-border-width: 2;
 	
 }
+
+.tasks-results-label{
+	-fx-text-fill: DarkGreen;
+}
+
+.tasks-results-result-label{
+	-fx-text-fill: DarkGreen;
+	-fx-border-color: DarkGreen;
+	-fx-border-radius: 50%;
+}
