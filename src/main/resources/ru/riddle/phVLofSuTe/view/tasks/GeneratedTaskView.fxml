@@ -13,8 +13,8 @@
 <?import javafx.scene.text.Font?>
 
 <fx:root alignment="CENTER" type="VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-   <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="tasks-generator-scroll-pane" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
-      <VBox>
+   <ScrollPane fitToWidth="true" hbarPolicy="NEVER" pannable="true" styleClass="tasks-generator-scroll-pane" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+      <VBox alignment="CENTER">
          <VBox alignment="CENTER">
             <HBox alignment="CENTER">
                <padding>
@@ -30,7 +30,6 @@
                      </font>
                   </Label>
                </HBox>
-               <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                <HBox alignment="CENTER_RIGHT" layoutX="546.0" layoutY="10.0" HBox.hgrow="NEVER">
                   <HBox.margin>
                      <Insets left="10.0" />
@@ -45,16 +44,17 @@
                   </StackPane>
                </HBox>
             </HBox>
-            <HBox VBox.vgrow="ALWAYS">
+            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
                </VBox.margin>
-               <Label fx:id="condition" styleClass="tasks-generated-tasks-task-text" text="Весьма интересное условие задачи" wrapText="true" HBox.hgrow="ALWAYS">
+               <Label fx:id="condition" styleClass="tasks-generated-tasks-task-text"
+                      text="Весьма интересное условие задачи" wrapText="true">
                   <font>
-                     <Font size="36.0" />
+                     <Font size="36.0"/>
                   </font>
                </Label>
-            </HBox>
+            </VBox>
             <HBox alignment="CENTER">
                <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                   <Button alignment="CENTER" mnemonicParsing="false" text="Ответ:">
