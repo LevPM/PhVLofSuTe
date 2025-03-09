@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.data.json.JSONDataManager;
 import ru.riddle.phVLofSuTe.model.data.json.Task;
-import ru.riddle.phVLofSuTe.viewModel.tasks.GeneratedTaskDataScope;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +15,7 @@ public class TasksGenerator {
 
     private static final Logger logger = LoggerFactory.getLogger(TasksGenerator.class);
 
-    private static GeneratedTaskDataScope generateTask(){
+    private static Task generateTask(){
         logger.debug("Generating task...");
         Task task = JSONDataManager.getById((int)(Math.random() * 0) + 1, Task.class);
         String condition = Objects.requireNonNull(task).condition();
@@ -31,7 +30,7 @@ public class TasksGenerator {
             condition = condition.replace(variable.name, Double.toString(randomValue));
         }
         logger.debug("Task with id {} is generated", task.id());
-        return new GeneratedTaskDataScope(task.level(), condition);
+        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.level());
     }
 
     public static Task createDefaultTask(int id){
@@ -46,9 +45,9 @@ public class TasksGenerator {
         return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.level());
     }
 
-    public static List<GeneratedTaskDataScope> generateTasks(int count){
+    public static List<Task> generateTasks(int count){
         logger.debug("Generating {} tasks", count);
-        List<GeneratedTaskDataScope> result = new ArrayList<>();
+        List<Task> result = new ArrayList<>();
         for(int i = 0; i < count; i++){
             result.add(generateTask());
         }

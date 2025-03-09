@@ -10,13 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.ViewModel;
 import ru.riddle.phVLofSuTe.model.data.json.JSONDataManager;
-import ru.riddle.phVLofSuTe.model.data.json.Task;
 import ru.riddle.phVLofSuTe.model.data.json.TheoryChapterInfo;
+import ru.riddle.phVLofSuTe.model.tasks.TasksGenerator;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class TasksGeneratorViewModel implements ViewModel {
@@ -46,13 +43,8 @@ public class TasksGeneratorViewModel implements ViewModel {
     }
 
     public void createTasks(ActionEvent event){
-        logger.debug("Creating {} tasks", (int) countOfTasks.get());
-        List<Task> generatedTasks = new ArrayList<>();
-        for(int i = 0; i < (int) countOfTasks.get(); i++){
-            generatedTasks.add(JSONDataManager.getById((int)(Math.random() * 5) + 1, Task.class));
-        }
-        logger.debug("Creating tasks view with {} generated tasks", generatedTasks.size());
-        ViewManager.changeScreen(event, ViewName.TASKS_PAGINATION, new GeneratorInfoScope(generatedTasks));
+        logger.debug("Creating {} tasks", countOfTasks.get());
+        ViewManager.changeScreen(event, ViewName.TASKS_PAGINATION, new GeneratorInfoScope(TasksGenerator.generateTasks((int) countOfTasks.get())));
     }
 
     @Initialize
