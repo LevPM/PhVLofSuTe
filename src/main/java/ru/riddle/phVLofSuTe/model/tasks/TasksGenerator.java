@@ -25,9 +25,9 @@ public class TasksGenerator {
             double rangeMin = variable.valueFrom;
             double rangeMax = variable.valueTo;
             double randomValue = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
-            randomValue = (double) Math.round(randomValue * Math.pow(10, variable.scale)) /100;
+            randomValue = (double) Math.round(randomValue * Math.pow(10, variable.scale)) / Math.pow(10, variable.scale);
 
-            condition = condition.replace(variable.name, Double.toString(randomValue));
+            condition = condition.replace(variable.name, randomValue + " " + variable.unit);
         }
         logger.debug("Task with id {} is generated", task.id());
         return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.level());
@@ -72,7 +72,7 @@ public class TasksGenerator {
                 variable.substring(0, 1),
                 Double.parseDouble(variable.substring(2, variable.indexOf("-"))),
                 Double.parseDouble(variable.substring(variable.indexOf("-") + 1, variable.indexOf(" "))),
-                variable.substring(variable.indexOf(" ") + 1, variable.indexOf(" ") + 2),
+                variable.substring(variable.indexOf(" ") + 1, variable.indexOf("+")),
                 Integer.parseInt(variable.substring(variable.indexOf("+") + 1))
         );
     }
