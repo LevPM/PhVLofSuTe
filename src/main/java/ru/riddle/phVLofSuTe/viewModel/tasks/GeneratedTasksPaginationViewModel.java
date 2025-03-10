@@ -38,7 +38,7 @@ public class GeneratedTasksPaginationViewModel extends SimpleTextPaginationViewM
                             i,
                             new Triple<>(
                                     Integer.toString(i + 1),
-                                    generatorInfo.generatedTasksProperty().get(i).answer(),
+                                    generatorInfo.generatedTasksProperty().get(i).resultAns(),
                                     "-"
                                     )
                     );
@@ -67,7 +67,7 @@ public class GeneratedTasksPaginationViewModel extends SimpleTextPaginationViewM
                                             pageIndex,
                                             new Triple<>(
                                                     Integer.toString(pageIndex + 1),
-                                                    generatorInfo.generatedTasksProperty().get(pageIndex).answer(),
+                                                    generatorInfo.generatedTasksProperty().get(pageIndex).resultAns(),
                                                     generatedTaskDataScope.answerProperty().get()
                                             )
                                     )

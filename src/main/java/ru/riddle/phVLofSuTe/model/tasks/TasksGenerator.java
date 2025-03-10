@@ -1,5 +1,6 @@
 package ru.riddle.phVLofSuTe.model.tasks;
 
+import org.mariuszgromada.math.mxparser.Expression;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.data.json.JSONDataManager;
@@ -20,6 +21,7 @@ public class TasksGenerator {
         Task task = JSONDataManager.getById((int)(Math.random() * 0) + 1, Task.class);
         String condition = Objects.requireNonNull(task).condition();
         List<Variable> variables = parseVars(task.vars());
+        String formulaAns = task.formulaAns();
         for(Variable variable: variables){
             Random r = new Random();
             double rangeMin = variable.valueFrom;
@@ -28,9 +30,13 @@ public class TasksGenerator {
             randomValue = (double) Math.round(randomValue * Math.pow(10, variable.scale)) / Math.pow(10, variable.scale);
 
             condition = condition.replace(variable.name, randomValue + " " + variable.unit);
+            formulaAns = formulaAns.replace(variable.name, Double.toString(randomValue));
         }
+        Expression expression = new Expression(formulaAns.substring(0, formulaAns.indexOf(" ")));
+
+        double resultAns = (double) Math.round(expression.calculate() * Math.pow(10, 2)) / Math.pow(10, 2);
         logger.debug("Task with id {} is generated", task.id());
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.level());
+        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), Double.toString(resultAns), task.level());
     }
 
     public static Task createDefaultTask(int id){
@@ -42,7 +48,7 @@ public class TasksGenerator {
             condition = condition.replace(defVariable.name, defVariable.value);
         }
         logger.debug("Default task with id {} is generated", id);
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.level());
+        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.resultAns(), task.level());
     }
 
     public static List<Task> generateTasks(int count){

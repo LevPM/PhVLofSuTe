@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.mariuszgromada.math.mxparser.License;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.AppProperties;
@@ -20,6 +21,7 @@ public class PhVLofSuTe extends Application {
 
     static {
         System.setProperty("-Dlog4j2.contextSelector", "org.apache.logging.log4j.core.async.BasicAsyncLoggerContextSelector");
+        License.iConfirmNonCommercialUse("LevPM");
     }
 
     @Override

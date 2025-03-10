@@ -12,5 +12,6 @@ public record Task(
         List<String> decision,
         String answer,
         String formulaAns,
+        String resultAns,
         int level
 ){}
