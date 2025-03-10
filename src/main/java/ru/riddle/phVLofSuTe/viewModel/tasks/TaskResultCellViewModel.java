@@ -15,6 +15,11 @@ public class TaskResultCellViewModel implements ViewModel {
     private final StringProperty rightAnswer = new SimpleStringProperty();
     private final StringProperty yourAnswer = new SimpleStringProperty();
 
+    public TaskResultCellViewModel(String taskNumber, String rightAnswer, String yourAnswer) {
+        this.taskNumber.set(taskNumber);
+        this.rightAnswer.set(rightAnswer);
+        this.yourAnswer.set(yourAnswer);
+    }
 
     public StringProperty taskNumberProperty() {
         return taskNumber;
