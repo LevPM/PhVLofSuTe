@@ -4,15 +4,12 @@ import de.saxsys.mvvmfx.utils.viewlist.CachedViewModelCellFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import de.saxsys.mvvmfx.FxmlView;
 import de.saxsys.mvvmfx.InjectViewModel;
-import ru.riddle.phVLofSuTe.model.view.ViewManager;
-import ru.riddle.phVLofSuTe.model.view.ViewName;
 import ru.riddle.phVLofSuTe.viewModel.tasks.ResultsViewModel;
 import ru.riddle.phVLofSuTe.viewModel.tasks.TaskResultCellViewModel;
 
@@ -43,5 +40,6 @@ public class ResultsView implements FxmlView<ResultsViewModel>, Initializable {
         logger.debug("Initializing...");
         resultsList.setItems(viewModel.resultsProperty());
         resultsList.setCellFactory(CachedViewModelCellFactory.createForFxmlView(TaskResultCellView.class));
+        resultsLabel.textProperty().bind(viewModel.resultTextProperty());
     }
 }
