@@ -69,7 +69,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <TextField fx:id="Answer" alignment="CENTER" promptText="Ответ" styleClass="tasks-generated-tasks-task-answer">
+                  <TextField fx:id="answer" alignment="CENTER" promptText="Ответ" styleClass="tasks-generated-tasks-task-answer">
                      <font>
                         <Font size="32.0" />
                      </font>

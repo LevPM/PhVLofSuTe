@@ -1,6 +1,7 @@
 package ru.riddle.phVLofSuTe.viewModel.tasks;
 
 import de.saxsys.mvvmfx.Scope;
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -8,6 +9,7 @@ public class GeneratedTaskDataScope implements Scope {
 
     private final StringProperty level = new SimpleStringProperty();
     private final StringProperty condition = new SimpleStringProperty();
+    private final StringProperty answer = new SimpleStringProperty();
 
     public GeneratedTaskDataScope(int level, String condition) {
         this.level.set(Integer.toString(level));
@@ -20,5 +22,9 @@ public class GeneratedTaskDataScope implements Scope {
 
     public StringProperty conditionProperty() {
         return condition;
+    }
+
+    public StringProperty answerProperty() {
+        return answer;
     }
 }

@@ -45,5 +45,6 @@ public class GeneratedTaskView extends VBox implements FxmlView<GeneratedTaskVie
         logger.debug("Initializing...");
         condition.textProperty().bind(viewModel.conditionProperty());
         level.textProperty().bind(viewModel.levelProperty());
+        answerSaveButton.setOnAction(event -> viewModel.saveAnswer(answer.getText()));
     }
 }

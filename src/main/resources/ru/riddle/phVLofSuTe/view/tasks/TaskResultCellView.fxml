@@ -2,57 +2,77 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.view.tasks.TaskResultCellView">
    <padding>
-      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
    </padding>
-   <BorderPane HBox.hgrow="ALWAYS">
-      <left>
-         <HBox BorderPane.alignment="CENTER">
-            <Label text="Задание №">
+   <HBox alignment="CENTER">
+      <children>
+         <HBox>
+            <Label text="№">
                <font>
-                  <Font size="36.0"/>
+                  <Font size="36.0" />
                </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </Label>
             <Label fx:id="taskNumber" text="0" underline="true">
                <font>
-                  <Font size="36.0"/>
+                  <Font size="36.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label text=":">
+               <font>
+                  <Font size="36.0" />
                </font>
             </Label>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
          </HBox>
-      </left>
-      <center>
-         <HBox BorderPane.alignment="CENTER">
+         <HBox>
             <Label text="Верный ответ:">
                <font>
-                  <Font size="36.0"/>
+                  <Font size="36.0" />
                </font>
             </Label>
             <Label fx:id="rightAnswer" text="0">
                <font>
-                  <Font size="36.0"/>
+                  <Font size="36.0" />
                </font>
+               <HBox.margin>
+                  <Insets left="4.0" />
+               </HBox.margin>
             </Label>
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </HBox.margin>
          </HBox>
-      </center>
-      <right>
-         <HBox BorderPane.alignment="CENTER">
-            <Label text="Ваш ответ:">
-               <font>
-                  <Font size="36.0"/>
-               </font>
-            </Label>
-            <Label fx:id="yourAnswer" text="0">
-               <font>
-                  <Font size="36.0"/>
-               </font>
-            </Label>
-         </HBox>
-      </right>
-   </BorderPane>
+      </children>
+   </HBox>
+   <HBox>
+      <Label text="Ваш ответ:" HBox.hgrow="ALWAYS">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="yourAnswer" text="0">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="4.0" />
+         </HBox.margin>
+      </Label>
+   </HBox>
 </HBox>

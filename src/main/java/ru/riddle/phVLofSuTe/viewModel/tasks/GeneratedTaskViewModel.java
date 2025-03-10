@@ -22,6 +22,10 @@ public class GeneratedTaskViewModel implements ViewModel {
         return generatedTask.levelProperty();
     }
 
+    public void saveAnswer(String answer){
+        generatedTask.answerProperty().set(answer);
+    }
+
     @Initialize
     private void initialize(){
         logger.debug("Initializing...");
