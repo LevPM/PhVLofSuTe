@@ -370,3 +370,29 @@
 	-fx-border-color: DarkGreen;
 	-fx-border-radius: 50%;
 }
+
+.tasks-pagination{
+	-fx-arrows-visible: false;
+	-fx-tooltip-visible: false;
+	-fx-page-information-visible: true;
+	-fx-page-information-alignment: right;
+}
+
+.tasks-pagination .pagination-control{
+	-fx-font-size: 16px;
+	-fx-text-fill: Maroon;
+}
+
+.tasks-pagination .pagination-control .number-button{
+	-fx-background-radius: 50%;
+	-fx-background-color: Transparent;
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50%;
+}
+
+.tasks-pagination .pagination-control .number-button:selected{
+	-fx-border-color: Navy;
+	-fx-border-width: 2;
+	-fx-text-fill: Navy;
+	-fx-font-weight: 800;
+}
