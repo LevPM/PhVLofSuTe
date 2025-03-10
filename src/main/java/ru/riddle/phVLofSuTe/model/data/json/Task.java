@@ -11,5 +11,6 @@ public record Task(
         String toFind,
         List<String> decision,
         String answer,
+        String formulaAns,
         int level
 ){}

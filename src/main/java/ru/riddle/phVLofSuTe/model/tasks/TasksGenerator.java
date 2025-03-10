@@ -30,7 +30,7 @@ public class TasksGenerator {
             condition = condition.replace(variable.name, randomValue + " " + variable.unit);
         }
         logger.debug("Task with id {} is generated", task.id());
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.level());
+        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.level());
     }
 
     public static Task createDefaultTask(int id){
@@ -42,7 +42,7 @@ public class TasksGenerator {
             condition = condition.replace(defVariable.name, defVariable.value);
         }
         logger.debug("Default task with id {} is generated", id);
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.level());
+        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.level());
     }
 
     public static List<Task> generateTasks(int count){
