@@ -1,7 +1,6 @@
 package ru.riddle.phVLofSuTe.viewModel.tasks;
 
 import de.saxsys.mvvmfx.Scope;
-import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

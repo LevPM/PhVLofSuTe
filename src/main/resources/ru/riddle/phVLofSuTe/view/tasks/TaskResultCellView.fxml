@@ -10,52 +10,50 @@
       <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
    </padding>
    <HBox alignment="CENTER">
-      <children>
-         <HBox>
-            <Label text="№">
-               <font>
-                  <Font size="36.0" />
-               </font>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Label>
-            <Label fx:id="taskNumber" text="0" underline="true">
-               <font>
-                  <Font size="36.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="2.0" right="2.0" />
-               </HBox.margin>
-            </Label>
-            <Label text=":">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
+      <HBox>
+         <Label text="№">
+            <font>
+               <Font size="36.0"/>
+            </font>
             <HBox.margin>
-               <Insets />
+               <Insets/>
             </HBox.margin>
-         </HBox>
-         <HBox>
-            <Label text="Верный ответ:">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
-            <Label fx:id="rightAnswer" text="0">
-               <font>
-                  <Font size="36.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="4.0" />
-               </HBox.margin>
-            </Label>
+         </Label>
+         <Label fx:id="taskNumber" text="0" underline="true">
+            <font>
+               <Font size="36.0"/>
+            </font>
             <HBox.margin>
-               <Insets left="20.0" right="20.0" />
+               <Insets left="2.0" right="2.0"/>
             </HBox.margin>
-         </HBox>
-      </children>
+         </Label>
+         <Label text=":">
+            <font>
+               <Font size="36.0"/>
+            </font>
+         </Label>
+         <HBox.margin>
+            <Insets/>
+         </HBox.margin>
+      </HBox>
+      <HBox>
+         <Label text="Верный ответ:">
+            <font>
+               <Font size="36.0"/>
+            </font>
+         </Label>
+         <Label fx:id="rightAnswer" text="0">
+            <font>
+               <Font size="36.0"/>
+            </font>
+            <HBox.margin>
+               <Insets left="4.0"/>
+            </HBox.margin>
+         </Label>
+         <HBox.margin>
+            <Insets left="20.0" right="20.0"/>
+         </HBox.margin>
+      </HBox>
    </HBox>
    <HBox>
       <Label text="Ваш ответ:" HBox.hgrow="ALWAYS">
