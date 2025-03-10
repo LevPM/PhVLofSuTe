@@ -59,7 +59,7 @@ public class JSONDataManager {
     private static <T extends Record> String getPathByDataClass(Class<T> clazz){
         logger.trace("Getting path by data class: {}", clazz.getSimpleName());
         return switch (clazz.getSimpleName()){
-            case "Task" -> PATH_TO_TASKS;
+            case "Task", "TaskInfo" -> PATH_TO_TASKS;
             case "TheoryChapter", "TheoryChapterInfo" -> PATH_TO_BASIC_THEORY;
             case "Liquid" -> PATH_TO_LIQUIDS;
             default -> {

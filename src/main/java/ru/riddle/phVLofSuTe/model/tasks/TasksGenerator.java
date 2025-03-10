@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.riddle.phVLofSuTe.model.data.json.JSONDataManager;
 import ru.riddle.phVLofSuTe.model.data.json.Task;
+import ru.riddle.phVLofSuTe.model.data.json.TaskInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class TasksGenerator {
 
     private static Task generateTask(){
         logger.debug("Generating task...");
-        Task task = JSONDataManager.getById((int)(Math.random() * 0) + 1, Task.class);
+        Task task = JSONDataManager.getById((int)(Math.random() * Objects.requireNonNull(JSONDataManager.getListOf(TaskInfo.class)).size()) + 1, Task.class);
         String condition = Objects.requireNonNull(task).condition();
         List<Variable> variables = parseVars(task.vars());
         String formulaAns = task.formulaAns();
@@ -33,8 +34,8 @@ public class TasksGenerator {
             formulaAns = formulaAns.replace(variable.name, Double.toString(randomValue));
         }
         Expression expression = new Expression(formulaAns.substring(0, formulaAns.indexOf(" ")));
-
-        double resultAns = (double) Math.round(expression.calculate() * Math.pow(10, 2)) / Math.pow(10, 2);
+        int formulaScale = Integer.parseInt(formulaAns.substring(formulaAns.indexOf("@") + 1));
+        double resultAns = (double) Math.round(expression.calculate() * Math.pow(10, formulaScale)) / Math.pow(10, formulaScale);
         logger.debug("Task with id {} is generated", task.id());
         return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), Double.toString(resultAns), task.level());
     }
