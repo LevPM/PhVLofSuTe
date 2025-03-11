@@ -17,9 +17,16 @@ public class TasksGenerator {
 
     private static final Logger logger = LoggerFactory.getLogger(TasksGenerator.class);
 
-    private static Task generateTask(){
+    private static Task generateTask(int level){
         logger.debug("Generating task...");
-        Task task = JSONDataManager.getById((int)(Math.random() * Objects.requireNonNull(JSONDataManager.getListOf(TaskInfo.class)).size()) + 1, Task.class);
+        List<Integer> IDs =  Objects.requireNonNull(JSONDataManager.getListOf(TaskInfo.class))
+                .stream()
+                .filter(taskInfo -> taskInfo.level() == level)
+                .map(TaskInfo::id)
+                .toList();
+
+
+        Task task = JSONDataManager.getById(IDs.get((int)(Math.random() * IDs.size())), Task.class);
         String condition = Objects.requireNonNull(task).condition();
         List<Variable> variables = parseVars(task.vars());
         String formulaAns = task.formulaAns();
@@ -38,7 +45,19 @@ public class TasksGenerator {
         double resultAns = (double) Math.round(expression.calculate() * Math.pow(10, formulaScale)) / Math.pow(10, formulaScale);
         condition = condition.replace("p^1", Integer.toString(formulaScale));
         logger.debug("Task with id {} is generated", task.id());
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), Double.toString(resultAns), task.level());
+        return new Task(
+                task.id(),
+                condition,
+                task.vars(),
+                task.defvars(),
+                task.given(),
+                task.toFind(),
+                task.decision(),
+                task.answer(),
+                task.formulaAns(),
+                Double.toString(resultAns),
+                task.level()
+        );
     }
 
     public static Task createDefaultTask(int id){
@@ -50,14 +69,26 @@ public class TasksGenerator {
             condition = condition.replace(defVariable.name, defVariable.value);
         }
         logger.debug("Default task with id {} is generated", id);
-        return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), task.resultAns(), task.level());
+        return new Task(
+                task.id(),
+                condition,
+                task.vars(),
+                task.defvars(),
+                task.given(),
+                task.toFind(),
+                task.decision(),
+                task.answer(),
+                task.formulaAns(),
+                task.resultAns(),
+                task.level()
+        );
     }
 
-    public static List<Task> generateTasks(int count){
+    public static List<Task> generateTasks(int count, int level){
         logger.debug("Generating {} tasks", count);
         List<Task> result = new ArrayList<>();
         for(int i = 0; i < count; i++){
-            result.add(generateTask());
+            result.add(generateTask(level));
         }
         return result;
     }

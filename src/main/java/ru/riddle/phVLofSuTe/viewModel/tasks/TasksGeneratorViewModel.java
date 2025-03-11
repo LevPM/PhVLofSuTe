@@ -44,7 +44,7 @@ public class TasksGeneratorViewModel implements ViewModel {
 
     public void createTasks(ActionEvent event){
         logger.debug("Creating {} tasks", countOfTasks.get());
-        ViewManager.changeScreen(event, ViewName.TASKS_PAGINATION, new GeneratorInfoScope(TasksGenerator.generateTasks((int) countOfTasks.get())));
+        ViewManager.changeScreen(event, ViewName.TASKS_PAGINATION, new GeneratorInfoScope(TasksGenerator.generateTasks((int) countOfTasks.get(), (int) levelOfTasks.get())));
     }
 
     @Initialize
