@@ -36,6 +36,7 @@ public class TasksGenerator {
         Expression expression = new Expression(formulaAns.substring(0, formulaAns.indexOf(" ")));
         int formulaScale = Integer.parseInt(formulaAns.substring(formulaAns.indexOf("@") + 1));
         double resultAns = (double) Math.round(expression.calculate() * Math.pow(10, formulaScale)) / Math.pow(10, formulaScale);
+        condition = condition.replace("p^1", Integer.toString(formulaScale));
         logger.debug("Task with id {} is generated", task.id());
         return new Task(task.id(), condition, task.vars(), task.defvars(), task.given(), task.toFind(), task.decision(), task.answer(), task.formulaAns(), Double.toString(resultAns), task.level());
     }
