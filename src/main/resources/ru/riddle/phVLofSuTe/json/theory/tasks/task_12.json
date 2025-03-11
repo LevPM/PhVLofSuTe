@@ -15,7 +15,7 @@
   "toFind": "\tA = ?",
   "decision": [
     "\t1) m = n\uD835\uDF0CV # Масса n капелек объёмом V \n\tn = m/(\uD835\uDF0CV)\n\tV = (\uD835\uDF0Bd³)/6\n\tn = (6m)/(\uD835\uDF0C\uD835\uDF0Bd³)",
-    "\t2) 2) A = σ\uD835\uDEE5S\n\t\uD835\uDEE5S = Sк - Sн = Sк #Пренебрегаем начальной массой\n\tSк = n*\uD835\uDF0Bd² #Площадь n капелек диаметром d\n\tA = σn\uD835\uDF0Bd² = (6σm\uD835\uDF0Bd²)/(\uD835\uDF0C\uD835\uDF0Bd³) = (6σm)/(\uD835\uDF0Cd) = 435 [Дж]"
+    "\t2) A = σ\uD835\uDEE5S\n\t\uD835\uDEE5S = Sк - Sн = Sк #Пренебрегаем начальной массой\n\tSк = n*\uD835\uDF0Bd² #Площадь n капелек диаметром d\n\tA = σn\uD835\uDF0Bd² = (6σm\uD835\uDF0Bd²)/(\uD835\uDF0C\uD835\uDF0Bd³) = (6σm)/(\uD835\uDF0Cd) = 435 [Дж]"
   ],
   "answer": "\tA = 435 Дж",
   "formulaAns": "(6*σ*m)/(1000*d*10^(-6)) [Дж]@0",
