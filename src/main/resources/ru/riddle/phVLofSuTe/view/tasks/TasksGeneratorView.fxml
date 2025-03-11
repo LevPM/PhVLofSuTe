@@ -55,7 +55,7 @@
                   <Font name="Calibri" size="48.0" />
                </font>
             </Label>
-            <Slider fx:id="levelOfTasks" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Slider fx:id="levelOfTasks" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
          </VBox>
          <VBox styleClass="tasks-generator-parameter-vbox" GridPane.columnIndex="1" GridPane.rowSpan="2">
             <padding>
