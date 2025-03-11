@@ -23,7 +23,8 @@ public class GeneratedTaskViewModel implements ViewModel {
     }
 
     public void saveAnswer(String answer){
-        generatedTask.answerProperty().set(answer);
+        logger.debug("Saving answer: {}", answer);
+        generatedTask.answerProperty().set(answer.contains(".") ? answer : answer + ".0");
     }
 
     @Initialize
