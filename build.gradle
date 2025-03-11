@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'ru.riddle.PhVLofSuTe'
-version = '0.2.0.3'
+version = '0.2.0.4'
 
 launch4j {
     outfile = 'PhVLofSuTe_v' + project.version + '.exe'
