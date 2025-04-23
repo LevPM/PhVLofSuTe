@@ -55,17 +55,17 @@
     "isSpecial": false
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Высота поднятия жидкости в капиллярных трубках",
     "isSpecial": false
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Адсорбция",
     "isSpecial": true
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Флотация",
     "isSpecial": true
   }
