@@ -17,7 +17,7 @@ public class TheorySelectionViewModel implements ViewModel {
     }
 
     public void openBasicTheory(ActionEvent event){
-        logger.debug("Opening basic theory"); //TODO: Change message
+        logger.debug("Opening basic theory");
         ViewManager.changeScreen(event, ViewName.THEORY_BASIC_THEORY_CHAPTERS_LIST);
     }
 
