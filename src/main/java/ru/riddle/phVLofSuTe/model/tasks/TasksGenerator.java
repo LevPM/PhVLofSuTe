@@ -68,6 +68,9 @@ public class TasksGenerator {
         for(DefVariable defVariable: defVariables){
             condition = condition.replace(defVariable.name, defVariable.value);
         }
+        String formulaAns = task.formulaAns();
+        int formulaScale = Integer.parseInt(formulaAns.substring(formulaAns.indexOf("@") + 1));
+        condition = condition.replace("p^1", Integer.toString(formulaScale));
         logger.debug("Default task with id {} is generated", id);
         return new Task(
                 task.id(),
