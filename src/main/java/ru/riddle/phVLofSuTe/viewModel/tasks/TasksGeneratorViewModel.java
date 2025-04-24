@@ -50,6 +50,6 @@ public class TasksGeneratorViewModel implements ViewModel {
     @Initialize
     private void initialize(){
         logger.debug("Initializing...");
-        themesList.addAll(Objects.requireNonNull(JSONDataManager.getListOf(TheoryChapterInfo.class)).stream().map(TheoryChapterInfo::title).toList());
+        themesList.addAll(Objects.requireNonNull(JSONDataManager.getListOf(TheoryChapterInfo.class)).stream().filter(TheoryChapterInfo::hasTasks).map(TheoryChapterInfo::title).toList());
     }
 }

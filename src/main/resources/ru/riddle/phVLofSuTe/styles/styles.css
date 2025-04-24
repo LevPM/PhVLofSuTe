@@ -340,7 +340,7 @@
 }
 
 .tasks-generator-parameter-vbox .list-view .list-cell:selected{
-	-fx-background-color: Khaki
+	-fx-background-color: Khaki;
 }
 
 .tasks-generated-tasks-task-number{
