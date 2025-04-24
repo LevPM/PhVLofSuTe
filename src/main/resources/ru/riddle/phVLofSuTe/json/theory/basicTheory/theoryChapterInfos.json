@@ -2,71 +2,71 @@
   {
     "id": 1,
     "title": "Поверхностные эффекты",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 2,
     "title": "Строение жидкостей",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 3,
     "title": "Молекулярная картина поверхностного слоя",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 4,
     "title": "Поверхностная энергия",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 5,
     "title": "Поверхностное натяжение",
-    "isSpecial": false
+    "hasTasks": true
   },
   {
     "id": 6,
     "title": "Жидкостные плёнки",
-    "isSpecial": true
+    "hasTasks": false
   },
   {
     "id": 7,
     "title": "Зависимость поверхностного натяжения от температуры",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 8,
     "title": "Смачивание и несмачивание",
-    "isSpecial": false
+    "hasTasks": true
   },
   {
     "id": 9,
     "title": "Расположение молекул у поверхности тел",
-    "isSpecial": false
+    "hasTasks": false
   },
   {
     "id": 10,
     "title": "Давление под искривлённой поверхностью жидкости",
-    "isSpecial": false
+    "hasTasks": true
   },
   {
     "id": 11,
     "title": "Капиллярные явления",
-    "isSpecial": false
+    "hasTasks": true
   },
   {
     "id": 12,
     "title": "Высота поднятия жидкости в капиллярных трубках",
-    "isSpecial": false
+    "hasTasks": true
   },
   {
     "id": 13,
     "title": "Адсорбция",
-    "isSpecial": true
+    "hasTasks": false
   },
   {
     "id": 14,
     "title": "Флотация",
-    "isSpecial": true
+    "hasTasks": false
   }
 ]
