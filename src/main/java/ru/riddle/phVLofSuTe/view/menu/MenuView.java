@@ -43,4 +43,9 @@ public class MenuView implements FxmlView<MenuViewModel>, Initializable {
         logger.debug("Initializing MenuView");
         versionLabel.textProperty().bind(viewModel.versionProperty());
     }
+
+    public void handleExperimentsButtonAction(ActionEvent event) {
+        logger.debug("Handling ExperimentsButtonAction");
+
+    }
 }
