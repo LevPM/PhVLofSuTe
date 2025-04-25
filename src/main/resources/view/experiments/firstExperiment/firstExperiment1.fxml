@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1080.0" maxWidth="1920.0" prefHeight="729.0" prefWidth="1296.0" stylesheets="@../../styles/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.riddle.phVLofSuTe.controller.ExperimentsController">
+   <Label alignment="CENTER" prefHeight="105.0" prefWidth="638.0" styleClass="experiments-experiment-header-label" text="Измерение коэффициента поверхностного натяжения методом отрыва капель" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+      <font>
+         <Font name="Calibri Bold" size="30.0" />
+      </font>
+      <padding>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </padding>
+      <VBox.margin>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </VBox.margin>
+   </Label>
+   <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <Label prefWidth="835.0" styleClass="experiments-text-label" text="1) Рассмотрим носик шприца в момент отрыва капли" wrapText="true">
+            <font>
+               <Font name="Calibri Bold" size="30.0" />
+            </font>
+            <padding>
+               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+         </Label>
+         <Label layoutX="30.0" layoutY="209.0" prefWidth="835.0" styleClass="experiments-text-label" text="2) Силы, действующие на каплю:&#10;Mg⃗ + F⃗ₚ = 0" wrapText="true">
+            <font>
+               <Font name="Calibri Bold" size="30.0" />
+            </font>
+            <padding>
+               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+         </Label>
+         <Label prefWidth="835.0" styleClass="experiments-text-label" text="3) В проекциях на ось OY: &#10;Mg - σl = 0, где l = 𝜋D" wrapText="true">
+            <font>
+               <Font name="Calibri Bold" size="30.0" />
+            </font>
+            <padding>
+               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <VBox.margin>
+               <Insets left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+         </Label>
+         <Label prefWidth="835.0" styleClass="experiments-text-label" text="P.S. D носика шприца = 2мм = 0,0002 м" wrapText="true">
+            <font>
+               <Font name="Calibri Bold" size="30.0" />
+            </font>
+            <padding>
+               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+            <VBox.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+         </Label>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <ImageView fitHeight="217.0" fitWidth="402.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+            <Image url="@../images/Syringe_Spout.png" />
+         </ImageView>
+      </VBox>
+   </HBox>
+   <BorderPane>
+      <VBox.margin>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </VBox.margin>
+      <left>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" styleClass="secondary-button" text="Назад" textAlignment="CENTER" textFill="#6b0000" visible="false" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </left>
+      <center>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLeaveButtonAction" styleClass="secondary-button" text="Вернуться" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+            <BorderPane.margin>
+               <Insets />
+            </BorderPane.margin>
+         </Button>
+      </center>
+      <right>
+         <Button id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNextButtonAction" styleClass="secondary-button" text="Вперёд" textAlignment="CENTER" textFill="#6b0000" BorderPane.alignment="CENTER">
+            <font>
+               <Font name="Arial Black" size="50.0" />
+            </font>
+         </Button>
+      </right>
+   </BorderPane>
+</VBox>

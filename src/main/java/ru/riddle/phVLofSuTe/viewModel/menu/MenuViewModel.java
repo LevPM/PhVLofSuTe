@@ -6,6 +6,8 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.riddle.phVLofSuTe.model.util.FXMLs;
+import ru.riddle.phVLofSuTe.model.util.ModelUtil;
 import ru.riddle.phVLofSuTe.model.*;
 import ru.riddle.phVLofSuTe.model.view.ViewManager;
 import ru.riddle.phVLofSuTe.model.view.ViewName;
@@ -33,6 +35,11 @@ public class MenuViewModel implements ViewModel {
     public void openTasks(ActionEvent event){
         logger.debug("Opening tasks");
         ViewManager.changeScreen(event, ViewName.TASKS_GENERATOR);
+    }
+
+    public void openExperiments(ActionEvent event){
+        logger.debug("Opening experiments");
+        ModelUtil.changeScreen(event, FXMLs.EXPERIMENTS_MENU);
     }
 
     public void closeApp(){

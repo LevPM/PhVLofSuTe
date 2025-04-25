@@ -1,0 +1,362 @@
+.root {
+	-fx-background-color: PapayaWhip;
+	-fx-background-radius: 18;
+	
+	-fx-border-color: black;
+	-fx-border-radius: 18;
+	-fx-border-width: 6;
+}
+
+
+
+.main-button{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #a0522d 25.0%, #d2691e 50.0%, #9e512e 75.0%, #800000 100.0%);
+
+	-fx-background-color:  linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #eee8aa 0.0%, #ffe4b5 25.0%, #fafad2 50.0%, #ffe4b5 75.0%, #eee8aa 100.0%);
+	-fx-background-radius: 50;
+
+	-fx-border-color: Maroon;
+	-fx-border-width: 2;
+	-fx-border-radius: 50;
+}
+
+.secondary-button{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #8b4513 25.0%, #a0522d 50.0%, #8b4513 75.0%, #800000 100.0%);
+
+	-fx-background-color: BurlyWood;
+	-fx-background-radius: 60;
+
+	-fx-border-color: Navy;
+	-fx-border-width: 2;
+	-fx-border-radius: 60;
+}
+
+
+.menu-secondary-button{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #800000 0.0%, #8b4513 25.0%, #a0522d 50.0%, #8b4513 75.0%, #800000 100.0%);
+
+	-fx-background-color: BurlyWood;
+	-fx-background-radius: 60;
+
+	-fx-border-color: Maroon;
+	-fx-border-width: 2;
+	-fx-border-radius: 60;
+}
+
+.selection-button{
+	-fx-background-color: Transparent;
+
+	-fx-text-fill: #020c0d;
+}
+
+
+
+.main-label{
+	-fx-text-fill: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #000080 0.0%, #800000 25.0%, #8b4513 50.0%, #800000 75.0%, #000080 100.0%);
+}
+
+.theory-header-label{
+	-fx-text-fill: Navy;
+	-fx-underline: true;
+}
+
+.theory-definition-label{
+	-fx-background-color: Transparent;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: #dd5f5f;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-text-label{
+	-fx-background-color: Transparent;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Navy;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-answer-label{
+	-fx-border-color:  #d00000;
+}
+
+.theory-condition-label{
+	-fx-background-color:  #f2c76c;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-decision-label{
+	-fx-background-color:  #a4ff5e;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-given-label{
+	-fx-background-color: #ff8664;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.theory-to-find-label{
+	-fx-background-color: #9db7ff;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+
+.theory-image{
+	-fx-background-color:  LemonChiffon;
+	-fx-background-radius: 20;
+	
+	-fx-border-color:  Navy;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.examples-cell{
+	-fx-background-color: Transparent;
+	
+	-fx-text-fill: Black;
+	
+	-fx-border-color: Black;
+	-fx-border-radius: 50;
+	-fx-border-width: 2;
+}
+
+
+.experiments-header-label{
+	-fx-text-fill: #f4621f;
+	-fx-underline: true;
+}
+
+.experiments-experiment-header-label{
+	-fx-text-fill: Maroon;
+	-fx-underline: true;
+}
+
+.experiments-text-label{
+	-fx-background-color: Transparent;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.experiments-remark-label{
+	-fx-background-color:  #ffc9c9;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.experiments-settings-header-label{
+	-fx-text-fill: Black;
+	-fx-underline: true;
+}
+
+.experiments-setting-name-label{
+	-fx-background-color: #ffd2ac;
+	-fx-background-radius: 50;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50;
+}
+
+.experiments-grid-pane-column-title{
+	-fx-text-fill: Black;
+	-fx-underline: true;
+}
+
+.experiments-grid-pane-row-title{
+	-fx-border-color:  #c35800;
+	-fx-border-radius: 80;
+	-fx-border-width: 3;
+}
+
+.experiments-grid-pane-row-title .label{
+	-fx-text-fill: Black;
+	-fx-background-color: Transparent;
+	-fx-font-family: Cambria;
+	-fx-font-weight: Bold;
+}
+
+.experiments-grid-pane-button{
+	-fx-background-color:  radial-gradient(focus-angle 0.0deg, focus-distance 1.5267% , center 48.3395% 51.5773%, radius 61.4504%, #ffd6b6 0.0%, #ffd6b6 24.6085%, #f29d3c 100.0%);
+	-fx-background-radius: 100;
+	
+	-fx-border-color: #ff8800;
+	-fx-border-radius: 100;
+	-fx-border-width: 3;
+}
+
+.experiments-start-experiment-button{
+	-fx-text-fill: Maroon;
+	
+	-fx-background-color:  #ffc2ad;
+	-fx-background-radius: 70;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 70;
+	-fx-border-width: 3;
+}
+
+.experiments-count-of-drops-button{
+	-fx-background-color: #ffa2a2;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+	-fx-border-width: 3;
+}
+
+.experiments-settings-by-default-button{
+	-fx-background-color:  #fffcc2;
+	-fx-background-radius: 50;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50;
+}
+
+.experiments-settings-scroll-pane{
+	-fx-background-color: Transparent;
+	-fx-background-radius: 20;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 20;
+}
+
+.experiments-settings-scroll-pane .viewport{
+	-fx-background-color: Transparent;
+}
+
+.experiments-settings-separator{
+	-fx-background-color: Maroon;
+}
+
+.experiments-setting{
+	-fx-background-color:  LightGoldenrodYellow;
+	-fx-background-radius: 50;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 50;
+}
+
+.experiments-state-setting{
+	-fx-text-fill: Black;
+}
+
+.experiments-count-of-segments-slider .thumb{
+	-fx-background-color: #f2a659;
+}
+
+.experiments-count-of-segments-slider .track{
+	-fx-background-color: DarkOrange,  #ffd2ac;
+	-fx-background-insets: 0, 0.5;
+}
+
+.experiments-liquid-type-setting .combo-box-popup .list-view{
+	-fx-background-color: PapayaWhip;
+	-fx-background-radius: 25;
+	-fx-padding: 2, 5;
+}
+
+.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell{
+	-fx-background-color: #ffd8b1;
+	-fx-background-radius: 40;
+}
+
+.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell .label{
+	-fx-text-fill: black;
+}
+
+.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell:selected{
+	-fx-background-color: Orange;
+}
+.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell:hover{
+	-fx-background-color: Orange;
+}
+
+.experiments-liquid-type-setting .combo-box-popup .list-view .list-cell .body{
+	-fx-background-color: LightGoldenrodYellow;
+	-fx-background-radius: 30;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 30;
+}
+
+.experiments-liquid-type-setting .list-cell .body{
+	-fx-background-color: LightGoldenrodYellow;
+	-fx-background-radius: 30;
+	
+	-fx-border-color: Maroon;
+	-fx-border-radius: 30;
+}
+
+
+.experiments-liquid-type-setting .list-cell .label{
+	-fx-text-fill: Black;
+}
+
+.syringe{
+    -rl-body-color: Black;
+}
+
+.syringe .syringe-piston{
+    -rl-body-color: DimGray;
+}
+
+.syringe .syringe-piston .piston-background{
+    -fx-fill: PapayaWhip;
+}
+
+.liquid-container{
+    -rl-body-color: Black;
+}
+
+
+.authors-header-label{
+	-fx-text-fill: Black;
+}
+
+.authors-author-icon{
+	-fx-border-color: Black;
+}
+
+.authors-author-name{
+	-fx-text-fill: Black;
+}
+
+.authors-author-role{
+	-fx-text-fill: Black;
+}
+
+.authors-feedback-label{
+	-fx-text-fill: Black;
+}
+
+.authors-our-social-networks{
+	-fx-text-fill: Black;
+}
+
+
+.version-label{
+	-fx-text-fill: Black;
+}
